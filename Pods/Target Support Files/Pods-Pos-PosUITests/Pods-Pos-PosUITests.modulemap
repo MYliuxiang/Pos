@@ -1,0 +1,6 @@
+framework module Pods_Pos_PosUITests {
+  umbrella header "Pods-Pos-PosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
