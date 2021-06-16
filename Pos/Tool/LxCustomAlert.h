@@ -23,6 +23,8 @@ typedef NS_ENUM(NSUInteger, LxCustomAlertType)
 @property(nonatomic,retain)UIViewController *topVC;
 @property(nonatomic,assign) CGFloat offsetBotom;
 @property(nonatomic,copy) void(^dismisBlock)(void);
+@property(nonatomic,strong)UITapGestureRecognizer *missTapGesture;
+
 
 - (void)show;
 - (void)disMiss;

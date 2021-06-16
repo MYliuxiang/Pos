@@ -9,7 +9,7 @@
 #import "TZGifPhotoPreviewController.h"
 #import "TZImagePickerController.h"
 #import "TZAssetModel.h"
-#import "UIView+TZLayout.h"
+#import "UIView+Layout.h"
 #import "TZPhotoPreviewCell.h"
 #import "TZImageManager.h"
 
@@ -116,7 +116,7 @@
     
     _previewView.frame = self.view.bounds;
     _previewView.scrollView.frame = self.view.bounds;
-    CGFloat toolBarHeight = 44 + [TZCommonTools tz_safeAreaInsets].bottom;
+    CGFloat toolBarHeight = [TZCommonTools tz_isIPhoneX] ? 44 + (83 - 49) : 44;
     _toolBar.frame = CGRectMake(0, self.view.tz_height - toolBarHeight, self.view.tz_width, toolBarHeight);
     _doneButton.frame = CGRectMake(self.view.tz_width - 44 - 12, 0, 44, 44);
     

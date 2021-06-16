@@ -12,7 +12,7 @@
 
 + (instancetype)noDataEmptyWith:(NSString *)titleStr
 {
-    return [LxEmptyView emptyActionViewWithImageStr:@"空界面icon"
+    return [LxEmptyView emptyActionViewWithImageStr:@"baocuofankui"
                                            titleStr:titleStr
                                           detailStr:@""
                                         btnTitleStr:@""
@@ -41,7 +41,10 @@
 - (void)prepare{
     [super prepare];
     
-    self.titleLabTextColor = [UIColor colorWithHexString:@"#383B44"];
+    self.autoShowEmptyView = NO; //如果想要DemoEmptyView的效果都不是自动显隐的，这里统一设置为NO，初始化时就不必再一一去写了
+
+    
+    self.titleLabTextColor = Color_9;
     self.titleLabFont = [UIFont systemFontOfSize:15];
     self.detailLabFont = [UIFont systemFontOfSize:14];
     self.detailLabTextColor = [UIColor colorWithHexString:@"#383B44"];
@@ -54,23 +57,17 @@
     self.actionBtnCornerRadius = 18;
     self.actionBtnTitleColor = [UIColor colorWithHexString:@"#BEBBD1"];
 
+//    self.contentViewY = 150;
     self.subViewMargin = 20;
-    self.imageMargin = -20;
-    self.titleMargin = -10;
-    self.detailMargin = 10;
-    self.autoShowEmptyView = NO;
+//    self.imageMargin = 0;
+//    self.titleMargin = 20;
+//    self.detailMargin = 10;
     self.actionBtnHorizontalMargin = 50;
-    self.emptyViewIsCompleteCoverSuperView = YES;
-    self.backgroundColor = [UIColor colorWithHexString:@"#F7F9FD"];
+//    self.emptyViewIsCompleteCoverSuperView = YES;
+//    self.backgroundColor = [MyColor colorWithHexString:@"#F7F9FD"];
     
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
 
 @end

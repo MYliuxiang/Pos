@@ -18,6 +18,7 @@
 @property (nonatomic,assign) NSInteger lastIdx;
 //单例方法
 + (instancetype)shareMainTabBarController;
++ (void)clearMainTabBarVC;
 
 
 @end

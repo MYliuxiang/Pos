@@ -7,7 +7,7 @@
 //
 
 #import "TZImageCropManager.h"
-#import "UIView+TZLayout.h"
+#import "UIView+Layout.h"
 #import <ImageIO/ImageIO.h>
 #import "TZImageManager.h"
 #import "TZImagePickerController.h"

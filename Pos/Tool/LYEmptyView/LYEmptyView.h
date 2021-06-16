@@ -22,18 +22,9 @@
 @property (nonatomic, assign) BOOL emptyViewIsCompleteCoverSuperView;
 
 /**
- 内容物上每个子控件之间的间距 default is 20.f
+ 内容物上每个子控件之间的间距 default is 20.f , 这是统一设置的，每个子控件可单独设置
  */
 @property (nonatomic, assign) CGFloat  subViewMargin;
-
-@property (nonatomic, assign) CGFloat  imageMargin;
-
-@property (nonatomic, assign) CGFloat  titleMargin;
-
-@property (nonatomic, assign) CGFloat  detailMargin;
-
-@property (nonatomic, assign) CGFloat  selfviewY;
-
 
 /**
  内容物-垂直方向偏移 (此属性与contentViewY 互斥，只有一个会有效)
@@ -63,10 +54,16 @@
  标题字体, 大小default is 16.f
  */
 @property (nonatomic, strong) UIFont   *titleLabFont;
+
 /**
  标题文字颜色
  */
 @property (nonatomic, strong) UIColor  *titleLabTextColor;
+
+/**
+ 标题与图片之间的间距 default is @subViewMargin
+ */
+@property (nonatomic, assign) CGFloat  titleLabMargin;
 
 
 //-------------------------- detailLab 相关 --------------------------//
@@ -74,14 +71,26 @@
  详细描述字体，大小default is 14.f
  */
 @property (nonatomic, strong) UIFont   *detailLabFont;
+
 /**
  详细描述最大行数， default is 2
  */
 @property (nonatomic, assign) NSInteger detailLabMaxLines;
+
 /**
  详细描述文字颜色
  */
 @property (nonatomic, strong) UIColor  *detailLabTextColor;
+
+/**
+ 详细描述文字行间距
+ */
+@property (nonatomic, assign) NSInteger detailLabLineSpacing;
+
+/**
+ 详细描述 与 (标题或图片) 之间的间距 default is @subViewMargin
+ */
+@property (nonatomic, assign) CGFloat  detailLabMargin;
 
 
 //-------------------------- Button 相关 --------------------------//
@@ -94,11 +103,15 @@
  */
 @property (nonatomic, assign) CGFloat  actionBtnHeight;
 /**
- 水平方向内边距, default is 30.f
+ 按钮的宽度, default is 0.f, (此属性和actionBtnHorizontalMargin只有一个有效，都>0时，此属性优先级大)
+ */
+@property (nonatomic, assign) CGFloat  actionBtnWidth;
+/**
+ 按钮的水平方向内边距, default is 30.f, (此属性和actionBtnWidth只有一个有效，都>0时，此属性优先级小)
  */
 @property (nonatomic, assign) CGFloat  actionBtnHorizontalMargin;
 /**
- 按钮的圆角大小, default is 5.f
+ 按钮的圆角大小, default is 0
  */
 @property (nonatomic, assign) CGFloat  actionBtnCornerRadius;
 /**
@@ -117,5 +130,13 @@
  按钮背景颜色
  */
 @property (nonatomic, strong) UIColor  *actionBtnBackGroundColor;
+/**
+ 按钮背景渐变颜色集合，2个
+ */
+@property (nonatomic, strong) NSArray<UIColor *> *actionBtnBackGroundGradientColors;
+/**
+ 按钮 与 (详细描述或标题或图片) 之间的间距 default is @subViewMargin
+ */
+@property (nonatomic, assign) CGFloat  actionBtnMargin;
 
 @end

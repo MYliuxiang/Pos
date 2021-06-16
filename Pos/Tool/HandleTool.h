@@ -72,6 +72,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)isIphoneXUp;
 
+
+//切换到登录页面
++ (void)switchLgoinVC;
+
+//切换的主页面
++ (void)switchMainVC;
+
++ (NSString *)getImageUrlStr:(NSString *)imageId;
+
++ (NSString *)getDistance:(int)distance;
+
++ (NSString *)getCount:(int)count;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

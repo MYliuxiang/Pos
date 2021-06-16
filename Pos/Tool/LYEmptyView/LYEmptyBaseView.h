@@ -26,13 +26,13 @@ typedef void (^LYActionTapBlock)(void);
 @property (nonatomic,strong,readonly) UIView *contentView;
 @property (nonatomic, weak, readonly) id actionBtnTarget;
 @property (nonatomic,assign,readonly) SEL actionBtnAction;
-@property (nonatomic, copy) LYActionTapBlock btnClickBlock;
+@property (nonatomic, copy, readonly) LYActionTapBlock btnClickBlock;
 @property (nonatomic,strong,readonly) UIView *customView;
 
 /**
- emptyView内容区域点击事件
+ emptyView点击事件
  */
-@property (nonatomic, copy) LYActionTapBlock tapContentViewBlock;
+@property (nonatomic, copy) LYActionTapBlock tapEmptyViewBlock;
 
 
 ///初始化配置

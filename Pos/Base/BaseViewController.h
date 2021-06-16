@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LxEmptyView.h"
 
 @interface BaseViewController : UIViewController
 
 
 @property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
+@property (nonatomic, strong) UIView *bottomView;
+@property (nonatomic, assign) int pageNum;
+
+@property (nonatomic, strong)LxEmptyView *nodataView;
 
 
 //是否显示NavigationBar

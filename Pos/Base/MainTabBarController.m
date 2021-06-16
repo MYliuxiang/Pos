@@ -16,11 +16,6 @@ static MainTabBarController *mainTVC = nil;
 
 @implementation MainTabBarController
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-}
 
 - (void)viewDidLoad
 {
@@ -183,5 +178,11 @@ static MainTabBarController *mainTVC = nil;
     return mainTVC;
     
 }
+
++ (void)clearMainTabBarVC
+{
+    mainTVC = nil;
+}
+
 
 @end

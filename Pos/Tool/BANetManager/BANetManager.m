@@ -76,11 +76,11 @@ static NSMutableArray *tasks;
 
 //static void *isNeedCacheKey = @"isNeedCacheKey";
 
-#ifndef __OPTIMIZE__
-#define NSLog(...) NSLog(__VA_ARGS__)
-#else
-#define NSLog(...){}
-#endif
+//#ifndef __OPTIMIZE__
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#else
+//#define NSLog(...){}
+//#endif
 
 @interface BANetManager ()
 
@@ -254,13 +254,11 @@ static NSMutableArray *tasks;
     CGFloat allCacheSize = [BANetManagerCache ba_getAllHttpCacheSize];
     
     
-    
-    
-    
     if (BANetManagerShare.isOpenLog)
     {
         NSLog(@"\n******************** 请求参数 ***************************");
-        NSLog(@"\n请求头: %@\n超时时间设置：%.1f 秒【默认：30秒】\nAFHTTPResponseSerializer：%@【默认：AFJSONResponseSerializer】\nAFHTTPRequestSerializer：%@【默认：AFJSONRequestSerializer】\n请求方式: %@\n请求URL: %@\n请求param: %@\n是否启用缓存：%@【默认：开启】\n目前总缓存大小：%.6fM\n", BANetManagerShare.sessionManager.requestSerializer.HTTPRequestHeaders, timeoutInterval, scc2, scc3, requestType, URLString, parameters, isCache, allCacheSize);
+//        NSLog(@"\n请求头: %@\n超时时间设置：%.1f 秒【默认：30秒】\nAFHTTPResponseSerializer：%@【默认：AFJSONResponseSerializer】\nAFHTTPRequestSerializer：%@【默认：AFJSONRequestSerializer】\n请求方式: %@\n请求URL: %@\n请求param: %@\n是否启用缓存：%@【默认：开启】\n目前总缓存大小：%.6fM\n", BANetManagerShare.sessionManager.requestSerializer.HTTPRequestHeaders, timeoutInterval, scc2, scc3, requestType, URLString, parameters, isCache, allCacheSize);
+        NSLog(@"\n请求头: %@\n请求URL: %@\n请求param: %@", BANetManagerShare.sessionManager.requestSerializer.HTTPRequestHeaders, URLString, parameters);
         NSLog(@"\n********************************************************");
     }
     
@@ -270,14 +268,14 @@ static NSMutableArray *tasks;
         
     }
     
-        
     BAURLSessionTask *sessionTask = nil;
-    
     // 读取缓存
     id responseCacheData = [BANetManagerCache ba_httpCacheWithUrlString:urlString parameters:parameters];
     
     if (isNeedCache && responseCacheData != nil)
     {
+        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+
         if (successBlock)
         {
             successBlock(responseCacheData);
@@ -302,12 +300,13 @@ static NSMutableArray *tasks;
     if (type == BAHttpRequestTypeGet)
     {
         
-        [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:parameters error:nil];
+        [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET" URLString:URLString parameters:parameters error:nil];
         
         sessionTask = [BANetManagerShare.sessionManager GET:URLString parameters:parameters headers:nil  progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+
             if (successBlock)
             {
                 successBlock(responseObject);
@@ -317,7 +316,9 @@ static NSMutableArray *tasks;
             [[weakSelf tasks] removeObject:sessionTask];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+
             if (failureBlock)
             {
                 failureBlock(error);
@@ -331,7 +332,7 @@ static NSMutableArray *tasks;
         sessionTask = [BANetManagerShare.sessionManager POST:URLString parameters:parameters headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
             if (BANetManagerShare.isOpenLog)
             {
-                NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
+//                NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
             }
             /*! 回到主线程刷新UI */
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -341,19 +342,24 @@ static NSMutableArray *tasks;
                 }
             });
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
             if (BANetManagerShare.isOpenLog)
             {
-                NSLog(@"post 请求数据结果： *** %@", responseObject);
+                NSLog(@"post结果***%@", responseObject);
             }
             if (successBlock)
             {
+                NSDictionary *reslut = responseObject;
+                NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
                 
-                [MBProgressHUD hideHUDForView:lxWindow animated:YES];
-                                    
-//                [SVProgressHUD dismiss];
+                if ([code isEqualToString:@"401"]) {
                 
-
-           
+                    [HandleTool switchLgoinVC];
+//                    [LoginManger sharedManager].currentLoginModel = nil;
+                }
+                if (![code isEqualToString:@"0"]) {
+                   [MBProgressHUD showError:reslut[@"message"] toView:lxWindow];
+                }
 
                 successBlock(responseObject);
             }
@@ -363,7 +369,9 @@ static NSMutableArray *tasks;
             [[weakSelf tasks] removeObject:sessionTask];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-           
+           [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+           [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+
             if (failureBlock){
                 failureBlock(error);
             }
@@ -373,7 +381,8 @@ static NSMutableArray *tasks;
     else if (type == BAHttpRequestTypePut)
     {
         sessionTask = [BANetManagerShare.sessionManager PUT:URLString parameters:parameters headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+
             if (successBlock)
             {
                 successBlock(responseObject);
@@ -383,6 +392,9 @@ static NSMutableArray *tasks;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"错误信息：%@",error);
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+
             if (failureBlock)
             {
                 failureBlock(error);
@@ -394,6 +406,8 @@ static NSMutableArray *tasks;
     else if (type == BAHttpRequestTypeDelete)
     {
         sessionTask = [BANetManagerShare.sessionManager DELETE:URLString parameters:parameters headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+
             if (successBlock)
             {
                 successBlock(responseObject);
@@ -403,6 +417,9 @@ static NSMutableArray *tasks;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"错误信息：%@",error);
+            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+
             if (failureBlock)
             {
                 failureBlock(error);
@@ -475,9 +492,7 @@ static NSMutableArray *tasks;
     if (!entity || ![entity isKindOfClass:[BADataEntity class]]) {
         return nil;
     }
-    
-    
-    
+        
     return [self ba_requestWithType:BAHttpRequestTypePost isNeedCache:entity.isNeedCache urlString:entity.urlString parameters:entity.parameters successBlock:successBlock failureBlock:failureBlock progressBlock:progressBlock];
 }
 
@@ -579,7 +594,7 @@ static NSMutableArray *tasks;
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         if (BANetManagerShare.isOpenLog)
         {
-            NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
+//            NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
         }
         /*! 回到主线程刷新UI */
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -588,16 +603,36 @@ static NSMutableArray *tasks;
             }
         });
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+
         if (BANetManagerShare.isOpenLog)
         {
             NSLog(@"上传图片成功 = %@",responseObject);
         }
+        
+       
+        
         if (successBlock) {
+            NSDictionary *reslut = responseObject;
+            NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
+            
+            if ([code isEqualToString:@"401"]) {
+                
+                [HandleTool switchLgoinVC];
+//                [LoginManger sharedManager].currentLoginModel = nil;
+            }
+            if (![code isEqualToString:@"0"]) {
+                [MBProgressHUD showError:reslut[@"message"] toView:lxWindow];
+            }
             successBlock(responseObject);
+            
         }
         
         [[weakSelf tasks] removeObject:sessionTask];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+        [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+
         NSLog(@"错误信息：%@",error);
         if (failureBlock) {
             failureBlock(error);
@@ -668,7 +703,7 @@ static NSMutableArray *tasks;
                 } progress:^(NSProgress * _Nonnull uploadProgress) {
                     if (BANetManagerShare.isOpenLog)
                     {
-                        NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
+//                        NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
                     }
                     /*! 回到主线程刷新UI */
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -831,7 +866,7 @@ static NSMutableArray *tasks;
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         if (BANetManagerShare.isOpenLog)
         {
-            NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
+//            NSLog(@"上传进度--%lld, 总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
         }
         /*! 回到主线程刷新UI */
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -1101,16 +1136,24 @@ static NSMutableArray *tasks;
         
         // 默认图片的文件名, 若fileNames为nil就使用
         
+        
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyyMMddHHmmss";
-        NSString *str = [formatter stringFromDate:[NSDate date]];
+//        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *str = @"file";
+
         NSString *imageFileName = [NSString stringWithFormat:@"%@%ld.%@",str, index, imageType?:@"jpg"];
         
+        NSString *name = fileNames ? fileNames[index]:str;
+        NSString *fileName = fileNames ? fileNames[index]:imageFileName;
+        
+        NSString *mimeType = [NSString stringWithFormat:@"image/%@",imageType ?: @"jpg"];
+
         
         [formData appendPartWithFileData:imageData
-                                    name:fileNames[index]
-                                fileName:fileNames ? [NSString stringWithFormat:@"%@.%@",fileNames[index],imageType?:@"jpg"] : fileNames[index]
-                                mimeType:[NSString stringWithFormat:@"image/%@",imageType ?: @"jpg"]];
+                                    name:name
+                                fileName:fileName
+                                mimeType:mimeType];
         
 //        [formData appendPartWithFileData:imageData
 //                                    name:[NSString stringWithFormat:@"picflie%ld", index]

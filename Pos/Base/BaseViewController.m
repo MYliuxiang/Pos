@@ -28,6 +28,14 @@
     NSLog(@"[%@] 释放了", NSStringFromClass([self class]));
 }
 
+- (UIView *)bottomView{
+    if (_bottomView == nil) {
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - kBottomSafeHeight, kScreenWidth, kBottomSafeHeight)];
+        _bottomView.backgroundColor = [UIColor whiteColor];
+    }
+    return _bottomView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -45,15 +53,18 @@
         // Fallback on earlier versions
     }
 
-    self.view.backgroundColor = BG_Color;
+    self.view.backgroundColor = Color_bg;
+    [self.view addSubview:self.bottomView];
    
-     self.navigationController.navigationBar.hidden = YES;
+//     self.navigationController.navigationBar.hidden = YES;
      self.automaticallyAdjustsScrollViewInsets = NO;
      [self setupNavBar];
    
+    self.navigationController.navigationBar.translucent = NO;
+    self.fd_prefersNavigationBarHidden = YES;
+
     
-//    self.leftBtnImage = @"组 30";
-    
+//    self.leftBtnImage = @"icon_back";
     
     if (self.navigationController.viewControllers.count > 1 ) {
 
@@ -64,6 +75,12 @@
 //        self.hiddenLeftBtn = YES;
     }
     
+    if (@available(iOS 11.0, *)) {
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
+    
     
 
 }
@@ -72,16 +89,19 @@
 {
     [self.view addSubview:self.customNavBar];
 
+//    self.customNavBar.ba
     // 设置自定义导航栏背景图片
+    [WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
+    [self wr_setNavBarShadowImageHidden:YES];
+    [self.customNavBar wr_setBottomLineHidden:YES];
     self.customNavBar.barBackgroundImage = [UIImage imageNamed:@"millcolorGrad"];
-    self.customNavBar.backgroundColor = [UIColor whiteColor];
-    [self.customNavBar setBarBackgroundImage:[UIImage imageNamed:@"wr_setLeftButtonWithImage"]];
 
-    // 设置自定义导航栏标题颜色
-//    self.customNavBar.titleLabelColor = [UIColor blackColor];
+    self.customNavBar.backgroundColor = [UIColor whiteColor];
+    self.customNavBar.titleLabelFont = [UIFont boldSystemFontOfSize:16];
+    self.customNavBar.titleLabelColor = [UIColor blackColor];
 
     if (self.navigationController.childViewControllers.count != 1) {
-        [self.customNavBar wr_setLeftButtonWithTitle:@"<<" titleColor:[UIColor whiteColor]];
+        [self.customNavBar wr_setLeftButtonWithImage:[UIImage imageNamed:@"组 30"]];
     }
 }
 
@@ -92,8 +112,6 @@
     }
     return _customNavBar;
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {
@@ -123,11 +141,19 @@
     
 }
 
+
+////prefersStatusBarHidden
+//- (BOOL)prefersStatusBarHidden{
+//
+//
+//}
+
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     UIStatusBarStyle style = [self preferredStatusBarStyle];
     [[UIApplication sharedApplication] setStatusBarStyle:style animated:NO];
+    
   
 }
 
@@ -169,8 +195,8 @@
 //    self.hbd_titleTextAttributes = @{NSForegroundColorAttributeName:[MyColor colorWithHexString:@"#2E3145"],
 //    NSFontAttributeName:[UIFont systemFontOfSize:17]};
     self.navigationController.navigationBar.titleTextAttributes=
-    @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#282828"],
-      NSFontAttributeName:[UIFont boldSystemFontOfSize:16]};
+    @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#2E3145"],
+      NSFontAttributeName:[UIFont systemFontOfSize:16]};
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 
@@ -251,9 +277,11 @@
     
 };
 
-
-
-
-
+- (LxEmptyView *)nodataView{
+    if (_nodataView == nil) {
+        _nodataView = [LxEmptyView noDataEmptyWith:@"没有数据"];
+    }
+    return _nodataView;
+}
 
 @end

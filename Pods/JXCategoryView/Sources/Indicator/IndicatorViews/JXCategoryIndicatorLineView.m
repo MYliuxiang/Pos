@@ -17,28 +17,15 @@
 
 @implementation JXCategoryIndicatorLineView
 
-#pragma mark - Initialize
-
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
     if (self) {
-        [self configureDefaulteValue];
+        _lineStyle = JXCategoryIndicatorLineStyle_Normal;
+        _lineScrollOffsetX = 10;
+        self.indicatorHeight = 3;
     }
     return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self configureDefaulteValue];
-    }
-    return self;
-}
-
-- (void)configureDefaulteValue {
-    _lineStyle = JXCategoryIndicatorLineStyle_Normal;
-    _lineScrollOffsetX = 10;
-    self.indicatorHeight = 3;
 }
 
 #pragma mark - JXCategoryIndicatorProtocol

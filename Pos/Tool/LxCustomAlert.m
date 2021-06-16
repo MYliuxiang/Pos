@@ -18,8 +18,12 @@
          self  = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
         _maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
         _maskView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.5];
-       
+        self.offsetBotom = kBottomSafeHeight;
         
+        _missTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(misstap)];
+          _missTapGesture.delegate = self;
+          [_maskView addGestureRecognizer:_missTapGesture];
+       
     }
     return self;
 }
@@ -58,9 +62,7 @@
    
     [self showAnimation];
     
-    UITapGestureRecognizer *misstap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(misstap)];
-    misstap.delegate = self;
-    [_maskView addGestureRecognizer:misstap];
+  
     
 }
 
@@ -102,7 +104,7 @@
 //        self.hidden = YES;
         [UIView animateWithDuration:.35 animations:^{
             self.alpha = 1;
-            self.center = _maskView.center;
+            self.center = self.maskView.center;
 
         }];
         
@@ -119,9 +121,11 @@
 //        [self.layer addAnimation:popAnimation forKey:nil];
     }else{
         
+        [_maskView layoutIfNeeded];
         self.top = _maskView.bottom;
         [UIView animateWithDuration:.35 animations:^{
-            self.bottom = _maskView.bottom - self.offsetBotom - (Height_TabBar - 49);
+            self.bottom = self.maskView.bottom - self.offsetBotom;
+            
         }];
     }
    

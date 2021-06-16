@@ -10,7 +10,6 @@ target 'Pos' do
    pod 'MJExtension'
    pod 'MBProgressHUD'
    pod 'AxcAE_TabBar'
-   pod 'WRNavigationBar'
    pod 'IQKeyboardManager'
    pod 'Masonry'
    pod 'TZImagePickerController'
@@ -19,6 +18,9 @@ target 'Pos' do
    pod 'JXPagingView/Pager'
    pod 'JXCategoryView'
    pod 'YYCategories'
+   pod 'WHC_AutoLayoutKit'
+   pod 'UITextView+Placeholder'
+   pod 'SDAutoLayout', '~> 2.1.3'
 
 
   # Pods for Pos

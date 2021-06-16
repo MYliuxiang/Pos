@@ -456,33 +456,47 @@
     
     else if((temp = temp/60) <24){
         result = [NSString stringWithFormat:@"%d小时前",temp];
-    }else if((temp = temp/24) <30){
+    }else{
         
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"MM-dd HH:mm"];
-        NSString *dateStr = [formatter stringFromDate:timeDate];
-        result = dateStr;
+        temp = temp / 24;
+        if ( [timeDate isThisYear]) {
+             result = [NSString stringWithFormat:@"%d天前",temp];
+        }else{
+             result = [NSString stringWithFormat:@"去年"];
+        };
         
-        //           result = [NSString stringWithFormat:@"%d天前",temp];
     }
-    
-    else if((temp = temp/30) <12){
         
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"MM-dd HH:mm"];
-        NSString *dateStr = [formatter stringFromDate:timeDate];
-        result = dateStr;
-        //        result = [NSString stringWithFormat:@"%d月前",temp];
-    }
-    else{
+                
         
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-        NSString *dateStr = [formatter stringFromDate:timeDate];
-        result = dateStr;
-        //        temp = temp/12;
-        //        result = [NSString stringWithFormat:@"%d年前",temp];
-    }
+        
+//        if((temp = temp/24) <30){
+//
+////        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+////        [formatter setDateFormat:@"MM-dd HH:mm"];
+////        NSString *dateStr = [formatter stringFromDate:timeDate];
+////        result = dateStr;
+//
+//            result = [NSString stringWithFormat:@"%d天前",temp];
+//    }
+//
+//    else if((temp = temp/30) <12){
+//
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//        [formatter setDateFormat:@"MM-dd HH:mm"];
+//        NSString *dateStr = [formatter stringFromDate:timeDate];
+//        result = dateStr;
+//        //        result = [NSString stringWithFormat:@"%d月前",temp];
+//    }
+//    else{
+//
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//        [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+//        NSString *dateStr = [formatter stringFromDate:timeDate];
+//        result = dateStr;
+//        //        temp = temp/12;
+//        //        result = [NSString stringWithFormat:@"%d年前",temp];
+//    }
     
     return  result;
     
@@ -685,6 +699,47 @@
     }
     
 }
+
++ (void)switchLgoinVC{
+    
+//    [MainTabBarController clearMainTabBarVC];
+//       [UIApplication sharedApplication].delegate.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LogingViewController new]];
+//    [[UIApplication sharedApplication].delegate.window makeKeyWindow];
+    
+}
+
++ (void)switchMainVC{
+    [[UIApplication sharedApplication] keyWindow].rootViewController = [[MainTabBarController alloc] init];
+    [[[UIApplication sharedApplication] keyWindow] makeKeyWindow];
+}
+
++ (NSString *)getImageUrlStr:(NSString *)imageId{
+    
+    return [NSString stringWithFormat:@"%@/imageInfo/download?imageId=%@",MainFileUrl,imageId];
+}
+
++ (NSString *)getDistance:(int)distance{
+    if (distance < 1000) {
+        return [NSString stringWithFormat:@"%dm",distance];
+    }else{
+                
+        return [NSString stringWithFormat:@"%@km",handlerDecimalNumber(@(distance / 1000.0), NSRoundBankers, 2).stringValue];
+    }
+}
+
++ (NSString *)getCount:(int)count{
+    if (count < 1000) {
+           return [NSString stringWithFormat:@"%d",count];
+       }else{
+                   
+           return [NSString stringWithFormat:@"%@k",handlerDecimalNumber(@(count / 1000.0), NSRoundBankers, 2).stringValue];
+       }
+    
+}
+
+
+
+
 
 
 
