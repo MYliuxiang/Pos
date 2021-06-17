@@ -59,6 +59,14 @@
 		22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCE9267A677C00092C1E /* LxDelayed.m */; };
 		22C1BCF5267A678500092C1E /* HandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCF4267A678500092C1E /* HandleTool.m */; };
 		22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCFC267A679000092C1E /* TZImgePickHelper.m */; };
+		22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F858267BAE620009FDF0 /* HomeOneCell.m */; };
+		22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F859267BAE620009FDF0 /* HomeOneCell.xib */; };
+		22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F860267BB7FD0009FDF0 /* HomeTwoCell.m */; };
+		22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F861267BB7FD0009FDF0 /* HomeTwoCell.xib */; };
+		22F7F86A267BB9280009FDF0 /* HomeOneCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F868267BB9280009FDF0 /* HomeOneCCell.m */; };
+		22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F869267BB9280009FDF0 /* HomeOneCCell.xib */; };
+		22F7F872267BB93B0009FDF0 /* HomeTwoCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F870267BB93B0009FDF0 /* HomeTwoCCell.m */; };
+		22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F871267BB93B0009FDF0 /* HomeTwoCCell.xib */; };
 		299E599066FA613ACF456276 /* Pods_PosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CAFA14D96261860D459735 /* Pods_PosTests.framework */; };
 		56EDAF8983D68EFD8FA4615B /* Pods_Pos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766792BAAAA57537E38FAE0F /* Pods_Pos.framework */; };
 		711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7BAD2679A0F400BAFB54 /* AppDelegate.m */; };
@@ -219,6 +227,18 @@
 		22C1BCF4267A678500092C1E /* HandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleTool.m; sourceTree = "<group>"; };
 		22C1BCFB267A678F00092C1E /* TZImgePickHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImgePickHelper.h; sourceTree = "<group>"; };
 		22C1BCFC267A679000092C1E /* TZImgePickHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImgePickHelper.m; sourceTree = "<group>"; };
+		22F7F857267BAE620009FDF0 /* HomeOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeOneCell.h; sourceTree = "<group>"; };
+		22F7F858267BAE620009FDF0 /* HomeOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeOneCell.m; sourceTree = "<group>"; };
+		22F7F859267BAE620009FDF0 /* HomeOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOneCell.xib; sourceTree = "<group>"; };
+		22F7F85F267BB7FD0009FDF0 /* HomeTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTwoCell.h; sourceTree = "<group>"; };
+		22F7F860267BB7FD0009FDF0 /* HomeTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTwoCell.m; sourceTree = "<group>"; };
+		22F7F861267BB7FD0009FDF0 /* HomeTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTwoCell.xib; sourceTree = "<group>"; };
+		22F7F867267BB9280009FDF0 /* HomeOneCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeOneCCell.h; sourceTree = "<group>"; };
+		22F7F868267BB9280009FDF0 /* HomeOneCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeOneCCell.m; sourceTree = "<group>"; };
+		22F7F869267BB9280009FDF0 /* HomeOneCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOneCCell.xib; sourceTree = "<group>"; };
+		22F7F86F267BB93B0009FDF0 /* HomeTwoCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTwoCCell.h; sourceTree = "<group>"; };
+		22F7F870267BB93B0009FDF0 /* HomeTwoCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTwoCCell.m; sourceTree = "<group>"; };
+		22F7F871267BB93B0009FDF0 /* HomeTwoCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTwoCCell.xib; sourceTree = "<group>"; };
 		267F1CB1320880F79E129712 /* Pods-Pos-PosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos-PosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D3DBBFA1E611944D36CC3EE /* Pods-PosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosTests.release.xcconfig"; path = "Target Support Files/Pods-PosTests/Pods-PosTests.release.xcconfig"; sourceTree = "<group>"; };
 		45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos_PosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -461,6 +481,25 @@
 			path = BANetManager;
 			sourceTree = "<group>";
 		};
+		22F7F853267BA88B0009FDF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22F7F857267BAE620009FDF0 /* HomeOneCell.h */,
+				22F7F858267BAE620009FDF0 /* HomeOneCell.m */,
+				22F7F859267BAE620009FDF0 /* HomeOneCell.xib */,
+				22F7F867267BB9280009FDF0 /* HomeOneCCell.h */,
+				22F7F868267BB9280009FDF0 /* HomeOneCCell.m */,
+				22F7F869267BB9280009FDF0 /* HomeOneCCell.xib */,
+				22F7F85F267BB7FD0009FDF0 /* HomeTwoCell.h */,
+				22F7F860267BB7FD0009FDF0 /* HomeTwoCell.m */,
+				22F7F861267BB7FD0009FDF0 /* HomeTwoCell.xib */,
+				22F7F86F267BB93B0009FDF0 /* HomeTwoCCell.h */,
+				22F7F870267BB93B0009FDF0 /* HomeTwoCCell.m */,
+				22F7F871267BB93B0009FDF0 /* HomeTwoCCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		711D7BA02679A0F400BAFB54 = {
 			isa = PBXGroup;
 			children = (
@@ -580,6 +619,7 @@
 		711D7C122679AB9600BAFB54 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				22F7F853267BA88B0009FDF0 /* Views */,
 				711D7CCC2679ACF100BAFB54 /* HomeVC.h */,
 				711D7CCD2679ACF100BAFB54 /* HomeVC.m */,
 				711D7CCE2679ACF100BAFB54 /* HomeVC.xib */,
@@ -766,16 +806,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
+				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
 				711D7C202679ABF900BAFB54 /* BaseViewController.xib in Resources */,
+				22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */,
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
+				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
+				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,9 +954,11 @@
 				711D7D362679E31200BAFB54 /* ViewController.m in Sources */,
 				22C1BC51267A674200092C1E /* LxResfreshHeader.m in Sources */,
 				22C1BCC6267A677200092C1E /* TXDynamicDelegate.m in Sources */,
+				22F7F86A267BB9280009FDF0 /* HomeOneCCell.m in Sources */,
 				711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */,
 				22C1BCD1267A677200092C1E /* NSString+Handel.m in Sources */,
 				22C1BCDB267A677200092C1E /* NSDecimalNumber+Addtion.m in Sources */,
+				22F7F872267BB93B0009FDF0 /* HomeTwoCCell.m in Sources */,
 				22C1BCCD267A677200092C1E /* LYEmptyView.m in Sources */,
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
@@ -923,6 +969,7 @@
 				22C1BCF5267A678500092C1E /* HandleTool.m in Sources */,
 				22C1BC65267A675500092C1E /* SDCycleScrollView.m in Sources */,
 				22C1BC50267A674200092C1E /* LxRefreshFooter.m in Sources */,
+				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
 				22C1BC41267A670200092C1E /* HttpHelp.m in Sources */,
 				711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */,
@@ -962,6 +1009,7 @@
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
 				22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */,
+				22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,

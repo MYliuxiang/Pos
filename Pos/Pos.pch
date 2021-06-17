@@ -59,7 +59,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 
 //颜色
-#define Color_bg [UIColor colorWithHexString:@"#EFF2F4"]
+#define Color_bg [UIColor colorWithHexString:@"#F9F9F9"]
 #define Color_line [UIColor colorWithHexString:@"#EFEFF4"]
 #define Color_Theme [UIColor colorWithHexString:@"#FB78A3"]
 #define Color_3 [UIColor colorWithHexString:@"#333333"]
