@@ -9,6 +9,7 @@
 #import "HomeOneCell.h"
 #import "HomeTwoCCell.h"
 #import "DataShowVC.h"
+#import "MerchantDetailVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *headerB5;
 @property (weak, nonatomic) IBOutlet UIView *headerCV;
 @property (weak, nonatomic) IBOutlet UIView *headerCDownV;
+@property (weak, nonatomic) IBOutlet UILabel *hederTotalL;
 
 
 @end
@@ -57,9 +59,22 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headerClick)];
     [self.headerCDownV addGestureRecognizer:tap];
+    
+    
+    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapheaderTitle)];
+    self.hederTotalL.userInteractionEnabled = YES;
+    [self.hederTotalL addGestureRecognizer:tap1];
+    
 
       
 }
+
+- (void)tapheaderTitle {
+    
+    MerchantDetailVC *vc = [MerchantDetailVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 - (void)headerClick{
     DataShowVC *vc = [DataShowVC new];

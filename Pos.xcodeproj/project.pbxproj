@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */; };
+		229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F2267D17DA00EB762F /* WSTableViewCell.m */; };
+		229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F3267D17DA00EB762F /* WSTableviewDataModel.m */; };
+		229215FD267D17DA00EB762F /* WSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F4267D17DA00EB762F /* WSTableView.m */; };
+		22921604267D196E00EB762F /* DataSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22921602267D196E00EB762F /* DataSCell.m */; };
+		22921605267D196E00EB762F /* DataSCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22921603267D196E00EB762F /* DataSCell.xib */; };
+		2292160F267D198000EB762F /* DataSSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2292160D267D198000EB762F /* DataSSubCell.m */; };
+		22921610267D198000EB762F /* DataSSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2292160E267D198000EB762F /* DataSSubCell.xib */; };
+		2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2292161B267D287000EB762F /* MerchantDetailVC.m */; };
+		2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2292161C267D287000EB762F /* MerchantDetailVC.xib */; };
 		22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */; };
 		22C1BC40267A670200092C1E /* LLUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC3E267A670100092C1E /* LLUrl.m */; };
 		22C1BC41267A670200092C1E /* HttpHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC3F267A670100092C1E /* HttpHelp.m */; };
@@ -91,13 +101,9 @@
 		711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CCD2679ACF100BAFB54 /* HomeVC.m */; };
 		711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711D7CCE2679ACF100BAFB54 /* HomeVC.xib */; };
 		711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CD82679AD4A00BAFB54 /* AppService.m */; };
-		711D7D2B2679E1A600BAFB54 /* LTMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D272679E1A600BAFB54 /* LTMenuItemCell.m */; };
-		711D7D2C2679E1A600BAFB54 /* LTMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D282679E1A600BAFB54 /* LTMenuItemViewController.m */; };
-		711D7D2D2679E1A600BAFB54 /* LTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D292679E1A600BAFB54 /* LTMenuItem.m */; };
 		711D7D362679E31200BAFB54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D342679E31200BAFB54 /* ViewController.m */; };
 		71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24D9E267C858F00700C7F /* DataShowVC.m */; };
 		71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C24D9F267C858F00700C7F /* DataShowVC.xib */; };
-		71C24DA7267C894200700C7F /* DataShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24DA6267C894200700C7F /* DataShowCell.m */; };
 		71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24DAD267C8EDA00700C7F /* DataModel.m */; };
 		B568E0BF3597F86AFFEBDA5D /* Pods_Pos_PosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +128,24 @@
 /* Begin PBXFileReference section */
 		11E0F9872DEA9D9248315F21 /* Pods-Pos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.release.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.release.xcconfig"; sourceTree = "<group>"; };
 		1250E3EEA3D69DDD716B8112 /* Pods-PosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosTests.debug.xcconfig"; path = "Target Support Files/Pods-PosTests/Pods-PosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCellIndicator.m; sourceTree = "<group>"; };
+		229215F2267D17DA00EB762F /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
+		229215F3267D17DA00EB762F /* WSTableviewDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableviewDataModel.m; sourceTree = "<group>"; };
+		229215F4267D17DA00EB762F /* WSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableView.m; sourceTree = "<group>"; };
+		229215F5267D17DA00EB762F /* WSTableviewTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableviewTree.h; sourceTree = "<group>"; };
+		229215F6267D17DA00EB762F /* WSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableViewCellIndicator.h; sourceTree = "<group>"; };
+		229215F7267D17DA00EB762F /* WSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableViewCell.h; sourceTree = "<group>"; };
+		229215F8267D17DA00EB762F /* WSTableviewDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableviewDataModel.h; sourceTree = "<group>"; };
+		229215F9267D17DA00EB762F /* WSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableView.h; sourceTree = "<group>"; };
+		22921601267D196E00EB762F /* DataSCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSCell.h; sourceTree = "<group>"; };
+		22921602267D196E00EB762F /* DataSCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSCell.m; sourceTree = "<group>"; };
+		22921603267D196E00EB762F /* DataSCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataSCell.xib; sourceTree = "<group>"; };
+		2292160C267D198000EB762F /* DataSSubCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSSubCell.h; sourceTree = "<group>"; };
+		2292160D267D198000EB762F /* DataSSubCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSSubCell.m; sourceTree = "<group>"; };
+		2292160E267D198000EB762F /* DataSSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataSSubCell.xib; sourceTree = "<group>"; };
+		2292161A267D287000EB762F /* MerchantDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantDetailVC.h; sourceTree = "<group>"; };
+		2292161B267D287000EB762F /* MerchantDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantDetailVC.m; sourceTree = "<group>"; };
+		2292161C267D287000EB762F /* MerchantDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantDetailVC.xib; sourceTree = "<group>"; };
 		22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		22C1BC34267A65FB00092C1E /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
 		22C1BC35267A65FB00092C1E /* SwizzlingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzlingDefine.h; sourceTree = "<group>"; };
@@ -285,19 +309,11 @@
 		711D7CCE2679ACF100BAFB54 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		711D7CD72679AD4A00BAFB54 /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		711D7CD82679AD4A00BAFB54 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
-		711D7D252679E1A600BAFB54 /* LTMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMenuItemViewController.h; sourceTree = "<group>"; };
-		711D7D262679E1A600BAFB54 /* LTMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMenuItemCell.h; sourceTree = "<group>"; };
-		711D7D272679E1A600BAFB54 /* LTMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMenuItemCell.m; sourceTree = "<group>"; };
-		711D7D282679E1A600BAFB54 /* LTMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMenuItemViewController.m; sourceTree = "<group>"; };
-		711D7D292679E1A600BAFB54 /* LTMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMenuItem.m; sourceTree = "<group>"; };
-		711D7D2A2679E1A600BAFB54 /* LTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMenuItem.h; sourceTree = "<group>"; };
 		711D7D342679E31200BAFB54 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		711D7D352679E31200BAFB54 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		71C24D9D267C858F00700C7F /* DataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataShowVC.h; sourceTree = "<group>"; };
 		71C24D9E267C858F00700C7F /* DataShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataShowVC.m; sourceTree = "<group>"; };
 		71C24D9F267C858F00700C7F /* DataShowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataShowVC.xib; sourceTree = "<group>"; };
-		71C24DA5267C894200700C7F /* DataShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataShowCell.h; sourceTree = "<group>"; };
-		71C24DA6267C894200700C7F /* DataShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataShowCell.m; sourceTree = "<group>"; };
 		71C24DAC267C8EDA00700C7F /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		71C24DAD267C8EDA00700C7F /* DataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		766792BAAAA57537E38FAE0F /* Pods_Pos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +350,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229215F0267D17DA00EB762F /* WSTableViewTree */ = {
+			isa = PBXGroup;
+			children = (
+				229215F9267D17DA00EB762F /* WSTableView.h */,
+				229215F4267D17DA00EB762F /* WSTableView.m */,
+				229215F7267D17DA00EB762F /* WSTableViewCell.h */,
+				229215F2267D17DA00EB762F /* WSTableViewCell.m */,
+				229215F6267D17DA00EB762F /* WSTableViewCellIndicator.h */,
+				229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */,
+				229215F8267D17DA00EB762F /* WSTableviewDataModel.h */,
+				229215F3267D17DA00EB762F /* WSTableviewDataModel.m */,
+				229215F5267D17DA00EB762F /* WSTableviewTree.h */,
+			);
+			path = WSTableViewTree;
+			sourceTree = "<group>";
+		};
 		22C1BC4B267A674200092C1E /* Mjrefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,8 +539,12 @@
 				22F7F86F267BB93B0009FDF0 /* HomeTwoCCell.h */,
 				22F7F870267BB93B0009FDF0 /* HomeTwoCCell.m */,
 				22F7F871267BB93B0009FDF0 /* HomeTwoCCell.xib */,
-				71C24DA5267C894200700C7F /* DataShowCell.h */,
-				71C24DA6267C894200700C7F /* DataShowCell.m */,
+				22921601267D196E00EB762F /* DataSCell.h */,
+				22921602267D196E00EB762F /* DataSCell.m */,
+				22921603267D196E00EB762F /* DataSCell.xib */,
+				2292160C267D198000EB762F /* DataSSubCell.h */,
+				2292160D267D198000EB762F /* DataSSubCell.m */,
+				2292160E267D198000EB762F /* DataSSubCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -603,6 +639,7 @@
 		711D7C112679AB8F00BAFB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				229215F0267D17DA00EB762F /* WSTableViewTree */,
 				22C1BCFB267A678F00092C1E /* TZImgePickHelper.h */,
 				22C1BCFC267A679000092C1E /* TZImgePickHelper.m */,
 				22C1BCF3267A678500092C1E /* HandleTool.h */,
@@ -640,12 +677,9 @@
 				71C24D9D267C858F00700C7F /* DataShowVC.h */,
 				71C24D9E267C858F00700C7F /* DataShowVC.m */,
 				71C24D9F267C858F00700C7F /* DataShowVC.xib */,
-				711D7D2A2679E1A600BAFB54 /* LTMenuItem.h */,
-				711D7D292679E1A600BAFB54 /* LTMenuItem.m */,
-				711D7D262679E1A600BAFB54 /* LTMenuItemCell.h */,
-				711D7D272679E1A600BAFB54 /* LTMenuItemCell.m */,
-				711D7D252679E1A600BAFB54 /* LTMenuItemViewController.h */,
-				711D7D282679E1A600BAFB54 /* LTMenuItemViewController.m */,
+				2292161A267D287000EB762F /* MerchantDetailVC.h */,
+				2292161B267D287000EB762F /* MerchantDetailVC.m */,
+				2292161C267D287000EB762F /* MerchantDetailVC.xib */,
 				711D7D352679E31200BAFB54 /* ViewController.h */,
 				711D7D342679E31200BAFB54 /* ViewController.m */,
 			);
@@ -839,13 +873,16 @@
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
+				22921610267D198000EB762F /* DataSSubCell.xib in Resources */,
 				711D7C202679ABF900BAFB54 /* BaseViewController.xib in Resources */,
 				22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */,
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
+				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
+				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,7 +1012,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				711D7CAC2679ACA600BAFB54 /* LoginVC.m in Sources */,
-				711D7D2B2679E1A600BAFB54 /* LTMenuItemCell.m in Sources */,
 				22C1BCDA267A677200092C1E /* UIColor+MyColor.m in Sources */,
 				711D7C1F2679ABF900BAFB54 /* MainTabBarController.m in Sources */,
 				711D7D362679E31200BAFB54 /* ViewController.m in Sources */,
@@ -983,7 +1019,9 @@
 				22C1BCC6267A677200092C1E /* TXDynamicDelegate.m in Sources */,
 				22F7F86A267BB9280009FDF0 /* HomeOneCCell.m in Sources */,
 				711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */,
+				229215FD267D17DA00EB762F /* WSTableView.m in Sources */,
 				22C1BCD1267A677200092C1E /* NSString+Handel.m in Sources */,
+				229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */,
 				22C1BCDB267A677200092C1E /* NSDecimalNumber+Addtion.m in Sources */,
 				22F7F872267BB93B0009FDF0 /* HomeTwoCCell.m in Sources */,
 				22C1BCCD267A677200092C1E /* LYEmptyView.m in Sources */,
@@ -1002,12 +1040,10 @@
 				711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */,
 				22C1BCCF267A677200092C1E /* UIView+ViewController.m in Sources */,
 				22C1BC7C267A676100092C1E /* Reachability.m in Sources */,
-				711D7D2C2679E1A600BAFB54 /* LTMenuItemViewController.m in Sources */,
+				229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */,
 				711D7CBF2679ACCA00BAFB54 /* MailListVC.m in Sources */,
-				71C24DA7267C894200700C7F /* DataShowCell.m in Sources */,
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
-				711D7D2D2679E1A600BAFB54 /* LTMenuItem.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
@@ -1017,6 +1053,7 @@
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,
+				2292160F267D198000EB762F /* DataSSubCell.m in Sources */,
 				22C1BC6B267A675500092C1E /* TAAbstractDotView.m in Sources */,
 				22C1BC6A267A675500092C1E /* TAAnimatedDotView.m in Sources */,
 				22C1BC74267A675A00092C1E /* WRNavigationBar.m in Sources */,
@@ -1024,6 +1061,7 @@
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
 				22C1BCD6267A677200092C1E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				22C1BCC7267A677200092C1E /* TXMatchConst.m in Sources */,
+				2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */,
 				22C1BC47267A673C00092C1E /* YZInputView.m in Sources */,
 				711D7BBF2679A0F500BAFB54 /* main.m in Sources */,
 				22C1BCD3267A677200092C1E /* UIDevice+VKKeychainIDFV.m in Sources */,
@@ -1034,12 +1072,14 @@
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
 				22C1BCD9267A677200092C1E /* UISwitch+Custom.m in Sources */,
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
+				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
 				71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */,
 				22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */,
 				22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */,
 				71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */,
+				22921604267D196E00EB762F /* DataSCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,

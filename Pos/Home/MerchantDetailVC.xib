@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MerchantDetailVC">
+            <connections>
+                <outlet property="headerB" destination="OfP-Xy-Gi8" id="7X3-Rg-dls"/>
+                <outlet property="headerView" destination="lbC-TX-wOi" id="q6t-OR-C44"/>
+                <outlet property="tableView" destination="LZR-qt-zKx" id="FsF-qb-tYY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LZR-qt-zKx">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CGL-OU-e3g"/>
+                        <outlet property="delegate" destination="-1" id="psj-Mu-NUY"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="LZR-qt-zKx" secondAttribute="bottom" id="6TI-CB-DGo"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="LZR-qt-zKx" secondAttribute="trailing" id="6ga-dS-ZEu"/>
+                <constraint firstItem="LZR-qt-zKx" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="6ny-1h-eSE"/>
+                <constraint firstItem="LZR-qt-zKx" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Lsa-ej-kGT"/>
+            </constraints>
+            <point key="canvasLocation" x="-270" y="33"/>
+        </view>
+        <view contentMode="scaleToFill" id="lbC-TX-wOi">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计交易额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FO2-sl-CPk">
+                    <rect key="frame" x="171" y="42" width="72" height="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78909.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqZ-SB-RZj">
+                    <rect key="frame" x="116" y="76" width="182" height="46"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                    <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-Xy-Gi8">
+                    <rect key="frame" x="174.5" y="142" width="65" height="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="交易明细" image="返回(3)">
+                        <color key="titleColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="pqI-Og-Whr"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="FO2-sl-CPk" firstAttribute="centerX" secondItem="lbC-TX-wOi" secondAttribute="centerX" id="2CZ-Nf-ayv"/>
+                <constraint firstItem="OfP-Xy-Gi8" firstAttribute="top" secondItem="OqZ-SB-RZj" secondAttribute="bottom" constant="20" id="5pR-tM-8sb"/>
+                <constraint firstItem="OfP-Xy-Gi8" firstAttribute="centerX" secondItem="lbC-TX-wOi" secondAttribute="centerX" id="V5A-3q-80r"/>
+                <constraint firstItem="OqZ-SB-RZj" firstAttribute="top" secondItem="FO2-sl-CPk" secondAttribute="bottom" constant="17" id="fJz-Xv-Uli"/>
+                <constraint firstItem="FO2-sl-CPk" firstAttribute="top" secondItem="lbC-TX-wOi" secondAttribute="top" constant="42" id="kxK-Bo-h8T"/>
+                <constraint firstItem="OqZ-SB-RZj" firstAttribute="centerX" secondItem="lbC-TX-wOi" secondAttribute="centerX" id="nQX-ko-EyH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="UKA-Lu-GV1" appends="YES" id="ZeE-nx-0le"/>
+            </connections>
+            <point key="canvasLocation" x="448" y="54"/>
+        </view>
+        <tapGestureRecognizer id="UKA-Lu-GV1">
+            <connections>
+                <action selector="headeClickAC:" destination="-1" id="1dj-Uh-WUR"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="返回(3)" width="7" height="12"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
