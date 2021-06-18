@@ -51,20 +51,20 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67r-wF-TiX">
-                    <rect key="frame" x="0.0" y="0.0" width="459" height="192.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="459" height="0.0"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="67r-wF-TiX" secondAttribute="height" multiplier="424:178" id="a6O-Z4-K4c"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-DW-SWx">
-                    <rect key="frame" x="12" y="117.5" width="435" height="246.5"/>
+                    <rect key="frame" x="12" y="-112.5" width="435" height="225"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-xw-30H">
-                            <rect key="frame" x="0.0" y="121.5" width="435" height="125"/>
+                            <rect key="frame" x="0.0" y="121.5" width="435" height="103.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dya-Rd-Wnr">
-                                    <rect key="frame" x="0.0" y="0.0" width="145" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="103.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日新增商户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHZ-VE-kC0">
                                             <rect key="frame" x="35.5" y="59" width="74" height="14.5"/>
@@ -88,7 +88,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBH-wv-O52">
-                                    <rect key="frame" x="145" y="0.0" width="145" height="125"/>
+                                    <rect key="frame" x="145" y="0.0" width="145" height="103.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总激活商户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wl-oE-eOy">
                                             <rect key="frame" x="42" y="59" width="61.5" height="14.5"/>
@@ -112,7 +112,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2e-hI-fBx">
-                                    <rect key="frame" x="290" y="0.0" width="145" height="125"/>
+                                    <rect key="frame" x="290" y="0.0" width="145" height="103.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本月新增商户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oh-Yt-PkL">
                                             <rect key="frame" x="35.5" y="59" width="74" height="14.5"/>
@@ -170,9 +170,9 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="XDZ-Xo-582" firstAttribute="centerX" secondItem="PWs-DW-SWx" secondAttribute="centerX" id="6PJ-UZ-72r"/>
+                        <constraint firstAttribute="height" constant="225" id="8BW-Dd-9RE"/>
                         <constraint firstItem="JpQ-fO-EFh" firstAttribute="top" secondItem="XDZ-Xo-582" secondAttribute="bottom" constant="9" id="ONg-dt-oRV"/>
                         <constraint firstItem="JpQ-fO-EFh" firstAttribute="centerX" secondItem="PWs-DW-SWx" secondAttribute="centerX" id="QsF-SD-KSr"/>
-                        <constraint firstAttribute="width" secondItem="PWs-DW-SWx" secondAttribute="height" multiplier="145:82" id="Y3A-v2-EFN"/>
                         <constraint firstItem="nO5-xw-30H" firstAttribute="leading" secondItem="PWs-DW-SWx" secondAttribute="leading" id="a3S-NL-a8L"/>
                         <constraint firstItem="nO5-xw-30H" firstAttribute="top" secondItem="JpQ-fO-EFh" secondAttribute="bottom" constant="24" id="gnb-Iu-ZJb"/>
                         <constraint firstItem="XDZ-Xo-582" firstAttribute="top" secondItem="PWs-DW-SWx" secondAttribute="top" constant="26" id="iKr-3i-USD"/>
@@ -181,7 +181,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sy-LMn">
-                    <rect key="frame" x="0.0" y="386" width="459" height="98"/>
+                    <rect key="frame" x="0.0" y="134.5" width="459" height="98"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-00-uJp">
                             <rect key="frame" x="0.0" y="24" width="92" height="50"/>

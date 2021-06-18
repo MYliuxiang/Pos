@@ -8,6 +8,7 @@
 #import "HomeVC.h"
 #import "HomeOneCell.h"
 #import "HomeTwoCCell.h"
+#import "DataShowVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -54,10 +55,15 @@
     self.headerCV.layer.shadowOpacity=0.3;
     self.headerCV.layer.shadowRadius=5;
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headerClick)];
+    [self.headerCDownV addGestureRecognizer:tap];
 
-  
-    
-    
+      
+}
+
+- (void)headerClick{
+    DataShowVC *vc = [DataShowVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)viewWillLayoutSubviews{
