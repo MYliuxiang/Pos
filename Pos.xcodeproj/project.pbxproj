@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
+		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
+		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
+		228711A8267F998700AEE15A /* RegistReslutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228711A6267F998700AEE15A /* RegistReslutVC.xib */; };
+		228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711B3267F9DA900AEE15A /* TerminalManagerVC.m */; };
+		228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228711B4267F9DA900AEE15A /* TerminalManagerVC.xib */; };
+		228711BD267FA39100AEE15A /* TerminalCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711BB267FA39100AEE15A /* TerminalCenterVC.m */; };
+		228711BE267FA39100AEE15A /* TerminalCenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228711BC267FA39100AEE15A /* TerminalCenterVC.xib */; };
+		228711C6267FA57000AEE15A /* LxSubTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711C4267FA57000AEE15A /* LxSubTitleCell.m */; };
+		228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228711C5267FA57000AEE15A /* LxSubTitleCell.xib */; };
 		229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */; };
 		229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F2267D17DA00EB762F /* WSTableViewCell.m */; };
 		229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F3267D17DA00EB762F /* WSTableviewDataModel.m */; };
@@ -17,6 +27,7 @@
 		22921610267D198000EB762F /* DataSSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2292160E267D198000EB762F /* DataSSubCell.xib */; };
 		2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2292161B267D287000EB762F /* MerchantDetailVC.m */; };
 		2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2292161C267D287000EB762F /* MerchantDetailVC.xib */; };
+		22921624267E43E700EB762F /* LoginManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 22921622267E43E700EB762F /* LoginManger.m */; };
 		22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */; };
 		22C1BC40267A670200092C1E /* LLUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC3E267A670100092C1E /* LLUrl.m */; };
 		22C1BC41267A670200092C1E /* HttpHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC3F267A670100092C1E /* HttpHelp.m */; };
@@ -128,6 +139,21 @@
 /* Begin PBXFileReference section */
 		11E0F9872DEA9D9248315F21 /* Pods-Pos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.release.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.release.xcconfig"; sourceTree = "<group>"; };
 		1250E3EEA3D69DDD716B8112 /* Pods-PosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosTests.debug.xcconfig"; path = "Target Support Files/Pods-PosTests/Pods-PosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
+		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
+		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
+		228711A4267F998700AEE15A /* RegistReslutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistReslutVC.h; sourceTree = "<group>"; };
+		228711A5267F998700AEE15A /* RegistReslutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistReslutVC.m; sourceTree = "<group>"; };
+		228711A6267F998700AEE15A /* RegistReslutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistReslutVC.xib; sourceTree = "<group>"; };
+		228711B2267F9DA900AEE15A /* TerminalManagerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalManagerVC.h; sourceTree = "<group>"; };
+		228711B3267F9DA900AEE15A /* TerminalManagerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalManagerVC.m; sourceTree = "<group>"; };
+		228711B4267F9DA900AEE15A /* TerminalManagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalManagerVC.xib; sourceTree = "<group>"; };
+		228711BA267FA39100AEE15A /* TerminalCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalCenterVC.h; sourceTree = "<group>"; };
+		228711BB267FA39100AEE15A /* TerminalCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalCenterVC.m; sourceTree = "<group>"; };
+		228711BC267FA39100AEE15A /* TerminalCenterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalCenterVC.xib; sourceTree = "<group>"; };
+		228711C3267FA57000AEE15A /* LxSubTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxSubTitleCell.h; sourceTree = "<group>"; };
+		228711C4267FA57000AEE15A /* LxSubTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LxSubTitleCell.m; sourceTree = "<group>"; };
+		228711C5267FA57000AEE15A /* LxSubTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LxSubTitleCell.xib; sourceTree = "<group>"; };
 		229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCellIndicator.m; sourceTree = "<group>"; };
 		229215F2267D17DA00EB762F /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
 		229215F3267D17DA00EB762F /* WSTableviewDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableviewDataModel.m; sourceTree = "<group>"; };
@@ -146,6 +172,8 @@
 		2292161A267D287000EB762F /* MerchantDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantDetailVC.h; sourceTree = "<group>"; };
 		2292161B267D287000EB762F /* MerchantDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantDetailVC.m; sourceTree = "<group>"; };
 		2292161C267D287000EB762F /* MerchantDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantDetailVC.xib; sourceTree = "<group>"; };
+		22921622267E43E700EB762F /* LoginManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManger.m; sourceTree = "<group>"; };
+		22921623267E43E700EB762F /* LoginManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManger.h; sourceTree = "<group>"; };
 		22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		22C1BC34267A65FB00092C1E /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
 		22C1BC35267A65FB00092C1E /* SwizzlingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzlingDefine.h; sourceTree = "<group>"; };
@@ -350,6 +378,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		228711C2267FA53600AEE15A /* PublicCell */ = {
+			isa = PBXGroup;
+			children = (
+				228711C3267FA57000AEE15A /* LxSubTitleCell.h */,
+				228711C4267FA57000AEE15A /* LxSubTitleCell.m */,
+				228711C5267FA57000AEE15A /* LxSubTitleCell.xib */,
+			);
+			path = PublicCell;
+			sourceTree = "<group>";
+		};
 		229215F0267D17DA00EB762F /* WSTableViewTree */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +402,47 @@
 				229215F5267D17DA00EB762F /* WSTableviewTree.h */,
 			);
 			path = WSTableViewTree;
+			sourceTree = "<group>";
+		};
+		22921628267E49CA00EB762F /* 商户登记 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "商户登记";
+			sourceTree = "<group>";
+		};
+		22921629267E49D400EB762F /* 终端管理 */ = {
+			isa = PBXGroup;
+			children = (
+				228711B2267F9DA900AEE15A /* TerminalManagerVC.h */,
+				228711B3267F9DA900AEE15A /* TerminalManagerVC.m */,
+				228711B4267F9DA900AEE15A /* TerminalManagerVC.xib */,
+				228711BA267FA39100AEE15A /* TerminalCenterVC.h */,
+				228711BB267FA39100AEE15A /* TerminalCenterVC.m */,
+				228711BC267FA39100AEE15A /* TerminalCenterVC.xib */,
+			);
+			path = "终端管理";
+			sourceTree = "<group>";
+		};
+		2292162A267E49DC00EB762F /* 业务拓展 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "业务拓展";
+			sourceTree = "<group>";
+		};
+		2292162B267E49E200EB762F /* 学习讲堂 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "学习讲堂";
+			sourceTree = "<group>";
+		};
+		2292162C267E49E900EB762F /* 紧急关注 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "紧急关注";
 			sourceTree = "<group>";
 		};
 		22C1BC4B267A674200092C1E /* Mjrefresh */ = {
@@ -639,6 +718,7 @@
 		711D7C112679AB8F00BAFB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				228711C2267FA53600AEE15A /* PublicCell */,
 				229215F0267D17DA00EB762F /* WSTableViewTree */,
 				22C1BCFB267A678F00092C1E /* TZImgePickHelper.h */,
 				22C1BCFC267A679000092C1E /* TZImgePickHelper.m */,
@@ -674,6 +754,11 @@
 				711D7CCC2679ACF100BAFB54 /* HomeVC.h */,
 				711D7CCD2679ACF100BAFB54 /* HomeVC.m */,
 				711D7CCE2679ACF100BAFB54 /* HomeVC.xib */,
+				2292162C267E49E900EB762F /* 紧急关注 */,
+				2292162B267E49E200EB762F /* 学习讲堂 */,
+				2292162A267E49DC00EB762F /* 业务拓展 */,
+				22921629267E49D400EB762F /* 终端管理 */,
+				22921628267E49CA00EB762F /* 商户登记 */,
 				71C24D9D267C858F00700C7F /* DataShowVC.h */,
 				71C24D9E267C858F00700C7F /* DataShowVC.m */,
 				71C24D9F267C858F00700C7F /* DataShowVC.xib */,
@@ -719,9 +804,17 @@
 		711D7C272679ABFF00BAFB54 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				22921623267E43E700EB762F /* LoginManger.h */,
+				22921622267E43E700EB762F /* LoginManger.m */,
 				711D7CA92679ACA600BAFB54 /* LoginVC.h */,
 				711D7CAA2679ACA600BAFB54 /* LoginVC.m */,
 				711D7CAB2679ACA600BAFB54 /* LoginVC.xib */,
+				2287119C267F960400AEE15A /* RegistVC.h */,
+				2287119D267F960400AEE15A /* RegistVC.m */,
+				2287119E267F960400AEE15A /* RegistVC.xib */,
+				228711A4267F998700AEE15A /* RegistReslutVC.h */,
+				228711A5267F998700AEE15A /* RegistReslutVC.m */,
+				228711A6267F998700AEE15A /* RegistReslutVC.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -865,11 +958,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228711A0267F960400AEE15A /* RegistVC.xib in Resources */,
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
+				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
+				228711A8267F998700AEE15A /* RegistReslutVC.xib in Resources */,
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
@@ -879,7 +975,9 @@
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
 				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
+				228711BE267FA39100AEE15A /* TerminalCenterVC.xib in Resources */,
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
+				228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
@@ -1011,6 +1109,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228711C6267FA57000AEE15A /* LxSubTitleCell.m in Sources */,
 				711D7CAC2679ACA600BAFB54 /* LoginVC.m in Sources */,
 				22C1BCDA267A677200092C1E /* UIColor+MyColor.m in Sources */,
 				711D7C1F2679ABF900BAFB54 /* MainTabBarController.m in Sources */,
@@ -1034,6 +1133,7 @@
 				22C1BCF5267A678500092C1E /* HandleTool.m in Sources */,
 				22C1BC65267A675500092C1E /* SDCycleScrollView.m in Sources */,
 				22C1BC50267A674200092C1E /* LxRefreshFooter.m in Sources */,
+				228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */,
 				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
 				22C1BC41267A670200092C1E /* HttpHelp.m in Sources */,
@@ -1045,11 +1145,13 @@
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
+				228711BD267FA39100AEE15A /* TerminalCenterVC.m in Sources */,
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
 				22C1BCDF267A677200092C1E /* UIImage+CompressImage.m in Sources */,
 				22C1BCCB267A677200092C1E /* UIView+Empty.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
+				228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,
@@ -1070,6 +1172,7 @@
 				22C1BCD5267A677200092C1E /* UIButton+ImageTitleSpacing.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
+				22921624267E43E700EB762F /* LoginManger.m in Sources */,
 				22C1BCD9267A677200092C1E /* UISwitch+Custom.m in Sources */,
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
@@ -1078,6 +1181,7 @@
 				71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */,
 				22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */,
 				22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */,
+				2287119F267F960400AEE15A /* RegistVC.m in Sources */,
 				71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */,
 				22921604267D196E00EB762F /* DataSCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,

@@ -74,6 +74,58 @@
     MerchantDetailVC *vc = [MerchantDetailVC new];
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (IBAction)headerBottomAC:(UIButton *)sender {
+    
+    NSInteger tag = sender.tag;
+    switch (tag - 100) {
+        case 0:
+        {
+            //商户登记
+            
+        }
+            break;
+        case 1:
+        {
+            //终端管理
+            TerminalManagerVC *vc = [TerminalManagerVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+            break;
+            
+        case 2:
+        {
+            //业务拓展
+            
+            
+        }
+            break;
+            
+        case 3:
+        {
+            //学习讲堂
+            
+            
+        }
+            break;
+            
+        case 4:
+        {
+            //紧急关注
+            
+            
+        }
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+}
+
+
+
 
 
 - (void)headerClick{

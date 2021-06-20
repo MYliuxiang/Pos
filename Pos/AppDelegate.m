@@ -22,7 +22,15 @@
 
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    
+    
     self.window.rootViewController = [[MainTabBarController alloc] init];
+    
+//    self.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LoginVC new]];
+
+    
     [self.window makeKeyAndVisible];
 
     [[AppService shareInstance] registerAppService:application didFinishLaunchingWithOptions:launchOptions];

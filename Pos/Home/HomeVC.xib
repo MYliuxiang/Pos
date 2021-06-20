@@ -47,18 +47,18 @@
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </view>
-        <view contentMode="scaleToFill" ambiguous="YES" id="OEq-HP-zSt">
+        <view contentMode="scaleToFill" id="OEq-HP-zSt">
             <rect key="frame" x="0.0" y="0.0" width="459" height="484"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67r-wF-TiX">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67r-wF-TiX">
                     <rect key="frame" x="0.0" y="0.0" width="459" height="201"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="67r-wF-TiX" secondAttribute="height" multiplier="424:178" id="a6O-Z4-K4c"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-DW-SWx">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-DW-SWx">
                     <rect key="frame" x="12" y="139" width="435" height="225"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-xw-30H">
@@ -182,43 +182,58 @@
                         <constraint firstAttribute="bottom" secondItem="nO5-xw-30H" secondAttribute="bottom" id="z1Z-h7-fAT"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sy-LMn">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sy-LMn">
                     <rect key="frame" x="0.0" y="386" width="459" height="98"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-00-uJp">
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-00-uJp">
                             <rect key="frame" x="0.0" y="24" width="92" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="商户登记" image="组 12">
                                 <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="headerBottomAC:" destination="-1" eventType="touchUpInside" id="Pid-UH-06u"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHh-g6-ShR">
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHh-g6-ShR">
                             <rect key="frame" x="92" y="24" width="91.5" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="终端管理" image="组 13">
                                 <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="headerBottomAC:" destination="-1" eventType="touchUpInside" id="tCI-lK-PqW"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-6f-pgh">
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-6f-pgh">
                             <rect key="frame" x="183.5" y="24" width="92" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="业务拓展" image="组 14">
                                 <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="headerBottomAC:" destination="-1" eventType="touchUpInside" id="PMa-H5-SBD"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQm-Sa-5vn">
+                        <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQm-Sa-5vn">
                             <rect key="frame" x="275.5" y="24" width="91.5" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="学习讲堂" image="组 15">
                                 <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="headerBottomAC:" destination="-1" eventType="touchUpInside" id="zEu-fc-ObJ"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa5-c7-SIb">
+                        <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa5-c7-SIb">
                             <rect key="frame" x="367" y="24" width="92" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="紧急关注" image="组 16">
                                 <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="headerBottomAC:" destination="-1" eventType="touchUpInside" id="vYN-Tx-yWo"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

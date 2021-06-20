@@ -702,9 +702,9 @@
 
 + (void)switchLgoinVC{
     
-//    [MainTabBarController clearMainTabBarVC];
-//       [UIApplication sharedApplication].delegate.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LogingViewController new]];
-//    [[UIApplication sharedApplication].delegate.window makeKeyWindow];
+    [MainTabBarController clearMainTabBarVC];
+    [UIApplication sharedApplication].delegate.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LoginVC new]];
+    [[UIApplication sharedApplication].delegate.window makeKeyWindow];
     
 }
 
