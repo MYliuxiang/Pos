@@ -21,6 +21,7 @@ target 'Pos' do
    pod 'WHC_AutoLayoutKit'
    pod 'UITextView+Placeholder'
    pod 'SDAutoLayout', '~> 2.1.3'
+   pod 'SGQRCode', '~> 3.0.1'
 
 
   # Pods for Pos

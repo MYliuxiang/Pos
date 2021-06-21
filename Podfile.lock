@@ -26,6 +26,7 @@ PODS:
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SGQRCode (3.0.1)
   - TZImagePickerController (3.3.2)
   - "UITextView+Placeholder (1.4.0)"
   - WHC_AutoLayoutKit (2.8.6):
@@ -65,6 +66,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDAutoLayout (~> 2.1.3)
   - SDWebImage (~> 4.2.2)
+  - SGQRCode (~> 3.0.1)
   - TZImagePickerController
   - "UITextView+Placeholder"
   - WHC_AutoLayoutKit
@@ -84,6 +86,7 @@ SPEC REPOS:
     - MJRefresh
     - SDAutoLayout
     - SDWebImage
+    - SGQRCode
     - TZImagePickerController
     - "UITextView+Placeholder"
     - WHC_AutoLayoutKit
@@ -102,12 +105,13 @@ SPEC CHECKSUMS:
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   WHC_AutoLayoutKit: 8f1321571cbcc27922ecd9d51a44f4ffe8d98ff8
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 810463ff56cfe099a230891e89285f311d8d7202
+PODFILE CHECKSUM: 90357ffb7fa40107644a0fdb43f3f2831cfb24d6
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
