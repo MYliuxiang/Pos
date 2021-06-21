@@ -69,6 +69,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    ProductVC *vc = [ProductVC new];
+    [self.viewController.navigationController pushViewController:vc animated:YES];
     
     
 }
