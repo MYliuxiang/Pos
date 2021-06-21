@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InformationVC : BaseViewController
-
+@property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) UIImageView *headimageview;
 @end
 
 NS_ASSUME_NONNULL_END
