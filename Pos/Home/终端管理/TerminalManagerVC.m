@@ -6,6 +6,7 @@
 //
 
 #import "TerminalManagerVC.h"
+#import "TerminalTransferVC.h"
 
 @interface TerminalManagerVC ()<JXPagerViewDelegate, JXPagerMainTableViewGestureDelegate>
 @property (nonatomic, strong) JXPagerView *pagerView;
@@ -114,7 +115,7 @@
         case 1:
         {
             //终端划拨
-            TerminalManagerVC *vc = [TerminalManagerVC new];
+            TerminalTransferVC *vc = [TerminalTransferVC new];
             [self.navigationController pushViewController:vc animated:YES];
             
         }

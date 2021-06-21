@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TransfCCell">
+            <rect key="frame" x="0.0" y="0.0" width="136" height="169"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="136" height="169"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VQZ-lc-jQi">
+                        <rect key="frame" x="0.0" y="0.0" width="136" height="136"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="VQZ-lc-jQi" secondAttribute="height" id="3US-0c-sSA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POS机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-DZ-erG">
+                        <rect key="frame" x="46" y="143" width="44" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="组 5(1)" translatesAutoresizingMaskIntoConstraints="NO" id="hgg-xu-edZ">
+                        <rect key="frame" x="120" y="120" width="16" height="16"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VQZ-lc-jQi" secondAttribute="trailing" id="8kR-sF-9ch"/>
+                <constraint firstItem="bgT-DZ-erG" firstAttribute="top" secondItem="VQZ-lc-jQi" secondAttribute="bottom" constant="7" id="Vuu-F5-BqT"/>
+                <constraint firstAttribute="trailing" secondItem="hgg-xu-edZ" secondAttribute="trailing" id="cF8-gn-T5R"/>
+                <constraint firstItem="VQZ-lc-jQi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hFJ-hV-msd"/>
+                <constraint firstItem="bgT-DZ-erG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="s5E-Px-Uvh"/>
+                <constraint firstItem="hgg-xu-edZ" firstAttribute="bottom" secondItem="VQZ-lc-jQi" secondAttribute="bottom" id="wdJ-xZ-mlP"/>
+                <constraint firstItem="VQZ-lc-jQi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yzu-0C-g03"/>
+            </constraints>
+            <size key="customSize" width="136" height="169"/>
+            <connections>
+                <outlet property="img" destination="VQZ-lc-jQi" id="vM2-bz-m9H"/>
+                <outlet property="seletedI" destination="hgg-xu-edZ" id="gGi-Rb-VV4"/>
+                <outlet property="titleL" destination="bgT-DZ-erG" id="GDz-Zd-Byf"/>
+            </connections>
+            <point key="canvasLocation" x="75.362318840579718" y="168.41517857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="组 5(1)" width="16" height="16"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -113,9 +113,23 @@
 		711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711D7CCE2679ACF100BAFB54 /* HomeVC.xib */; };
 		711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CD82679AD4A00BAFB54 /* AppService.m */; };
 		711D7D362679E31200BAFB54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D342679E31200BAFB54 /* ViewController.m */; };
+		71864978268031A5008EED37 /* TerminalTransferVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71864976268031A5008EED37 /* TerminalTransferVC.m */; };
+		71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71864977268031A5008EED37 /* TerminalTransferVC.xib */; };
+		71864987268034BF008EED37 /* TransfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71864985268034BF008EED37 /* TransfCell.m */; };
+		71864988268034BF008EED37 /* TransfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71864986268034BF008EED37 /* TransfCell.xib */; };
+		7186499226804185008EED37 /* TransfCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186499026804185008EED37 /* TransfCCell.m */; };
+		7186499326804185008EED37 /* TransfCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7186499126804185008EED37 /* TransfCCell.xib */; };
 		71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24D9E267C858F00700C7F /* DataShowVC.m */; };
 		71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C24D9F267C858F00700C7F /* DataShowVC.xib */; };
 		71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24DAD267C8EDA00700C7F /* DataModel.m */; };
+		71CF0F1E268077BD00C4E558 /* TerminalTransfOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F1C268077BD00C4E558 /* TerminalTransfOneVC.m */; };
+		71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CF0F1D268077BD00C4E558 /* TerminalTransfOneVC.xib */; };
+		71CF0F26268077D300C4E558 /* TerminalTransfTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F24268077D300C4E558 /* TerminalTransfTwoVC.m */; };
+		71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CF0F25268077D300C4E558 /* TerminalTransfTwoVC.xib */; };
+		71CF0F442680901400C4E558 /* WCQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F3E2680901300C4E558 /* WCQRCodeVC.m */; };
+		71CF0F452680901400C4E558 /* WBQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F3F2680901300C4E558 /* WBQRCodeVC.m */; };
+		71CF0F462680901400C4E558 /* SGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F402680901300C4E558 /* SGWebView.m */; };
+		71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */; };
 		B568E0BF3597F86AFFEBDA5D /* Pods_Pos_PosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -339,11 +353,34 @@
 		711D7CD82679AD4A00BAFB54 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		711D7D342679E31200BAFB54 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		711D7D352679E31200BAFB54 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		71864975268031A5008EED37 /* TerminalTransferVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalTransferVC.h; sourceTree = "<group>"; };
+		71864976268031A5008EED37 /* TerminalTransferVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalTransferVC.m; sourceTree = "<group>"; };
+		71864977268031A5008EED37 /* TerminalTransferVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalTransferVC.xib; sourceTree = "<group>"; };
+		71864984268034BF008EED37 /* TransfCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfCell.h; sourceTree = "<group>"; };
+		71864985268034BF008EED37 /* TransfCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfCell.m; sourceTree = "<group>"; };
+		71864986268034BF008EED37 /* TransfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfCell.xib; sourceTree = "<group>"; };
+		7186498F26804185008EED37 /* TransfCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfCCell.h; sourceTree = "<group>"; };
+		7186499026804185008EED37 /* TransfCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfCCell.m; sourceTree = "<group>"; };
+		7186499126804185008EED37 /* TransfCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfCCell.xib; sourceTree = "<group>"; };
 		71C24D9D267C858F00700C7F /* DataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataShowVC.h; sourceTree = "<group>"; };
 		71C24D9E267C858F00700C7F /* DataShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataShowVC.m; sourceTree = "<group>"; };
 		71C24D9F267C858F00700C7F /* DataShowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataShowVC.xib; sourceTree = "<group>"; };
 		71C24DAC267C8EDA00700C7F /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		71C24DAD267C8EDA00700C7F /* DataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		71CF0F1B268077BD00C4E558 /* TerminalTransfOneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalTransfOneVC.h; sourceTree = "<group>"; };
+		71CF0F1C268077BD00C4E558 /* TerminalTransfOneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalTransfOneVC.m; sourceTree = "<group>"; };
+		71CF0F1D268077BD00C4E558 /* TerminalTransfOneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalTransfOneVC.xib; sourceTree = "<group>"; };
+		71CF0F23268077D300C4E558 /* TerminalTransfTwoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalTransfTwoVC.h; sourceTree = "<group>"; };
+		71CF0F24268077D300C4E558 /* TerminalTransfTwoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalTransfTwoVC.m; sourceTree = "<group>"; };
+		71CF0F25268077D300C4E558 /* TerminalTransfTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalTransfTwoVC.xib; sourceTree = "<group>"; };
+		71CF0F3E2680901300C4E558 /* WCQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCQRCodeVC.m; sourceTree = "<group>"; };
+		71CF0F3F2680901300C4E558 /* WBQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBQRCodeVC.m; sourceTree = "<group>"; };
+		71CF0F402680901300C4E558 /* SGWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWebView.m; sourceTree = "<group>"; };
+		71CF0F412680901300C4E558 /* WCQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCQRCodeVC.h; sourceTree = "<group>"; };
+		71CF0F422680901300C4E558 /* WBQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBQRCodeVC.h; sourceTree = "<group>"; };
+		71CF0F432680901300C4E558 /* SGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWebView.h; sourceTree = "<group>"; };
+		71CF0F642680913900C4E558 /* MBProgressHUD+SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+SGQRCode.h"; sourceTree = "<group>"; };
+		71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+SGQRCode.m"; sourceTree = "<group>"; };
 		766792BAAAA57537E38FAE0F /* Pods_Pos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		892CBA1CE419669925D5F4E4 /* Pods-Pos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.debug.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBFB3FA90CD74EA0B0BAEAE /* Pods-Pos-PosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos-PosUITests.release.xcconfig"; path = "Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -414,12 +451,22 @@
 		22921629267E49D400EB762F /* 终端管理 */ = {
 			isa = PBXGroup;
 			children = (
+				71864983268034A9008EED37 /* Views */,
 				228711B2267F9DA900AEE15A /* TerminalManagerVC.h */,
 				228711B3267F9DA900AEE15A /* TerminalManagerVC.m */,
 				228711B4267F9DA900AEE15A /* TerminalManagerVC.xib */,
 				228711BA267FA39100AEE15A /* TerminalCenterVC.h */,
 				228711BB267FA39100AEE15A /* TerminalCenterVC.m */,
 				228711BC267FA39100AEE15A /* TerminalCenterVC.xib */,
+				71864975268031A5008EED37 /* TerminalTransferVC.h */,
+				71864976268031A5008EED37 /* TerminalTransferVC.m */,
+				71864977268031A5008EED37 /* TerminalTransferVC.xib */,
+				71CF0F1B268077BD00C4E558 /* TerminalTransfOneVC.h */,
+				71CF0F1C268077BD00C4E558 /* TerminalTransfOneVC.m */,
+				71CF0F1D268077BD00C4E558 /* TerminalTransfOneVC.xib */,
+				71CF0F23268077D300C4E558 /* TerminalTransfTwoVC.h */,
+				71CF0F24268077D300C4E558 /* TerminalTransfTwoVC.m */,
+				71CF0F25268077D300C4E558 /* TerminalTransfTwoVC.xib */,
 			);
 			path = "终端管理";
 			sourceTree = "<group>";
@@ -718,6 +765,9 @@
 		711D7C112679AB8F00BAFB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				71CF0F642680913900C4E558 /* MBProgressHUD+SGQRCode.h */,
+				71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */,
+				71CF0F3D2680901300C4E558 /* ScanQR */,
 				228711C2267FA53600AEE15A /* PublicCell */,
 				229215F0267D17DA00EB762F /* WSTableViewTree */,
 				22C1BCFB267A678F00092C1E /* TZImgePickHelper.h */,
@@ -819,6 +869,19 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		71864983268034A9008EED37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71864984268034BF008EED37 /* TransfCell.h */,
+				71864985268034BF008EED37 /* TransfCell.m */,
+				71864986268034BF008EED37 /* TransfCell.xib */,
+				7186498F26804185008EED37 /* TransfCCell.h */,
+				7186499026804185008EED37 /* TransfCCell.m */,
+				7186499126804185008EED37 /* TransfCCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		71C24DAB267C8EB700700C7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +889,19 @@
 				71C24DAD267C8EDA00700C7F /* DataModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		71CF0F3D2680901300C4E558 /* ScanQR */ = {
+			isa = PBXGroup;
+			children = (
+				71CF0F432680901300C4E558 /* SGWebView.h */,
+				71CF0F402680901300C4E558 /* SGWebView.m */,
+				71CF0F422680901300C4E558 /* WBQRCodeVC.h */,
+				71CF0F3F2680901300C4E558 /* WBQRCodeVC.m */,
+				71CF0F412680901300C4E558 /* WCQRCodeVC.h */,
+				71CF0F3E2680901300C4E558 /* WCQRCodeVC.m */,
+			);
+			path = ScanQR;
 			sourceTree = "<group>";
 		};
 		84CF427F585B54273205569D /* Frameworks */ = {
@@ -962,11 +1038,13 @@
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
 				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
+				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
 				228711A8267F998700AEE15A /* RegistReslutVC.xib in Resources */,
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
+				71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
 				22921610267D198000EB762F /* DataSSubCell.xib in Resources */,
@@ -975,11 +1053,14 @@
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
 				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
+				7186499326804185008EED37 /* TransfCCell.xib in Resources */,
 				228711BE267FA39100AEE15A /* TerminalCenterVC.xib in Resources */,
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
+				71864988268034BF008EED37 /* TransfCell.xib in Resources */,
 				228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
+				71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 			);
@@ -1116,6 +1197,7 @@
 				711D7D362679E31200BAFB54 /* ViewController.m in Sources */,
 				22C1BC51267A674200092C1E /* LxResfreshHeader.m in Sources */,
 				22C1BCC6267A677200092C1E /* TXDynamicDelegate.m in Sources */,
+				71CF0F452680901400C4E558 /* WBQRCodeVC.m in Sources */,
 				22F7F86A267BB9280009FDF0 /* HomeOneCCell.m in Sources */,
 				711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */,
 				229215FD267D17DA00EB762F /* WSTableView.m in Sources */,
@@ -1127,6 +1209,7 @@
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
+				71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */,
 				22C1BCD2267A677200092C1E /* UIWindow+JXSafeArea.m in Sources */,
 				711D7CB72679ACB400BAFB54 /* PersonalVC.m in Sources */,
 				22C1BCDD267A677200092C1E /* BANetManagerCache.m in Sources */,
@@ -1137,9 +1220,13 @@
 				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
 				22C1BC41267A670200092C1E /* HttpHelp.m in Sources */,
+				71864987268034BF008EED37 /* TransfCell.m in Sources */,
+				71CF0F462680901400C4E558 /* SGWebView.m in Sources */,
 				711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */,
 				22C1BCCF267A677200092C1E /* UIView+ViewController.m in Sources */,
 				22C1BC7C267A676100092C1E /* Reachability.m in Sources */,
+				71CF0F1E268077BD00C4E558 /* TerminalTransfOneVC.m in Sources */,
+				71CF0F442680901400C4E558 /* WCQRCodeVC.m in Sources */,
 				229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */,
 				711D7CBF2679ACCA00BAFB54 /* MailListVC.m in Sources */,
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
@@ -1162,10 +1249,12 @@
 				22C1BCD0267A677200092C1E /* NSDate+Utilities.m in Sources */,
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
 				22C1BCD6267A677200092C1E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				71CF0F26268077D300C4E558 /* TerminalTransfTwoVC.m in Sources */,
 				22C1BCC7267A677200092C1E /* TXMatchConst.m in Sources */,
 				2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */,
 				22C1BC47267A673C00092C1E /* YZInputView.m in Sources */,
 				711D7BBF2679A0F500BAFB54 /* main.m in Sources */,
+				71864978268031A5008EED37 /* TerminalTransferVC.m in Sources */,
 				22C1BCD3267A677200092C1E /* UIDevice+VKKeychainIDFV.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
@@ -1188,6 +1277,7 @@
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,
 				22C1BC67267A675500092C1E /* SDCollectionViewCell.m in Sources */,
+				7186499226804185008EED37 /* TransfCCell.m in Sources */,
 				22C1BC68267A675500092C1E /* TADotView.m in Sources */,
 				22C1BCC5267A677200092C1E /* TXMatchManager.m in Sources */,
 			);
@@ -1363,13 +1453,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5HRKRDUCX;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Pos/Pos.pch";
 				INFOPLIST_FILE = Pos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pos.cn.Pos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pos.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1382,13 +1474,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5HRKRDUCX;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Pos/Pos.pch";
 				INFOPLIST_FILE = Pos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pos.cn.Pos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pos.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>是否允许此app使用相机用于用户上传个人证件的功能，如身份证，驾驶证等，以及更改用户头像？</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>是否允许app访问相册用于用户上传个人证件的功能，如身份证，驾驶证等，以及更改用户头像？</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
