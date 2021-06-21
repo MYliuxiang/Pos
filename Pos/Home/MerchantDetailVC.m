@@ -117,7 +117,7 @@
     return 0.1;
     
 }
-- (UIView *)tableView:(UITableView *)tableView viewFooterInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     return [UIView new];
 }
