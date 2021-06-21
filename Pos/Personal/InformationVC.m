@@ -75,6 +75,7 @@
     UIImageView *goinimagview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 20, 9.14, 16.26)];
     goinimagview.image = [UIImage imageNamed:@"返回(2)"];
     [cell addSubview:goinimagview];
+    //444
     
     if (indexPath.section ==0) {
         NSArray *sectionarry = @[@"",@"姓名",@"手机号",@"直排人数",@"下排所有人数"];
