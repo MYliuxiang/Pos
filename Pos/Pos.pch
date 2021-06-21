@@ -57,6 +57,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 [View.layer setBorderWidth:(Width)];\
 [View.layer setBorderColor:[Color CGColor]]
 
+/** View 圆角和加边框 */
+#define LXViewBorder(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+
+
 
 //颜色
 #define Color_bg [UIColor colorWithHexString:@"#F6F6F6"]

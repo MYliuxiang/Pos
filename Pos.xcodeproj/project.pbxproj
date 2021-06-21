@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221898DC2680E85700653C2C /* ProductVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 221898DA2680E85700653C2C /* ProductVC.m */; };
+		221898DD2680E85700653C2C /* ProductVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221898DB2680E85700653C2C /* ProductVC.xib */; };
+		221898EF2680EAE000653C2C /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221898ED2680EAE000653C2C /* ProductCell.m */; };
+		221898F02680EAE000653C2C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221898EE2680EAE000653C2C /* ProductCell.xib */; };
+		221898F72680F3C000653C2C /* ProductDoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 221898F52680F3C000653C2C /* ProductDoneVC.m */; };
+		221898F82680F3C000653C2C /* ProductDoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221898F62680F3C000653C2C /* ProductDoneVC.xib */; };
+		221898FF2680F4C300653C2C /* ProductOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221898FD2680F4C300653C2C /* ProductOneCell.m */; };
+		221899002680F4C300653C2C /* ProductOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221898FE2680F4C300653C2C /* ProductOneCell.xib */; };
+		221899072680F4D600653C2C /* ProductTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221899052680F4D600653C2C /* ProductTwoCell.m */; };
+		221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221899062680F4D600653C2C /* ProductTwoCell.xib */; };
 		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
 		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
 		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
@@ -153,6 +163,21 @@
 /* Begin PBXFileReference section */
 		11E0F9872DEA9D9248315F21 /* Pods-Pos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.release.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.release.xcconfig"; sourceTree = "<group>"; };
 		1250E3EEA3D69DDD716B8112 /* Pods-PosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosTests.debug.xcconfig"; path = "Target Support Files/Pods-PosTests/Pods-PosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		221898D92680E85700653C2C /* ProductVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductVC.h; sourceTree = "<group>"; };
+		221898DA2680E85700653C2C /* ProductVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductVC.m; sourceTree = "<group>"; };
+		221898DB2680E85700653C2C /* ProductVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductVC.xib; sourceTree = "<group>"; };
+		221898EC2680EAE000653C2C /* ProductCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		221898ED2680EAE000653C2C /* ProductCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		221898EE2680EAE000653C2C /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		221898F42680F3C000653C2C /* ProductDoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDoneVC.h; sourceTree = "<group>"; };
+		221898F52680F3C000653C2C /* ProductDoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDoneVC.m; sourceTree = "<group>"; };
+		221898F62680F3C000653C2C /* ProductDoneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDoneVC.xib; sourceTree = "<group>"; };
+		221898FC2680F4C300653C2C /* ProductOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductOneCell.h; sourceTree = "<group>"; };
+		221898FD2680F4C300653C2C /* ProductOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductOneCell.m; sourceTree = "<group>"; };
+		221898FE2680F4C300653C2C /* ProductOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductOneCell.xib; sourceTree = "<group>"; };
+		221899042680F4D600653C2C /* ProductTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductTwoCell.h; sourceTree = "<group>"; };
+		221899052680F4D600653C2C /* ProductTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductTwoCell.m; sourceTree = "<group>"; };
+		221899062680F4D600653C2C /* ProductTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTwoCell.xib; sourceTree = "<group>"; };
 		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
@@ -671,6 +696,15 @@
 				2292160C267D198000EB762F /* DataSSubCell.h */,
 				2292160D267D198000EB762F /* DataSSubCell.m */,
 				2292160E267D198000EB762F /* DataSSubCell.xib */,
+				221898EC2680EAE000653C2C /* ProductCell.h */,
+				221898ED2680EAE000653C2C /* ProductCell.m */,
+				221898EE2680EAE000653C2C /* ProductCell.xib */,
+				221898FC2680F4C300653C2C /* ProductOneCell.h */,
+				221898FD2680F4C300653C2C /* ProductOneCell.m */,
+				221898FE2680F4C300653C2C /* ProductOneCell.xib */,
+				221899042680F4D600653C2C /* ProductTwoCell.h */,
+				221899052680F4D600653C2C /* ProductTwoCell.m */,
+				221899062680F4D600653C2C /* ProductTwoCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -815,6 +849,12 @@
 				2292161A267D287000EB762F /* MerchantDetailVC.h */,
 				2292161B267D287000EB762F /* MerchantDetailVC.m */,
 				2292161C267D287000EB762F /* MerchantDetailVC.xib */,
+				221898D92680E85700653C2C /* ProductVC.h */,
+				221898DA2680E85700653C2C /* ProductVC.m */,
+				221898DB2680E85700653C2C /* ProductVC.xib */,
+				221898F42680F3C000653C2C /* ProductDoneVC.h */,
+				221898F52680F3C000653C2C /* ProductDoneVC.m */,
+				221898F62680F3C000653C2C /* ProductDoneVC.xib */,
 				711D7D352679E31200BAFB54 /* ViewController.h */,
 				711D7D342679E31200BAFB54 /* ViewController.m */,
 			);
@@ -1036,6 +1076,8 @@
 			files = (
 				228711A0267F960400AEE15A /* RegistVC.xib in Resources */,
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
+				221899002680F4C300653C2C /* ProductOneCell.xib in Resources */,
+				221898F82680F3C000653C2C /* ProductDoneVC.xib in Resources */,
 				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
@@ -1044,6 +1086,7 @@
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
 				228711A8267F998700AEE15A /* RegistReslutVC.xib in Resources */,
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
+				221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */,
 				71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
@@ -1054,6 +1097,7 @@
 				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
 				7186499326804185008EED37 /* TransfCCell.xib in Resources */,
+				221898DD2680E85700653C2C /* ProductVC.xib in Resources */,
 				228711BE267FA39100AEE15A /* TerminalCenterVC.xib in Resources */,
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
 				71864988268034BF008EED37 /* TransfCell.xib in Resources */,
@@ -1063,6 +1107,7 @@
 				71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
+				221898F02680EAE000653C2C /* ProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1195,6 +1240,7 @@
 				22C1BCDA267A677200092C1E /* UIColor+MyColor.m in Sources */,
 				711D7C1F2679ABF900BAFB54 /* MainTabBarController.m in Sources */,
 				711D7D362679E31200BAFB54 /* ViewController.m in Sources */,
+				221898EF2680EAE000653C2C /* ProductCell.m in Sources */,
 				22C1BC51267A674200092C1E /* LxResfreshHeader.m in Sources */,
 				22C1BCC6267A677200092C1E /* TXDynamicDelegate.m in Sources */,
 				71CF0F452680901400C4E558 /* WBQRCodeVC.m in Sources */,
@@ -1211,6 +1257,7 @@
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
 				71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */,
 				22C1BCD2267A677200092C1E /* UIWindow+JXSafeArea.m in Sources */,
+				221898FF2680F4C300653C2C /* ProductOneCell.m in Sources */,
 				711D7CB72679ACB400BAFB54 /* PersonalVC.m in Sources */,
 				22C1BCDD267A677200092C1E /* BANetManagerCache.m in Sources */,
 				22C1BCF5267A678500092C1E /* HandleTool.m in Sources */,
@@ -1238,6 +1285,7 @@
 				22C1BCDF267A677200092C1E /* UIImage+CompressImage.m in Sources */,
 				22C1BCCB267A677200092C1E /* UIView+Empty.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
+				221898DC2680E85700653C2C /* ProductVC.m in Sources */,
 				228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
@@ -1250,6 +1298,7 @@
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
 				22C1BCD6267A677200092C1E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				71CF0F26268077D300C4E558 /* TerminalTransfTwoVC.m in Sources */,
+				221898F72680F3C000653C2C /* ProductDoneVC.m in Sources */,
 				22C1BCC7267A677200092C1E /* TXMatchConst.m in Sources */,
 				2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */,
 				22C1BC47267A673C00092C1E /* YZInputView.m in Sources */,
@@ -1258,6 +1307,7 @@
 				22C1BCD3267A677200092C1E /* UIDevice+VKKeychainIDFV.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
+				221899072680F4D600653C2C /* ProductTwoCell.m in Sources */,
 				22C1BCD5267A677200092C1E /* UIButton+ImageTitleSpacing.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
