@@ -6,8 +6,8 @@
 //
 
 #import "PersonalVC.h"
-
-@interface PersonalVC ()
+#import "InformationVC.h"
+@interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -17,17 +17,207 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"个人中心";
-
+    [self setUI];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//初始化视图
+-(void)setUI{
+    
+    UIView *headview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 231)];
+    headview.backgroundColor = [UIColor whiteColor];
+    
+    //个人中心点击视图
+    UIView *tapview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 153)];
+    tapview.backgroundColor = [UIColor colorWithHexString:@"FF8901"];
+    tapview.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapgest = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapviewaction)];
+    [tapview addGestureRecognizer:tapgest];
+    [headview addSubview:tapview];
+    
+    //头像
+    self.headimageview = [[UIImageView alloc]initWithFrame:CGRectMake(40, 36, 78, 78)];
+    self.headimageview.backgroundColor = [UIColor grayColor];
+    KViewBorderRadius(self.headimageview, 39, 0.5, [UIColor clearColor]);
+    [tapview addSubview:self.headimageview];
+    
+    //昵称
+    self.namelabel = [[UILabel alloc]initWithFrame:CGRectMake(self.headimageview.right+21, self.headimageview.top+17, 65, 21)];
+    self.namelabel.font = [UIFont systemFontOfSize:16];
+    self.namelabel.text = @"张三跑";
+    self.namelabel.textColor = [UIColor whiteColor];
+    [tapview addSubview:self.namelabel];
+    
+    //手机号码
+    self.iphonelabel = [[UILabel alloc]initWithFrame:CGRectMake(self.namelabel.left, self.namelabel.bottom+9, 120, 17)];
+    self.iphonelabel.font = [UIFont systemFontOfSize:16];
+    self.iphonelabel.textColor = [UIColor colorWithHexString:@"FFC98B"];
+    self.iphonelabel.text = @"13299998888";
+    [tapview addSubview:self.iphonelabel];
+    
+    UIView *yaoqview = [[UIView alloc] init];
+    yaoqview.frame = CGRectMake(self.namelabel.right+2,self.namelabel.top-2,148,24);
+    yaoqview.alpha = 1.0;
+    yaoqview.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
+    yaoqview.layer.cornerRadius = 12;
+    [tapview addSubview:yaoqview];
+    //我的邀请码
+    self.yaoqingmalabel = [[UILabel alloc]initWithFrame:CGRectMake(11, 4, 148-22, 16)];
+    self.yaoqingmalabel.font = [UIFont systemFontOfSize:12];
+    self.yaoqingmalabel.textColor = [UIColor colorWithHexString:@"FF8901"];
+    self.yaoqingmalabel.text = @"我的邀请码：889N0U";
+    [yaoqview addSubview:self.yaoqingmalabel];
+    
+    //进入图标
+    UIImageView *goinimageview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 67, 9.14, 16.26)];
+    goinimageview.image = [UIImage imageNamed:@"返回(1)"];
+    [tapview addSubview:goinimageview];
+    
+    //分润，返现，卡包
+    NSArray *titlearry = @[@"分润",@"返现",@"卡包"];
+    
+    for (int i = 0; i<titlearry.count; i++) {
+        UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(i*((kScreenWidth-70)/3)+70, tapview.bottom+17, 23.29, 19.36)];
+        imageview.image = [UIImage imageNamed:titlearry[i]];
+        [headview addSubview:imageview];
+        
+        //文字
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(imageview.left, imageview.bottom+10, imageview.width+10, 19)];
+        label.font = [UIFont systemFontOfSize:14];
+        label.text = titlearry[i];
+        label.textColor = [UIColor colorWithHexString:@"232323"];
+        [headview addSubview:label];
+        
+        UIButton *buttuon = [UIButton buttonWithType:UIButtonTypeCustom];
+        buttuon.frame = CGRectMake(imageview.left, imageview.top-5, label.width+10, 55);
+        buttuon.tag = 50+i;
+        buttuon.backgroundColor = [UIColor clearColor];
+        [buttuon addTarget:self action:@selector(buttonction:) forControlEvents:UIControlEventTouchUpInside];
+        [headview addSubview:buttuon];
+        
+        if (i==0) {
+            //分割线
+            UIView *fegeview = [[UIView alloc]initWithFrame:CGRectMake(0, label.bottom+12, kScreenWidth, 10)];
+            fegeview.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
+            [headview addSubview:fegeview];
+        }
+    }
+    
+   
+    
+    
+    
+    //表视图
+   self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, [self ykStatusbarHeight], kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+   self.tableView.delegate = self;
+   self.tableView.dataSource = self;
+   self.tableView.bounces = NO;
+   self.tableView.estimatedSectionFooterHeight = 0;
+   self.tableView.estimatedSectionHeaderHeight = 10;
+   self.tableView.backgroundColor = [UIColor clearColor];
+   UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.01)];
+   self.tableView.tableFooterView = footview;
+    self.tableView.tableHeaderView = headview;
+   [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+   [self.view addSubview:self.tableView];
+    
 }
-*/
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section==0) {
+        return 2;
+    }else if (section ==1){
+        return 2;
+    }else{
+        return 5;
+    }
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"JFletTableViewCell"];
+    if (cell==nil) {
+        cell=[[UITableViewCell alloc] init];
+        [cell setRestorationIdentifier:@"TransactionTableViewCell"];
+    }
+   
+    //线条
+    UIView *xtview = [[UIView alloc]initWithFrame:CGRectMake(53, 54-1, kScreenWidth, 1)];
+    xtview.backgroundColor = [UIColor colorWithHexString:@"E9E9E9"];
+    [cell addSubview:xtview];
+    
+    //箭头
+    UIImageView *goinimagview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 17, 9.14, 16.26)];
+    goinimagview.image = [UIImage imageNamed:@"返回(2)"];
+    [cell addSubview:goinimagview];
+    
+    if (indexPath.section ==0) {
+        NSArray *sectionarry = @[@"订单查询",@"地址管理"];
+        cell.imageView.image = [UIImage imageNamed:sectionarry[indexPath.row]];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.textLabel.text = sectionarry[indexPath.row];
+        if (indexPath.row ==1) {
+            xtview.hidden = YES;
+        }
+    }else if (indexPath.section ==1){
+        NSArray *sectionarry = @[@"实名认证",@"企业认证"];
+        cell.imageView.image = [UIImage imageNamed:sectionarry[indexPath.row]];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.textLabel.text = sectionarry[indexPath.row];
+        if (indexPath.row ==1) {
+            xtview.hidden = YES;
+        }
+    }else{
+        NSArray *sectionarry = @[@"消息中心",@"联系客服",@"投诉建议",@"关于我们",@"更多设置"];
+        cell.imageView.image = [UIImage imageNamed:sectionarry[indexPath.row]];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.textLabel.text = sectionarry[indexPath.row];
+        if (indexPath.row ==4) {
+            xtview.hidden = YES;
+        }
+    }
+    
+    return cell;
+}
+
+#pragma mark -UITableView代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 54;
+}
+
+#pragma mark - 列表点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+}
+
+// 添加每组的组头
+- (UIView *)tableView:(nonnull UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+ 
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 10)];
+    view.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
+    return view;
+ }
+
+//点击按钮
+-(void)buttonction:(UIButton *)button{
+    
+    if (button.tag ==50) {
+        NSLog(@"");
+    }else if (button.tag ==51){
+        NSLog(@"51");
+    }else{
+        NSLog(@"52");
+    }
+}
+
+//个人信息页面
+-(void)tapviewaction{
+    InformationVC *VC = [[InformationVC alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+}
 @end

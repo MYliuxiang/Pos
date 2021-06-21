@@ -90,6 +90,8 @@
 		22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCE9267A677C00092C1E /* LxDelayed.m */; };
 		22C1BCF5267A678500092C1E /* HandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCF4267A678500092C1E /* HandleTool.m */; };
 		22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCFC267A679000092C1E /* TZImgePickHelper.m */; };
+		22E33E84268071C40019915A /* UIViewController+YKViewControllerBarHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E33E82268071C40019915A /* UIViewController+YKViewControllerBarHeight.m */; };
+		22E33E8726808EEE0019915A /* InformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E33E8626808EEE0019915A /* InformationVC.m */; };
 		22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F858267BAE620009FDF0 /* HomeOneCell.m */; };
 		22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F859267BAE620009FDF0 /* HomeOneCell.xib */; };
 		22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F860267BB7FD0009FDF0 /* HomeTwoCell.m */; };
@@ -322,6 +324,10 @@
 		22C1BCF4267A678500092C1E /* HandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleTool.m; sourceTree = "<group>"; };
 		22C1BCFB267A678F00092C1E /* TZImgePickHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImgePickHelper.h; sourceTree = "<group>"; };
 		22C1BCFC267A679000092C1E /* TZImgePickHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImgePickHelper.m; sourceTree = "<group>"; };
+		22E33E82268071C40019915A /* UIViewController+YKViewControllerBarHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YKViewControllerBarHeight.m"; sourceTree = "<group>"; };
+		22E33E83268071C40019915A /* UIViewController+YKViewControllerBarHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YKViewControllerBarHeight.h"; sourceTree = "<group>"; };
+		22E33E8526808EEE0019915A /* InformationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationVC.h; sourceTree = "<group>"; };
+		22E33E8626808EEE0019915A /* InformationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationVC.m; sourceTree = "<group>"; };
 		22F7F857267BAE620009FDF0 /* HomeOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeOneCell.h; sourceTree = "<group>"; };
 		22F7F858267BAE620009FDF0 /* HomeOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeOneCell.m; sourceTree = "<group>"; };
 		22F7F859267BAE620009FDF0 /* HomeOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOneCell.xib; sourceTree = "<group>"; };
@@ -806,6 +812,8 @@
 				229215F0267D17DA00EB762F /* WSTableViewTree */,
 				22C1BCFB267A678F00092C1E /* TZImgePickHelper.h */,
 				22C1BCFC267A679000092C1E /* TZImgePickHelper.m */,
+				22E33E83268071C40019915A /* UIViewController+YKViewControllerBarHeight.h */,
+				22E33E82268071C40019915A /* UIViewController+YKViewControllerBarHeight.m */,
 				22C1BCF3267A678500092C1E /* HandleTool.h */,
 				22C1BCF4267A678500092C1E /* HandleTool.m */,
 				22C1BCE7267A677C00092C1E /* LxCustomAlert.h */,
@@ -887,6 +895,8 @@
 				711D7CB42679ACB400BAFB54 /* PersonalVC.h */,
 				711D7CB52679ACB400BAFB54 /* PersonalVC.m */,
 				711D7CB62679ACB400BAFB54 /* PersonalVC.xib */,
+				22E33E8526808EEE0019915A /* InformationVC.h */,
+				22E33E8626808EEE0019915A /* InformationVC.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -1242,6 +1252,7 @@
 				711D7D362679E31200BAFB54 /* ViewController.m in Sources */,
 				221898EF2680EAE000653C2C /* ProductCell.m in Sources */,
 				22C1BC51267A674200092C1E /* LxResfreshHeader.m in Sources */,
+				22E33E84268071C40019915A /* UIViewController+YKViewControllerBarHeight.m in Sources */,
 				22C1BCC6267A677200092C1E /* TXDynamicDelegate.m in Sources */,
 				71CF0F452680901400C4E558 /* WBQRCodeVC.m in Sources */,
 				22F7F86A267BB9280009FDF0 /* HomeOneCCell.m in Sources */,
@@ -1277,6 +1288,7 @@
 				229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */,
 				711D7CBF2679ACCA00BAFB54 /* MailListVC.m in Sources */,
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
+				22E33E8726808EEE0019915A /* InformationVC.m in Sources */,
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
 				228711BD267FA39100AEE15A /* TerminalCenterVC.m in Sources */,
@@ -1503,7 +1515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5HRKRDUCX;
+				DEVELOPMENT_TEAM = 49RMD2WMA5;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Pos/Pos.pch";
 				INFOPLIST_FILE = Pos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1524,7 +1536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5HRKRDUCX;
+				DEVELOPMENT_TEAM = 49RMD2WMA5;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Pos/Pos.pch";
 				INFOPLIST_FILE = Pos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
