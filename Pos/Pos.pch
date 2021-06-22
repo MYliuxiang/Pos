@@ -120,6 +120,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "MJRefresh.h"
 #import "NSDecimalNumber+Addtion.h"
 #import "NSDate+Utilities.h"
+#import "LoginManger.h"
 
 
 
