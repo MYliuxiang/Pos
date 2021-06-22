@@ -7,7 +7,7 @@
 
 #import "InformationVC.h"
 
-@interface InformationVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface InformationVC ()<UITableViewDelegate,UITableViewDataSource,gzhPhotoManagerDelegate>
 
 @end
 
@@ -72,10 +72,16 @@
     [cell addSubview:xtview];
     
     //箭头
-    UIImageView *goinimagview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 20, 9.14, 16.26)];
+    UIImageView *goinimagview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 29, 9.14, 16.26)];
     goinimagview.image = [UIImage imageNamed:@"返回(2)"];
     [cell addSubview:goinimagview];
-    //可以了吧
+    //显示值
+    UILabel *afterlabel = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth-200, 30, 150, 16)];
+    afterlabel.textAlignment = NSTextAlignmentRight;
+    afterlabel.font = [UIFont systemFontOfSize:14];
+    afterlabel.textColor = [UIColor colorWithHexString:@"C4C4C4"];
+    afterlabel.text = @"1111111";
+    [cell addSubview:afterlabel];
     
     if (indexPath.section ==0) {
         NSArray *sectionarry = @[@"",@"姓名",@"手机号",@"直排人数",@"下排所有人数"];
@@ -87,13 +93,15 @@
         KViewBorderRadius(self.headimageview, 39, 0.5, [UIColor clearColor]);
             self.headimageview.backgroundColor = [UIColor grayColor];
         [cell addSubview:self.headimageview];
-            xtview.frame = CGRectMake(53, 101-1, kScreenWidth, 1);
+        xtview.frame = CGRectMake(53, 101-1, kScreenWidth, 1);
+        afterlabel.hidden = YES;
         }
         if (indexPath.row ==4) {
             xtview.hidden = YES;
         }
     }else if (indexPath.section ==1){
-        NSArray *sectionarry = @[@"实名认证",@"企业认证"];
+        goinimagview.hidden = YES;
+        NSArray *sectionarry = @[@"推荐人",@"推荐人手机号"];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.textLabel.text = sectionarry[indexPath.row];
         if (indexPath.row ==1) {
@@ -136,6 +144,19 @@
 #pragma mark - 列表点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section ==0) {
+        if (indexPath.row ==0) {
+            //头像
+            //调用
+            [[gzhPhotoManager instance]selectPhotoWithController:self delegate:self size:CGSizeMake(kScreenWidth, kScreenWidth)];
+        }
+    }
   
+}
+
+-(void)selectedPhotoImage:(UIImage *)image{
+
+    self.headimageview.image = image;
 }
 @end

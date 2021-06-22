@@ -38,6 +38,7 @@
 		2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2292161B267D287000EB762F /* MerchantDetailVC.m */; };
 		2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2292161C267D287000EB762F /* MerchantDetailVC.xib */; };
 		22921624267E43E700EB762F /* LoginManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 22921622267E43E700EB762F /* LoginManger.m */; };
+		22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ACB8732681745800A4E79D /* GzhPhotoManager.m */; };
 		22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */; };
 		22C1BC40267A670200092C1E /* LLUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC3E267A670100092C1E /* LLUrl.m */; };
 		22C1BC41267A670200092C1E /* HttpHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BC3F267A670100092C1E /* HttpHelp.m */; };
@@ -215,6 +216,8 @@
 		2292161C267D287000EB762F /* MerchantDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantDetailVC.xib; sourceTree = "<group>"; };
 		22921622267E43E700EB762F /* LoginManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManger.m; sourceTree = "<group>"; };
 		22921623267E43E700EB762F /* LoginManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManger.h; sourceTree = "<group>"; };
+		22ACB8722681745800A4E79D /* GzhPhotoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GzhPhotoManager.h; sourceTree = "<group>"; };
+		22ACB8732681745800A4E79D /* GzhPhotoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GzhPhotoManager.m; sourceTree = "<group>"; };
 		22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		22C1BC34267A65FB00092C1E /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
 		22C1BC35267A65FB00092C1E /* SwizzlingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzlingDefine.h; sourceTree = "<group>"; };
@@ -834,6 +837,8 @@
 				22C1BC4B267A674200092C1E /* Mjrefresh */,
 				22C1BC45267A673C00092C1E /* YZInputView.h */,
 				22C1BC46267A673C00092C1E /* YZInputView.m */,
+				22ACB8722681745800A4E79D /* GzhPhotoManager.h */,
+				22ACB8732681745800A4E79D /* GzhPhotoManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1299,6 +1304,7 @@
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
 				221898DC2680E85700653C2C /* ProductVC.m in Sources */,
 				228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */,
+				22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,

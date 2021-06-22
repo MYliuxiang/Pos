@@ -10,5 +10,5 @@
 #define LLHeader_h
 #define Application  @"申请邀请码成功"
 #import "UIViewController+YKViewControllerBarHeight.h"
-
+#import "GzhPhotoManager.h"
 #endif /* LLHeader_h */
