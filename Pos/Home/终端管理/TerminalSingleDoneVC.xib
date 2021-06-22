@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TerminalSingleDoneVC">
+            <connections>
+                <outlet property="bottomL" destination="3pF-gn-mo5" id="llR-aE-WAb"/>
+                <outlet property="doneB" destination="522-qS-ZED" id="xxE-0Z-cm4"/>
+                <outlet property="tableView" destination="AX4-CU-5LN" id="JR3-qV-gf7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="AX4-CU-5LN">
+                    <rect key="frame" x="0.0" y="88" width="414" height="716"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Tbv-8U-63n"/>
+                        <outlet property="delegate" destination="-1" id="nbs-U9-eRV"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKg-Dp-1KB">
+                    <rect key="frame" x="0.0" y="804" width="414" height="92"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="号段调拨50台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-gn-mo5">
+                            <rect key="frame" x="12" y="20.5" width="90" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="522-qS-ZED">
+                            <rect key="frame" x="280" y="7" width="120" height="44"/>
+                            <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="sZa-3p-JFG"/>
+                                <constraint firstAttribute="height" constant="44" id="wK0-sZ-gZx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="确认调拨">
+                                <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doneAC:" destination="-1" eventType="touchUpInside" id="cTn-XN-WDq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="3pF-gn-mo5" firstAttribute="leading" secondItem="tKg-Dp-1KB" secondAttribute="leading" constant="12" id="DcA-N4-t5l"/>
+                        <constraint firstItem="522-qS-ZED" firstAttribute="top" secondItem="tKg-Dp-1KB" secondAttribute="top" constant="7" id="DcT-Il-5Ma"/>
+                        <constraint firstAttribute="trailing" secondItem="522-qS-ZED" secondAttribute="trailing" constant="14" id="rDy-Ur-1Rp"/>
+                        <constraint firstItem="522-qS-ZED" firstAttribute="centerY" secondItem="3pF-gn-mo5" secondAttribute="centerY" id="wED-u5-w9k"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tKg-Dp-1KB" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="7aR-UU-Cod"/>
+                <constraint firstItem="tKg-Dp-1KB" firstAttribute="top" secondItem="AX4-CU-5LN" secondAttribute="bottom" id="MvM-oL-AEP"/>
+                <constraint firstAttribute="bottom" secondItem="tKg-Dp-1KB" secondAttribute="bottom" id="Rqk-sY-x8A"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="AX4-CU-5LN" secondAttribute="trailing" id="aDo-vw-9TJ"/>
+                <constraint firstItem="AX4-CU-5LN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ejB-it-s6S"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="AX4-CU-5LN" secondAttribute="bottom" constant="58" id="iqg-Ll-CnB"/>
+                <constraint firstItem="tKg-Dp-1KB" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="rXJ-Ft-6Y9"/>
+                <constraint firstItem="AX4-CU-5LN" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="sEJ-vn-tar"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

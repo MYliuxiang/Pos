@@ -17,6 +17,22 @@
 		221899002680F4C300653C2C /* ProductOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221898FE2680F4C300653C2C /* ProductOneCell.xib */; };
 		221899072680F4D600653C2C /* ProductTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221899052680F4D600653C2C /* ProductTwoCell.m */; };
 		221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221899062680F4D600653C2C /* ProductTwoCell.xib */; };
+		2253CBCF268243AC0015B808 /* LeranVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBCD268243AC0015B808 /* LeranVC.m */; };
+		2253CBD0268243AC0015B808 /* LeranVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CBCE268243AC0015B808 /* LeranVC.xib */; };
+		2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBD5268243C50015B808 /* LeranSubVC.m */; };
+		2253CBD8268243C50015B808 /* LeranSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CBD6268243C50015B808 /* LeranSubVC.xib */; };
+		2253CBE0268243E00015B808 /* LeranOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBDE268243E00015B808 /* LeranOneCell.m */; };
+		2253CBE1268243E00015B808 /* LeranOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CBDF268243E00015B808 /* LeranOneCell.xib */; };
+		2253CBEB268243EF0015B808 /* LearnTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBE9268243EF0015B808 /* LearnTwoCell.m */; };
+		2253CBEC268243EF0015B808 /* LearnTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CBEA268243EF0015B808 /* LearnTwoCell.xib */; };
+		2253CBF3268248F80015B808 /* TerminalSingleDoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBF1268248F80015B808 /* TerminalSingleDoneVC.m */; };
+		2253CBF4268248F80015B808 /* TerminalSingleDoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CBF2268248F80015B808 /* TerminalSingleDoneVC.xib */; };
+		2253CC0626824A200015B808 /* LxAccessoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CC0426824A200015B808 /* LxAccessoryCell.m */; };
+		2253CC0726824A200015B808 /* LxAccessoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC0526824A200015B808 /* LxAccessoryCell.xib */; };
+		2253CC0E26824E760015B808 /* ChooseAgentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CC0C26824E760015B808 /* ChooseAgentVC.m */; };
+		2253CC0F26824E760015B808 /* ChooseAgentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC0D26824E760015B808 /* ChooseAgentVC.xib */; };
+		2253CC1626824EE40015B808 /* AgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CC1426824EE40015B808 /* AgentCell.m */; };
+		2253CC1726824EE40015B808 /* AgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC1526824EE40015B808 /* AgentCell.xib */; };
 		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
 		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
 		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
@@ -201,6 +217,30 @@
 		221899042680F4D600653C2C /* ProductTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductTwoCell.h; sourceTree = "<group>"; };
 		221899052680F4D600653C2C /* ProductTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductTwoCell.m; sourceTree = "<group>"; };
 		221899062680F4D600653C2C /* ProductTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTwoCell.xib; sourceTree = "<group>"; };
+		2253CBCC268243AC0015B808 /* LeranVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeranVC.h; sourceTree = "<group>"; };
+		2253CBCD268243AC0015B808 /* LeranVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeranVC.m; sourceTree = "<group>"; };
+		2253CBCE268243AC0015B808 /* LeranVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeranVC.xib; sourceTree = "<group>"; };
+		2253CBD4268243C50015B808 /* LeranSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeranSubVC.h; sourceTree = "<group>"; };
+		2253CBD5268243C50015B808 /* LeranSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeranSubVC.m; sourceTree = "<group>"; };
+		2253CBD6268243C50015B808 /* LeranSubVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeranSubVC.xib; sourceTree = "<group>"; };
+		2253CBDD268243E00015B808 /* LeranOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeranOneCell.h; sourceTree = "<group>"; };
+		2253CBDE268243E00015B808 /* LeranOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeranOneCell.m; sourceTree = "<group>"; };
+		2253CBDF268243E00015B808 /* LeranOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeranOneCell.xib; sourceTree = "<group>"; };
+		2253CBE8268243EF0015B808 /* LearnTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnTwoCell.h; sourceTree = "<group>"; };
+		2253CBE9268243EF0015B808 /* LearnTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnTwoCell.m; sourceTree = "<group>"; };
+		2253CBEA268243EF0015B808 /* LearnTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LearnTwoCell.xib; sourceTree = "<group>"; };
+		2253CBF0268248F80015B808 /* TerminalSingleDoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalSingleDoneVC.h; sourceTree = "<group>"; };
+		2253CBF1268248F80015B808 /* TerminalSingleDoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalSingleDoneVC.m; sourceTree = "<group>"; };
+		2253CBF2268248F80015B808 /* TerminalSingleDoneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalSingleDoneVC.xib; sourceTree = "<group>"; };
+		2253CC0326824A200015B808 /* LxAccessoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxAccessoryCell.h; sourceTree = "<group>"; };
+		2253CC0426824A200015B808 /* LxAccessoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LxAccessoryCell.m; sourceTree = "<group>"; };
+		2253CC0526824A200015B808 /* LxAccessoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LxAccessoryCell.xib; sourceTree = "<group>"; };
+		2253CC0B26824E760015B808 /* ChooseAgentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseAgentVC.h; sourceTree = "<group>"; };
+		2253CC0C26824E760015B808 /* ChooseAgentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseAgentVC.m; sourceTree = "<group>"; };
+		2253CC0D26824E760015B808 /* ChooseAgentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseAgentVC.xib; sourceTree = "<group>"; };
+		2253CC1326824EE40015B808 /* AgentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgentCell.h; sourceTree = "<group>"; };
+		2253CC1426824EE40015B808 /* AgentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgentCell.m; sourceTree = "<group>"; };
+		2253CC1526824EE40015B808 /* AgentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgentCell.xib; sourceTree = "<group>"; };
 		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
@@ -502,12 +542,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2253CBDC268243C90015B808 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2253CBDD268243E00015B808 /* LeranOneCell.h */,
+				2253CBDE268243E00015B808 /* LeranOneCell.m */,
+				2253CBDF268243E00015B808 /* LeranOneCell.xib */,
+				2253CBE8268243EF0015B808 /* LearnTwoCell.h */,
+				2253CBE9268243EF0015B808 /* LearnTwoCell.m */,
+				2253CBEA268243EF0015B808 /* LearnTwoCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		228711C2267FA53600AEE15A /* PublicCell */ = {
 			isa = PBXGroup;
 			children = (
 				228711C3267FA57000AEE15A /* LxSubTitleCell.h */,
 				228711C4267FA57000AEE15A /* LxSubTitleCell.m */,
 				228711C5267FA57000AEE15A /* LxSubTitleCell.xib */,
+				2253CC0326824A200015B808 /* LxAccessoryCell.h */,
+				2253CC0426824A200015B808 /* LxAccessoryCell.m */,
+				2253CC0526824A200015B808 /* LxAccessoryCell.xib */,
 			);
 			path = PublicCell;
 			sourceTree = "<group>";
@@ -554,6 +610,12 @@
 				71CF0F23268077D300C4E558 /* TerminalTransfTwoVC.h */,
 				71CF0F24268077D300C4E558 /* TerminalTransfTwoVC.m */,
 				71CF0F25268077D300C4E558 /* TerminalTransfTwoVC.xib */,
+				2253CBF0268248F80015B808 /* TerminalSingleDoneVC.h */,
+				2253CBF1268248F80015B808 /* TerminalSingleDoneVC.m */,
+				2253CBF2268248F80015B808 /* TerminalSingleDoneVC.xib */,
+				2253CC0B26824E760015B808 /* ChooseAgentVC.h */,
+				2253CC0C26824E760015B808 /* ChooseAgentVC.m */,
+				2253CC0D26824E760015B808 /* ChooseAgentVC.xib */,
 			);
 			path = "终端管理";
 			sourceTree = "<group>";
@@ -584,6 +646,13 @@
 		2292162B267E49E200EB762F /* 学习讲堂 */ = {
 			isa = PBXGroup;
 			children = (
+				2253CBDC268243C90015B808 /* Views */,
+				2253CBCC268243AC0015B808 /* LeranVC.h */,
+				2253CBCD268243AC0015B808 /* LeranVC.m */,
+				2253CBCE268243AC0015B808 /* LeranVC.xib */,
+				2253CBD4268243C50015B808 /* LeranSubVC.h */,
+				2253CBD5268243C50015B808 /* LeranSubVC.m */,
+				2253CBD6268243C50015B808 /* LeranSubVC.xib */,
 			);
 			path = "学习讲堂";
 			sourceTree = "<group>";
@@ -1035,6 +1104,9 @@
 				7186498F26804185008EED37 /* TransfCCell.h */,
 				7186499026804185008EED37 /* TransfCCell.m */,
 				7186499126804185008EED37 /* TransfCCell.xib */,
+				2253CC1326824EE40015B808 /* AgentCell.h */,
+				2253CC1426824EE40015B808 /* AgentCell.m */,
+				2253CC1526824EE40015B808 /* AgentCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1200,6 +1272,7 @@
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
 				710272322681D45100D5B62A /* PosterVC.xib in Resources */,
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
+				2253CBE1268243E00015B808 /* LeranOneCell.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
 				710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
@@ -1208,16 +1281,22 @@
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
 				221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */,
 				71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */,
+				2253CC0726824A200015B808 /* LxAccessoryCell.xib in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
 				22921610267D198000EB762F /* DataSSubCell.xib in Resources */,
 				711D7C202679ABF900BAFB54 /* BaseViewController.xib in Resources */,
+				2253CBF4268248F80015B808 /* TerminalSingleDoneVC.xib in Resources */,
+				2253CBD0268243AC0015B808 /* LeranVC.xib in Resources */,
 				7102723A2681D4A500D5B62A /* PosterSubVC.xib in Resources */,
+				2253CBD8268243C50015B808 /* LeranSubVC.xib in Resources */,
+				2253CC0F26824E760015B808 /* ChooseAgentVC.xib in Resources */,
 				22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */,
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
 				7102725C2681E2DF00D5B62A /* PosterCCell.xib in Resources */,
 				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
+				2253CC1726824EE40015B808 /* AgentCell.xib in Resources */,
 				7186499326804185008EED37 /* TransfCCell.xib in Resources */,
 				221898DD2680E85700653C2C /* ProductVC.xib in Resources */,
 				710271FD2681CA1200D5B62A /* InvitationVC.xib in Resources */,
@@ -1228,6 +1307,7 @@
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
 				71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */,
+				2253CBEC268243EF0015B808 /* LearnTwoCell.xib in Resources */,
 				710272642681E48000D5B62A /* ToFaceVC.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
@@ -1390,6 +1470,7 @@
 				22C1BC65267A675500092C1E /* SDCycleScrollView.m in Sources */,
 				22C1BC50267A674200092C1E /* LxRefreshFooter.m in Sources */,
 				228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */,
+				2253CC0E26824E760015B808 /* ChooseAgentVC.m in Sources */,
 				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
 				22C1BC41267A670200092C1E /* HttpHelp.m in Sources */,
@@ -1405,6 +1486,7 @@
 				229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */,
 				711D7CBF2679ACCA00BAFB54 /* MailListVC.m in Sources */,
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
+				2253CBEB268243EF0015B808 /* LearnTwoCell.m in Sources */,
 				22E33E8726808EEE0019915A /* InformationVC.m in Sources */,
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
@@ -1412,6 +1494,7 @@
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				22ACB87A268181B900A4E79D /* ComplaintVC.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
+				2253CBF3268248F80015B808 /* TerminalSingleDoneVC.m in Sources */,
 				22C1BCDF267A677200092C1E /* UIImage+CompressImage.m in Sources */,
 				22C1BCCB267A677200092C1E /* UIView+Empty.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
@@ -1422,6 +1505,7 @@
 				22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
+				2253CBCF268243AC0015B808 /* LeranVC.m in Sources */,
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,
 				2292160F267D198000EB762F /* DataSSubCell.m in Sources */,
 				710272632681E48000D5B62A /* ToFaceVC.m in Sources */,
@@ -1443,6 +1527,8 @@
 				7102724D2681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m in Sources */,
 				22ACB877268177D600A4E79D /* AboutusVCViewController.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
+				2253CBE0268243E00015B808 /* LeranOneCell.m in Sources */,
+				2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
 				221899072680F4D600653C2C /* ProductTwoCell.m in Sources */,
 				22C1BCD5267A677200092C1E /* UIButton+ImageTitleSpacing.m in Sources */,
@@ -1454,6 +1540,7 @@
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
 				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
 				710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */,
+				2253CC1626824EE40015B808 /* AgentCell.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
@@ -1466,6 +1553,7 @@
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,
+				2253CC0626824A200015B808 /* LxAccessoryCell.m in Sources */,
 				22C1BC67267A675500092C1E /* SDCollectionViewCell.m in Sources */,
 				7186499226804185008EED37 /* TransfCCell.m in Sources */,
 				22C1BC68267A675500092C1E /* TADotView.m in Sources */,

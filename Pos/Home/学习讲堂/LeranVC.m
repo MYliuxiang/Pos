@@ -1,22 +1,21 @@
 //
-//  PosterVC.m
+//  LeranVC.m
 //  Pos
 //
-//  Created by tenvine on 2021/6/22.
+//  Created by 刘翔 on 2021/6/23.
 //
 
-#import "PosterVC.h"
-#import "PosterSubVC.h"
+#import "LeranVC.h"
+#import "LeranSubVC.h"
 
-@interface PosterVC ()<JXCategoryListContainerViewDelegate,JXCategoryViewDelegate>
+@interface LeranVC ()<JXCategoryListContainerViewDelegate,JXCategoryViewDelegate>
 @property (nonatomic, strong) JXCategoryListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleBackgroundView *categoryView;
 @property (nonatomic, strong) NSArray *titles;
 
-
 @end
 
-@implementation PosterVC
+@implementation LeranVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,28 +36,23 @@
     }];
     
 
-    self.titles = @[@"品牌1",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2"];
+    self.titles = @[@"操作指南",@"团队组建"];
     self.categoryView.titles = self.titles;
     self.categoryView.titleFont = [UIFont boldSystemFontOfSize:16];
     self.categoryView.titleSelectedFont = [UIFont boldSystemFontOfSize:16];
     self.categoryView.titleColor = [UIColor colorWithHexString:@"#FF8901"];
     self.categoryView.titleSelectedColor = [UIColor whiteColor];
-    self.categoryView.contentEdgeInsetLeft = 15;
-    self.categoryView.contentEdgeInsetRight = 15;
+//    self.categoryView.contentEdgeInsetLeft = 15;
+//    self.categoryView.contentEdgeInsetRight = 15;
     self.categoryView.cellWidthIncrement = 56;
-    self.categoryView.averageCellSpacingEnabled = NO;
+    self.categoryView.averageCellSpacingEnabled = YES;
     
     self.categoryView.normalBackgroundColor = [UIColor whiteColor];
     self.categoryView.selectedBackgroundColor = [UIColor colorWithHexString:@"#FF8901"];
     self.categoryView.backgroundHeight = 35;
     self.categoryView.backgroundCornerRadius = 17.5;
     self.categoryView.cellSpacing = 10;
-//    self.categoryView.
-
-    
 }
-
-
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -120,7 +114,7 @@
 
 // 返回各个列表菜单下的实例，该实例需要遵守并实现 <JXCategoryListContentViewDelegate> 协议
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
-    PosterSubVC *list = [[PosterSubVC alloc] init];
+    LeranSubVC *list = [[LeranSubVC alloc] init];
     return list;
 }
 

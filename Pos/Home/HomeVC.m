@@ -11,6 +11,8 @@
 #import "DataShowVC.h"
 #import "MerchantDetailVC.h"
 #import "BusinessVC.h"
+#import "TerminalManagerVC.h"
+#import "LeranVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -106,6 +108,8 @@
         case 3:
         {
             //学习讲堂
+            LeranVC *vc = [LeranVC new];
+            [self.navigationController pushViewController:vc animated:YES];
             
             
         }

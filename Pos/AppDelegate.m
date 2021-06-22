@@ -26,9 +26,9 @@
     
     
     
-//    self.window.rootViewController = [[MainTabBarController alloc] init];
+    self.window.rootViewController = [[MainTabBarController alloc] init];
     
-    self.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LoginVC new]];
+//    self.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LoginVC new]];
 
     
     [self.window makeKeyAndVisible];

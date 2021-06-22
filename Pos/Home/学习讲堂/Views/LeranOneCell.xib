@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="201" id="KGk-i7-Jjw" customClass="LeranOneCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-ZD-UBA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qcz-ZD-UBA" secondAttribute="height" multiplier="428:174" id="TaC-dd-BgA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="文本名称介绍视频名称介绍，视频名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn8-8d-GFU">
+                        <rect key="frame" x="10" y="140" width="300" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2021-09-12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVH-vt-hr9">
+                        <rect key="frame" x="10" y="169.5" width="300" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zVH-vt-hr9" firstAttribute="trailing" secondItem="qn8-8d-GFU" secondAttribute="trailing" id="Hcy-Lx-ZWK"/>
+                    <constraint firstItem="zVH-vt-hr9" firstAttribute="leading" secondItem="qn8-8d-GFU" secondAttribute="leading" id="Itb-53-cZY"/>
+                    <constraint firstItem="zVH-vt-hr9" firstAttribute="top" secondItem="qn8-8d-GFU" secondAttribute="bottom" constant="10" id="S3n-FG-lzo"/>
+                    <constraint firstItem="qn8-8d-GFU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Sgz-FL-g7u"/>
+                    <constraint firstAttribute="bottom" secondItem="zVH-vt-hr9" secondAttribute="bottom" constant="10" id="XBT-6Z-NZz"/>
+                    <constraint firstAttribute="right" secondItem="qn8-8d-GFU" secondAttribute="right" constant="10" id="d2p-c7-3fv"/>
+                    <constraint firstItem="qcz-ZD-UBA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dJ3-JK-tdF"/>
+                    <constraint firstItem="qn8-8d-GFU" firstAttribute="top" secondItem="qcz-ZD-UBA" secondAttribute="bottom" constant="10" id="fNW-8B-LVX"/>
+                    <constraint firstItem="qcz-ZD-UBA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kdB-ke-GVB"/>
+                    <constraint firstAttribute="trailing" secondItem="qcz-ZD-UBA" secondAttribute="trailing" id="wE6-Qf-c55"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="115.94202898550725" y="126.22767857142857"/>
+        </tableViewCell>
+    </objects>
+</document>
