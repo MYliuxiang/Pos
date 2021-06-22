@@ -15,6 +15,10 @@
 @property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
 @property (nonatomic, strong) UIView *bottomView;
 @property (nonatomic, assign) int pageNum;
+@property (nonatomic, copy) NSString *rightTitle;
+@property (nonatomic, strong) UIColor *rightColor;
+@property (nonatomic, strong) NSString *rightImageName;
+
 
 @property (nonatomic, strong)LxEmptyView *nodataView;
 

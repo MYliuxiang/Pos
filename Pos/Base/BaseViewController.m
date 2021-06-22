@@ -18,7 +18,7 @@
 
 
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
-
+@property (nonatomic, strong) UIButton *rightB;
 @end
 
 @implementation BaseViewController
@@ -103,6 +103,36 @@
     if (self.navigationController.childViewControllers.count != 1) {
         [self.customNavBar wr_setLeftButtonWithImage:[UIImage imageNamed:@"组 30"]];
     }
+    
+    //右边按钮
+    self.rightB = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.rightB.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    [self.rightB addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavBar addSubview:self.rightB];
+    [self.rightB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.customNavBar).offset(-20);
+        make.height.mas_equalTo(44);
+        make.bottom.equalTo(self.customNavBar).offset(-1);
+    }];
+    
+    
+}
+
+- (void)setRightTitle:(NSString *)rightTitle
+{
+    _rightTitle = rightTitle;
+    [self.rightB setTitle:rightTitle forState:UIControlStateNormal];
+}
+
+- (void)setRightColor:(UIColor *)rightColor
+{
+    _rightColor = rightColor;
+    [self.rightB setTitleColor:rightColor forState:UIControlStateNormal];
+}
+
+- (void)setRightImageName:(NSString *)rightImageName{
+    _rightImageName = rightImageName;
+    [self.rightB setImage:[UIImage imageNamed:rightImageName] forState:UIControlStateNormal];
 }
 
 - (WRCustomNavigationBar *)customNavBar

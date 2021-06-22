@@ -10,6 +10,7 @@
 #import "HomeTwoCCell.h"
 #import "DataShowVC.h"
 #import "MerchantDetailVC.h"
+#import "BusinessVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -96,7 +97,8 @@
         case 2:
         {
             //业务拓展
-            
+            BusinessVC *vc = [BusinessVC new];
+            [self.navigationController pushViewController:vc animated:YES];
             
         }
             break;

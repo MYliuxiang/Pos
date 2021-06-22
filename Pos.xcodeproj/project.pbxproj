@@ -106,6 +106,23 @@
 		22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F871267BB93B0009FDF0 /* HomeTwoCCell.xib */; };
 		299E599066FA613ACF456276 /* Pods_PosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CAFA14D96261860D459735 /* Pods_PosTests.framework */; };
 		56EDAF8983D68EFD8FA4615B /* Pods_Pos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766792BAAAA57537E38FAE0F /* Pods_Pos.framework */; };
+		710271EB2681C71D00D5B62A /* BusinessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710271E92681C71D00D5B62A /* BusinessVC.m */; };
+		710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710271EA2681C71D00D5B62A /* BusinessVC.xib */; };
+		710271F42681C7B200D5B62A /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 710271F22681C7B200D5B62A /* BusinessCell.m */; };
+		710271F52681C7B200D5B62A /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710271F32681C7B200D5B62A /* BusinessCell.xib */; };
+		710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710271FA2681CA1200D5B62A /* InvitationVC.m */; };
+		710271FD2681CA1200D5B62A /* InvitationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710271FB2681CA1200D5B62A /* InvitationVC.xib */; };
+		710272312681D45100D5B62A /* PosterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7102722F2681D45100D5B62A /* PosterVC.m */; };
+		710272322681D45100D5B62A /* PosterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710272302681D45100D5B62A /* PosterVC.xib */; };
+		710272392681D4A500D5B62A /* PosterSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710272372681D4A500D5B62A /* PosterSubVC.m */; };
+		7102723A2681D4A500D5B62A /* PosterSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710272382681D4A500D5B62A /* PosterSubVC.xib */; };
+		7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 710272462681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m */; };
+		7102724D2681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 710272472681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m */; };
+		7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 710272492681E05E00D5B62A /* JXCategoryTitleBackgroundView.m */; };
+		7102725B2681E2DF00D5B62A /* PosterCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 710272592681E2DF00D5B62A /* PosterCCell.m */; };
+		7102725C2681E2DF00D5B62A /* PosterCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7102725A2681E2DF00D5B62A /* PosterCCell.xib */; };
+		710272632681E48000D5B62A /* ToFaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710272612681E48000D5B62A /* ToFaceVC.m */; };
+		710272642681E48000D5B62A /* ToFaceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710272622681E48000D5B62A /* ToFaceVC.xib */; };
 		711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7BAD2679A0F400BAFB54 /* AppDelegate.m */; };
 		711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711D7BB52679A0F400BAFB54 /* Main.storyboard */; };
 		711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711D7BB82679A0F500BAFB54 /* Assets.xcassets */; };
@@ -355,6 +372,33 @@
 		267F1CB1320880F79E129712 /* Pods-Pos-PosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos-PosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D3DBBFA1E611944D36CC3EE /* Pods-PosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosTests.release.xcconfig"; path = "Target Support Files/Pods-PosTests/Pods-PosTests.release.xcconfig"; sourceTree = "<group>"; };
 		45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos_PosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		710271E82681C71D00D5B62A /* BusinessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BusinessVC.h; path = "Pos/Home/终端管理/BusinessVC.h"; sourceTree = SOURCE_ROOT; };
+		710271E92681C71D00D5B62A /* BusinessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BusinessVC.m; path = "Pos/Home/终端管理/BusinessVC.m"; sourceTree = SOURCE_ROOT; };
+		710271EA2681C71D00D5B62A /* BusinessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BusinessVC.xib; path = "Pos/Home/终端管理/BusinessVC.xib"; sourceTree = SOURCE_ROOT; };
+		710271F12681C7B200D5B62A /* BusinessCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
+		710271F22681C7B200D5B62A /* BusinessCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
+		710271F32681C7B200D5B62A /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
+		710271F92681CA1200D5B62A /* InvitationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvitationVC.h; sourceTree = "<group>"; };
+		710271FA2681CA1200D5B62A /* InvitationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvitationVC.m; sourceTree = "<group>"; };
+		710271FB2681CA1200D5B62A /* InvitationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvitationVC.xib; sourceTree = "<group>"; };
+		7102722E2681D45100D5B62A /* PosterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterVC.h; sourceTree = "<group>"; };
+		7102722F2681D45100D5B62A /* PosterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterVC.m; sourceTree = "<group>"; };
+		710272302681D45100D5B62A /* PosterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterVC.xib; sourceTree = "<group>"; };
+		710272362681D4A500D5B62A /* PosterSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterSubVC.h; sourceTree = "<group>"; };
+		710272372681D4A500D5B62A /* PosterSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterSubVC.m; sourceTree = "<group>"; };
+		710272382681D4A500D5B62A /* PosterSubVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterSubVC.xib; sourceTree = "<group>"; };
+		710272432681E05E00D5B62A /* JXCategoryTitleBackgroundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryTitleBackgroundCell.h; sourceTree = "<group>"; };
+		710272442681E05E00D5B62A /* JXCategoryTitleBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryTitleBackgroundView.h; sourceTree = "<group>"; };
+		710272462681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleBackgroundCellModel.m; sourceTree = "<group>"; };
+		710272472681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleBackgroundCell.m; sourceTree = "<group>"; };
+		710272492681E05E00D5B62A /* JXCategoryTitleBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleBackgroundView.m; sourceTree = "<group>"; };
+		7102724A2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryTitleBackgroundCellModel.h; sourceTree = "<group>"; };
+		710272582681E2DF00D5B62A /* PosterCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterCCell.h; sourceTree = "<group>"; };
+		710272592681E2DF00D5B62A /* PosterCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterCCell.m; sourceTree = "<group>"; };
+		7102725A2681E2DF00D5B62A /* PosterCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCCell.xib; sourceTree = "<group>"; };
+		710272602681E48000D5B62A /* ToFaceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToFaceVC.h; sourceTree = "<group>"; };
+		710272612681E48000D5B62A /* ToFaceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToFaceVC.m; sourceTree = "<group>"; };
+		710272622681E48000D5B62A /* ToFaceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToFaceVC.xib; sourceTree = "<group>"; };
 		711D7BA92679A0F400BAFB54 /* Pos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		711D7BAC2679A0F400BAFB54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		711D7BAD2679A0F400BAFB54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -517,6 +561,22 @@
 		2292162A267E49DC00EB762F /* 业务拓展 */ = {
 			isa = PBXGroup;
 			children = (
+				710271E82681C71D00D5B62A /* BusinessVC.h */,
+				710271E92681C71D00D5B62A /* BusinessVC.m */,
+				710271EA2681C71D00D5B62A /* BusinessVC.xib */,
+				710271F92681CA1200D5B62A /* InvitationVC.h */,
+				710271FA2681CA1200D5B62A /* InvitationVC.m */,
+				710271FB2681CA1200D5B62A /* InvitationVC.xib */,
+				7102722E2681D45100D5B62A /* PosterVC.h */,
+				7102722F2681D45100D5B62A /* PosterVC.m */,
+				710272302681D45100D5B62A /* PosterVC.xib */,
+				710272362681D4A500D5B62A /* PosterSubVC.h */,
+				710272372681D4A500D5B62A /* PosterSubVC.m */,
+				710272382681D4A500D5B62A /* PosterSubVC.xib */,
+				710272602681E48000D5B62A /* ToFaceVC.h */,
+				710272612681E48000D5B62A /* ToFaceVC.m */,
+				710272622681E48000D5B62A /* ToFaceVC.xib */,
+				710271F02681C79C00D5B62A /* Views */,
 			);
 			path = "业务拓展";
 			sourceTree = "<group>";
@@ -727,6 +787,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		710271F02681C79C00D5B62A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				710271F12681C7B200D5B62A /* BusinessCell.h */,
+				710271F22681C7B200D5B62A /* BusinessCell.m */,
+				710271F32681C7B200D5B62A /* BusinessCell.xib */,
+				710272582681E2DF00D5B62A /* PosterCCell.h */,
+				710272592681E2DF00D5B62A /* PosterCCell.m */,
+				7102725A2681E2DF00D5B62A /* PosterCCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		710272422681E05E00D5B62A /* TitleBackground */ = {
+			isa = PBXGroup;
+			children = (
+				710272432681E05E00D5B62A /* JXCategoryTitleBackgroundCell.h */,
+				710272472681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m */,
+				7102724A2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.h */,
+				710272462681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m */,
+				710272442681E05E00D5B62A /* JXCategoryTitleBackgroundView.h */,
+				710272492681E05E00D5B62A /* JXCategoryTitleBackgroundView.m */,
+			);
+			path = TitleBackground;
+			sourceTree = "<group>";
+		};
 		711D7BA02679A0F400BAFB54 = {
 			isa = PBXGroup;
 			children = (
@@ -817,6 +903,7 @@
 		711D7C112679AB8F00BAFB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				710272422681E05E00D5B62A /* TitleBackground */,
 				71CF0F642680913900C4E558 /* MBProgressHUD+SGQRCode.h */,
 				71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */,
 				71CF0F3D2680901300C4E558 /* ScanQR */,
@@ -1109,9 +1196,12 @@
 				221899002680F4C300653C2C /* ProductOneCell.xib in Resources */,
 				221898F82680F3C000653C2C /* ProductDoneVC.xib in Resources */,
 				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
+				710271F52681C7B200D5B62A /* BusinessCell.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
+				710272322681D45100D5B62A /* PosterVC.xib in Resources */,
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
+				710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
 				228711A8267F998700AEE15A /* RegistReslutVC.xib in Resources */,
@@ -1122,12 +1212,15 @@
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
 				22921610267D198000EB762F /* DataSSubCell.xib in Resources */,
 				711D7C202679ABF900BAFB54 /* BaseViewController.xib in Resources */,
+				7102723A2681D4A500D5B62A /* PosterSubVC.xib in Resources */,
 				22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */,
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
+				7102725C2681E2DF00D5B62A /* PosterCCell.xib in Resources */,
 				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
 				7186499326804185008EED37 /* TransfCCell.xib in Resources */,
 				221898DD2680E85700653C2C /* ProductVC.xib in Resources */,
+				710271FD2681CA1200D5B62A /* InvitationVC.xib in Resources */,
 				228711BE267FA39100AEE15A /* TerminalCenterVC.xib in Resources */,
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
 				71864988268034BF008EED37 /* TransfCell.xib in Resources */,
@@ -1135,6 +1228,7 @@
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
 				71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */,
+				710272642681E48000D5B62A /* ToFaceVC.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 				221898F02680EAE000653C2C /* ProductCell.xib in Resources */,
@@ -1281,6 +1375,7 @@
 				22C1BCD1267A677200092C1E /* NSString+Handel.m in Sources */,
 				229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */,
 				22C1BCDB267A677200092C1E /* NSDecimalNumber+Addtion.m in Sources */,
+				710271EB2681C71D00D5B62A /* BusinessVC.m in Sources */,
 				22F7F872267BB93B0009FDF0 /* HomeTwoCCell.m in Sources */,
 				22C1BCCD267A677200092C1E /* LYEmptyView.m in Sources */,
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
@@ -1303,6 +1398,7 @@
 				711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */,
 				22C1BCCF267A677200092C1E /* UIView+ViewController.m in Sources */,
 				22C1BC7C267A676100092C1E /* Reachability.m in Sources */,
+				710272312681D45100D5B62A /* PosterVC.m in Sources */,
 				71CF0F1E268077BD00C4E558 /* TerminalTransfOneVC.m in Sources */,
 				22ACB87D2681889200A4E79D /* PhoneCell.m in Sources */,
 				71CF0F442680901400C4E558 /* WCQRCodeVC.m in Sources */,
@@ -1320,14 +1416,18 @@
 				22C1BCCB267A677200092C1E /* UIView+Empty.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
 				221898DC2680E85700653C2C /* ProductVC.m in Sources */,
+				710271F42681C7B200D5B62A /* BusinessCell.m in Sources */,
+				7102725B2681E2DF00D5B62A /* PosterCCell.m in Sources */,
 				228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */,
 				22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,
 				2292160F267D198000EB762F /* DataSSubCell.m in Sources */,
+				710272632681E48000D5B62A /* ToFaceVC.m in Sources */,
 				22C1BC6B267A675500092C1E /* TAAbstractDotView.m in Sources */,
 				22C1BC6A267A675500092C1E /* TAAnimatedDotView.m in Sources */,
+				710272392681D4A500D5B62A /* PosterSubVC.m in Sources */,
 				22C1BC74267A675A00092C1E /* WRNavigationBar.m in Sources */,
 				22C1BCD0267A677200092C1E /* NSDate+Utilities.m in Sources */,
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
@@ -1340,16 +1440,20 @@
 				711D7BBF2679A0F500BAFB54 /* main.m in Sources */,
 				71864978268031A5008EED37 /* TerminalTransferVC.m in Sources */,
 				22C1BCD3267A677200092C1E /* UIDevice+VKKeychainIDFV.m in Sources */,
+				7102724D2681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m in Sources */,
 				22ACB877268177D600A4E79D /* AboutusVCViewController.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
 				221899072680F4D600653C2C /* ProductTwoCell.m in Sources */,
 				22C1BCD5267A677200092C1E /* UIButton+ImageTitleSpacing.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
+				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
 				22921624267E43E700EB762F /* LoginManger.m in Sources */,
 				22C1BCD9267A677200092C1E /* UISwitch+Custom.m in Sources */,
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
+				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
+				710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
