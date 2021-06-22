@@ -7,6 +7,8 @@
 
 #import "PersonalVC.h"
 #import "InformationVC.h"
+#import "AboutusVCViewController.h"
+#import "ComplaintVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -192,7 +194,37 @@
 #pragma mark - 列表点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  
+    if (indexPath.section ==0) {
+        if (indexPath.row==0) {
+            //订单查询
+        }else{
+           //地址管理
+        }
+    }else if (indexPath.section==1) {
+        if (indexPath.row==0) {
+            //实名认证
+        }else{
+            //企业认证
+        }
+    }else {
+        if (indexPath.row ==0) {
+            //消息中心
+        }else if (indexPath.row==1){
+            //联系客服
+        }else if (indexPath.row==2){
+            //投诉建议
+            ComplaintVC *vc = [[ComplaintVC alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row==3){
+        //关于我们
+        AboutusVCViewController *vc = [[AboutusVCViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+            
+        }else{
+            //更多设置
+        }
+        
+    }
 }
 
 // 添加每组的组头
