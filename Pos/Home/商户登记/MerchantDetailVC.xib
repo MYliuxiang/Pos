@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,8 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MerchantDetailVC">
             <connections>
-                <outlet property="headerB" destination="OfP-Xy-Gi8" id="7X3-Rg-dls"/>
+                <outlet property="headerB" destination="OfP-Xy-Gi8" id="057-Re-lEz"/>
                 <outlet property="headerView" destination="lbC-TX-wOi" id="q6t-OR-C44"/>
+                <outlet property="numberL" destination="OqZ-SB-RZj" id="rdU-MI-IR6"/>
                 <outlet property="tableView" destination="LZR-qt-zKx" id="FsF-qb-tYY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -62,6 +64,9 @@
                     <state key="normal" title="交易明细" image="返回(3)">
                         <color key="titleColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="detailAC:" destination="-1" eventType="touchUpInside" id="6qb-64-idL"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="pqI-Og-Whr"/>

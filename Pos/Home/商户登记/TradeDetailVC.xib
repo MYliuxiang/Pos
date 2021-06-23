@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TradeDetailVC">
+            <connections>
+                <outlet property="headerView" destination="p2G-Le-p8O" id="n1G-y5-Hqk"/>
+                <outlet property="tableView" destination="k3g-08-MfM" id="AVt-Ev-Z9P"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-08-MfM" customClass="WSTableView">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="p2G-Le-p8O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-Pr-1YW">
+                                <rect key="frame" x="20" y="10" width="374" height="43"/>
+                                <string key="text">备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qI6-GN-8zB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i4D-Pr-1YW" firstAttribute="leading" secondItem="qI6-GN-8zB" secondAttribute="leading" constant="20" id="RWR-Kp-co2"/>
+                            <constraint firstAttribute="trailing" secondItem="i4D-Pr-1YW" secondAttribute="trailing" constant="20" id="U6I-vW-if5"/>
+                            <constraint firstItem="qI6-GN-8zB" firstAttribute="bottom" secondItem="i4D-Pr-1YW" secondAttribute="bottom" constant="10" id="jPD-cB-akE"/>
+                            <constraint firstItem="i4D-Pr-1YW" firstAttribute="top" secondItem="p2G-Le-p8O" secondAttribute="top" constant="10" id="uHg-hh-YBY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HpZ-0b-3Yb"/>
+                        <outlet property="delegate" destination="-1" id="Iq5-ly-04D"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="k3g-08-MfM" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="1u8-lp-3wL"/>
+                <constraint firstItem="k3g-08-MfM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bRr-N3-1an"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="k3g-08-MfM" secondAttribute="bottom" id="vWQ-ce-3rb"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="k3g-08-MfM" secondAttribute="trailing" id="yTH-iG-eEV"/>
+            </constraints>
+            <point key="canvasLocation" x="100" y="50"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

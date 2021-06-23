@@ -14,6 +14,8 @@
 #import "TerminalManagerVC.h"
 #import "LeranVC.h"
 #import "UrgentAttentionVC.h"
+#import "MerchantVC.h"
+#import "TradeDetailVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -46,6 +48,24 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
 
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    {
+        CGFloat height = [self.tableView.tableFooterView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+        CGRect footerFrame = self.tableView.tableFooterView.frame;
+        footerFrame.size.height = height;
+        self.tableView.tableFooterView.frame = footerFrame;
+        self.tableView.tableFooterView = self.tableView.tableFooterView;
+    }
+    {
+        CGFloat height = [self.tableView.tableHeaderView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+        CGRect headerFrame = self.tableView.tableHeaderView.frame;
+        headerFrame.size.height = height;
+        self.tableView.tableHeaderView.frame = headerFrame;
+        self.tableView.tableHeaderView = self.tableView.tableHeaderView;
+    }
 }
 
 - (void)setUI{
@@ -85,6 +105,9 @@
         case 0:
         {
             //商户登记
+            MerchantVC *vc = [MerchantVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+
             
         }
             break;
@@ -140,6 +163,10 @@
 - (void)headerClick{
     DataShowVC *vc = [DataShowVC new];
     [self.navigationController pushViewController:vc animated:YES];
+    
+  
+    
+    
 }
 
 - (void)viewWillLayoutSubviews{

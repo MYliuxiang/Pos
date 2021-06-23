@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="KGk-i7-Jjw" customClass="TradeDCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFB-o4-e0l">
+                        <rect key="frame" x="20" y="30" width="60" height="33"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="向下" translatesAutoresizingMaskIntoConstraints="NO" id="agk-M7-er5">
+                        <rect key="frame" x="90" y="43" width="12" height="7"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kFB-o4-e0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1Vd-mi-Tc6"/>
+                    <constraint firstAttribute="bottom" secondItem="kFB-o4-e0l" secondAttribute="bottom" constant="30" id="c5J-0v-f5h"/>
+                    <constraint firstItem="agk-M7-er5" firstAttribute="leading" secondItem="kFB-o4-e0l" secondAttribute="trailing" constant="10" id="r6O-Bc-aiG"/>
+                    <constraint firstItem="agk-M7-er5" firstAttribute="centerY" secondItem="kFB-o4-e0l" secondAttribute="centerY" id="taW-Ro-76X"/>
+                    <constraint firstItem="kFB-o4-e0l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="zXv-Zu-c1e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="arrowI" destination="agk-M7-er5" id="dEq-a6-L4U"/>
+                <outlet property="timeL" destination="kFB-o4-e0l" id="Ujx-Nx-rQf"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="65.959821428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="向下" width="12" height="7"/>
+    </resources>
+</document>

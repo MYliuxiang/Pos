@@ -13,6 +13,7 @@
 @property (nonatomic,strong) NSArray *nameList;
 @property (nonatomic,strong) NSArray *subList;
 @property (nonatomic,strong) NSArray *dataList;
+@property (weak, nonatomic) IBOutlet UILabel *numberL;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *headerB;
@@ -24,7 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.customNavBar.title = @"数据展示";
+    self.customNavBar.title = @"商户详情";
+    
+    
+//    self.headerB
+    
     
     [self.headerB layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleRight imageTitleSpace:5];
     self.headerView.height = 197;
@@ -36,6 +41,13 @@
     self.dataList = @[@"首次达标：N时间到N时间，达标剩余金额￥7000",@"二次达标：N时间到N时间，达标剩余金额￥7000",@"三次达标：N时间到N时间，达标剩余金额￥7000",
         @"四次达标：N时间到N时间，达标剩余金额￥7000"];
 
+}
+
+
+
+- (IBAction)detailAC:(id)sender {
+    TradeDetailVC *vc = [TradeDetailVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)headeClickAC:(id)sender {

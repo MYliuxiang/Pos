@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -48,18 +49,18 @@
             <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </view>
         <view contentMode="scaleToFill" id="OEq-HP-zSt">
-            <rect key="frame" x="0.0" y="0.0" width="459" height="484"/>
+            <rect key="frame" x="0.0" y="0.0" width="459" height="514"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67r-wF-TiX">
-                    <rect key="frame" x="0.0" y="0.0" width="459" height="201"/>
+                    <rect key="frame" x="0.0" y="0.0" width="459" height="0.0"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="67r-wF-TiX" secondAttribute="height" multiplier="424:178" id="a6O-Z4-K4c"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-DW-SWx">
-                    <rect key="frame" x="12" y="139" width="435" height="225"/>
+                    <rect key="frame" x="12" y="-112.5" width="435" height="225"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-xw-30H">
                             <rect key="frame" x="0.0" y="121.5" width="435" height="103.5"/>
@@ -183,7 +184,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sy-LMn">
-                    <rect key="frame" x="0.0" y="386" width="459" height="98"/>
+                    <rect key="frame" x="0.0" y="134.5" width="459" height="98"/>
                     <subviews>
                         <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-00-uJp">
                             <rect key="frame" x="0.0" y="24" width="92" height="50"/>
@@ -247,16 +248,16 @@
                 <constraint firstItem="67r-wF-TiX" firstAttribute="top" secondItem="OEq-HP-zSt" secondAttribute="top" id="5oX-Zz-TOt"/>
                 <constraint firstItem="PbY-7y-Z8f" firstAttribute="trailing" secondItem="PWs-DW-SWx" secondAttribute="trailing" constant="12" id="9Ro-bc-Qiq"/>
                 <constraint firstItem="0Rf-sy-LMn" firstAttribute="leading" secondItem="PbY-7y-Z8f" secondAttribute="leading" id="FnV-Ng-SnQ"/>
-                <constraint firstAttribute="bottom" secondItem="0Rf-sy-LMn" secondAttribute="bottom" id="L1I-KU-uzA"/>
                 <constraint firstItem="PbY-7y-Z8f" firstAttribute="trailing" secondItem="0Rf-sy-LMn" secondAttribute="trailing" id="Q9r-Kg-Ekx"/>
                 <constraint firstItem="67r-wF-TiX" firstAttribute="leading" secondItem="PbY-7y-Z8f" secondAttribute="leading" id="T4x-bO-AQW"/>
                 <constraint firstItem="67r-wF-TiX" firstAttribute="trailing" secondItem="PbY-7y-Z8f" secondAttribute="trailing" id="Vro-4h-P3w"/>
                 <constraint firstItem="0Rf-sy-LMn" firstAttribute="top" secondItem="PWs-DW-SWx" secondAttribute="bottom" constant="22" id="cys-YA-Ipd"/>
                 <constraint firstItem="PWs-DW-SWx" firstAttribute="leading" secondItem="PbY-7y-Z8f" secondAttribute="leading" constant="12" id="hr0-bc-EcS"/>
                 <constraint firstItem="PWs-DW-SWx" firstAttribute="centerY" secondItem="67r-wF-TiX" secondAttribute="bottom" multiplier="1.25" id="p6P-TF-uS8"/>
+                <constraint firstItem="PbY-7y-Z8f" firstAttribute="bottom" secondItem="0Rf-sy-LMn" secondAttribute="bottom" id="xH2-Js-SkO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-454.34782608695656" y="588.61607142857144"/>
+            <point key="canvasLocation" x="-964.49275362318849" y="281.25"/>
         </view>
     </objects>
     <resources>
