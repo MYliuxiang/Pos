@@ -49,6 +49,9 @@
 		2253CC53268386C50015B808 /* BusinessListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC51268386C50015B808 /* BusinessListVC.xib */; };
 		2253CC5A268387220015B808 /* BusinessListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CC58268387220015B808 /* BusinessListCell.m */; };
 		2253CC5B268387220015B808 /* BusinessListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC59268387220015B808 /* BusinessListCell.xib */; };
+		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
+		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
+		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
 		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
 		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
 		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
@@ -292,6 +295,12 @@
 		2253CC57268387220015B808 /* BusinessListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessListCell.h; sourceTree = "<group>"; };
 		2253CC58268387220015B808 /* BusinessListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessListCell.m; sourceTree = "<group>"; };
 		2253CC59268387220015B808 /* BusinessListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessListCell.xib; sourceTree = "<group>"; };
+		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
+		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
+		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		2281D83826839A39004AF0A3 /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		2281D83A26839ED6004AF0A3 /* MessageNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageNewsVC.h; sourceTree = "<group>"; };
+		2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageNewsVC.m; sourceTree = "<group>"; };
 		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
@@ -1186,6 +1195,12 @@
 				22ACB879268181B800A4E79D /* ComplaintVC.m */,
 				22ACB87B2681889100A4E79D /* PhoneCell.h */,
 				22ACB87C2681889200A4E79D /* PhoneCell.m */,
+				2281D83426839915004AF0A3 /* MessagecenterVC.h */,
+				2281D83526839915004AF0A3 /* MessagecenterVC.m */,
+				2281D83726839A39004AF0A3 /* MessageCell.h */,
+				2281D83826839A39004AF0A3 /* MessageCell.m */,
+				2281D83A26839ED6004AF0A3 /* MessageNewsVC.h */,
+				2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -1615,6 +1630,7 @@
 				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
 				22C1BC41267A670200092C1E /* HttpHelp.m in Sources */,
+				2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */,
 				71864987268034BF008EED37 /* TransfCell.m in Sources */,
 				2253CC3E268380290015B808 /* MerchantSubVC.m in Sources */,
 				71CF0F462680901400C4E558 /* SGWebView.m in Sources */,
@@ -1634,6 +1650,7 @@
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
 				228711BD267FA39100AEE15A /* TerminalCenterVC.m in Sources */,
+				2281D83926839A39004AF0A3 /* MessageCell.m in Sources */,
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				22ACB87A268181B900A4E79D /* ComplaintVC.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
@@ -1708,6 +1725,7 @@
 				22C1BC67267A675500092C1E /* SDCollectionViewCell.m in Sources */,
 				2242393F26838D2100E5188F /* TradeDSubCell.m in Sources */,
 				7186499226804185008EED37 /* TransfCCell.m in Sources */,
+				2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */,
 				22C1BC68267A675500092C1E /* TADotView.m in Sources */,
 				22C1BCC5267A677200092C1E /* TXMatchManager.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 #import "InformationVC.h"
 #import "AboutusVCViewController.h"
 #import "ComplaintVC.h"
+#import "MessagecenterVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -209,6 +210,8 @@
     }else {
         if (indexPath.row ==0) {
             //消息中心
+            MessagecenterVC *vc = [[MessagecenterVC alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row==1){
             //联系客服
         }else if (indexPath.row==2){
