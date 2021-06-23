@@ -48,7 +48,7 @@
     
     //内容
     self.contelabel = [[UILabel alloc]initWithFrame:CGRectMake(39, self.timelabel.bottom+32, kScreenWidth-39*2, 0)];
-    self.contelabel.textColor = [UIColor colorWithHexString:@"B0B0B0"];
+    self.contelabel.textColor = [UIColor colorWithHexString:@"282828"];
     self.contelabel.numberOfLines = 0;
     self.contelabel.font = [UIFont systemFontOfSize:14];
     [witreview addSubview:self.contelabel];
