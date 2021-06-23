@@ -26,11 +26,11 @@
 //初始化视图
 -(void)setUI{
     
-    UIView *headview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 231)];
+    UIView *headview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 231+[self ykStatusbarHeight])];
     headview.backgroundColor = [UIColor whiteColor];
     
     //个人中心点击视图
-    UIView *tapview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 153)];
+    UIView *tapview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 153+[self ykStatusbarHeight])];
     tapview.backgroundColor = [UIColor colorWithHexString:@"FF8901"];
     tapview.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapgest = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapviewaction)];
@@ -38,7 +38,7 @@
     [headview addSubview:tapview];
     
     //头像
-    self.headimageview = [[UIImageView alloc]initWithFrame:CGRectMake(40, 36, 78, 78)];
+    self.headimageview = [[UIImageView alloc]initWithFrame:CGRectMake(40, 36+[self ykStatusbarHeight], 78, 78)];
     self.headimageview.backgroundColor = [UIColor grayColor];
     KViewBorderRadius(self.headimageview, 39, 0.5, [UIColor clearColor]);
     [tapview addSubview:self.headimageview];
@@ -71,7 +71,7 @@
     [yaoqview addSubview:self.yaoqingmalabel];
     
     //进入图标
-    UIImageView *goinimageview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 67, 9.14, 16.26)];
+    UIImageView *goinimageview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 67+[self ykStatusbarHeight], 9.14, 16.26)];
     goinimageview.image = [UIImage imageNamed:@"返回(1)"];
     [tapview addSubview:goinimageview];
     
@@ -110,7 +110,7 @@
     
     
     //表视图
-   self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, [self ykStatusbarHeight], kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+   self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
    self.tableView.delegate = self;
    self.tableView.dataSource = self;
    self.tableView.bounces = NO;
