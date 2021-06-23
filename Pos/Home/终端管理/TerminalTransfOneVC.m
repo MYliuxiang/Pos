@@ -7,6 +7,7 @@
 
 #import "TerminalTransfOneVC.h"
 #import "WBQRCodeVC.h"
+#import "TerminalSingleDoneVC.h"
 
 @interface TerminalTransfOneVC ()
 @property (nonatomic, copy) void(^scrollCallback)(UIScrollView *scrollView);
@@ -34,6 +35,9 @@
 }
 
 - (IBAction)tansfAC:(id)sender {
+    
+    TerminalSingleDoneVC *vc = [TerminalSingleDoneVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)scanAC:(id)sender {
@@ -199,14 +203,6 @@
     NSLog(@"%@:%@", self.title, NSStringFromSelector(_cmd));
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
