@@ -13,6 +13,7 @@
 #import "BusinessVC.h"
 #import "TerminalManagerVC.h"
 #import "LeranVC.h"
+#import "UrgentAttentionVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -118,6 +119,8 @@
         case 4:
         {
             //紧急关注
+            UrgentAttentionVC *vc = [UrgentAttentionVC new];
+            [self.navigationController pushViewController:vc animated:YES];
             
             
         }

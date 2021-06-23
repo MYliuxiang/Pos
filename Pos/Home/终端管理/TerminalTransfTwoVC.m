@@ -7,6 +7,7 @@
 
 #import "TerminalTransfTwoVC.h"
 #import "WBQRCodeVC.h"
+#import "TerminalBatchVC.h"
 
 
 @interface TerminalTransfTwoVC ()
@@ -165,7 +166,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    if (self.tableView.indexPathsForSelectedRows.count > 1) {
+        TerminalBatchVC *vc = [TerminalBatchVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     
 }
 
@@ -206,14 +210,6 @@
     NSLog(@"2:%@", NSStringFromSelector(_cmd));
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
