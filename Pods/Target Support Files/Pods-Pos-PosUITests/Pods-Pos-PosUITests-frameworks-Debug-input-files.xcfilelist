@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/AxcAE_TabBar/AxcAE_TabBar.framework
+${BUILT_PRODUCTS_DIR}/BRPickerView/BRPickerView.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework
 ${BUILT_PRODUCTS_DIR}/JXPagingView/JXPagingView.framework
