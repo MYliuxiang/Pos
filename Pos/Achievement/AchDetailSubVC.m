@@ -108,7 +108,7 @@ static NSString *const resueIdright = @"rightCell";
             
         }
         AchDetailModel *model = self.dataList[indexPath.row];
-        cell.titleL.text = self.rightTitles[indexPath.row];
+        cell.titleL.text = model.name;
         
         return cell;
         
@@ -127,7 +127,7 @@ static NSString *const resueIdright = @"rightCell";
         
         AchDetailModel *model = self.dataList[self.leftTable.indexPathForSelectedRow.row];
         AchDetailSubModel *smodel = model.subModels[indexPath.section];
-        cell.titleL.text = smodel.time;
+        cell.titleL.text = self.rightTitles[indexPath.row];
        
         return cell;
     }
