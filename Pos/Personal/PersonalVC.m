@@ -10,6 +10,8 @@
 #import "AboutusVCViewController.h"
 #import "ComplaintVC.h"
 #import "MessagecenterVC.h"
+#import "MoresettingsVC.h"
+#import "PersonalcertificationVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -204,6 +206,8 @@
     }else if (indexPath.section==1) {
         if (indexPath.row==0) {
             //实名认证
+        PersonalcertificationVC *vc = [[PersonalcertificationVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
         }else{
             //企业认证
         }
@@ -225,6 +229,8 @@
             
         }else{
             //更多设置
+            MoresettingsVC *VC = [[MoresettingsVC alloc]init];
+            [self.navigationController pushViewController:VC animated:YES];
         }
         
     }
