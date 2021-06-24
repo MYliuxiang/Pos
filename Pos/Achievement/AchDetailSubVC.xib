@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchDetailSubVC">
+            <connections>
+                <outlet property="leftTable" destination="ZeQ-Hf-74p" id="MVI-PU-olJ"/>
+                <outlet property="rightTable" destination="RB4-ur-2de" id="eBS-ay-ivs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZeQ-Hf-74p">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="ZWN-x3-Xsk"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Y7f-gD-zfO"/>
+                        <outlet property="delegate" destination="-1" id="zPn-C9-4hH"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RB4-ur-2de">
+                    <rect key="frame" x="100" y="0.0" width="314" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="4s4-Xa-pR5"/>
+                        <outlet property="delegate" destination="-1" id="E8n-mh-vCx"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="RB4-ur-2de" secondAttribute="trailing" id="AcZ-0f-Cbm"/>
+                <constraint firstItem="ZeQ-Hf-74p" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="M5l-iP-wcI"/>
+                <constraint firstItem="ZeQ-Hf-74p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZOO-qk-Wxr"/>
+                <constraint firstAttribute="bottom" secondItem="RB4-ur-2de" secondAttribute="bottom" id="k4F-Y1-uC4"/>
+                <constraint firstItem="RB4-ur-2de" firstAttribute="leading" secondItem="ZeQ-Hf-74p" secondAttribute="trailing" id="kWJ-RW-RCl"/>
+                <constraint firstItem="RB4-ur-2de" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ni6-df-fRc"/>
+                <constraint firstAttribute="bottom" secondItem="ZeQ-Hf-74p" secondAttribute="bottom" id="pYp-tU-bHI"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="59.598214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

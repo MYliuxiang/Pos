@@ -51,6 +51,8 @@
 }
 
 - (void)viewDidLayoutSubviews {
+    
+    
     [super viewDidLayoutSubviews];
     {
         CGFloat height = [self.tableView.tableFooterView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
@@ -163,9 +165,6 @@
 - (void)headerClick{
     DataShowVC *vc = [DataShowVC new];
     [self.navigationController pushViewController:vc animated:YES];
-    
-  
-    
     
 }
 

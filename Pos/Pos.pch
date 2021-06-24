@@ -135,6 +135,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "HomeVC.h"
 #import "AchievementVC.h"
 #import "LoginVC.h"
+#import "MerchantDetailVC.h"
 
 //cell
 #import "LxSubTitleCell.h"

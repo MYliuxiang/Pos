@@ -1,22 +1,88 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementVC">
             <connections>
+                <outlet property="achievementB" destination="ooS-JN-yMI" id="3yd-3m-3wN"/>
+                <outlet property="footerView" destination="mZU-2d-qN8" id="eRN-WV-ZmI"/>
+                <outlet property="tableView" destination="55J-gG-ryr" id="wgL-qz-9dg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="55J-gG-ryr">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="xCI-h5-5dv"/>
+                        <outlet property="delegate" destination="-1" id="fAj-s8-bRs"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="55J-gG-ryr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MS5-4c-I8w"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="55J-gG-ryr" secondAttribute="trailing" id="aax-Wy-h9E"/>
+                <constraint firstItem="55J-gG-ryr" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="hAi-yY-5Ib"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="55J-gG-ryr" secondAttribute="bottom" id="heA-vp-j4E"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="94.419642857142847"/>
+        </view>
+        <view contentMode="scaleToFill" id="mZU-2d-qN8">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天服务商已登记商户：0 个" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-Ys-GYj">
+                    <rect key="frame" x="115" y="15" width="184" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooS-JN-yMI">
+                    <rect key="frame" x="46" y="98" width="322" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="K19-GX-wgA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="业绩详情">
+                        <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="detailAC:" destination="-1" eventType="touchUpInside" id="PP8-aa-PyE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="rC0-O5-9KA"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ooS-JN-yMI" firstAttribute="leading" secondItem="rC0-O5-9KA" secondAttribute="leading" constant="46" id="LhS-1k-dxi"/>
+                <constraint firstItem="ooS-JN-yMI" firstAttribute="top" secondItem="rC0-O5-9KA" secondAttribute="top" constant="54" id="dcY-bb-HKV"/>
+                <constraint firstItem="ooS-JN-yMI" firstAttribute="centerX" secondItem="mZU-2d-qN8" secondAttribute="centerX" id="icF-te-IHy"/>
+                <constraint firstItem="rC0-O5-9KA" firstAttribute="trailing" secondItem="ooS-JN-yMI" secondAttribute="trailing" constant="46" id="jKY-9y-raG"/>
+                <constraint firstItem="H5h-Ys-GYj" firstAttribute="centerX" secondItem="mZU-2d-qN8" secondAttribute="centerX" id="kjP-OY-psM"/>
+                <constraint firstItem="H5h-Ys-GYj" firstAttribute="top" secondItem="mZU-2d-qN8" secondAttribute="top" constant="15" id="vje-lq-5GZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-310.14492753623193" y="-378.68303571428572"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

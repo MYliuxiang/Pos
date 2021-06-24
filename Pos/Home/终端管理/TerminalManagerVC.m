@@ -7,6 +7,7 @@
 
 #import "TerminalManagerVC.h"
 #import "TerminalTransferVC.h"
+#import "TerminalSearchVC.h"
 
 @interface TerminalManagerVC ()<JXPagerViewDelegate, JXPagerMainTableViewGestureDelegate>
 @property (nonatomic, strong) JXPagerView *pagerView;
@@ -109,6 +110,8 @@
         case 0:
         {
             //终端查询
+            TerminalSearchVC *vc = [TerminalSearchVC new];
+            [self.navigationController pushViewController:vc animated:YES];
             
         }
             break;
@@ -124,7 +127,8 @@
         case 2:
         {
             //终端回调
-            
+            TerminalTransferVC *vc = [TerminalTransferVC new];
+            [self.navigationController pushViewController:vc animated:YES];
             
         }
             break;

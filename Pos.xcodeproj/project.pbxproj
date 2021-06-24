@@ -181,6 +181,24 @@
 		711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711D7CCE2679ACF100BAFB54 /* HomeVC.xib */; };
 		711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CD82679AD4A00BAFB54 /* AppService.m */; };
 		711D7D362679E31200BAFB54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D342679E31200BAFB54 /* ViewController.m */; };
+		713AA4552684272A009F02A5 /* TerminalSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4532684272A009F02A5 /* TerminalSearchVC.m */; };
+		713AA4562684272A009F02A5 /* TerminalSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4542684272A009F02A5 /* TerminalSearchVC.xib */; };
+		713AA45D2684285C009F02A5 /* TerSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA45B2684285C009F02A5 /* TerSearchCell.m */; };
+		713AA45E2684285C009F02A5 /* TerSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA45C2684285C009F02A5 /* TerSearchCell.xib */; };
+		713AA46526842CDF009F02A5 /* TerminalSDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA46326842CDF009F02A5 /* TerminalSDetailVC.m */; };
+		713AA46626842CDF009F02A5 /* TerminalSDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA46426842CDF009F02A5 /* TerminalSDetailVC.xib */; };
+		713AA4862684671A009F02A5 /* AchievementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4842684671A009F02A5 /* AchievementCell.m */; };
+		713AA4872684671A009F02A5 /* AchievementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4852684671A009F02A5 /* AchievementCell.xib */; };
+		713AA491268470BB009F02A5 /* AchievementDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA48F268470BB009F02A5 /* AchievementDetailVC.m */; };
+		713AA492268470BB009F02A5 /* AchievementDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA490268470BB009F02A5 /* AchievementDetailVC.xib */; };
+		713AA4992684713E009F02A5 /* AchDetailSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4972684713E009F02A5 /* AchDetailSubVC.m */; };
+		713AA49A2684713E009F02A5 /* AchDetailSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4982684713E009F02A5 /* AchDetailSubVC.xib */; };
+		713AA4A126847AAA009F02A5 /* AchDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4A026847AAA009F02A5 /* AchDetailModel.m */; };
+		713AA4AA26847E83009F02A5 /* AchDetailSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4A926847E83009F02A5 /* AchDetailSubModel.m */; };
+		713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4AF268486F4009F02A5 /* ALeftCell.m */; };
+		713AA4B2268486F4009F02A5 /* ALeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4B0268486F4009F02A5 /* ALeftCell.xib */; };
+		713AA4B926848704009F02A5 /* ARightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4B726848704009F02A5 /* ARightCell.m */; };
+		713AA4BA26848704009F02A5 /* ARightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4B826848704009F02A5 /* ARightCell.xib */; };
 		713B8C132682D44400420F75 /* GHCountField.m in Sources */ = {isa = PBXBuildFile; fileRef = 713B8C122682D44400420F75 /* GHCountField.m */; };
 		713B8C1A2682D51200420F75 /* UrgentAttentionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713B8C182682D51200420F75 /* UrgentAttentionVC.m */; };
 		713B8C1B2682D51200420F75 /* UrgentAttentionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713B8C192682D51200420F75 /* UrgentAttentionVC.xib */; };
@@ -540,6 +558,34 @@
 		711D7CD82679AD4A00BAFB54 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		711D7D342679E31200BAFB54 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		711D7D352679E31200BAFB54 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		713AA4522684272A009F02A5 /* TerminalSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalSearchVC.h; sourceTree = "<group>"; };
+		713AA4532684272A009F02A5 /* TerminalSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalSearchVC.m; sourceTree = "<group>"; };
+		713AA4542684272A009F02A5 /* TerminalSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalSearchVC.xib; sourceTree = "<group>"; };
+		713AA45A2684285C009F02A5 /* TerSearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerSearchCell.h; sourceTree = "<group>"; };
+		713AA45B2684285C009F02A5 /* TerSearchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerSearchCell.m; sourceTree = "<group>"; };
+		713AA45C2684285C009F02A5 /* TerSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerSearchCell.xib; sourceTree = "<group>"; };
+		713AA46226842CDF009F02A5 /* TerminalSDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalSDetailVC.h; sourceTree = "<group>"; };
+		713AA46326842CDF009F02A5 /* TerminalSDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalSDetailVC.m; sourceTree = "<group>"; };
+		713AA46426842CDF009F02A5 /* TerminalSDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalSDetailVC.xib; sourceTree = "<group>"; };
+		713AA4832684671A009F02A5 /* AchievementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchievementCell.h; sourceTree = "<group>"; };
+		713AA4842684671A009F02A5 /* AchievementCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchievementCell.m; sourceTree = "<group>"; };
+		713AA4852684671A009F02A5 /* AchievementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCell.xib; sourceTree = "<group>"; };
+		713AA48E268470BB009F02A5 /* AchievementDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchievementDetailVC.h; sourceTree = "<group>"; };
+		713AA48F268470BB009F02A5 /* AchievementDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchievementDetailVC.m; sourceTree = "<group>"; };
+		713AA490268470BB009F02A5 /* AchievementDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementDetailVC.xib; sourceTree = "<group>"; };
+		713AA4962684713E009F02A5 /* AchDetailSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchDetailSubVC.h; sourceTree = "<group>"; };
+		713AA4972684713E009F02A5 /* AchDetailSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchDetailSubVC.m; sourceTree = "<group>"; };
+		713AA4982684713E009F02A5 /* AchDetailSubVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchDetailSubVC.xib; sourceTree = "<group>"; };
+		713AA49F26847AAA009F02A5 /* AchDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchDetailModel.h; sourceTree = "<group>"; };
+		713AA4A026847AAA009F02A5 /* AchDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchDetailModel.m; sourceTree = "<group>"; };
+		713AA4A826847E83009F02A5 /* AchDetailSubModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchDetailSubModel.h; sourceTree = "<group>"; };
+		713AA4A926847E83009F02A5 /* AchDetailSubModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchDetailSubModel.m; sourceTree = "<group>"; };
+		713AA4AE268486F4009F02A5 /* ALeftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALeftCell.h; sourceTree = "<group>"; };
+		713AA4AF268486F4009F02A5 /* ALeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALeftCell.m; sourceTree = "<group>"; };
+		713AA4B0268486F4009F02A5 /* ALeftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALeftCell.xib; sourceTree = "<group>"; };
+		713AA4B626848704009F02A5 /* ARightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARightCell.h; sourceTree = "<group>"; };
+		713AA4B726848704009F02A5 /* ARightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARightCell.m; sourceTree = "<group>"; };
+		713AA4B826848704009F02A5 /* ARightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARightCell.xib; sourceTree = "<group>"; };
 		713B8C112682D44400420F75 /* GHCountField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCountField.h; sourceTree = "<group>"; };
 		713B8C122682D44400420F75 /* GHCountField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHCountField.m; sourceTree = "<group>"; };
 		713B8C172682D51200420F75 /* UrgentAttentionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UrgentAttentionVC.h; path = "Pos/Home/业务拓展/UrgentAttentionVC.h"; sourceTree = SOURCE_ROOT; };
@@ -710,6 +756,12 @@
 				228711B2267F9DA900AEE15A /* TerminalManagerVC.h */,
 				228711B3267F9DA900AEE15A /* TerminalManagerVC.m */,
 				228711B4267F9DA900AEE15A /* TerminalManagerVC.xib */,
+				713AA4522684272A009F02A5 /* TerminalSearchVC.h */,
+				713AA4532684272A009F02A5 /* TerminalSearchVC.m */,
+				713AA4542684272A009F02A5 /* TerminalSearchVC.xib */,
+				713AA46226842CDF009F02A5 /* TerminalSDetailVC.h */,
+				713AA46326842CDF009F02A5 /* TerminalSDetailVC.m */,
+				713AA46426842CDF009F02A5 /* TerminalSDetailVC.xib */,
 				228711BA267FA39100AEE15A /* TerminalCenterVC.h */,
 				228711BB267FA39100AEE15A /* TerminalCenterVC.m */,
 				228711BC267FA39100AEE15A /* TerminalCenterVC.xib */,
@@ -1164,9 +1216,17 @@
 		711D7C132679ABB700BAFB54 /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
+				713AA49E26847A9A009F02A5 /* Models */,
+				713AA482268466FC009F02A5 /* Views */,
 				711D7CC42679ACE300BAFB54 /* AchievementVC.h */,
 				711D7CC52679ACE300BAFB54 /* AchievementVC.m */,
 				711D7CC62679ACE300BAFB54 /* AchievementVC.xib */,
+				713AA48E268470BB009F02A5 /* AchievementDetailVC.h */,
+				713AA48F268470BB009F02A5 /* AchievementDetailVC.m */,
+				713AA490268470BB009F02A5 /* AchievementDetailVC.xib */,
+				713AA4962684713E009F02A5 /* AchDetailSubVC.h */,
+				713AA4972684713E009F02A5 /* AchDetailSubVC.m */,
+				713AA4982684713E009F02A5 /* AchDetailSubVC.xib */,
 			);
 			path = Achievement;
 			sourceTree = "<group>";
@@ -1223,6 +1283,33 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		713AA482268466FC009F02A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				713AA4832684671A009F02A5 /* AchievementCell.h */,
+				713AA4842684671A009F02A5 /* AchievementCell.m */,
+				713AA4852684671A009F02A5 /* AchievementCell.xib */,
+				713AA4AE268486F4009F02A5 /* ALeftCell.h */,
+				713AA4AF268486F4009F02A5 /* ALeftCell.m */,
+				713AA4B0268486F4009F02A5 /* ALeftCell.xib */,
+				713AA4B626848704009F02A5 /* ARightCell.h */,
+				713AA4B726848704009F02A5 /* ARightCell.m */,
+				713AA4B826848704009F02A5 /* ARightCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		713AA49E26847A9A009F02A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				713AA49F26847AAA009F02A5 /* AchDetailModel.h */,
+				713AA4A026847AAA009F02A5 /* AchDetailModel.m */,
+				713AA4A826847E83009F02A5 /* AchDetailSubModel.h */,
+				713AA4A926847E83009F02A5 /* AchDetailSubModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		713B8C1F2682D51700420F75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1247,6 +1334,9 @@
 				2253CC1326824EE40015B808 /* AgentCell.h */,
 				2253CC1426824EE40015B808 /* AgentCell.m */,
 				2253CC1526824EE40015B808 /* AgentCell.xib */,
+				713AA45A2684285C009F02A5 /* TerSearchCell.h */,
+				713AA45B2684285C009F02A5 /* TerSearchCell.m */,
+				713AA45C2684285C009F02A5 /* TerSearchCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1406,7 +1496,9 @@
 				228711A0267F960400AEE15A /* RegistVC.xib in Resources */,
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
 				221899002680F4C300653C2C /* ProductOneCell.xib in Resources */,
+				713AA45E2684285C009F02A5 /* TerSearchCell.xib in Resources */,
 				221898F82680F3C000653C2C /* ProductDoneVC.xib in Resources */,
+				713AA4B2268486F4009F02A5 /* ALeftCell.xib in Resources */,
 				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
 				710271F52681C7B200D5B62A /* BusinessCell.xib in Resources */,
 				2242393026838B9800E5188F /* TradeDetailVC.xib in Resources */,
@@ -1415,10 +1507,13 @@
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
 				2253CBE1268243E00015B808 /* LeranOneCell.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
+				713AA49A2684713E009F02A5 /* AchDetailSubVC.xib in Resources */,
 				710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */,
 				2242393826838D0D00E5188F /* TradeDCell.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
+				713AA492268470BB009F02A5 /* AchievementDetailVC.xib in Resources */,
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
+				713AA4872684671A009F02A5 /* AchievementCell.xib in Resources */,
 				228711A8267F998700AEE15A /* RegistReslutVC.xib in Resources */,
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
 				221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */,
@@ -1435,6 +1530,7 @@
 				2253CBD8268243C50015B808 /* LeranSubVC.xib in Resources */,
 				2253CC0F26824E760015B808 /* ChooseAgentVC.xib in Resources */,
 				2253CC48268382630015B808 /* MerchantCell.xib in Resources */,
+				713AA46626842CDF009F02A5 /* TerminalSDetailVC.xib in Resources */,
 				22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */,
 				711D7CB82679ACB400BAFB54 /* PersonalVC.xib in Resources */,
 				2253CC3F268380290015B808 /* MerchantSubVC.xib in Resources */,
@@ -1456,12 +1552,14 @@
 				713B8C37268318E000420F75 /* TerminalBatchVC.xib in Resources */,
 				228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
+				713AA4562684272A009F02A5 /* TerminalSearchVC.xib in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
 				713B8C2F2682D73700420F75 /* UrgentDetailVC.xib in Resources */,
 				71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */,
 				2253CBEC268243EF0015B808 /* LearnTwoCell.xib in Resources */,
 				713B8C242682D53200420F75 /* UrgentAttentionCell.xib in Resources */,
 				710272642681E48000D5B62A /* ToFaceVC.xib in Resources */,
+				713AA4BA26848704009F02A5 /* ARightCell.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 				221898F02680EAE000653C2C /* ProductCell.xib in Resources */,
@@ -1613,10 +1711,12 @@
 				22C1BCCD267A677200092C1E /* LYEmptyView.m in Sources */,
 				713B8C36268318E000420F75 /* TerminalBatchVC.m in Sources */,
 				713B8C232682D53200420F75 /* UrgentAttentionCell.m in Sources */,
+				713AA4992684713E009F02A5 /* AchDetailSubVC.m in Sources */,
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
 				2253CC5A268387220015B808 /* BusinessListCell.m in Sources */,
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
+				713AA4B926848704009F02A5 /* ARightCell.m in Sources */,
 				71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */,
 				22C1BCD2267A677200092C1E /* UIWindow+JXSafeArea.m in Sources */,
 				221898FF2680F4C300653C2C /* ProductOneCell.m in Sources */,
@@ -1638,6 +1738,7 @@
 				22C1BCCF267A677200092C1E /* UIView+ViewController.m in Sources */,
 				22C1BC7C267A676100092C1E /* Reachability.m in Sources */,
 				710272312681D45100D5B62A /* PosterVC.m in Sources */,
+				713AA4552684272A009F02A5 /* TerminalSearchVC.m in Sources */,
 				71CF0F1E268077BD00C4E558 /* TerminalTransfOneVC.m in Sources */,
 				22ACB87D2681889200A4E79D /* PhoneCell.m in Sources */,
 				71CF0F442680901400C4E558 /* WCQRCodeVC.m in Sources */,
@@ -1656,6 +1757,7 @@
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
 				713B8C1A2682D51200420F75 /* UrgentAttentionVC.m in Sources */,
 				2253CBF3268248F80015B808 /* TerminalSingleDoneVC.m in Sources */,
+				713AA491268470BB009F02A5 /* AchievementDetailVC.m in Sources */,
 				22C1BCDF267A677200092C1E /* UIImage+CompressImage.m in Sources */,
 				22C1BCCB267A677200092C1E /* UIView+Empty.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
@@ -1680,6 +1782,7 @@
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
 				22C1BCD6267A677200092C1E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				71CF0F26268077D300C4E558 /* TerminalTransfTwoVC.m in Sources */,
+				713AA46526842CDF009F02A5 /* TerminalSDetailVC.m in Sources */,
 				221898F72680F3C000653C2C /* ProductDoneVC.m in Sources */,
 				22C1BCC7267A677200092C1E /* TXMatchConst.m in Sources */,
 				2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */,
@@ -1692,20 +1795,25 @@
 				7102724D2681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m in Sources */,
 				22ACB877268177D600A4E79D /* AboutusVCViewController.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
+				713AA4AA26847E83009F02A5 /* AchDetailSubModel.m in Sources */,
 				2253CBE0268243E00015B808 /* LeranOneCell.m in Sources */,
 				2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
 				221899072680F4D600653C2C /* ProductTwoCell.m in Sources */,
+				713AA45D2684285C009F02A5 /* TerSearchCell.m in Sources */,
 				22C1BCD5267A677200092C1E /* UIButton+ImageTitleSpacing.m in Sources */,
 				2242393726838D0D00E5188F /* TradeDCell.m in Sources */,
 				713B8C132682D44400420F75 /* GHCountField.m in Sources */,
+				713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
 				22921624267E43E700EB762F /* LoginManger.m in Sources */,
 				22C1BCD9267A677200092C1E /* UISwitch+Custom.m in Sources */,
+				713AA4A126847AAA009F02A5 /* AchDetailModel.m in Sources */,
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
 				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
+				713AA4862684671A009F02A5 /* AchievementCell.m in Sources */,
 				713B8C2E2682D73700420F75 /* UrgentDetailVC.m in Sources */,
 				710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */,
 				2253CC1626824EE40015B808 /* AgentCell.m in Sources */,
