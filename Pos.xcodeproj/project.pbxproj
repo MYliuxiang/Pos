@@ -52,6 +52,10 @@
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
+		2281D83F2684C6E2004AF0A3 /* MoresettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83E2684C6E2004AF0A3 /* MoresettingsVC.m */; };
+		2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8412684CCB1004AF0A3 /* ChangePasswordVC.m */; };
+		2281D8452684D5C6004AF0A3 /* ChangiphoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */; };
+		2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */; };
 		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
 		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
 		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
@@ -319,6 +323,14 @@
 		2281D83826839A39004AF0A3 /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		2281D83A26839ED6004AF0A3 /* MessageNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageNewsVC.h; sourceTree = "<group>"; };
 		2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageNewsVC.m; sourceTree = "<group>"; };
+		2281D83D2684C6E2004AF0A3 /* MoresettingsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoresettingsVC.h; sourceTree = "<group>"; };
+		2281D83E2684C6E2004AF0A3 /* MoresettingsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoresettingsVC.m; sourceTree = "<group>"; };
+		2281D8402684CCB1004AF0A3 /* ChangePasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordVC.h; sourceTree = "<group>"; };
+		2281D8412684CCB1004AF0A3 /* ChangePasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordVC.m; sourceTree = "<group>"; };
+		2281D8432684D5C6004AF0A3 /* ChangiphoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangiphoneVC.h; sourceTree = "<group>"; };
+		2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangiphoneVC.m; sourceTree = "<group>"; };
+		2281D8462684E5FA004AF0A3 /* PersonalcertificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalcertificationVC.h; sourceTree = "<group>"; };
+		2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalcertificationVC.m; sourceTree = "<group>"; };
 		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
@@ -1261,6 +1273,14 @@
 				2281D83826839A39004AF0A3 /* MessageCell.m */,
 				2281D83A26839ED6004AF0A3 /* MessageNewsVC.h */,
 				2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */,
+				2281D83D2684C6E2004AF0A3 /* MoresettingsVC.h */,
+				2281D83E2684C6E2004AF0A3 /* MoresettingsVC.m */,
+				2281D8402684CCB1004AF0A3 /* ChangePasswordVC.h */,
+				2281D8412684CCB1004AF0A3 /* ChangePasswordVC.m */,
+				2281D8432684D5C6004AF0A3 /* ChangiphoneVC.h */,
+				2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */,
+				2281D8462684E5FA004AF0A3 /* PersonalcertificationVC.h */,
+				2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -1763,6 +1783,7 @@
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
 				221898DC2680E85700653C2C /* ProductVC.m in Sources */,
 				710271F42681C7B200D5B62A /* BusinessCell.m in Sources */,
+				2281D83F2684C6E2004AF0A3 /* MoresettingsVC.m in Sources */,
 				7102725B2681E2DF00D5B62A /* PosterCCell.m in Sources */,
 				228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */,
 				22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */,
@@ -1806,6 +1827,7 @@
 				713B8C132682D44400420F75 /* GHCountField.m in Sources */,
 				713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
+				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,
 				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
 				22921624267E43E700EB762F /* LoginManger.m in Sources */,
@@ -1816,10 +1838,12 @@
 				713AA4862684671A009F02A5 /* AchievementCell.m in Sources */,
 				713B8C2E2682D73700420F75 /* UrgentDetailVC.m in Sources */,
 				710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */,
+				2281D8452684D5C6004AF0A3 /* ChangiphoneVC.m in Sources */,
 				2253CC1626824EE40015B808 /* AgentCell.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
+				2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */,
 				71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */,
 				22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */,
 				22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */,
