@@ -17,12 +17,33 @@
 		221899002680F4C300653C2C /* ProductOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221898FE2680F4C300653C2C /* ProductOneCell.xib */; };
 		221899072680F4D600653C2C /* ProductTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221899052680F4D600653C2C /* ProductTwoCell.m */; };
 		221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221899062680F4D600653C2C /* ProductTwoCell.xib */; };
+		2235FF88268641E00064B505 /* 2020年1月县以上行政区划代码.json in Resources */ = {isa = PBXBuildFile; fileRef = 2235FF87268641DF0064B505 /* 2020年1月县以上行政区划代码.json */; };
+		2235FFBF268647FE0064B505 /* BRResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFA5268647FE0064B505 /* BRResultModel.m */; };
+		2235FFC0268647FE0064B505 /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFA8268647FE0064B505 /* BRStringPickerView.m */; };
+		2235FFC1268647FE0064B505 /* BRDatePickerView+BR.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFAB268647FE0064B505 /* BRDatePickerView+BR.m */; };
+		2235FFC2268647FE0064B505 /* NSDate+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFAD268647FE0064B505 /* NSDate+BRPickerView.m */; };
+		2235FFC3268647FE0064B505 /* BRDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFAE268647FE0064B505 /* BRDatePickerView.m */; };
+		2235FFC4268647FE0064B505 /* BRPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2235FFB4268647FE0064B505 /* BRPickerView.bundle */; };
+		2235FFC5268647FE0064B505 /* BRPickerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFB5268647FE0064B505 /* BRPickerStyle.m */; };
+		2235FFC6268647FE0064B505 /* BRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFB6268647FE0064B505 /* BRBaseView.m */; };
+		2235FFC7268647FE0064B505 /* NSBundle+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFB7268647FE0064B505 /* NSBundle+BRPickerView.m */; };
+		2235FFC8268647FE0064B505 /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFBB268647FE0064B505 /* BRAddressModel.m */; };
+		2235FFC9268647FE0064B505 /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235FFBE268647FE0064B505 /* BRAddressPickerView.m */; };
 		2242392F26838B9800E5188F /* TradeDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242392D26838B9800E5188F /* TradeDetailVC.m */; };
 		2242393026838B9800E5188F /* TradeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2242392E26838B9800E5188F /* TradeDetailVC.xib */; };
 		2242393726838D0D00E5188F /* TradeDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242393526838D0D00E5188F /* TradeDCell.m */; };
 		2242393826838D0D00E5188F /* TradeDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2242393626838D0D00E5188F /* TradeDCell.xib */; };
 		2242393F26838D2100E5188F /* TradeDSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242393D26838D2100E5188F /* TradeDSubCell.m */; };
 		2242394026838D2100E5188F /* TradeDSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2242393E26838D2100E5188F /* TradeDSubCell.xib */; };
+		224239572686168200E5188F /* UITextField+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 224239562686168200E5188F /* UITextField+TintColor.m */; };
+		2242395F268618BF00E5188F /* DirectAccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242395D268618BF00E5188F /* DirectAccessVC.m */; };
+		22423960268618BF00E5188F /* DirectAccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2242395E268618BF00E5188F /* DirectAccessVC.xib */; };
+		2242396A2686196B00E5188F /* PrivateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 224239682686196B00E5188F /* PrivateVC.m */; };
+		2242396B2686196B00E5188F /* PrivateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224239692686196B00E5188F /* PrivateVC.xib */; };
+		224239722686198600E5188F /* ToPublicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 224239702686198600E5188F /* ToPublicVC.m */; };
+		224239732686198600E5188F /* ToPublicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224239712686198600E5188F /* ToPublicVC.xib */; };
+		2242397A268619EE00E5188F /* UnincorporateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22423978268619EE00E5188F /* UnincorporateVC.m */; };
+		2242397B268619EE00E5188F /* UnincorporateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22423979268619EE00E5188F /* UnincorporateVC.xib */; };
 		2253CBCF268243AC0015B808 /* LeranVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBCD268243AC0015B808 /* LeranVC.m */; };
 		2253CBD0268243AC0015B808 /* LeranVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CBCE268243AC0015B808 /* LeranVC.xib */; };
 		2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CBD5268243C50015B808 /* LeranSubVC.m */; };
@@ -284,6 +305,30 @@
 		221899042680F4D600653C2C /* ProductTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductTwoCell.h; sourceTree = "<group>"; };
 		221899052680F4D600653C2C /* ProductTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductTwoCell.m; sourceTree = "<group>"; };
 		221899062680F4D600653C2C /* ProductTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTwoCell.xib; sourceTree = "<group>"; };
+		2235FF87268641DF0064B505 /* 2020年1月县以上行政区划代码.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "2020年1月县以上行政区划代码.json"; sourceTree = "<group>"; };
+		2235FFA5268647FE0064B505 /* BRResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRResultModel.m; sourceTree = "<group>"; };
+		2235FFA6268647FE0064B505 /* BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStringPickerView.h; sourceTree = "<group>"; };
+		2235FFA7268647FE0064B505 /* BRResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRResultModel.h; sourceTree = "<group>"; };
+		2235FFA8268647FE0064B505 /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
+		2235FFA9268647FE0064B505 /* BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerView.h; sourceTree = "<group>"; };
+		2235FFAB268647FE0064B505 /* BRDatePickerView+BR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BRDatePickerView+BR.m"; sourceTree = "<group>"; };
+		2235FFAC268647FE0064B505 /* BRDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDatePickerView.h; sourceTree = "<group>"; };
+		2235FFAD268647FE0064B505 /* NSDate+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BRPickerView.m"; sourceTree = "<group>"; };
+		2235FFAE268647FE0064B505 /* BRDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDatePickerView.m; sourceTree = "<group>"; };
+		2235FFAF268647FE0064B505 /* BRDatePickerView+BR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BRDatePickerView+BR.h"; sourceTree = "<group>"; };
+		2235FFB0268647FE0064B505 /* NSDate+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BRPickerView.h"; sourceTree = "<group>"; };
+		2235FFB2268647FE0064B505 /* NSBundle+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+BRPickerView.h"; sourceTree = "<group>"; };
+		2235FFB3268647FE0064B505 /* BRPickerViewMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerViewMacro.h; sourceTree = "<group>"; };
+		2235FFB4268647FE0064B505 /* BRPickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BRPickerView.bundle; sourceTree = "<group>"; };
+		2235FFB5268647FE0064B505 /* BRPickerStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPickerStyle.m; sourceTree = "<group>"; };
+		2235FFB6268647FE0064B505 /* BRBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBaseView.m; sourceTree = "<group>"; };
+		2235FFB7268647FE0064B505 /* NSBundle+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+BRPickerView.m"; sourceTree = "<group>"; };
+		2235FFB8268647FE0064B505 /* BRBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBaseView.h; sourceTree = "<group>"; };
+		2235FFB9268647FE0064B505 /* BRPickerStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerStyle.h; sourceTree = "<group>"; };
+		2235FFBB268647FE0064B505 /* BRAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressModel.m; sourceTree = "<group>"; };
+		2235FFBC268647FE0064B505 /* BRAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressPickerView.h; sourceTree = "<group>"; };
+		2235FFBD268647FE0064B505 /* BRAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressModel.h; sourceTree = "<group>"; };
+		2235FFBE268647FE0064B505 /* BRAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressPickerView.m; sourceTree = "<group>"; };
 		2242392C26838B9800E5188F /* TradeDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TradeDetailVC.h; sourceTree = "<group>"; };
 		2242392D26838B9800E5188F /* TradeDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeDetailVC.m; sourceTree = "<group>"; };
 		2242392E26838B9800E5188F /* TradeDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TradeDetailVC.xib; sourceTree = "<group>"; };
@@ -293,6 +338,20 @@
 		2242393C26838D2100E5188F /* TradeDSubCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TradeDSubCell.h; sourceTree = "<group>"; };
 		2242393D26838D2100E5188F /* TradeDSubCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeDSubCell.m; sourceTree = "<group>"; };
 		2242393E26838D2100E5188F /* TradeDSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TradeDSubCell.xib; sourceTree = "<group>"; };
+		224239552686168200E5188F /* UITextField+TintColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+TintColor.h"; sourceTree = "<group>"; };
+		224239562686168200E5188F /* UITextField+TintColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TintColor.m"; sourceTree = "<group>"; };
+		2242395C268618BF00E5188F /* DirectAccessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectAccessVC.h; sourceTree = "<group>"; };
+		2242395D268618BF00E5188F /* DirectAccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectAccessVC.m; sourceTree = "<group>"; };
+		2242395E268618BF00E5188F /* DirectAccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectAccessVC.xib; sourceTree = "<group>"; };
+		224239672686196B00E5188F /* PrivateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateVC.h; sourceTree = "<group>"; };
+		224239682686196B00E5188F /* PrivateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateVC.m; sourceTree = "<group>"; };
+		224239692686196B00E5188F /* PrivateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivateVC.xib; sourceTree = "<group>"; };
+		2242396F2686198600E5188F /* ToPublicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToPublicVC.h; sourceTree = "<group>"; };
+		224239702686198600E5188F /* ToPublicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToPublicVC.m; sourceTree = "<group>"; };
+		224239712686198600E5188F /* ToPublicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToPublicVC.xib; sourceTree = "<group>"; };
+		22423977268619ED00E5188F /* UnincorporateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnincorporateVC.h; sourceTree = "<group>"; };
+		22423978268619EE00E5188F /* UnincorporateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnincorporateVC.m; sourceTree = "<group>"; };
+		22423979268619EE00E5188F /* UnincorporateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnincorporateVC.xib; sourceTree = "<group>"; };
 		2253CBCC268243AC0015B808 /* LeranVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeranVC.h; sourceTree = "<group>"; };
 		2253CBCD268243AC0015B808 /* LeranVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeranVC.m; sourceTree = "<group>"; };
 		2253CBCE268243AC0015B808 /* LeranVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeranVC.xib; sourceTree = "<group>"; };
@@ -714,6 +773,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2235FFA3268647FE0064B505 /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2235FFA4268647FE0064B505 /* StringPickerView */,
+				2235FFA9268647FE0064B505 /* BRPickerView.h */,
+				2235FFAA268647FE0064B505 /* DatePickerView */,
+				2235FFB1268647FE0064B505 /* Base */,
+				2235FFBA268647FE0064B505 /* AddressPickerView */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		2235FFA4268647FE0064B505 /* StringPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2235FFA5268647FE0064B505 /* BRResultModel.m */,
+				2235FFA6268647FE0064B505 /* BRStringPickerView.h */,
+				2235FFA7268647FE0064B505 /* BRResultModel.h */,
+				2235FFA8268647FE0064B505 /* BRStringPickerView.m */,
+			);
+			path = StringPickerView;
+			sourceTree = "<group>";
+		};
+		2235FFAA268647FE0064B505 /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2235FFAB268647FE0064B505 /* BRDatePickerView+BR.m */,
+				2235FFAC268647FE0064B505 /* BRDatePickerView.h */,
+				2235FFAD268647FE0064B505 /* NSDate+BRPickerView.m */,
+				2235FFAE268647FE0064B505 /* BRDatePickerView.m */,
+				2235FFAF268647FE0064B505 /* BRDatePickerView+BR.h */,
+				2235FFB0268647FE0064B505 /* NSDate+BRPickerView.h */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		2235FFB1268647FE0064B505 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2235FFB2268647FE0064B505 /* NSBundle+BRPickerView.h */,
+				2235FFB3268647FE0064B505 /* BRPickerViewMacro.h */,
+				2235FFB4268647FE0064B505 /* BRPickerView.bundle */,
+				2235FFB5268647FE0064B505 /* BRPickerStyle.m */,
+				2235FFB6268647FE0064B505 /* BRBaseView.m */,
+				2235FFB7268647FE0064B505 /* NSBundle+BRPickerView.m */,
+				2235FFB8268647FE0064B505 /* BRBaseView.h */,
+				2235FFB9268647FE0064B505 /* BRPickerStyle.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2235FFBA268647FE0064B505 /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2235FFBB268647FE0064B505 /* BRAddressModel.m */,
+				2235FFBC268647FE0064B505 /* BRAddressPickerView.h */,
+				2235FFBD268647FE0064B505 /* BRAddressModel.h */,
+				2235FFBE268647FE0064B505 /* BRAddressPickerView.m */,
+			);
+			path = AddressPickerView;
+			sourceTree = "<group>";
+		};
 		2253CBDC268243C90015B808 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +915,18 @@
 				2242392C26838B9800E5188F /* TradeDetailVC.h */,
 				2242392D26838B9800E5188F /* TradeDetailVC.m */,
 				2242392E26838B9800E5188F /* TradeDetailVC.xib */,
+				2242395C268618BF00E5188F /* DirectAccessVC.h */,
+				2242395D268618BF00E5188F /* DirectAccessVC.m */,
+				2242395E268618BF00E5188F /* DirectAccessVC.xib */,
+				224239672686196B00E5188F /* PrivateVC.h */,
+				224239682686196B00E5188F /* PrivateVC.m */,
+				224239692686196B00E5188F /* PrivateVC.xib */,
+				2242396F2686198600E5188F /* ToPublicVC.h */,
+				224239702686198600E5188F /* ToPublicVC.m */,
+				224239712686198600E5188F /* ToPublicVC.xib */,
+				22423977268619ED00E5188F /* UnincorporateVC.h */,
+				22423978268619EE00E5188F /* UnincorporateVC.m */,
+				22423979268619EE00E5188F /* UnincorporateVC.xib */,
 			);
 			path = "商户登记";
 			sourceTree = "<group>";
@@ -1156,6 +1289,7 @@
 				711D7BB52679A0F400BAFB54 /* Main.storyboard */,
 				711D7BB82679A0F500BAFB54 /* Assets.xcassets */,
 				711D7CA82679AC7A00BAFB54 /* Pos.pch */,
+				2235FF87268641DF0064B505 /* 2020年1月县以上行政区划代码.json */,
 				22C1BC3B267A670100092C1E /* HttpHelp.h */,
 				22C1BC3F267A670100092C1E /* HttpHelp.m */,
 				22C1BC3A267A670100092C1E /* LLHeader.h */,
@@ -1207,6 +1341,7 @@
 		711D7C112679AB8F00BAFB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				2235FFA3268647FE0064B505 /* BRPickerView */,
 				710272422681E05E00D5B62A /* TitleBackground */,
 				71CF0F642680913900C4E558 /* MBProgressHUD+SGQRCode.h */,
 				71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */,
@@ -1239,6 +1374,8 @@
 				22C1BC46267A673C00092C1E /* YZInputView.m */,
 				22ACB8722681745800A4E79D /* GzhPhotoManager.h */,
 				22ACB8732681745800A4E79D /* GzhPhotoManager.m */,
+				224239552686168200E5188F /* UITextField+TintColor.h */,
+				224239562686168200E5188F /* UITextField+TintColor.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1576,11 +1713,14 @@
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
 				221899002680F4C300653C2C /* ProductOneCell.xib in Resources */,
 				716979C026857FAD00B278C7 /* MerchantTotalVC.xib in Resources */,
+				224239732686198600E5188F /* ToPublicVC.xib in Resources */,
 				713AA45E2684285C009F02A5 /* TerSearchCell.xib in Resources */,
 				221898F82680F3C000653C2C /* ProductDoneVC.xib in Resources */,
 				713AA4B2268486F4009F02A5 /* ALeftCell.xib in Resources */,
+				2235FFC4268647FE0064B505 /* BRPickerView.bundle in Resources */,
 				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
 				710271F52681C7B200D5B62A /* BusinessCell.xib in Resources */,
+				2242397B268619EE00E5188F /* UnincorporateVC.xib in Resources */,
 				2242393026838B9800E5188F /* TradeDetailVC.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
 				716979DB2685C5DB00B278C7 /* TransferRecordVC.xib in Resources */,
@@ -1591,6 +1731,7 @@
 				713AA49A2684713E009F02A5 /* AchDetailSubVC.xib in Resources */,
 				710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */,
 				2242393826838D0D00E5188F /* TradeDCell.xib in Resources */,
+				2235FF88268641E00064B505 /* 2020年1月县以上行政区划代码.json in Resources */,
 				716979C826857FE000B278C7 /* DayTransactionVC.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
 				716979D02685802500B278C7 /* DayTotalProfitVC.xib in Resources */,
@@ -1601,6 +1742,7 @@
 				711D7BBC2679A0F500BAFB54 /* LaunchScreen.storyboard in Resources */,
 				221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */,
 				71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */,
+				22423960268618BF00E5188F /* DirectAccessVC.xib in Resources */,
 				2253CC0726824A200015B808 /* LxAccessoryCell.xib in Resources */,
 				716979F62685C8EE00B278C7 /* TransferRecordCell.xib in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
@@ -1621,6 +1763,7 @@
 				2253CC5B268387220015B808 /* BusinessListCell.xib in Resources */,
 				7102725C2681E2DF00D5B62A /* PosterCCell.xib in Resources */,
 				2292161E267D287000EB762F /* MerchantDetailVC.xib in Resources */,
+				2242396B2686196B00E5188F /* PrivateVC.xib in Resources */,
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
 				2253CC53268386C50015B808 /* BusinessListVC.xib in Resources */,
 				2253CC1726824EE40015B808 /* AgentCell.xib in Resources */,
@@ -1801,8 +1944,10 @@
 				713AA4992684713E009F02A5 /* AchDetailSubVC.m in Sources */,
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
+				2235FFC1268647FE0064B505 /* BRDatePickerView+BR.m in Sources */,
 				2253CC5A268387220015B808 /* BusinessListCell.m in Sources */,
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
+				2242396A2686196B00E5188F /* PrivateVC.m in Sources */,
 				713AA4B926848704009F02A5 /* ARightCell.m in Sources */,
 				71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */,
 				22C1BCD2267A677200092C1E /* UIWindow+JXSafeArea.m in Sources */,
@@ -1844,6 +1989,7 @@
 				716979ED2685C73C00B278C7 /* TransferRecordSubVC.m in Sources */,
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				22ACB87A268181B900A4E79D /* ComplaintVC.m in Sources */,
+				2235FFC5268647FE0064B505 /* BRPickerStyle.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
 				713B8C1A2682D51200420F75 /* UrgentAttentionVC.m in Sources */,
 				2253CBF3268248F80015B808 /* TerminalSingleDoneVC.m in Sources */,
@@ -1856,19 +2002,24 @@
 				2281D83F2684C6E2004AF0A3 /* MoresettingsVC.m in Sources */,
 				7102725B2681E2DF00D5B62A /* PosterCCell.m in Sources */,
 				228711B5267F9DA900AEE15A /* TerminalManagerVC.m in Sources */,
+				2235FFC6268647FE0064B505 /* BRBaseView.m in Sources */,
 				22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
+				224239572686168200E5188F /* UITextField+TintColor.m in Sources */,
 				2253CBCF268243AC0015B808 /* LeranVC.m in Sources */,
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,
 				713B8C4126832FF700420F75 /* TerminalBatchDoneVC.m in Sources */,
 				2292160F267D198000EB762F /* DataSSubCell.m in Sources */,
 				710272632681E48000D5B62A /* ToFaceVC.m in Sources */,
+				2235FFC3268647FE0064B505 /* BRDatePickerView.m in Sources */,
 				2253CC3626837FEF0015B808 /* MerchantVC.m in Sources */,
 				22C1BC6B267A675500092C1E /* TAAbstractDotView.m in Sources */,
+				2235FFBF268647FE0064B505 /* BRResultModel.m in Sources */,
 				22C1BC6A267A675500092C1E /* TAAnimatedDotView.m in Sources */,
 				710272392681D4A500D5B62A /* PosterSubVC.m in Sources */,
 				22C1BC74267A675A00092C1E /* WRNavigationBar.m in Sources */,
+				2235FFC0268647FE0064B505 /* BRStringPickerView.m in Sources */,
 				22C1BCD0267A677200092C1E /* NSDate+Utilities.m in Sources */,
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
 				22C1BCD6267A677200092C1E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -1897,6 +2048,7 @@
 				2242393726838D0D00E5188F /* TradeDCell.m in Sources */,
 				713B8C132682D44400420F75 /* GHCountField.m in Sources */,
 				713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */,
+				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,
 				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
@@ -1907,11 +2059,14 @@
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
 				716979DA2685C5DB00B278C7 /* TransferRecordVC.m in Sources */,
 				716979FE2685D9E200B278C7 /* TransferRecordDetailVC.m in Sources */,
+				2235FFC7268647FE0064B505 /* NSBundle+BRPickerView.m in Sources */,
 				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
+				2235FFC8268647FE0064B505 /* BRAddressModel.m in Sources */,
 				713AA4862684671A009F02A5 /* AchievementCell.m in Sources */,
 				713B8C2E2682D73700420F75 /* UrgentDetailVC.m in Sources */,
 				710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */,
 				2281D8452684D5C6004AF0A3 /* ChangiphoneVC.m in Sources */,
+				2242397A268619EE00E5188F /* UnincorporateVC.m in Sources */,
 				716979CF2685802500B278C7 /* DayTotalProfitVC.m in Sources */,
 				2253CC1626824EE40015B808 /* AgentCell.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
@@ -1920,12 +2075,15 @@
 				2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */,
 				71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */,
 				22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */,
+				2242395F268618BF00E5188F /* DirectAccessVC.m in Sources */,
+				2235FFC2268647FE0064B505 /* NSDate+BRPickerView.m in Sources */,
 				22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */,
 				2287119F267F960400AEE15A /* RegistVC.m in Sources */,
 				71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */,
 				22921604267D196E00EB762F /* DataSCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
+				2235FFC9268647FE0064B505 /* BRAddressPickerView.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,
 				2253CC0626824A200015B808 /* LxAccessoryCell.m in Sources */,
 				22C1BC67267A675500092C1E /* SDCollectionViewCell.m in Sources */,

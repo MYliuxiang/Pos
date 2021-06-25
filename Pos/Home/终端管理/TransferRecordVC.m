@@ -75,9 +75,9 @@
     self.textField.rightViewMode = UITextFieldViewModeAlways;
     
     UIView *leftView = [[UIView alloc]init];
-    leftView.size = CGSizeMake(10, 44);
+    leftView.size = CGSizeMake(31 , 31);
     leftView.contentMode = UIViewContentModeCenter;
-    self.textField.leftView = rightView;
+    self.textField.leftView = leftView;
     self.textField.leftViewMode = UITextFieldViewModeAlways;
    
   

@@ -73,6 +73,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define Color_6 [UIColor colorWithHexString:@"#666666"]
 #define Color_9 [UIColor colorWithHexString:@"#999999"]
 
+#define TextFieldTintColor [UIColor colorWithHexString:@"#282828"]
+
+
 
 //第三方
 #import "SDAutoLayout.h"
@@ -92,6 +95,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import <TZImagePickerController/TZImagePickerController.h>//图片选择器
 #import "MJExtension.h"
 #import "WSTableviewTree.h"
+#import "BRPickerView.h"
 
 
 

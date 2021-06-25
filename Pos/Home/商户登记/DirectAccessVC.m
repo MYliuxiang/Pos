@@ -1,28 +1,28 @@
 //
-//  MerchantVC.m
+//  DirectAccessVC.m
 //  Pos
 //
-//  Created by 刘翔 on 2021/6/23.
+//  Created by 刘翔 on 2021/6/25.
 //
 
-#import "MerchantVC.h"
-#import "MerchantSubVC.h"
 #import "DirectAccessVC.h"
+#import "PrivateVC.h"
+#import "ToPublicVC.h"
+#import "UnincorporateVC.h"
 
-@interface MerchantVC ()<JXCategoryListContainerViewDelegate,JXCategoryViewDelegate>
+@interface DirectAccessVC ()<JXCategoryListContainerViewDelegate,JXCategoryViewDelegate>
 @property (nonatomic, strong) JXCategoryListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleBackgroundView *categoryView;
 @property (nonatomic, strong) NSArray *titles;
 
 @end
 
-@implementation MerchantVC
+@implementation DirectAccessVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.customNavBar.title = @"企业";
-    
+    self.customNavBar.title = @"直接入网";
     [self.view addSubview:self.categoryView];
     [self.view addSubview:self.listContainerView];
     [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -37,47 +37,22 @@
     }];
     
 
-    self.titles = @[@"全部",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2"];
+    self.titles = @[@"对私结算",@"对公结算",@"非法人结算"];
     self.categoryView.titles = self.titles;
     self.categoryView.titleFont = [UIFont boldSystemFontOfSize:16];
     self.categoryView.titleSelectedFont = [UIFont boldSystemFontOfSize:16];
     self.categoryView.titleColor = [UIColor colorWithHexString:@"#FF8901"];
     self.categoryView.titleSelectedColor = [UIColor whiteColor];
-    self.categoryView.contentEdgeInsetLeft = 15;
-    self.categoryView.contentEdgeInsetRight = 15;
-    self.categoryView.cellWidthIncrement = 56;
-    self.categoryView.averageCellSpacingEnabled = NO;
+//    self.categoryView.contentEdgeInsetLeft = 15;
+//    self.categoryView.contentEdgeInsetRight = 15;
+    self.categoryView.cellWidthIncrement = 20;
+    self.categoryView.averageCellSpacingEnabled = YES;
     
     self.categoryView.normalBackgroundColor = [UIColor whiteColor];
     self.categoryView.selectedBackgroundColor = [UIColor colorWithHexString:@"#FF8901"];
     self.categoryView.backgroundHeight = 35;
     self.categoryView.backgroundCornerRadius = 17.5;
     self.categoryView.cellSpacing = 10;
-    
-    UIButton *importBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    importBtn.backgroundColor = [UIColor whiteColor];
-    importBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    [importBtn setTitle:@"进件" forState:UIControlStateNormal];
-    [importBtn setTitleColor:[UIColor colorWithHexString:@"#FF8901"] forState:UIControlStateNormal];
-    [importBtn addTarget:self action:@selector(importBtnAC:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:importBtn];
-    LXViewBorder(importBtn, 40);
-    
-    [importBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.mas_equalTo(80);
-            make.right.equalTo(self.view).offset(-27);
-            make.bottom.equalTo(self.view).offset(-kBottomSafeHeight - 50);
-    }];
-        
-    
-}
-
-- (void)importBtnAC:(UIButton *)sender{
-    //进件
-    
-    DirectAccessVC *vc = [DirectAccessVC new];
-    [self.navigationController pushViewController:vc animated:YES];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -140,18 +115,22 @@
 
 // 返回各个列表菜单下的实例，该实例需要遵守并实现 <JXCategoryListContentViewDelegate> 协议
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
-    MerchantSubVC *list = [[MerchantSubVC alloc] init];
-    return list;
+    
+    if (index == 0) {
+        PrivateVC *list = [[PrivateVC alloc] init];
+        return list;
+    }else if (index == 1){
+        ToPublicVC *list = [[ToPublicVC alloc] init];
+        return list;
+    }else{
+        UnincorporateVC *list = [[UnincorporateVC alloc] init];
+        return list;
+    }
+    
+   
+   
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
