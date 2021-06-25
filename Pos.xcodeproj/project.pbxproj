@@ -184,7 +184,6 @@
 		711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CCD2679ACF100BAFB54 /* HomeVC.m */; };
 		711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711D7CCE2679ACF100BAFB54 /* HomeVC.xib */; };
 		711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CD82679AD4A00BAFB54 /* AppService.m */; };
-		711D7D362679E31200BAFB54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7D342679E31200BAFB54 /* ViewController.m */; };
 		713AA4552684272A009F02A5 /* TerminalSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4532684272A009F02A5 /* TerminalSearchVC.m */; };
 		713AA4562684272A009F02A5 /* TerminalSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4542684272A009F02A5 /* TerminalSearchVC.xib */; };
 		713AA45D2684285C009F02A5 /* TerSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA45B2684285C009F02A5 /* TerSearchCell.m */; };
@@ -214,6 +213,22 @@
 		713B8C37268318E000420F75 /* TerminalBatchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713B8C35268318E000420F75 /* TerminalBatchVC.xib */; };
 		713B8C4126832FF700420F75 /* TerminalBatchDoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713B8C3F26832FF700420F75 /* TerminalBatchDoneVC.m */; };
 		713B8C4226832FF700420F75 /* TerminalBatchDoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713B8C4026832FF700420F75 /* TerminalBatchDoneVC.xib */; };
+		716979B726857F6C00B278C7 /* ServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979B526857F6C00B278C7 /* ServiceVC.m */; };
+		716979B826857F6C00B278C7 /* ServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979B626857F6C00B278C7 /* ServiceVC.xib */; };
+		716979BF26857FAD00B278C7 /* MerchantTotalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979BD26857FAD00B278C7 /* MerchantTotalVC.m */; };
+		716979C026857FAD00B278C7 /* MerchantTotalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979BE26857FAD00B278C7 /* MerchantTotalVC.xib */; };
+		716979C726857FE000B278C7 /* DayTransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979C526857FE000B278C7 /* DayTransactionVC.m */; };
+		716979C826857FE000B278C7 /* DayTransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979C626857FE000B278C7 /* DayTransactionVC.xib */; };
+		716979CF2685802500B278C7 /* DayTotalProfitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979CD2685802500B278C7 /* DayTotalProfitVC.m */; };
+		716979D02685802500B278C7 /* DayTotalProfitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979CE2685802500B278C7 /* DayTotalProfitVC.xib */; };
+		716979DA2685C5DB00B278C7 /* TransferRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979D82685C5DB00B278C7 /* TransferRecordVC.m */; };
+		716979DB2685C5DB00B278C7 /* TransferRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979D92685C5DB00B278C7 /* TransferRecordVC.xib */; };
+		716979ED2685C73C00B278C7 /* TransferRecordSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979EB2685C73C00B278C7 /* TransferRecordSubVC.m */; };
+		716979EE2685C73C00B278C7 /* TransferRecordSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979EC2685C73C00B278C7 /* TransferRecordSubVC.xib */; };
+		716979F52685C8EE00B278C7 /* TransferRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979F32685C8EE00B278C7 /* TransferRecordCell.m */; };
+		716979F62685C8EE00B278C7 /* TransferRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979F42685C8EE00B278C7 /* TransferRecordCell.xib */; };
+		716979FE2685D9E200B278C7 /* TransferRecordDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 716979FC2685D9E100B278C7 /* TransferRecordDetailVC.m */; };
+		716979FF2685D9E200B278C7 /* TransferRecordDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716979FD2685D9E100B278C7 /* TransferRecordDetailVC.xib */; };
 		71864978268031A5008EED37 /* TerminalTransferVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71864976268031A5008EED37 /* TerminalTransferVC.m */; };
 		71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71864977268031A5008EED37 /* TerminalTransferVC.xib */; };
 		71864987268034BF008EED37 /* TransfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71864985268034BF008EED37 /* TransfCell.m */; };
@@ -568,8 +583,6 @@
 		711D7CCE2679ACF100BAFB54 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		711D7CD72679AD4A00BAFB54 /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		711D7CD82679AD4A00BAFB54 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
-		711D7D342679E31200BAFB54 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		711D7D352679E31200BAFB54 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		713AA4522684272A009F02A5 /* TerminalSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalSearchVC.h; sourceTree = "<group>"; };
 		713AA4532684272A009F02A5 /* TerminalSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalSearchVC.m; sourceTree = "<group>"; };
 		713AA4542684272A009F02A5 /* TerminalSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalSearchVC.xib; sourceTree = "<group>"; };
@@ -615,6 +628,30 @@
 		713B8C3E26832FF700420F75 /* TerminalBatchDoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalBatchDoneVC.h; sourceTree = "<group>"; };
 		713B8C3F26832FF700420F75 /* TerminalBatchDoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalBatchDoneVC.m; sourceTree = "<group>"; };
 		713B8C4026832FF700420F75 /* TerminalBatchDoneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalBatchDoneVC.xib; sourceTree = "<group>"; };
+		716979B426857F6C00B278C7 /* ServiceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceVC.h; sourceTree = "<group>"; };
+		716979B526857F6C00B278C7 /* ServiceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceVC.m; sourceTree = "<group>"; };
+		716979B626857F6C00B278C7 /* ServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceVC.xib; sourceTree = "<group>"; };
+		716979BC26857FAD00B278C7 /* MerchantTotalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantTotalVC.h; sourceTree = "<group>"; };
+		716979BD26857FAD00B278C7 /* MerchantTotalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantTotalVC.m; sourceTree = "<group>"; };
+		716979BE26857FAD00B278C7 /* MerchantTotalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTotalVC.xib; sourceTree = "<group>"; };
+		716979C426857FE000B278C7 /* DayTransactionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayTransactionVC.h; sourceTree = "<group>"; };
+		716979C526857FE000B278C7 /* DayTransactionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayTransactionVC.m; sourceTree = "<group>"; };
+		716979C626857FE000B278C7 /* DayTransactionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayTransactionVC.xib; sourceTree = "<group>"; };
+		716979CC2685802500B278C7 /* DayTotalProfitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayTotalProfitVC.h; sourceTree = "<group>"; };
+		716979CD2685802500B278C7 /* DayTotalProfitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayTotalProfitVC.m; sourceTree = "<group>"; };
+		716979CE2685802500B278C7 /* DayTotalProfitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayTotalProfitVC.xib; sourceTree = "<group>"; };
+		716979D72685C5DB00B278C7 /* TransferRecordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferRecordVC.h; sourceTree = "<group>"; };
+		716979D82685C5DB00B278C7 /* TransferRecordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferRecordVC.m; sourceTree = "<group>"; };
+		716979D92685C5DB00B278C7 /* TransferRecordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecordVC.xib; sourceTree = "<group>"; };
+		716979EA2685C73C00B278C7 /* TransferRecordSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferRecordSubVC.h; sourceTree = "<group>"; };
+		716979EB2685C73C00B278C7 /* TransferRecordSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferRecordSubVC.m; sourceTree = "<group>"; };
+		716979EC2685C73C00B278C7 /* TransferRecordSubVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecordSubVC.xib; sourceTree = "<group>"; };
+		716979F22685C8EE00B278C7 /* TransferRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferRecordCell.h; sourceTree = "<group>"; };
+		716979F32685C8EE00B278C7 /* TransferRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferRecordCell.m; sourceTree = "<group>"; };
+		716979F42685C8EE00B278C7 /* TransferRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecordCell.xib; sourceTree = "<group>"; };
+		716979FB2685D9E100B278C7 /* TransferRecordDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferRecordDetailVC.h; sourceTree = "<group>"; };
+		716979FC2685D9E100B278C7 /* TransferRecordDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferRecordDetailVC.m; sourceTree = "<group>"; };
+		716979FD2685D9E100B278C7 /* TransferRecordDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecordDetailVC.xib; sourceTree = "<group>"; };
 		71864975268031A5008EED37 /* TerminalTransferVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalTransferVC.h; sourceTree = "<group>"; };
 		71864976268031A5008EED37 /* TerminalTransferVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalTransferVC.m; sourceTree = "<group>"; };
 		71864977268031A5008EED37 /* TerminalTransferVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalTransferVC.xib; sourceTree = "<group>"; };
@@ -798,6 +835,15 @@
 				2253CC0B26824E760015B808 /* ChooseAgentVC.h */,
 				2253CC0C26824E760015B808 /* ChooseAgentVC.m */,
 				2253CC0D26824E760015B808 /* ChooseAgentVC.xib */,
+				716979D72685C5DB00B278C7 /* TransferRecordVC.h */,
+				716979D82685C5DB00B278C7 /* TransferRecordVC.m */,
+				716979D92685C5DB00B278C7 /* TransferRecordVC.xib */,
+				716979EA2685C73C00B278C7 /* TransferRecordSubVC.h */,
+				716979EB2685C73C00B278C7 /* TransferRecordSubVC.m */,
+				716979EC2685C73C00B278C7 /* TransferRecordSubVC.xib */,
+				716979FB2685D9E100B278C7 /* TransferRecordDetailVC.h */,
+				716979FC2685D9E100B278C7 /* TransferRecordDetailVC.m */,
+				716979FD2685D9E100B278C7 /* TransferRecordDetailVC.xib */,
 			);
 			path = "终端管理";
 			sourceTree = "<group>";
@@ -1219,8 +1265,6 @@
 				221898F42680F3C000653C2C /* ProductDoneVC.h */,
 				221898F52680F3C000653C2C /* ProductDoneVC.m */,
 				221898F62680F3C000653C2C /* ProductDoneVC.xib */,
-				711D7D352679E31200BAFB54 /* ViewController.h */,
-				711D7D342679E31200BAFB54 /* ViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1239,6 +1283,18 @@
 				713AA4962684713E009F02A5 /* AchDetailSubVC.h */,
 				713AA4972684713E009F02A5 /* AchDetailSubVC.m */,
 				713AA4982684713E009F02A5 /* AchDetailSubVC.xib */,
+				716979B426857F6C00B278C7 /* ServiceVC.h */,
+				716979B526857F6C00B278C7 /* ServiceVC.m */,
+				716979B626857F6C00B278C7 /* ServiceVC.xib */,
+				716979BC26857FAD00B278C7 /* MerchantTotalVC.h */,
+				716979BD26857FAD00B278C7 /* MerchantTotalVC.m */,
+				716979BE26857FAD00B278C7 /* MerchantTotalVC.xib */,
+				716979C426857FE000B278C7 /* DayTransactionVC.h */,
+				716979C526857FE000B278C7 /* DayTransactionVC.m */,
+				716979C626857FE000B278C7 /* DayTransactionVC.xib */,
+				716979CC2685802500B278C7 /* DayTotalProfitVC.h */,
+				716979CD2685802500B278C7 /* DayTotalProfitVC.m */,
+				716979CE2685802500B278C7 /* DayTotalProfitVC.xib */,
 			);
 			path = Achievement;
 			sourceTree = "<group>";
@@ -1357,6 +1413,9 @@
 				713AA45A2684285C009F02A5 /* TerSearchCell.h */,
 				713AA45B2684285C009F02A5 /* TerSearchCell.m */,
 				713AA45C2684285C009F02A5 /* TerSearchCell.xib */,
+				716979F22685C8EE00B278C7 /* TransferRecordCell.h */,
+				716979F32685C8EE00B278C7 /* TransferRecordCell.m */,
+				716979F42685C8EE00B278C7 /* TransferRecordCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1516,6 +1575,7 @@
 				228711A0267F960400AEE15A /* RegistVC.xib in Resources */,
 				711D7CAD2679ACA600BAFB54 /* LoginVC.xib in Resources */,
 				221899002680F4C300653C2C /* ProductOneCell.xib in Resources */,
+				716979C026857FAD00B278C7 /* MerchantTotalVC.xib in Resources */,
 				713AA45E2684285C009F02A5 /* TerSearchCell.xib in Resources */,
 				221898F82680F3C000653C2C /* ProductDoneVC.xib in Resources */,
 				713AA4B2268486F4009F02A5 /* ALeftCell.xib in Resources */,
@@ -1523,6 +1583,7 @@
 				710271F52681C7B200D5B62A /* BusinessCell.xib in Resources */,
 				2242393026838B9800E5188F /* TradeDetailVC.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
+				716979DB2685C5DB00B278C7 /* TransferRecordVC.xib in Resources */,
 				710272322681D45100D5B62A /* PosterVC.xib in Resources */,
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
 				2253CBE1268243E00015B808 /* LeranOneCell.xib in Resources */,
@@ -1530,7 +1591,9 @@
 				713AA49A2684713E009F02A5 /* AchDetailSubVC.xib in Resources */,
 				710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */,
 				2242393826838D0D00E5188F /* TradeDCell.xib in Resources */,
+				716979C826857FE000B278C7 /* DayTransactionVC.xib in Resources */,
 				71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */,
+				716979D02685802500B278C7 /* DayTotalProfitVC.xib in Resources */,
 				713AA492268470BB009F02A5 /* AchievementDetailVC.xib in Resources */,
 				711D7CC82679ACE300BAFB54 /* AchievementVC.xib in Resources */,
 				713AA4872684671A009F02A5 /* AchievementCell.xib in Resources */,
@@ -1539,6 +1602,7 @@
 				221899082680F4D600653C2C /* ProductTwoCell.xib in Resources */,
 				71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */,
 				2253CC0726824A200015B808 /* LxAccessoryCell.xib in Resources */,
+				716979F62685C8EE00B278C7 /* TransferRecordCell.xib in Resources */,
 				22C1BCC3267A677200092C1E /* LICENSE in Resources */,
 				711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */,
 				22921610267D198000EB762F /* DataSSubCell.xib in Resources */,
@@ -1560,6 +1624,8 @@
 				711D7BB92679A0F500BAFB54 /* Assets.xcassets in Resources */,
 				2253CC53268386C50015B808 /* BusinessListVC.xib in Resources */,
 				2253CC1726824EE40015B808 /* AgentCell.xib in Resources */,
+				716979EE2685C73C00B278C7 /* TransferRecordSubVC.xib in Resources */,
+				716979FF2685D9E200B278C7 /* TransferRecordDetailVC.xib in Resources */,
 				713B8C1B2682D51200420F75 /* UrgentAttentionVC.xib in Resources */,
 				7186499326804185008EED37 /* TransfCCell.xib in Resources */,
 				221898DD2680E85700653C2C /* ProductVC.xib in Resources */,
@@ -1573,6 +1639,7 @@
 				228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				713AA4562684272A009F02A5 /* TerminalSearchVC.xib in Resources */,
+				716979B826857F6C00B278C7 /* ServiceVC.xib in Resources */,
 				22F7F873267BB93B0009FDF0 /* HomeTwoCCell.xib in Resources */,
 				713B8C2F2682D73700420F75 /* UrgentDetailVC.xib in Resources */,
 				71864979268031A5008EED37 /* TerminalTransferVC.xib in Resources */,
@@ -1711,10 +1778,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				228711C6267FA57000AEE15A /* LxSubTitleCell.m in Sources */,
+				716979C726857FE000B278C7 /* DayTransactionVC.m in Sources */,
 				711D7CAC2679ACA600BAFB54 /* LoginVC.m in Sources */,
 				22C1BCDA267A677200092C1E /* UIColor+MyColor.m in Sources */,
 				711D7C1F2679ABF900BAFB54 /* MainTabBarController.m in Sources */,
-				711D7D362679E31200BAFB54 /* ViewController.m in Sources */,
 				221898EF2680EAE000653C2C /* ProductCell.m in Sources */,
 				22C1BC51267A674200092C1E /* LxResfreshHeader.m in Sources */,
 				22E33E84268071C40019915A /* UIViewController+YKViewControllerBarHeight.m in Sources */,
@@ -1769,9 +1836,12 @@
 				22E33E8726808EEE0019915A /* InformationVC.m in Sources */,
 				2242392F26838B9800E5188F /* TradeDetailVC.m in Sources */,
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
+				716979BF26857FAD00B278C7 /* MerchantTotalVC.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
 				228711BD267FA39100AEE15A /* TerminalCenterVC.m in Sources */,
 				2281D83926839A39004AF0A3 /* MessageCell.m in Sources */,
+				716979F52685C8EE00B278C7 /* TransferRecordCell.m in Sources */,
+				716979ED2685C73C00B278C7 /* TransferRecordSubVC.m in Sources */,
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				22ACB87A268181B900A4E79D /* ComplaintVC.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
@@ -1811,6 +1881,7 @@
 				711D7BBF2679A0F500BAFB54 /* main.m in Sources */,
 				71864978268031A5008EED37 /* TerminalTransferVC.m in Sources */,
 				2253CC52268386C50015B808 /* BusinessListVC.m in Sources */,
+				716979B726857F6C00B278C7 /* ServiceVC.m in Sources */,
 				22C1BCD3267A677200092C1E /* UIDevice+VKKeychainIDFV.m in Sources */,
 				2253CC47268382630015B808 /* MerchantCell.m in Sources */,
 				7102724D2681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m in Sources */,
@@ -1834,11 +1905,14 @@
 				22C1BCD9267A677200092C1E /* UISwitch+Custom.m in Sources */,
 				713AA4A126847AAA009F02A5 /* AchDetailModel.m in Sources */,
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
+				716979DA2685C5DB00B278C7 /* TransferRecordVC.m in Sources */,
+				716979FE2685D9E200B278C7 /* TransferRecordDetailVC.m in Sources */,
 				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
 				713AA4862684671A009F02A5 /* AchievementCell.m in Sources */,
 				713B8C2E2682D73700420F75 /* UrgentDetailVC.m in Sources */,
 				710271FC2681CA1200D5B62A /* InvitationVC.m in Sources */,
 				2281D8452684D5C6004AF0A3 /* ChangiphoneVC.m in Sources */,
+				716979CF2685802500B278C7 /* DayTotalProfitVC.m in Sources */,
 				2253CC1626824EE40015B808 /* AgentCell.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,

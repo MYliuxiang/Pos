@@ -1,38 +1,36 @@
 //
-//  TerminalTransferVC.m
+//  TransferRecordVC.m
 //  Pos
 //
-//  Created by tenvine on 2021/6/21.
+//  Created by tenvine on 2021/6/25.
 //
 
-#import "TerminalTransferVC.h"
-#import "TransfCell.h"
-#import "TerminalTransfOneVC.h"
-#import "TerminalTransfTwoVC.h"
 #import "TransferRecordVC.h"
+#import "TransferRecordSubVC.h"
 
-@interface TerminalTransferVC ()<JXPagerViewDelegate, JXPagerMainTableViewGestureDelegate>
+@interface TransferRecordVC ()<JXPagerViewDelegate, JXPagerMainTableViewGestureDelegate>
 @property (nonatomic, strong) JXPagerListRefreshView *pagerView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *sectionView;
 @property (weak, nonatomic) IBOutlet UIButton *btn1;
 @property (weak, nonatomic) IBOutlet UIButton *btn2;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
-
 @property (nonatomic,assign) int seletedIndex;
+@property (weak, nonatomic) IBOutlet UIView *headerUpView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UILabel *brandL;
+@property (weak, nonatomic) IBOutlet UIImageView *brandI;
+@property (weak, nonatomic) IBOutlet UIView *brandV;
+
+@property (nonatomic,copy) NSString *keyword;
+
+
 @end
 
-@implementation TerminalTransferVC
+@implementation TransferRecordVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.customNavBar.title = @"终端划拨";
-    self.rightTitle = @"调拨记录";
-    self.rightColor = [UIColor colorWithHexString:@"#A2A2A2"];
-    [self creatCollection];
-    
+    self.customNavBar.title = @"调拨记录";
     _pagerView = [self preferredPagingView];
     self.pagerView.mainTableView.gestureDelegate = self;
     self.pagerView.mainTableView.backgroundColor = [UIColor clearColor];
@@ -47,17 +45,7 @@
     
     [self setUI];
     [self handerHeadrBWithIndex:0];
-    
-      
 }
-
-- (void)doRightNavBarRightBtnAction{
-    TransferRecordVC *vc = [TransferRecordVC new];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-
-
 
 - (void)setUI{
     self.btn1.layer.cornerRadius = 17.5;
@@ -66,8 +54,58 @@
     self.btn2.layer.cornerRadius = 17.5;
     self.btn2.layer.masksToBounds = YES;
     
+    LXViewBorder(self.textField, 5);
+    LXViewBorder(self.brandV, 5);
+    
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:@"品牌搜索" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#BBBBBB"],NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+    self.textField.attributedPlaceholder = attrString;
+    
+    
+    [self.textField addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    
+    UIView *rightView = [[UIView alloc]init];
+    rightView.size = CGSizeMake(44, 44);
+    rightView.contentMode = UIViewContentModeCenter;
+    UIImageView *rightImage = [[UIImageView alloc]init];
+    rightImage.image = [UIImage imageNamed:@"搜索"];
+    rightImage.frame = CGRectMake(11, 11, 20, 20);
+    [rightView addSubview:rightImage];
+    self.textField.rightView = rightView;
+    self.textField.rightViewMode = UITextFieldViewModeAlways;
+    
+    UIView *leftView = [[UIView alloc]init];
+    leftView.size = CGSizeMake(10, 44);
+    leftView.contentMode = UIViewContentModeCenter;
+    self.textField.leftView = rightView;
+    self.textField.leftViewMode = UITextFieldViewModeAlways;
+   
   
 }
+
+- (IBAction)brandAC:(id)sender {
+}
+
+
+- (void)textFieldChange:(UITextField *)textField{
+    
+    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+
+        NSString *handleStr =  [self.textField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if (handleStr.length == 0) {
+            self.textField.text = handleStr;
+            return;
+        }
+    self.keyword = handleStr;
+    [self performSelector:@selector(searchAC) withObject:nil afterDelay:1.f];
+}
+
+- (void)searchAC{
+
+}
+
+
 
 
 - (void)handerHeadrBWithIndex:(int)index{
@@ -85,56 +123,6 @@
     }
 }
 
-- (void)creatCollection
-{
-    
-    self.layout.itemSize = CGSizeMake(75, 110);
-    self.layout.minimumLineSpacing = 12;
-    self.layout.minimumInteritemSpacing = 12;
-    self.layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
-    
-    [self.collectionView registerNib:[UINib nibWithNibName:@"TransfCCell" bundle:nil] forCellWithReuseIdentifier:@"TransfCCellID"];
-    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
-    
-}
-
-#pragma mark - UICollectionViewDelegate
-- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    TransfCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TransfCCellID" forIndexPath:indexPath];
-    return cell;
-    
-}
-
-
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    UICollectionReusableView *reusableview = nil;
-    if ([kind isEqualToString: UICollectionElementKindSectionHeader]){
-        UIView *view = [UIView new];
-        reusableview = view;
-    }
-    return reusableview;
-}
-
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    
-}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -169,7 +157,7 @@
 }
 
 - (NSUInteger)heightForPinSectionHeaderInPagerView:(JXPagerView *)pagerView {
-    return 248;
+    return 160;
 }
 
 - (UIView *)viewForPinSectionHeaderInPagerView:(JXPagerView *)pagerView {
@@ -182,14 +170,10 @@
 }
 
 - (id<JXPagerViewListViewDelegate>)pagerView:(JXPagerView *)pagerView initListAtIndex:(NSInteger)index {
-    if (index == 0) {
-        TerminalTransfOneVC *list = [[TerminalTransfOneVC alloc] init];
-        return list;
-    }else{
-        TerminalTransfTwoVC *list1 = [[TerminalTransfTwoVC alloc] init];
-        return list1;
-    }
-  
+    TransferRecordSubVC *list = [[TransferRecordSubVC alloc] init];
+    return list;
+    
+    
 }
 
 
@@ -212,8 +196,8 @@
     
     [self.pagerView.listContainerView.scrollView setContentOffset:CGPointMake(kScreenWidth * (tag - 100), 0) animated:NO];
     [self.pagerView.listContainerView didClickSelectedItemAtIndex:tag - 100];
-//    self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = (self.seletedIndex == 0);
 }
+
 
 
 

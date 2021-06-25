@@ -69,9 +69,12 @@
     if (self.navigationController.viewControllers.count > 1 ) {
 
 //        self.hiddenLeftBtn = NO;
+        self.bottomView.hidden = YES;
+
         
     }else{
-        
+        self.bottomView.hidden = NO;
+
 //        self.hiddenLeftBtn = YES;
     }
     

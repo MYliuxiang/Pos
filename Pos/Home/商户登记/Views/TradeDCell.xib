@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFB-o4-e0l">
-                        <rect key="frame" x="20" y="30" width="60" height="33"/>
+                        <rect key="frame" x="20" y="38" width="60" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -29,10 +29,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="kFB-o4-e0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1Vd-mi-Tc6"/>
-                    <constraint firstAttribute="bottom" secondItem="kFB-o4-e0l" secondAttribute="bottom" constant="30" id="c5J-0v-f5h"/>
                     <constraint firstItem="agk-M7-er5" firstAttribute="leading" secondItem="kFB-o4-e0l" secondAttribute="trailing" constant="10" id="r6O-Bc-aiG"/>
                     <constraint firstItem="agk-M7-er5" firstAttribute="centerY" secondItem="kFB-o4-e0l" secondAttribute="centerY" id="taW-Ro-76X"/>
-                    <constraint firstItem="kFB-o4-e0l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="zXv-Zu-c1e"/>
+                    <constraint firstItem="kFB-o4-e0l" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ur3-Vm-oM2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>

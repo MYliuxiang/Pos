@@ -10,6 +10,10 @@
 #import "AchDetailSubModel.h"
 #import "ALeftCell.h"
 #import "ARightCell.h"
+#import "ServiceVC.h"
+#import "MerchantTotalVC.h"
+#import "DayTransactionVC.h"
+#import "DayTotalProfitVC.h"
 
 @interface AchDetailSubVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -181,6 +185,46 @@ static NSString *const resueIdright = @"rightCell";
                                atScrollPosition:UITableViewScrollPositionNone animated:NO];
 
     }
+    
+    if (tableView == self.rightTable) {
+        switch (indexPath.row) {
+            case 0:
+            {
+                ServiceVC *vc = [ServiceVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+                
+            }
+                break;
+            case 1:
+            {
+                MerchantTotalVC *vc = [MerchantTotalVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+                
+            }
+                break;
+            case 2:
+            {
+                DayTransactionVC *vc = [DayTransactionVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 3:
+            {
+                DayTotalProfitVC *vc = [DayTotalProfitVC new];
+                [self.navigationController pushViewController:vc animated:YES];
+                
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+
+    }
+    
+   
+    
 }
 
 

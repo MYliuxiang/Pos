@@ -55,7 +55,6 @@
     cell.titleL.text = self.titles[indexPath.row];
     cell.subTitleL.text = self.subTitles[indexPath.row];
     cell.img.image = [UIImage imageNamed:self.imageStrs[indexPath.row]];
-    
     return cell;
     
 }

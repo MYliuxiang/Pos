@@ -15,6 +15,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstrint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightConstrint;
 
+
+//折叠用的属性
+@property (nonatomic, assign, getter = isExpanded) BOOL expanded;
+@property (nonatomic, assign, getter = isExpandable) BOOL expandable;
+
+- (void)addIndicatorView;
+- (void)removeIndicatorView;
+- (BOOL)containsIndicatorView;
+- (void)accessoryViewAnimation;
 @end
 
 NS_ASSUME_NONNULL_END

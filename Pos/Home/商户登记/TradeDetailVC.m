@@ -23,14 +23,10 @@
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"交易明细";
     
-     self.dataSourceArrM = [NSMutableArray array];
+    self.dataSourceArrM = [NSMutableArray array];
     
-//    self.headerView.autoresizingMask = UIViewAutoresizingNone;
-//    self.tableView.tableHeaderView = self.headerView;
-
-
-     [self registerCell];
-     [self addData];
+    [self registerCell];
+    [self addData];
 
  }
 

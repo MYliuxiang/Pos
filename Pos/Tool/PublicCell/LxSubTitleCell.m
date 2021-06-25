@@ -20,4 +20,24 @@
     // Configure the view for the selected state
 }
 
+
+#pragma  mark -----折叠方法-------
+
+- (void)addIndicatorView {
+   
+}
+
+- (void)removeIndicatorView {
+    
+}
+
+- (BOOL)containsIndicatorView {
+    return  YES;
+}
+
+- (void)accessoryViewAnimation {
+   
+}
+
+
 @end
