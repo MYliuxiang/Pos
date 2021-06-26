@@ -181,7 +181,9 @@
     AdressModel *model = self.dataList[indexPath.section];
     if (self.selectBlock) {
         self.selectBlock(model);
+        [self.navigationController popViewControllerAnimated:YES];
     }
+    
     
     
 }

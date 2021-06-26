@@ -117,7 +117,6 @@
             self.adModel = model;
             [self.tableView reloadData];
         };
-       
         [self.navigationController pushViewController:vc animated:YES];
     }
     
