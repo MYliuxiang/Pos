@@ -61,6 +61,12 @@
     yzmlabel.text = @"验证码";
     [baiseview addSubview:yzmlabel];
     
+    //手机号码
+    self.yzmtextfield = [[UITextField alloc]initWithFrame:CGRectMake(yzmlabel.right+40, 25, 200, 19)];
+    self.yzmtextfield.font = [UIFont systemFontOfSize:14];
+    self.yzmtextfield.placeholder = @"232356";
+    [baiseview addSubview:self.yzmtextfield];
+    
 }
 
 @end

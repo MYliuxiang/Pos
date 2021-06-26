@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCarVC : BaseViewController
 @property (nonatomic,strong) UITextField *iphonetextfield;
+@property (nonatomic,strong) UITextField *yzmtextfield;
 @end
 
 NS_ASSUME_NONNULL_END

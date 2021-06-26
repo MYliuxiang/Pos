@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     
     [self setUI];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#F6F6F6"];
 }
 
 //初始化视图
@@ -36,7 +37,7 @@
    self.tableView.bounces = NO;
    self.tableView.estimatedSectionFooterHeight = 0;
 //   self.tableView.estimatedSectionHeaderHeight = 0;
-   self.tableView.backgroundColor = [UIColor clearColor];
+   self.tableView.backgroundColor = [UIColor colorWithHexString:@"#F6F6F6"];
    UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.01)];
    self.tableView.tableFooterView = footview;
 //    self.tableView.tableHeaderView = headview;
