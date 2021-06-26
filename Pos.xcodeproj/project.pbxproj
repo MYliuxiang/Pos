@@ -70,6 +70,10 @@
 		2253CC53268386C50015B808 /* BusinessListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC51268386C50015B808 /* BusinessListVC.xib */; };
 		2253CC5A268387220015B808 /* BusinessListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253CC58268387220015B808 /* BusinessListCell.m */; };
 		2253CC5B268387220015B808 /* BusinessListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2253CC59268387220015B808 /* BusinessListCell.xib */; };
+		226D6E6B26878816004D8778 /* MailListSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E6926878816004D8778 /* MailListSubVC.m */; };
+		226D6E6C26878816004D8778 /* MailListSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E6A26878816004D8778 /* MailListSubVC.xib */; };
+		226D6E74268788A8004D8778 /* MailListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E72268788A8004D8778 /* MailListCell.m */; };
+		226D6E75268788A8004D8778 /* MailListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E73268788A8004D8778 /* MailListCell.xib */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -399,6 +403,12 @@
 		2253CC57268387220015B808 /* BusinessListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessListCell.h; sourceTree = "<group>"; };
 		2253CC58268387220015B808 /* BusinessListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessListCell.m; sourceTree = "<group>"; };
 		2253CC59268387220015B808 /* BusinessListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessListCell.xib; sourceTree = "<group>"; };
+		226D6E6826878816004D8778 /* MailListSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailListSubVC.h; sourceTree = "<group>"; };
+		226D6E6926878816004D8778 /* MailListSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailListSubVC.m; sourceTree = "<group>"; };
+		226D6E6A26878816004D8778 /* MailListSubVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailListSubVC.xib; sourceTree = "<group>"; };
+		226D6E71268788A8004D8778 /* MailListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailListCell.h; sourceTree = "<group>"; };
+		226D6E72268788A8004D8778 /* MailListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailListCell.m; sourceTree = "<group>"; };
+		226D6E73268788A8004D8778 /* MailListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailListCell.xib; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -887,6 +897,16 @@
 				2242393C26838D2100E5188F /* TradeDSubCell.h */,
 				2242393D26838D2100E5188F /* TradeDSubCell.m */,
 				2242393E26838D2100E5188F /* TradeDSubCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		226D6E7026878894004D8778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				226D6E71268788A8004D8778 /* MailListCell.h */,
+				226D6E72268788A8004D8778 /* MailListCell.m */,
+				226D6E73268788A8004D8778 /* MailListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1495,9 +1515,13 @@
 		711D7C142679ABD300BAFB54 /* Maillist  */ = {
 			isa = PBXGroup;
 			children = (
+				226D6E7026878894004D8778 /* Views */,
 				711D7CBC2679ACCA00BAFB54 /* MailListVC.h */,
 				711D7CBD2679ACCA00BAFB54 /* MailListVC.m */,
 				711D7CBE2679ACCA00BAFB54 /* MailListVC.xib */,
+				226D6E6826878816004D8778 /* MailListSubVC.h */,
+				226D6E6926878816004D8778 /* MailListSubVC.m */,
+				226D6E6A26878816004D8778 /* MailListSubVC.xib */,
 			);
 			path = "Maillist ";
 			sourceTree = "<group>";
@@ -1833,6 +1857,7 @@
 				2253CC1726824EE40015B808 /* AgentCell.xib in Resources */,
 				716979EE2685C73C00B278C7 /* TransferRecordSubVC.xib in Resources */,
 				716979FF2685D9E200B278C7 /* TransferRecordDetailVC.xib in Resources */,
+				226D6E75268788A8004D8778 /* MailListCell.xib in Resources */,
 				713B8C1B2682D51200420F75 /* UrgentAttentionVC.xib in Resources */,
 				7186499326804185008EED37 /* TransfCCell.xib in Resources */,
 				221898DD2680E85700653C2C /* ProductVC.xib in Resources */,
@@ -1843,6 +1868,7 @@
 				22C1BCC4267A677200092C1E /* README.md in Resources */,
 				71864988268034BF008EED37 /* TransfCell.xib in Resources */,
 				713B8C37268318E000420F75 /* TerminalBatchVC.xib in Resources */,
+				226D6E6C26878816004D8778 /* MailListSubVC.xib in Resources */,
 				228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */,
 				711D7BB72679A0F400BAFB54 /* Main.storyboard in Resources */,
 				713AA4562684272A009F02A5 /* TerminalSearchVC.xib in Resources */,
@@ -2105,6 +2131,7 @@
 				7102724D2681E05E00D5B62A /* JXCategoryTitleBackgroundCell.m in Sources */,
 				22ACB877268177D600A4E79D /* AboutusVCViewController.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
+				226D6E6B26878816004D8778 /* MailListSubVC.m in Sources */,
 				713AA4AA26847E83009F02A5 /* AchDetailSubModel.m in Sources */,
 				2253CBE0268243E00015B808 /* LeranOneCell.m in Sources */,
 				2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */,
@@ -2141,6 +2168,7 @@
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				2281D85826874B3A004AF0A3 /* MyoerderCellTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
+				226D6E74268788A8004D8778 /* MailListCell.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
 				2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */,
 				2281D84B2686D7A3004AF0A3 /* EnterpriseVC.m in Sources */,
