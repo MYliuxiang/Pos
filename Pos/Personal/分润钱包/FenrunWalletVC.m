@@ -71,8 +71,6 @@
     [txbutton addTarget:self action:@selector(txbuttonacion) forControlEvents:UIControlEventTouchUpInside];
     [witheview addSubview:txbutton];
     
-    
-    
     self.tableView.tableHeaderView = headview;
    self.tableView.tableFooterView = footview;
 //    self.tableView.tableHeaderView = headview;

@@ -15,6 +15,7 @@
 #import "EnterpriseVC.h"
 #import "FenrunWalletVC.h"
 #import "MyorderVC.h"
+#import "MybankcardVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -262,6 +263,9 @@
         NSLog(@"51");
     }else{
         NSLog(@"52");
+        //卡包
+        MybankcardVC *vc = [[MybankcardVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

@@ -82,6 +82,9 @@
 		2281D85226874623004AF0A3 /* DetailsfenrunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D85126874623004AF0A3 /* DetailsfenrunVC.m */; };
 		2281D85526874A06004AF0A3 /* MyorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D85426874A06004AF0A3 /* MyorderVC.m */; };
 		2281D85826874B3A004AF0A3 /* MyoerderCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D85726874B3A004AF0A3 /* MyoerderCellTableViewCell.m */; };
+		2281D85C268789D0004AF0A3 /* MybankcardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D85B268789D0004AF0A3 /* MybankcardVC.m */; };
+		2281D85F26878B1C004AF0A3 /* MybankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D85E26878B1C004AF0A3 /* MybankCell.m */; };
+		2281D8632687924A004AF0A3 /* AddCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8622687924A004AF0A3 /* AddCarVC.m */; };
 		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
 		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
 		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
@@ -420,6 +423,12 @@
 		2281D85426874A06004AF0A3 /* MyorderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyorderVC.m; sourceTree = "<group>"; };
 		2281D85626874B3A004AF0A3 /* MyoerderCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyoerderCellTableViewCell.h; sourceTree = "<group>"; };
 		2281D85726874B3A004AF0A3 /* MyoerderCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoerderCellTableViewCell.m; sourceTree = "<group>"; };
+		2281D85A268789D0004AF0A3 /* MybankcardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MybankcardVC.h; sourceTree = "<group>"; };
+		2281D85B268789D0004AF0A3 /* MybankcardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MybankcardVC.m; sourceTree = "<group>"; };
+		2281D85D26878B1C004AF0A3 /* MybankCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MybankCell.h; sourceTree = "<group>"; };
+		2281D85E26878B1C004AF0A3 /* MybankCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MybankCell.m; sourceTree = "<group>"; };
+		2281D8612687924A004AF0A3 /* AddCarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCarVC.h; sourceTree = "<group>"; };
+		2281D8622687924A004AF0A3 /* AddCarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCarVC.m; sourceTree = "<group>"; };
 		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
@@ -891,6 +900,27 @@
 				2281D85126874623004AF0A3 /* DetailsfenrunVC.m */,
 			);
 			path = "分润钱包";
+			sourceTree = "<group>";
+		};
+		2281D85926878989004AF0A3 /* 卡包 */ = {
+			isa = PBXGroup;
+			children = (
+				2281D85A268789D0004AF0A3 /* MybankcardVC.h */,
+				2281D85B268789D0004AF0A3 /* MybankcardVC.m */,
+				2281D8612687924A004AF0A3 /* AddCarVC.h */,
+				2281D8622687924A004AF0A3 /* AddCarVC.m */,
+				2281D86026879217004AF0A3 /* Cell */,
+			);
+			path = "卡包";
+			sourceTree = "<group>";
+		};
+		2281D86026879217004AF0A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2281D85D26878B1C004AF0A3 /* MybankCell.h */,
+				2281D85E26878B1C004AF0A3 /* MybankCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		228711C2267FA53600AEE15A /* PublicCell */ = {
@@ -1478,6 +1508,7 @@
 				711D7CB42679ACB400BAFB54 /* PersonalVC.h */,
 				711D7CB52679ACB400BAFB54 /* PersonalVC.m */,
 				711D7CB62679ACB400BAFB54 /* PersonalVC.xib */,
+				2281D85926878989004AF0A3 /* 卡包 */,
 				2281D84C26873B00004AF0A3 /* 分润钱包 */,
 				22E33E8526808EEE0019915A /* InformationVC.h */,
 				22E33E8626808EEE0019915A /* InformationVC.m */,
@@ -2014,6 +2045,7 @@
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
 				2253CBEB268243EF0015B808 /* LearnTwoCell.m in Sources */,
 				22E33E8726808EEE0019915A /* InformationVC.m in Sources */,
+				2281D85F26878B1C004AF0A3 /* MybankCell.m in Sources */,
 				2242392F26838B9800E5188F /* TradeDetailVC.m in Sources */,
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
 				716979BF26857FAD00B278C7 /* MerchantTotalVC.m in Sources */,
@@ -2087,6 +2119,7 @@
 				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,
+				2281D85C268789D0004AF0A3 /* MybankcardVC.m in Sources */,
 				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
 				22921624267E43E700EB762F /* LoginManger.m in Sources */,
@@ -2120,6 +2153,7 @@
 				71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */,
 				22921604267D196E00EB762F /* DataSCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
+				2281D8632687924A004AF0A3 /* AddCarVC.m in Sources */,
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
 				2235FFC9268647FE0064B505 /* BRAddressPickerView.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,
