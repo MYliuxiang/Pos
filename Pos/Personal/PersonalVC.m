@@ -16,6 +16,7 @@
 #import "FenrunWalletVC.h"
 #import "MyorderVC.h"
 #import "MybankcardVC.h"
+#import "AdressVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -116,10 +117,10 @@
     
     
     //表视图
-   self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+   self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - Height_TabBar) style:UITableViewStylePlain];
    self.tableView.delegate = self;
    self.tableView.dataSource = self;
-   self.tableView.bounces = NO;
+   self.tableView.bounces = YES;
    self.tableView.estimatedSectionFooterHeight = 0;
    self.tableView.estimatedSectionHeaderHeight = 10;
    self.tableView.backgroundColor = [UIColor clearColor];
@@ -208,6 +209,9 @@
         [self.navigationController pushViewController:vc animated:YES];
         }else{
            //地址管理
+            AdressVC *vc = [[AdressVC alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
         }
     }else if (indexPath.section==1) {
         if (indexPath.row==0) {
