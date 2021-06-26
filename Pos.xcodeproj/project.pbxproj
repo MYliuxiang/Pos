@@ -106,6 +106,9 @@
 		228711BE267FA39100AEE15A /* TerminalCenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228711BC267FA39100AEE15A /* TerminalCenterVC.xib */; };
 		228711C6267FA57000AEE15A /* LxSubTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711C4267FA57000AEE15A /* LxSubTitleCell.m */; };
 		228711C7267FA57000AEE15A /* LxSubTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228711C5267FA57000AEE15A /* LxSubTitleCell.xib */; };
+		22881F4026879F9C002F725B /* AddcariphoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F3F26879F9C002F725B /* AddcariphoneVC.m */; };
+		22881F442687A12A002F725B /* FaxianWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F432687A12A002F725B /* FaxianWalletVC.m */; };
+		22881F472687A5F1002F725B /* ManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F462687A5F1002F725B /* ManagementVC.m */; };
 		229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */; };
 		229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F2267D17DA00EB762F /* WSTableViewCell.m */; };
 		229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F3267D17DA00EB762F /* WSTableviewDataModel.m */; };
@@ -472,6 +475,12 @@
 		228711C3267FA57000AEE15A /* LxSubTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxSubTitleCell.h; sourceTree = "<group>"; };
 		228711C4267FA57000AEE15A /* LxSubTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LxSubTitleCell.m; sourceTree = "<group>"; };
 		228711C5267FA57000AEE15A /* LxSubTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LxSubTitleCell.xib; sourceTree = "<group>"; };
+		22881F3E26879F9C002F725B /* AddcariphoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddcariphoneVC.h; sourceTree = "<group>"; };
+		22881F3F26879F9C002F725B /* AddcariphoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddcariphoneVC.m; sourceTree = "<group>"; };
+		22881F422687A12A002F725B /* FaxianWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaxianWalletVC.h; sourceTree = "<group>"; };
+		22881F432687A12A002F725B /* FaxianWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaxianWalletVC.m; sourceTree = "<group>"; };
+		22881F452687A5F1002F725B /* ManagementVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagementVC.h; sourceTree = "<group>"; };
+		22881F462687A5F1002F725B /* ManagementVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagementVC.m; sourceTree = "<group>"; };
 		229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCellIndicator.m; sourceTree = "<group>"; };
 		229215F2267D17DA00EB762F /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
 		229215F3267D17DA00EB762F /* WSTableviewDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableviewDataModel.m; sourceTree = "<group>"; };
@@ -968,6 +977,8 @@
 			children = (
 				2281D84D26873B16004AF0A3 /* FenrunWalletVC.h */,
 				2281D84E26873B16004AF0A3 /* FenrunWalletVC.m */,
+				22881F452687A5F1002F725B /* ManagementVC.h */,
+				22881F462687A5F1002F725B /* ManagementVC.m */,
 				2281D85026874623004AF0A3 /* DetailsfenrunVC.h */,
 				2281D85126874623004AF0A3 /* DetailsfenrunVC.m */,
 			);
@@ -981,6 +992,8 @@
 				2281D85B268789D0004AF0A3 /* MybankcardVC.m */,
 				2281D8612687924A004AF0A3 /* AddCarVC.h */,
 				2281D8622687924A004AF0A3 /* AddCarVC.m */,
+				22881F3E26879F9C002F725B /* AddcariphoneVC.h */,
+				22881F3F26879F9C002F725B /* AddcariphoneVC.m */,
 				2281D86026879217004AF0A3 /* Cell */,
 			);
 			path = "卡包";
@@ -1006,6 +1019,15 @@
 				2253CC0526824A200015B808 /* LxAccessoryCell.xib */,
 			);
 			path = PublicCell;
+			sourceTree = "<group>";
+		};
+		22881F412687A0EF002F725B /* 返现钱包 */ = {
+			isa = PBXGroup;
+			children = (
+				22881F422687A12A002F725B /* FaxianWalletVC.h */,
+				22881F432687A12A002F725B /* FaxianWalletVC.m */,
+			);
+			path = "返现钱包";
 			sourceTree = "<group>";
 		};
 		229215F0267D17DA00EB762F /* WSTableViewTree */ = {
@@ -1586,6 +1608,7 @@
 				711D7CB62679ACB400BAFB54 /* PersonalVC.xib */,
 				226D6E7F268797D9004D8778 /* 地址管理 */,
 				2281D85926878989004AF0A3 /* 卡包 */,
+				22881F412687A0EF002F725B /* 返现钱包 */,
 				2281D84C26873B00004AF0A3 /* 分润钱包 */,
 				22E33E8526808EEE0019915A /* InformationVC.h */,
 				22E33E8626808EEE0019915A /* InformationVC.m */,
@@ -2084,6 +2107,7 @@
 				229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */,
 				22C1BCDB267A677200092C1E /* NSDecimalNumber+Addtion.m in Sources */,
 				710271EB2681C71D00D5B62A /* BusinessVC.m in Sources */,
+				22881F472687A5F1002F725B /* ManagementVC.m in Sources */,
 				22F7F872267BB93B0009FDF0 /* HomeTwoCCell.m in Sources */,
 				22C1BCCD267A677200092C1E /* LYEmptyView.m in Sources */,
 				713B8C36268318E000420F75 /* TerminalBatchVC.m in Sources */,
@@ -2127,6 +2151,7 @@
 				229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */,
 				711D7CBF2679ACCA00BAFB54 /* MailListVC.m in Sources */,
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
+				22881F4026879F9C002F725B /* AddcariphoneVC.m in Sources */,
 				2253CBEB268243EF0015B808 /* LearnTwoCell.m in Sources */,
 				22E33E8726808EEE0019915A /* InformationVC.m in Sources */,
 				2281D85F26878B1C004AF0A3 /* MybankCell.m in Sources */,
@@ -2202,6 +2227,7 @@
 				713B8C132682D44400420F75 /* GHCountField.m in Sources */,
 				2281D85526874A06004AF0A3 /* MyorderVC.m in Sources */,
 				713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */,
+				22881F442687A12A002F725B /* FaxianWalletVC.m in Sources */,
 				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,

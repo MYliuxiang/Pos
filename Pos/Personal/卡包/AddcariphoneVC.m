@@ -1,17 +1,17 @@
 //
-//  AddCarVC.m
+//  AddcariphoneVC.m
 //  Pos
 //
 //  Created by 李立 on 2021/6/27.
 //
 
-#import "AddCarVC.h"
 #import "AddcariphoneVC.h"
-@interface AddCarVC ()
+
+@interface AddcariphoneVC ()
 
 @end
 
-@implementation AddCarVC
+@implementation AddcariphoneVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +30,7 @@
     //请先绑定本人的手机号
     UILabel *addiphonelabel = [[UILabel alloc]initWithFrame:CGRectMake(21, [self ykNavigationbarAndTopHeight]+20, 200, 19)];
     addiphonelabel.font = [UIFont boldSystemFontOfSize:14];
-    addiphonelabel.text = @"请绑定本人的银行卡";
+    addiphonelabel.text = @"请绑定本人的手机号";
     [self.view addSubview:addiphonelabel];
     
     //白色背景
@@ -41,13 +41,13 @@
     //手机号
     UILabel *iphonelabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 25, 60, 19)];
     iphonelabel.font = [UIFont boldSystemFontOfSize:14];
-    iphonelabel.text = @"持卡人";
+    iphonelabel.text = @"手机号";
     [baiseview addSubview:iphonelabel];
     
     //手机号码
     self.iphonetextfield = [[UITextField alloc]initWithFrame:CGRectMake(iphonelabel.right+40, 25, 200, 19)];
     self.iphonetextfield.font = [UIFont systemFontOfSize:14];
-    self.iphonetextfield.placeholder = @"张三丰";
+    self.iphonetextfield.placeholder = @"请输入手机号";
     [baiseview addSubview:self.iphonetextfield];
     
     //线条
@@ -58,13 +58,13 @@
     //验证码
     UILabel *yzmlabel = [[UILabel alloc]initWithFrame:CGRectMake(20, xtview.bottom+22, 60, 19)];
     yzmlabel.font = [UIFont boldSystemFontOfSize:14];
-    yzmlabel.text = @"卡    号";
+    yzmlabel.text = @"验证码";
     [baiseview addSubview:yzmlabel];
     
     //手机号码
     self.yzmtextfield = [[UITextField alloc]initWithFrame:CGRectMake(yzmlabel.right+40,yzmlabel.top, 200, 19)];
     self.yzmtextfield.font = [UIFont systemFontOfSize:14];
-    self.yzmtextfield.placeholder = @"请输入银行卡号";
+    self.yzmtextfield.placeholder = @"请输入验证码";
     [baiseview addSubview:self.yzmtextfield];
     
     //信息采集
@@ -89,8 +89,8 @@
 
 //下一步
 -(void)nextbuttonaciton{
-    AddcariphoneVC *VC = [[AddcariphoneVC alloc]init];
-    [self.navigationController pushViewController:VC animated:YES];
+    
     
 }
+
 @end

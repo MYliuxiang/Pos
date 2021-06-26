@@ -1,5 +1,5 @@
 //
-//  AddCarVC.h
+//  AddcariphoneVC.h
 //  Pos
 //
 //  Created by 李立 on 2021/6/27.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddCarVC : BaseViewController
+@interface AddcariphoneVC : BaseViewController
 @property (nonatomic,strong) UITextField *iphonetextfield;
 @property (nonatomic,strong) UITextField *yzmtextfield;
 @end
