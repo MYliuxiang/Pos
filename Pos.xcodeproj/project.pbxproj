@@ -74,6 +74,10 @@
 		226D6E6C26878816004D8778 /* MailListSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E6A26878816004D8778 /* MailListSubVC.xib */; };
 		226D6E74268788A8004D8778 /* MailListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E72268788A8004D8778 /* MailListCell.m */; };
 		226D6E75268788A8004D8778 /* MailListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E73268788A8004D8778 /* MailListCell.xib */; };
+		226D6E83268797F2004D8778 /* AdressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E81268797F2004D8778 /* AdressVC.m */; };
+		226D6E84268797F2004D8778 /* AdressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E82268797F2004D8778 /* AdressVC.xib */; };
+		226D6E8E2687980C004D8778 /* AddAdressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E8C2687980C004D8778 /* AddAdressVC.m */; };
+		226D6E8F2687980C004D8778 /* AddAdressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E8D2687980C004D8778 /* AddAdressVC.xib */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -409,6 +413,12 @@
 		226D6E71268788A8004D8778 /* MailListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailListCell.h; sourceTree = "<group>"; };
 		226D6E72268788A8004D8778 /* MailListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailListCell.m; sourceTree = "<group>"; };
 		226D6E73268788A8004D8778 /* MailListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailListCell.xib; sourceTree = "<group>"; };
+		226D6E80268797F2004D8778 /* AdressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdressVC.h; sourceTree = "<group>"; };
+		226D6E81268797F2004D8778 /* AdressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdressVC.m; sourceTree = "<group>"; };
+		226D6E82268797F2004D8778 /* AdressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdressVC.xib; sourceTree = "<group>"; };
+		226D6E8B2687980C004D8778 /* AddAdressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddAdressVC.h; sourceTree = "<group>"; };
+		226D6E8C2687980C004D8778 /* AddAdressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddAdressVC.m; sourceTree = "<group>"; };
+		226D6E8D2687980C004D8778 /* AddAdressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAdressVC.xib; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -911,6 +921,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		226D6E7F268797D9004D8778 /* 地址管理 */ = {
+			isa = PBXGroup;
+			children = (
+				226D6E80268797F2004D8778 /* AdressVC.h */,
+				226D6E81268797F2004D8778 /* AdressVC.m */,
+				226D6E82268797F2004D8778 /* AdressVC.xib */,
+				226D6E8B2687980C004D8778 /* AddAdressVC.h */,
+				226D6E8C2687980C004D8778 /* AddAdressVC.m */,
+				226D6E8D2687980C004D8778 /* AddAdressVC.xib */,
+			);
+			path = "地址管理";
+			sourceTree = "<group>";
+		};
 		2281D84C26873B00004AF0A3 /* 分润钱包 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1253,15 +1276,15 @@
 			isa = PBXGroup;
 			children = (
 				22C1BCB9267A677200092C1E /* BADataEntity.h */,
-				22C1BCBA267A677200092C1E /* BANetManagerCache.m */,
-				22C1BCBB267A677200092C1E /* BANetManager.m */,
-				22C1BCBC267A677200092C1E /* UIImage+CompressImage.m */,
-				22C1BCBD267A677200092C1E /* BANetManager_Version.h */,
 				22C1BCBE267A677200092C1E /* BADataEntity.m */,
-				22C1BCBF267A677200092C1E /* BANetManagerCache.h */,
-				22C1BCC0267A677200092C1E /* UIImage+CompressImage.h */,
-				22C1BCC1267A677200092C1E /* BANetManager.h */,
 				22C1BCC2267A677200092C1E /* BANetManager_OC.h */,
+				22C1BCBD267A677200092C1E /* BANetManager_Version.h */,
+				22C1BCC1267A677200092C1E /* BANetManager.h */,
+				22C1BCBB267A677200092C1E /* BANetManager.m */,
+				22C1BCBF267A677200092C1E /* BANetManagerCache.h */,
+				22C1BCBA267A677200092C1E /* BANetManagerCache.m */,
+				22C1BCC0267A677200092C1E /* UIImage+CompressImage.h */,
+				22C1BCBC267A677200092C1E /* UIImage+CompressImage.m */,
 			);
 			path = BANetManager;
 			sourceTree = "<group>";
@@ -1532,6 +1555,7 @@
 				711D7CB42679ACB400BAFB54 /* PersonalVC.h */,
 				711D7CB52679ACB400BAFB54 /* PersonalVC.m */,
 				711D7CB62679ACB400BAFB54 /* PersonalVC.xib */,
+				226D6E7F268797D9004D8778 /* 地址管理 */,
 				2281D85926878989004AF0A3 /* 卡包 */,
 				2281D84C26873B00004AF0A3 /* 分润钱包 */,
 				22E33E8526808EEE0019915A /* InformationVC.h */,
@@ -1807,6 +1831,7 @@
 				713AA4B2268486F4009F02A5 /* ALeftCell.xib in Resources */,
 				2235FFC4268647FE0064B505 /* BRPickerView.bundle in Resources */,
 				228711B6267F9DA900AEE15A /* TerminalManagerVC.xib in Resources */,
+				226D6E84268797F2004D8778 /* AdressVC.xib in Resources */,
 				710271F52681C7B200D5B62A /* BusinessCell.xib in Resources */,
 				2242397B268619EE00E5188F /* UnincorporateVC.xib in Resources */,
 				2242393026838B9800E5188F /* TradeDetailVC.xib in Resources */,
@@ -1880,6 +1905,7 @@
 				713B8C242682D53200420F75 /* UrgentAttentionCell.xib in Resources */,
 				710272642681E48000D5B62A /* ToFaceVC.xib in Resources */,
 				713AA4BA26848704009F02A5 /* ARightCell.xib in Resources */,
+				226D6E8F2687980C004D8778 /* AddAdressVC.xib in Resources */,
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 				221898F02680EAE000653C2C /* ProductCell.xib in Resources */,
@@ -2036,6 +2062,7 @@
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
 				2235FFC1268647FE0064B505 /* BRDatePickerView+BR.m in Sources */,
+				226D6E83268797F2004D8778 /* AdressVC.m in Sources */,
 				2253CC5A268387220015B808 /* BusinessListCell.m in Sources */,
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
 				2242396A2686196B00E5188F /* PrivateVC.m in Sources */,
@@ -2053,6 +2080,7 @@
 				2253CC0E26824E760015B808 /* ChooseAgentVC.m in Sources */,
 				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
+				226D6E8E2687980C004D8778 /* AddAdressVC.m in Sources */,
 				22C1BC41267A670200092C1E /* HttpHelp.m in Sources */,
 				2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */,
 				71864987268034BF008EED37 /* TransfCell.m in Sources */,
