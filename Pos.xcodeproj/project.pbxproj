@@ -78,6 +78,9 @@
 		226D6E84268797F2004D8778 /* AdressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E82268797F2004D8778 /* AdressVC.xib */; };
 		226D6E8E2687980C004D8778 /* AddAdressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E8C2687980C004D8778 /* AddAdressVC.m */; };
 		226D6E8F2687980C004D8778 /* AddAdressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6E8D2687980C004D8778 /* AddAdressVC.xib */; };
+		226D6E9A26879A47004D8778 /* AdressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E9926879A47004D8778 /* AdressModel.m */; };
+		226D6EA426879AB4004D8778 /* AdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6EA226879AB4004D8778 /* AdressCell.m */; };
+		226D6EA526879AB4004D8778 /* AdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6EA326879AB4004D8778 /* AdressCell.xib */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -419,6 +422,11 @@
 		226D6E8B2687980C004D8778 /* AddAdressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddAdressVC.h; sourceTree = "<group>"; };
 		226D6E8C2687980C004D8778 /* AddAdressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddAdressVC.m; sourceTree = "<group>"; };
 		226D6E8D2687980C004D8778 /* AddAdressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAdressVC.xib; sourceTree = "<group>"; };
+		226D6E9826879A47004D8778 /* AdressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdressModel.h; sourceTree = "<group>"; };
+		226D6E9926879A47004D8778 /* AdressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdressModel.m; sourceTree = "<group>"; };
+		226D6EA126879AB4004D8778 /* AdressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdressCell.h; sourceTree = "<group>"; };
+		226D6EA226879AB4004D8778 /* AdressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdressCell.m; sourceTree = "<group>"; };
+		226D6EA326879AB4004D8778 /* AdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdressCell.xib; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -924,6 +932,8 @@
 		226D6E7F268797D9004D8778 /* 地址管理 */ = {
 			isa = PBXGroup;
 			children = (
+				226D6E9726879A39004D8778 /* Models */,
+				226D6E9626879A35004D8778 /* Views */,
 				226D6E80268797F2004D8778 /* AdressVC.h */,
 				226D6E81268797F2004D8778 /* AdressVC.m */,
 				226D6E82268797F2004D8778 /* AdressVC.xib */,
@@ -932,6 +942,25 @@
 				226D6E8D2687980C004D8778 /* AddAdressVC.xib */,
 			);
 			path = "地址管理";
+			sourceTree = "<group>";
+		};
+		226D6E9626879A35004D8778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				226D6EA126879AB4004D8778 /* AdressCell.h */,
+				226D6EA226879AB4004D8778 /* AdressCell.m */,
+				226D6EA326879AB4004D8778 /* AdressCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		226D6E9726879A39004D8778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				226D6E9826879A47004D8778 /* AdressModel.h */,
+				226D6E9926879A47004D8778 /* AdressModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2281D84C26873B00004AF0A3 /* 分润钱包 */ = {
@@ -1238,36 +1267,36 @@
 		22C1BC99267A677100092C1E /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				22C1BC9A267A677100092C1E /* UIButton+ImageTitleSpacing.h */,
-				22C1BC9B267A677100092C1E /* MBProgressHUD+Add.m */,
-				22C1BC9C267A677100092C1E /* UIScrollView+Gesture.h */,
-				22C1BC9D267A677100092C1E /* UINavigationController+FDFullscreenPopGesture.h */,
-				22C1BC9E267A677100092C1E /* UIView+ViewController.m */,
-				22C1BC9F267A677100092C1E /* UISwitch+Custom.h */,
-				22C1BCA0267A677100092C1E /* NSObject+XWAdd.h */,
-				22C1BCA1267A677100092C1E /* NSDate+Utilities.m */,
-				22C1BCA2267A677100092C1E /* NSString+Handel.m */,
-				22C1BCA3267A677100092C1E /* UIWindow+JXSafeArea.m */,
-				22C1BCA4267A677100092C1E /* UIView+Corners.h */,
-				22C1BCA5267A677100092C1E /* NSDecimalNumber+Addtion.h */,
-				22C1BCA6267A677100092C1E /* UIDevice+VKKeychainIDFV.m */,
-				22C1BCA7267A677100092C1E /* UIColor+MyColor.h */,
-				22C1BCA8267A677100092C1E /* UITextView+WZB.m */,
-				22C1BCA9267A677100092C1E /* UIButton+ImageTitleSpacing.m */,
-				22C1BCAA267A677100092C1E /* UIView+ViewController.h */,
-				22C1BCAB267A677100092C1E /* UINavigationController+FDFullscreenPopGesture.m */,
-				22C1BCAC267A677100092C1E /* UIScrollView+Gesture.m */,
 				22C1BCAD267A677100092C1E /* MBProgressHUD+Add.h */,
-				22C1BCAE267A677100092C1E /* NSString+Handel.h */,
+				22C1BC9B267A677100092C1E /* MBProgressHUD+Add.m */,
 				22C1BCAF267A677100092C1E /* NSDate+Utilities.h */,
+				22C1BCA1267A677100092C1E /* NSDate+Utilities.m */,
+				22C1BCA5267A677100092C1E /* NSDecimalNumber+Addtion.h */,
+				22C1BCB5267A677100092C1E /* NSDecimalNumber+Addtion.m */,
+				22C1BCA0267A677100092C1E /* NSObject+XWAdd.h */,
 				22C1BCB0267A677100092C1E /* NSObject+XWAdd.m */,
-				22C1BCB1267A677100092C1E /* UISwitch+Custom.m */,
-				22C1BCB2267A677100092C1E /* UITextView+WZB.h */,
+				22C1BCAE267A677100092C1E /* NSString+Handel.h */,
+				22C1BCA2267A677100092C1E /* NSString+Handel.m */,
+				22C1BC9A267A677100092C1E /* UIButton+ImageTitleSpacing.h */,
+				22C1BCA9267A677100092C1E /* UIButton+ImageTitleSpacing.m */,
+				22C1BCA7267A677100092C1E /* UIColor+MyColor.h */,
 				22C1BCB3267A677100092C1E /* UIColor+MyColor.m */,
 				22C1BCB4267A677100092C1E /* UIDevice+VKKeychainIDFV.h */,
-				22C1BCB5267A677100092C1E /* NSDecimalNumber+Addtion.m */,
+				22C1BCA6267A677100092C1E /* UIDevice+VKKeychainIDFV.m */,
+				22C1BC9D267A677100092C1E /* UINavigationController+FDFullscreenPopGesture.h */,
+				22C1BCAB267A677100092C1E /* UINavigationController+FDFullscreenPopGesture.m */,
+				22C1BC9C267A677100092C1E /* UIScrollView+Gesture.h */,
+				22C1BCAC267A677100092C1E /* UIScrollView+Gesture.m */,
+				22C1BC9F267A677100092C1E /* UISwitch+Custom.h */,
+				22C1BCB1267A677100092C1E /* UISwitch+Custom.m */,
+				22C1BCB2267A677100092C1E /* UITextView+WZB.h */,
+				22C1BCA8267A677100092C1E /* UITextView+WZB.m */,
+				22C1BCA4267A677100092C1E /* UIView+Corners.h */,
 				22C1BCB6267A677100092C1E /* UIView+Corners.m */,
+				22C1BCAA267A677100092C1E /* UIView+ViewController.h */,
+				22C1BC9E267A677100092C1E /* UIView+ViewController.m */,
 				22C1BCB7267A677100092C1E /* UIWindow+JXSafeArea.h */,
+				22C1BCA3267A677100092C1E /* UIWindow+JXSafeArea.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1866,6 +1895,7 @@
 				2253CC3726837FEF0015B808 /* MerchantVC.xib in Resources */,
 				2253CBD0268243AC0015B808 /* LeranVC.xib in Resources */,
 				7102723A2681D4A500D5B62A /* PosterSubVC.xib in Resources */,
+				226D6EA526879AB4004D8778 /* AdressCell.xib in Resources */,
 				2253CBD8268243C50015B808 /* LeranSubVC.xib in Resources */,
 				2253CC0F26824E760015B808 /* ChooseAgentVC.xib in Resources */,
 				2253CC48268382630015B808 /* MerchantCell.xib in Resources */,
@@ -2150,6 +2180,7 @@
 				22C1BCC7267A677200092C1E /* TXMatchConst.m in Sources */,
 				2292161D267D287000EB762F /* MerchantDetailVC.m in Sources */,
 				22C1BC47267A673C00092C1E /* YZInputView.m in Sources */,
+				226D6E9A26879A47004D8778 /* AdressModel.m in Sources */,
 				711D7BBF2679A0F500BAFB54 /* main.m in Sources */,
 				71864978268031A5008EED37 /* TerminalTransferVC.m in Sources */,
 				2253CC52268386C50015B808 /* BusinessListVC.m in Sources */,
@@ -2184,6 +2215,7 @@
 				716979DA2685C5DB00B278C7 /* TransferRecordVC.m in Sources */,
 				716979FE2685D9E200B278C7 /* TransferRecordDetailVC.m in Sources */,
 				2235FFC7268647FE0064B505 /* NSBundle+BRPickerView.m in Sources */,
+				226D6EA426879AB4004D8778 /* AdressCell.m in Sources */,
 				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
 				2235FFC8268647FE0064B505 /* BRAddressModel.m in Sources */,
 				713AA4862684671A009F02A5 /* AchievementCell.m in Sources */,

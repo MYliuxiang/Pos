@@ -13,6 +13,7 @@
 @interface ProductDoneVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *doneB;
+@property (nonatomic,strong) AdressModel *adModel;
 
 @end
 
@@ -63,7 +64,20 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
-//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        if (self.adModel == nil) {
+            cell.noAdressL.hidden = NO;
+            cell.nameL.hidden = YES;
+            cell.phoneL.hidden = YES;
+            cell.adressL.hidden = YES;
+        }else{
+            cell.noAdressL.hidden = YES;
+            cell.nameL.hidden = NO;
+            cell.phoneL.hidden = NO;
+            cell.adressL.hidden = NO;
+            cell.nameL.text = self.adModel.name;
+            cell.phoneL.text = self.adModel.phone;
+            cell.adressL.text = [NSString stringWithFormat:@"%@%@",self.adModel.adress,self.adModel.adressDetail];
+        }
         return cell;
     }
    
@@ -97,7 +111,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.section == 1) {
+        AdressVC *vc = [AdressVC new];
+        vc.selectBlock = ^(AdressModel * _Nonnull model) {
+            self.adModel = model;
+            [self.tableView reloadData];
+        };
+       
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     
     
 }

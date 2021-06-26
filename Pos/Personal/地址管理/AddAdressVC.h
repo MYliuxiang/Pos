@@ -6,10 +6,16 @@
 //
 
 #import "BaseViewController.h"
+#import "AdressModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddAdressVC : BaseViewController
+
+@property (nonatomic,strong) AdressModel *model;
+
+@property (nonatomic,copy) void (^addBlock)(AdressModel *model) ;
+
 
 @end
 
