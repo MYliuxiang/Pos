@@ -17,6 +17,7 @@
 #import "MyorderVC.h"
 #import "MybankcardVC.h"
 #import "AdressVC.h"
+#import "FaxianWalletVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -264,9 +265,10 @@
         FenrunWalletVC *VC = [[FenrunWalletVC alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (button.tag ==51){
-        NSLog(@"51");
+        //返现钱包
+        FaxianWalletVC *VC = [[FaxianWalletVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
     }else{
-        NSLog(@"52");
         //卡包
         MybankcardVC *vc = [[MybankcardVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];

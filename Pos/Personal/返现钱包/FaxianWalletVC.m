@@ -1,22 +1,21 @@
 //
-//  FenrunWalletVC.m
+//  FaxianWalletVC.m
 //  Pos
 //
-//  Created by 李立 on 2021/6/26.
+//  Created by 李立 on 2021/6/27.
 //
 
-#import "FenrunWalletVC.h"
-#import "ManagementVC.h"
-@interface FenrunWalletVC ()<UITableViewDelegate,UITableViewDataSource>
+#import "FaxianWalletVC.h"
+
+@interface FaxianWalletVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation FenrunWalletVC
+@implementation FaxianWalletVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"分润钱包";
     [self setUI];
 }
 
@@ -25,7 +24,7 @@
     UILabel *titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(0, [self ykStatusbarHeight]+12, kScreenWidth, 21)];
     titlelabel.textAlignment = NSTextAlignmentCenter;
     titlelabel.font = [UIFont boldSystemFontOfSize:16];
-    titlelabel.text = @"分润钱包";
+    titlelabel.text = @"返现钱包";
     [self.view addSubview:titlelabel];
     
     //表视图
@@ -36,7 +35,23 @@
    self.tableView.estimatedSectionFooterHeight = 0;
 //   self.tableView.estimatedSectionHeaderHeight = 0;
    self.tableView.backgroundColor = [UIColor clearColor];
-   UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.01)];
+   UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 200)];
+    
+    //提示
+    UILabel *tishilabel = [[UILabel alloc]initWithFrame:CGRectMake(76, 33, 80, 19)];
+    tishilabel.textColor = [UIColor colorWithHexString:@"#CACACA"];
+    tishilabel.text = @"提示:";
+    tishilabel.font = [UIFont systemFontOfSize:14];
+    [footview addSubview:tishilabel];
+    
+    //提示内容
+    UILabel *neironglabel = [[UILabel alloc]initWithFrame:CGRectMake(tishilabel.left, tishilabel.bottom+15, 286, 100)];
+    neironglabel.numberOfLines = 0;
+    neironglabel.textColor = [UIColor colorWithHexString:@"#CACACA"];
+    neironglabel.text = @"首次达标：N时间到N时间，达标剩余交易金额\n二次达标：N时间到N时间，达标剩余交易金额\n三次达标：N时间到N时间，达标剩余交易金额\n四次达标：N时间到N时间，达标剩余交易金额";
+    neironglabel.font = [UIFont systemFontOfSize:14];
+    [footview addSubview:neironglabel];
+    
     //表视图头视图
     UIView *headview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 173)];
     headview.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
@@ -81,20 +96,15 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section==0) {
-        return 1;
-    }else if (section ==1){
-        return 2;
-    }else if (section ==2){
+    if (section ==0) {
         return 2;
     }else{
-        return 1;
+    return 1;
     }
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -123,33 +133,22 @@
         moneylabel.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
         moneylabel.text = @"￥250.00";
         [cell.contentView addSubview:moneylabel];
-        cell.textLabel.text = @"管理奖分润";
+        if (indexPath.row ==0) {
+            cell.textLabel.text = @"直属商户返现";
+        }else if (indexPath.row ==1){
+            cell.textLabel.text = @"招募奖";
+        }
     }else if (indexPath.section==1){
         if (indexPath.row ==0) {
-            cell.textLabel.text = @"直属商户";
-        }else if (indexPath.row==1) {
-            xtview.hidden = YES;
-            cell.textLabel.text = @"团队商户";
-
+            cell.textLabel.text = @"直属商户返现";
+            UILabel *moneylabel = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth-300, 13, 250, 19)];
+            moneylabel.textAlignment = NSTextAlignmentRight;
+            moneylabel.font = [UIFont systemFontOfSize:14];
+            moneylabel.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
+            moneylabel.text = @"￥250.00";
+            [cell.contentView addSubview:moneylabel];
         }
-    }else if (indexPath.section ==2){
-        UILabel *moneylabel = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth-300, 13, 250, 19)];
-        moneylabel.textAlignment = NSTextAlignmentRight;
-        moneylabel.font = [UIFont systemFontOfSize:14];
-        moneylabel.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
-        moneylabel.text = @"上月待发分润金额：¥3223.00";
-        [cell.contentView addSubview:moneylabel];
-        cell.textLabel.text = @"直属企业版商户";
-        if (indexPath.row==1) {
-            xtview.hidden = YES;
-            cell.textLabel.text = @"团队企业版商户";
-            moneylabel.text = @"上月待发分润金额：¥3223.00";
-        }
-    }else{
-        xtview.hidden = YES;
-        cell.textLabel.text = @"调价分成（隐藏）";
     }
-    
     return cell;
 }
 
@@ -160,14 +159,14 @@
 // 添加每组的组头
 - (UIView *)tableView:(nonnull UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [[UIView alloc]init];
-    if (section ==1) {
+    if (section ==0) {
      view.frame =CGRectMake(0, 0, kScreenWidth, 39);
     UILabel *titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 13, kScreenWidth-40, 21)];
     titlelabel.font = [UIFont boldSystemFontOfSize:16];
     titlelabel.text = @"日结明细";
     [view addSubview:titlelabel];
      view.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
-    }else if (section ==2){
+    }else if (section ==1){
         view.frame =CGRectMake(0, 0, kScreenWidth, 39);
        UILabel *titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 13, kScreenWidth-40, 21)];
        titlelabel.font = [UIFont boldSystemFontOfSize:16];
@@ -180,24 +179,13 @@
     return view;
  }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section ==0) {
-        return 0.01;
-    }else if (section ==3){
-        return 20;
-    }else{
-        return 39;
-    }
+    
+    return 39;
 }
 #pragma mark - 列表点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section ==0) {
-        //管理奖分润
-        ManagementVC *vc = [[ManagementVC alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-  
 }
 
 //可提现
