@@ -13,6 +13,8 @@
 #import "MoresettingsVC.h"
 #import "PersonalcertificationVC.h"
 #import "EnterpriseVC.h"
+#import "FenrunWalletVC.h"
+#import "MyorderVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -200,7 +202,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section ==0) {
         if (indexPath.row==0) {
-            //订单查询
+        //订单查询
+        MyorderVC *vc = [[MyorderVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
         }else{
            //地址管理
         }
@@ -251,7 +255,9 @@
 -(void)buttonction:(UIButton *)button{
     
     if (button.tag ==50) {
-        NSLog(@"");
+         //分润
+        FenrunWalletVC *VC = [[FenrunWalletVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
     }else if (button.tag ==51){
         NSLog(@"51");
     }else{
