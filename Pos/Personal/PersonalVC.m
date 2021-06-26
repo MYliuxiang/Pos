@@ -12,6 +12,7 @@
 #import "MessagecenterVC.h"
 #import "MoresettingsVC.h"
 #import "PersonalcertificationVC.h"
+#import "EnterpriseVC.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -210,6 +211,8 @@
         [self.navigationController pushViewController:vc animated:YES];
         }else{
             //企业认证
+            EnterpriseVC *VC = [[EnterpriseVC alloc]init];
+            [self.navigationController pushViewController:VC animated:YES];
         }
     }else {
         if (indexPath.row ==0) {

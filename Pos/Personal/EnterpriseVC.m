@@ -1,17 +1,17 @@
 //
-//  PersonalcertificationVC.m
+//  EnterpriseVC.m
 //  Pos
 //
-//  Created by 李立 on 2021/6/25.
+//  Created by 李立 on 2021/6/26.
 //
 
-#import "PersonalcertificationVC.h"
+#import "EnterpriseVC.h"
 
-@interface PersonalcertificationVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface EnterpriseVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation PersonalcertificationVC
+@implementation EnterpriseVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,7 @@
     UILabel *titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(0, [self ykStatusbarHeight]+12, kScreenWidth, 21)];
     titlelabel.textAlignment = NSTextAlignmentCenter;
     titlelabel.font = [UIFont boldSystemFontOfSize:16];
-    titlelabel.text = @"个人认证";
+    titlelabel.text = @"企业认证";
     [self.view addSubview:titlelabel];
     
     //表视图
@@ -54,15 +54,11 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section==0) {
-        return 2;
-    }else{
-        return 1;
-    }
+    return 4;
     
 }
 
@@ -88,88 +84,46 @@
     [cell addSubview:afterlabel];
     
     if (indexPath.section ==0) {
-        NSArray *sectionarry = @[@"姓名",@"身份证"];
+        NSArray *sectionarry = @[@"企业名称",@"法  人",@"企业地址",@""];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.textLabel.text = sectionarry[indexPath.row];
       
         xtview.frame = CGRectMake(22, 60-1, kScreenWidth, 1);
         afterlabel.text = @"王小二";
-        if (indexPath.row ==1) {
+        if (indexPath.row ==3) {
             xtview.hidden = YES;
-            afterlabel.text = @"6109900098778909098";
-        }
-    }else if (indexPath.section ==1){
-        xtview.hidden = YES;
-        afterlabel.hidden = YES;
-        self.zimageview = [[UIImageView alloc]initWithFrame:CGRectMake((kScreenWidth-162*2-40)/2, 20, 162, 95)];
+            afterlabel.text = @"";
+        //营业执照
+        UILabel *zhizhaolable = [[UILabel alloc]initWithFrame:CGRectMake(21, 20, 100, 19)];
+        zhizhaolable.font = [UIFont systemFontOfSize:14];
+        zhizhaolable.text = @"营业执照";
+       [cell.contentView addSubview:zhizhaolable];
+         //营业执照
+        self.zimageview = [[UIImageView alloc]initWithFrame:CGRectMake((kScreenWidth-239)/2, zhizhaolable.bottom+57, 239, 140)];
         self.zimageview.backgroundColor = [UIColor grayColor];
-        self.zimageview.userInteractionEnabled = YES;
         [cell.contentView addSubview:self.zimageview];
-        //添加手势
-        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap1aciton)];
-        [self.zimageview addGestureRecognizer:tap1];
-        
+          
         //文字
         UILabel *zlabel = [[UILabel alloc]initWithFrame:CGRectMake(self.zimageview.left, self.zimageview.bottom+11, self.zimageview.width, 19)];
         zlabel.textColor = [UIColor colorWithHexString:@"FF8901"];
-        zlabel.text = @"身份证（正面）";
+        zlabel.text = @"营业执照";
         zlabel.font = [UIFont systemFontOfSize:14];
         zlabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:zlabel];
-        
-        //反面照
-        self.fimageview = [[UIImageView alloc]initWithFrame:CGRectMake(self.zimageview.right+40, 20, 162, 95)];
-        self.fimageview.backgroundColor = [UIColor grayColor];
-        self.fimageview.userInteractionEnabled = YES;
-        [cell.contentView addSubview:self.fimageview];
-        
-        //文字
-        UILabel *flabel = [[UILabel alloc]initWithFrame:CGRectMake(self.fimageview.left, self.fimageview.bottom+11, self.fimageview.width, 19)];
-        flabel.textColor = [UIColor colorWithHexString:@"FF8901"];
-        flabel.text = @"身份证（正面）";
-        flabel.font = [UIFont systemFontOfSize:14];
-        flabel.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:flabel];
-        
-        //添加手势
-        UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap1aciton2)];
-        [self.fimageview addGestureRecognizer:tap2];
+        }
     }
-    
     return cell;
 }
 
 
 #pragma mark -UITableView代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section ==0) {
-        
-      return 60;
-        
+    if (indexPath.row ==3) {
+        return 287;
     }
-    return 160;
+    return 60;
 }
-// 添加每组的组头
-- (UIView *)tableView:(nonnull UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *view = [[UIView alloc]init];
-    view.frame =CGRectMake(0, 0, kScreenWidth, 46);
-   UILabel *titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(21, 20, kScreenWidth-40, 19)];
-   titlelabel.font = [UIFont boldSystemFontOfSize:16];
-   
-   [view addSubview:titlelabel];
-    view.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
-    if (section ==0) {
-        titlelabel.text = @"个人信息";
-    }else{
-        titlelabel.text = @"身份证";
-    }
-    return view;
- }
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-   
-        return 50;
-    
-}
+
 #pragma mark - 列表点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

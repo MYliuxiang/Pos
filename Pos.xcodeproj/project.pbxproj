@@ -77,6 +77,7 @@
 		2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8412684CCB1004AF0A3 /* ChangePasswordVC.m */; };
 		2281D8452684D5C6004AF0A3 /* ChangiphoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */; };
 		2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */; };
+		2281D84B2686D7A3004AF0A3 /* EnterpriseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D84A2686D7A3004AF0A3 /* EnterpriseVC.m */; };
 		2287119F267F960400AEE15A /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287119D267F960400AEE15A /* RegistVC.m */; };
 		228711A0267F960400AEE15A /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287119E267F960400AEE15A /* RegistVC.xib */; };
 		228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 228711A5267F998700AEE15A /* RegistReslutVC.m */; };
@@ -405,6 +406,8 @@
 		2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangiphoneVC.m; sourceTree = "<group>"; };
 		2281D8462684E5FA004AF0A3 /* PersonalcertificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalcertificationVC.h; sourceTree = "<group>"; };
 		2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalcertificationVC.m; sourceTree = "<group>"; };
+		2281D8492686D7A3004AF0A3 /* EnterpriseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterpriseVC.h; sourceTree = "<group>"; };
+		2281D84A2686D7A3004AF0A3 /* EnterpriseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterpriseVC.m; sourceTree = "<group>"; };
 		2287119C267F960400AEE15A /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		2287119D267F960400AEE15A /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		2287119E267F960400AEE15A /* RegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
@@ -1474,6 +1477,8 @@
 				2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */,
 				2281D8462684E5FA004AF0A3 /* PersonalcertificationVC.h */,
 				2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */,
+				2281D8492686D7A3004AF0A3 /* EnterpriseVC.h */,
+				2281D84A2686D7A3004AF0A3 /* EnterpriseVC.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -2073,6 +2078,7 @@
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
 				2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */,
+				2281D84B2686D7A3004AF0A3 /* EnterpriseVC.m in Sources */,
 				71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */,
 				22C1BC36267A65FB00092C1E /* UIViewController+Swizzling.m in Sources */,
 				2242395F268618BF00E5188F /* DirectAccessVC.m in Sources */,
