@@ -6,7 +6,6 @@
 //
 
 #import "DetailsfenrunVC.h"
-
 @interface DetailsfenrunVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end

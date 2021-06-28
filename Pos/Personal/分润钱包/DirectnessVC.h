@@ -1,15 +1,15 @@
 //
-//  ManagementVC.h
+//  DirectnessVC.h
 //  Pos
 //
-//  Created by 李立 on 2021/6/27.
+//  Created by 李立 on 2021/6/29.
 //
 
 #import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ManagementVC : BaseViewController
+@interface DirectnessVC : BaseViewController
 @property (nonatomic,strong) UITableView *tableView;
 
 @end

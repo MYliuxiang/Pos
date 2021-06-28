@@ -7,6 +7,7 @@
 
 #import "FenrunWalletVC.h"
 #import "ManagementVC.h"
+#import "DirectnessVC.h"
 @interface FenrunWalletVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -196,6 +197,11 @@
         //管理奖分润
         ManagementVC *vc = [[ManagementVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section ==1){
+        if (indexPath.row ==0) {
+        DirectnessVC *vc = [[DirectnessVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+        }
     }
   
 }
