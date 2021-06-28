@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProductVC : BaseViewController
-
+@property (nonatomic, strong) ShopItemModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

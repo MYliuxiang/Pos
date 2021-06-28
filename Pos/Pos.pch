@@ -159,6 +159,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 //model
 #import "AdressModel.h"
 #import "CarouselModel.h"
+#import "ActivityModel.h"
+#import "BrandModel.h"
+#import "ShopItemModel.h"
 
 
 

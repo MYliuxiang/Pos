@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
 @property (weak, nonatomic) IBOutlet UIImageView *seletedI;
-
+@property (nonatomic,strong) BrandModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

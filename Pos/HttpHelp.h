@@ -27,6 +27,17 @@ extern NSString *const Url_carousel_list;
 //首页活动
 extern NSString *const Url_activity_list;
 
+//查询品牌信息列表
+extern NSString *const Url_shopBrand_list;
+
+//查询商品列表
+extern NSString *const Url_shopItem_list;
+
+//获取商户首页数据
+extern NSString *const Url_merc_index;
+
+
+
  
 NS_ASSUME_NONNULL_BEGIN
 

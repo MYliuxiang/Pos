@@ -12,7 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *buyB;
 
-@property(nonatomic,copy) NSArray *dataList;
 
 @end
 
@@ -27,9 +26,10 @@
     self.bottomView.hidden = YES;
     self.buyB.layer.cornerRadius = 22;
     self.buyB.layer.masksToBounds = YES;
-    {
-        self.dataList = @[@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=120863573,3150351979&fm=11&gp=0.jpg"];
-    }
+    
+    [self.buyB setTitle:[NSString stringWithFormat:@"￥%.f",self.model.price] forState:UIControlStateNormal];
+    
+    
     
 }
 
@@ -42,7 +42,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.dataList.count;
+    return self.model.itemImgs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,7 +56,7 @@
         
     }
     
-//    [cell.img sd_setImageWithURL:[NSURL URLWithString:self.dataList[indexPath.row]]];
+//    [cell.img sd_setImageWithURL:[NSURL URLWithString:self.model.itemImgs[indexPath.row]]];
     [self configureCell:cell atIndexPath:indexPath];
 
     
@@ -65,13 +65,15 @@
 }
 
 - (void)configureCell:(ProductCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSString *imgURL = self.dataList[indexPath.row];
+    NSString *imgURL = self.model.itemImgs[indexPath.row];
     UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imgURL];
       
     if ( !cachedImage ) {
-        [self downloadImage:self.dataList[indexPath.row] forIndexPath:indexPath];
+        [self downloadImage:self.model.itemImgs[indexPath.row] forIndexPath:indexPath];
     } else {
-        cell.img.image = cachedImage;
+//        cell.img.image = cachedImage;
+        [cell.btn setBackgroundImage:cachedImage forState:UIControlStateNormal];
+
     }
 }
 
@@ -118,7 +120,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     // 先从缓存中查找图片
-    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey: self.dataList[indexPath.row]];
+    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey: self.model.itemImgs[indexPath.row]];
       
     // 没有找到已下载的图片就使用默认的占位图，当然高度也是默认的高度了，除了高度不固定的文字部分。
     if (!image) {

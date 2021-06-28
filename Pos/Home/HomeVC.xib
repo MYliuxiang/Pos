@@ -21,6 +21,9 @@
                 <outlet property="headerCV" destination="PWs-DW-SWx" id="Vtp-iu-aus"/>
                 <outlet property="headerView" destination="OEq-HP-zSt" id="ZFz-bI-j0y"/>
                 <outlet property="hederTotalL" destination="XDZ-Xo-582" id="cFC-h7-ooa"/>
+                <outlet property="number1L" destination="8Xu-BG-mbR" id="DEj-Xs-0DP"/>
+                <outlet property="number2L" destination="Uto-N3-r7a" id="J5B-3X-EiR"/>
+                <outlet property="number3L" destination="ktK-kI-7qy" id="Oj8-BY-h29"/>
                 <outlet property="tableView" destination="ood-sG-G7I" id="pCq-2Q-w07"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -49,18 +52,18 @@
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </view>
-        <view contentMode="scaleToFill" ambiguous="YES" id="OEq-HP-zSt">
+        <view contentMode="scaleToFill" id="OEq-HP-zSt">
             <rect key="frame" x="0.0" y="0.0" width="459" height="514"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67r-wF-TiX">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67r-wF-TiX">
                     <rect key="frame" x="0.0" y="0.0" width="459" height="198"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="67r-wF-TiX" secondAttribute="height" multiplier="424:178" id="a6O-Z4-K4c"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-DW-SWx">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-DW-SWx">
                     <rect key="frame" x="12" y="135" width="435" height="225"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-xw-30H">
@@ -157,8 +160,8 @@
                                 <constraint firstItem="z2e-hI-fBx" firstAttribute="top" secondItem="nO5-xw-30H" secondAttribute="top" id="smN-aY-ICv"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDZ-Xo-582">
-                            <rect key="frame" x="149.5" y="26" width="136" height="45.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDZ-Xo-582">
+                            <rect key="frame" x="166.5" y="26" width="102" height="45.5"/>
                             <gestureRecognizers/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                             <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -184,7 +187,7 @@
                         <constraint firstAttribute="bottom" secondItem="nO5-xw-30H" secondAttribute="bottom" id="z1Z-h7-fAT"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sy-LMn">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sy-LMn">
                     <rect key="frame" x="0.0" y="382" width="459" height="98"/>
                     <subviews>
                         <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-00-uJp">

@@ -81,6 +81,9 @@
 		226D6E9A26879A47004D8778 /* AdressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6E9926879A47004D8778 /* AdressModel.m */; };
 		226D6EA426879AB4004D8778 /* AdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6EA226879AB4004D8778 /* AdressCell.m */; };
 		226D6EA526879AB4004D8778 /* AdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D6EA326879AB4004D8778 /* AdressCell.xib */; };
+		226D6ECB268A237B004D8778 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6ECA268A237B004D8778 /* ActivityModel.m */; };
+		226D6ED2268A2795004D8778 /* BrandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6ED1268A2795004D8778 /* BrandModel.m */; };
+		226D6EDB268A2A47004D8778 /* ShopItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6EDA268A2A47004D8778 /* ShopItemModel.m */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -435,6 +438,12 @@
 		226D6EA126879AB4004D8778 /* AdressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdressCell.h; sourceTree = "<group>"; };
 		226D6EA226879AB4004D8778 /* AdressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdressCell.m; sourceTree = "<group>"; };
 		226D6EA326879AB4004D8778 /* AdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdressCell.xib; sourceTree = "<group>"; };
+		226D6EC9268A237B004D8778 /* ActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
+		226D6ECA268A237B004D8778 /* ActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
+		226D6ED0268A2795004D8778 /* BrandModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandModel.h; sourceTree = "<group>"; };
+		226D6ED1268A2795004D8778 /* BrandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandModel.m; sourceTree = "<group>"; };
+		226D6ED9268A2A47004D8778 /* ShopItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopItemModel.h; sourceTree = "<group>"; };
+		226D6EDA268A2A47004D8778 /* ShopItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopItemModel.m; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -987,6 +996,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		226D6ECF268A2777004D8778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				226D6ED0268A2795004D8778 /* BrandModel.h */,
+				226D6ED1268A2795004D8778 /* BrandModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2281D84C26873B00004AF0A3 /* 分润钱包 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1111,6 +1129,7 @@
 		22921629267E49D400EB762F /* 终端管理 */ = {
 			isa = PBXGroup;
 			children = (
+				226D6ECF268A2777004D8778 /* Models */,
 				71864983268034A9008EED37 /* Views */,
 				228711B2267F9DA900AEE15A /* TerminalManagerVC.h */,
 				228711B3267F9DA900AEE15A /* TerminalManagerVC.m */,
@@ -1569,11 +1588,6 @@
 				711D7CCC2679ACF100BAFB54 /* HomeVC.h */,
 				711D7CCD2679ACF100BAFB54 /* HomeVC.m */,
 				711D7CCE2679ACF100BAFB54 /* HomeVC.xib */,
-				2292162C267E49E900EB762F /* 紧急关注 */,
-				2292162B267E49E200EB762F /* 学习讲堂 */,
-				2292162A267E49DC00EB762F /* 业务拓展 */,
-				22921629267E49D400EB762F /* 终端管理 */,
-				22921628267E49CA00EB762F /* 商户登记 */,
 				71C24D9D267C858F00700C7F /* DataShowVC.h */,
 				71C24D9E267C858F00700C7F /* DataShowVC.m */,
 				71C24D9F267C858F00700C7F /* DataShowVC.xib */,
@@ -1583,6 +1597,11 @@
 				221898F42680F3C000653C2C /* ProductDoneVC.h */,
 				221898F52680F3C000653C2C /* ProductDoneVC.m */,
 				221898F62680F3C000653C2C /* ProductDoneVC.xib */,
+				2292162C267E49E900EB762F /* 紧急关注 */,
+				2292162B267E49E200EB762F /* 学习讲堂 */,
+				2292162A267E49DC00EB762F /* 业务拓展 */,
+				22921629267E49D400EB762F /* 终端管理 */,
+				22921628267E49CA00EB762F /* 商户登记 */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1759,6 +1778,10 @@
 				71C24DAD267C8EDA00700C7F /* DataModel.m */,
 				71DE1B512689D25A00A46F5E /* CarouselModel.h */,
 				71DE1B522689D25A00A46F5E /* CarouselModel.m */,
+				226D6EC9268A237B004D8778 /* ActivityModel.h */,
+				226D6ECA268A237B004D8778 /* ActivityModel.m */,
+				226D6ED9268A2A47004D8778 /* ShopItemModel.h */,
+				226D6EDA268A2A47004D8778 /* ShopItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2155,6 +2178,7 @@
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
 				2242396A2686196B00E5188F /* PrivateVC.m in Sources */,
 				713AA4B926848704009F02A5 /* ARightCell.m in Sources */,
+				226D6ED2268A2795004D8778 /* BrandModel.m in Sources */,
 				2281D84F26873B16004AF0A3 /* FenrunWalletVC.m in Sources */,
 				71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */,
 				22C1BCD2267A677200092C1E /* UIWindow+JXSafeArea.m in Sources */,
@@ -2267,6 +2291,7 @@
 				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,
+				226D6ECB268A237B004D8778 /* ActivityModel.m in Sources */,
 				2281D85C268789D0004AF0A3 /* MybankcardVC.m in Sources */,
 				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
@@ -2287,6 +2312,7 @@
 				2242397A268619EE00E5188F /* UnincorporateVC.m in Sources */,
 				22881F4E268A38B5002F725B /* DirectnessCell.m in Sources */,
 				716979CF2685802500B278C7 /* DayTotalProfitVC.m in Sources */,
+				226D6EDB268A2A47004D8778 /* ShopItemModel.m in Sources */,
 				2253CC1626824EE40015B808 /* AgentCell.m in Sources */,
 				229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */,
 				2281D85826874B3A004AF0A3 /* MyoerderCellTableViewCell.m in Sources */,

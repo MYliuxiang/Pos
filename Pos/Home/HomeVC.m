@@ -7,7 +7,7 @@
 
 #import "HomeVC.h"
 #import "HomeOneCell.h"
-#import "HomeTwoCCell.h"
+#import "HomeTwoCell.h"
 #import "DataShowVC.h"
 #import "MerchantDetailVC.h"
 #import "BusinessVC.h"
@@ -30,8 +30,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *hederTotalL;
 @property(nonatomic,strong) SDCycleScrollView *cycleView;
 @property(nonatomic,copy) NSArray *cycleModels;
+@property(nonatomic,copy) NSArray *activityModels;
+@property(nonatomic,copy) NSArray *shopList;
+
+@property (weak, nonatomic) IBOutlet UILabel *number1L;
+@property (weak, nonatomic) IBOutlet UILabel *number2L;
+@property (weak, nonatomic) IBOutlet UILabel *number3L;
+
 
 @property (weak, nonatomic) IBOutlet UIView *cycleBgView;
+
 
 
 @end
@@ -71,7 +79,6 @@
 
 - (void)loadData{
     dispatch_group_t dispatchGroup = dispatch_group_create();
-
     dispatch_group_enter(dispatchGroup);
 
     //轮播图
@@ -109,8 +116,57 @@
     [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
     [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
            NSDictionary *result = response;
-           NSLog(@"222");
-           dispatch_group_leave(dispatchGroup);
+        self.activityModels = [ActivityModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+        [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+                
+        dispatch_group_leave(dispatchGroup);
+
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+
+        }];
+    
+    dispatch_group_enter(dispatchGroup);
+    BADataEntity *entity2 = [BADataEntity new];
+    entity2.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shopItem_list];
+    entity2.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity2 successBlock:^(id response) {
+        NSDictionary *result = response;
+        self.shopList = [ShopItemModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+        [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+                
+        dispatch_group_leave(dispatchGroup);
+
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+
+        }];
+    
+    dispatch_group_enter(dispatchGroup);
+    BADataEntity *entity3 = [BADataEntity new];
+    entity3.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_index];
+    entity3.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity3 successBlock:^(id response) {
+        NSDictionary *result = response;
+       
+        self.hederTotalL.text = [NSString stringWithFormat:@"%.2f", [result[@"data"][@"indexMoney"] floatValue]];
+        self.number1L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"today"] intValue]];
+//     Money"] intValue]];
+        
+        
+        self.number2L.text = [NSString stringWithFormat:@"%@",result[@"data"][@"activeTradeMoney"]];
+
+        
+        self.number3L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"month"] intValue]];
+        dispatch_group_leave(dispatchGroup);
 
 
         } failureBlock:^(NSError *error) {
@@ -134,7 +190,7 @@
 - (SDCycleScrollView *)cycleView
 {
     if (_cycleView == nil) {
-        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(10, 10, kScreenWidth,kScreenWidth / 424 * 178) delegate:self placeholderImage:nil];
+        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth,kScreenWidth / 424 * 178) delegate:self placeholderImage:nil];
         _cycleView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
 //        _cycleView.pageDotImage = [UIImage imageNamed:@"switch opacity"];
 //        _cycleView.currentPageDotImage = [UIImage imageNamed:@"switch"];
@@ -150,6 +206,8 @@
     CarouselModel *model = self.cycleModels[index];
     HWBaseWebViewController *vc = [HWBaseWebViewController new];
     vc.urlString = model.jumpUrl;
+//    vc.urlString = @"http://www.baidu.com";
+
     [self.navigationController pushViewController:vc animated:YES];
 
 }
@@ -306,18 +364,18 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
-        
-        
+        cell.dataList = self.shopList;
+            
         return cell;
     }else{
         static NSString *identifire = @"cellID2";
-        HomeOneCell *cell = [tableView dequeueReusableCellWithIdentifier:identifire];
+        HomeTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:identifire];
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"HomeTwoCell" owner:nil options:nil] lastObject];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
-        
+        cell.dataList = self.activityModels;
         
         return cell;
     }

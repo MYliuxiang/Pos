@@ -33,7 +33,7 @@
 #pragma mark - 添加进度条
 - (void)addMainView {
     HWWeakSelf(weakSelf)
-    UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, HWScreenW, HWScreenH)];
+    UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, Height_NavBar, HWScreenW, HWScreenH - Height_NavBar)];
     mainView.backgroundColor = [UIColor clearColor];
     _mainView = mainView;
     [weakSelf.view addSubview:mainView];
@@ -41,23 +41,22 @@
     progressView.progress = 0;
     progressView.progressTintColor = [UIColor colorWithHexString:@"#FF8901"];
     _progressView = progressView;
-    [weakSelf.view addSubview:progressView];
-    [mainView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+    [mainView addSubview:progressView];
+  
 }
 
 - (WKWebView *)webView
 {
     if (_webView == nil) {
         HWWeakSelf(weakSelf)
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, Height_NavBar, HWScreenW, HWScreenH - Height_NavBar)];
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, Height_NavBar + 1, HWScreenW, HWScreenH - Height_NavBar - 1)];
         _webView.backgroundColor = [UIColor whiteColor];
         _webView.navigationDelegate = weakSelf;
         _webView.scrollView.bounces = NO;
         [weakSelf.mainView addSubview:_webView];
         [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(weakSelf.mainView);
+            make.left.right.bottom.equalTo(weakSelf.mainView);
+            make.top.equalTo(weakSelf.mainView).offset(1);
         }];
         
         // 添加观察者

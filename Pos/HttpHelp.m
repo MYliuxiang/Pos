@@ -23,6 +23,14 @@ NSString *const Url_carousel_list = @"/app/carousel/list/";
 
 NSString *const Url_activity_list = @"/app/activity/list/";
 
+NSString *const Url_shopBrand_list = @"/app/shopBrand/list/";
+
+NSString *const Url_shopItem_list = @"/app/shopItem/list/";
+
+NSString *const Url_merc_index = @"/app/merc/index/";
+
+
+
 
 
 

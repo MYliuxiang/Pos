@@ -21,6 +21,10 @@
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
 
 @property (nonatomic,assign) int seletedIndex;
+
+@property (nonatomic,copy) NSArray *brandList;
+
+
 @end
 
 @implementation TerminalTransferVC
@@ -47,8 +51,44 @@
     
     [self setUI];
     [self handerHeadrBWithIndex:0];
-    
+    [self loadData];
       
+}
+
+- (void)loadData{
+    
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    dispatch_group_enter(dispatchGroup);
+
+   
+    BADataEntity *entity1 = [BADataEntity new];
+    entity1.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shopBrand_list];
+    entity1.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
+           NSDictionary *result = response;
+        self.brandList = [BrandModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+        [self.collectionView reloadData];
+        [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+
+        dispatch_group_leave(dispatchGroup);
+
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+
+        }];
+    
+    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
+
+        NSLog(@"请求完成");
+        [self.tableView.mj_header endRefreshing];
+
+    });
+
+    
 }
 
 - (void)doRightNavBarRightBtnAction{
@@ -95,7 +135,6 @@
     self.layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"TransfCCell" bundle:nil] forCellWithReuseIdentifier:@"TransfCCellID"];
-    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
     
 }
 
@@ -107,13 +146,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.brandList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     TransfCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TransfCCellID" forIndexPath:indexPath];
+    cell.model = self.brandList[indexPath.row];
     return cell;
     
 }

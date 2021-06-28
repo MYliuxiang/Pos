@@ -22,6 +22,12 @@
     // Configure the view for the selected state
 }
 
+- (void)setDataList:(NSArray *)dataList
+{
+    _dataList = dataList;
+    [self.collectionView reloadData];
+}
+
 - (void)creatCollection
 {
     
@@ -44,13 +50,15 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    return self.dataList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     HomeTwoCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTwoCCellID" forIndexPath:indexPath];
+    ActivityModel *model = self.dataList[indexPath.row];
+    [cell.img sd_setImageWithURL:model.indexUrl];
     return cell;
     
 }
@@ -69,7 +77,11 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ActivityModel *model = self.dataList[indexPath.row];
+    HWBaseWebViewController *vc = [HWBaseWebViewController new];
+    vc.urlString = model.jumpUrl;
+    [self.viewController.navigationController pushViewController:vc animated:YES];
+
     
 }
 

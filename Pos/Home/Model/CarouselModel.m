@@ -11,7 +11,7 @@
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"cid":@"",@"cdescription":@"description"};
+    return @{@"cid":@"id",@"cdescription":@"description"};
 }
 
 @end
