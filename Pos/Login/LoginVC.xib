@@ -43,15 +43,15 @@
                         <constraint firstAttribute="height" constant="1" id="6AM-eW-SoY"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wD4-eG-zsU">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18665923312" placeholder="输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wD4-eG-zsU">
                     <rect key="frame" x="96.5" y="346" width="271.5" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="VL6-JK-THx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入登陆密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vuD-yV-dqx">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="输入登陆密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vuD-yV-dqx">
                     <rect key="frame" x="96.5" y="401" width="271.5" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="AYK-Fy-NWr"/>

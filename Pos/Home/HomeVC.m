@@ -7,7 +7,7 @@
 
 #import "HomeVC.h"
 #import "HomeOneCell.h"
-#import "HomeTwoCCell.h"
+#import "HomeTwoCell.h"
 #import "DataShowVC.h"
 #import "MerchantDetailVC.h"
 #import "BusinessVC.h"
@@ -17,7 +17,7 @@
 #import "MerchantVC.h"
 #import "TradeDetailVC.h"
 
-@interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface HomeVC ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIButton *headerB1;
@@ -28,6 +28,18 @@
 @property (weak, nonatomic) IBOutlet UIView *headerCV;
 @property (weak, nonatomic) IBOutlet UIView *headerCDownV;
 @property (weak, nonatomic) IBOutlet UILabel *hederTotalL;
+@property(nonatomic,strong) SDCycleScrollView *cycleView;
+@property(nonatomic,copy) NSArray *cycleModels;
+@property(nonatomic,copy) NSArray *activityModels;
+@property(nonatomic,copy) NSArray *shopList;
+
+@property (weak, nonatomic) IBOutlet UILabel *number1L;
+@property (weak, nonatomic) IBOutlet UILabel *number2L;
+@property (weak, nonatomic) IBOutlet UILabel *number3L;
+
+
+@property (weak, nonatomic) IBOutlet UIView *cycleBgView;
+
 
 
 @end
@@ -40,15 +52,166 @@
     self.customNavBar.hidden = YES;
     [self setUI];
     
-
     self.headerView.autoresizingMask = UIViewAutoresizingNone;
     self.tableView.tableHeaderView = self.headerView;
-
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
+    
+    [self.cycleBgView addSubview:self.cycleView];
+//    self.cycleView.imageURLStringsGroup = @[[UIImage imageNamed:@"位图备份 4"],[UIImage imageNamed:@"位图备份 4"]];
+    
+//    self.tableView.mj_header = [LxResfreshHeader headerWithRefreshingBlock:^{
+//        [self loadData];
+//    }];
+     LxResfreshHeader *header = [LxResfreshHeader headerWithRefreshingBlock:^{
+        [self loadData];
+
+    }];
+                                
+    header.mj_h =  kTopBarSafeHeight + 54;
+    self.tableView.mj_header = header;
+    
+    [self.tableView.mj_header beginRefreshing];
+
 
 }
+
+- (void)loadData{
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    dispatch_group_enter(dispatchGroup);
+
+    //轮播图
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_carousel_list,@"0"];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        
+        self.cycleModels = [CarouselModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+        
+        NSMutableArray *marray = [NSMutableArray array];
+        for (CarouselModel *model in self.cycleModels) {
+            [marray addObject:model.imgUrl];
+        }
+        self.cycleView.imageURLStringsGroup = marray;
+        
+        
+        dispatch_group_leave(dispatchGroup);
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+    
+    dispatch_group_enter(dispatchGroup);
+    //活动
+    BADataEntity *entity1 = [BADataEntity new];
+    entity1.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_activity_list];
+    entity1.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
+           NSDictionary *result = response;
+        self.activityModels = [ActivityModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+        [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+                
+        dispatch_group_leave(dispatchGroup);
+
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+
+        }];
+    
+    dispatch_group_enter(dispatchGroup);
+    BADataEntity *entity2 = [BADataEntity new];
+    entity2.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shopItem_list];
+    entity2.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity2 successBlock:^(id response) {
+        NSDictionary *result = response;
+        self.shopList = [ShopItemModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+        [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+                
+        dispatch_group_leave(dispatchGroup);
+
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+
+        }];
+    
+    dispatch_group_enter(dispatchGroup);
+    BADataEntity *entity3 = [BADataEntity new];
+    entity3.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_index];
+    entity3.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity3 successBlock:^(id response) {
+        NSDictionary *result = response;
+       
+        self.hederTotalL.text = [NSString stringWithFormat:@"%.2f", [result[@"data"][@"indexMoney"] floatValue]];
+        self.number1L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"today"] intValue]];
+//     Money"] intValue]];
+        
+        
+        self.number2L.text = [NSString stringWithFormat:@"%@",result[@"data"][@"activeTradeMoney"]];
+
+        
+        self.number3L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"month"] intValue]];
+        dispatch_group_leave(dispatchGroup);
+
+
+        } failureBlock:^(NSError *error) {
+            dispatch_group_leave(dispatchGroup);
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+
+        }];
+    
+    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
+
+        NSLog(@"请求完成");
+        [self.tableView.mj_header endRefreshing];
+
+    });
+
+
+    
+}
+
+- (SDCycleScrollView *)cycleView
+{
+    if (_cycleView == nil) {
+        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth,kScreenWidth / 424 * 178) delegate:self placeholderImage:nil];
+        _cycleView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
+//        _cycleView.pageDotImage = [UIImage imageNamed:@"switch opacity"];
+//        _cycleView.currentPageDotImage = [UIImage imageNamed:@"switch"];
+        _cycleView.backgroundColor = [UIColor clearColor];
+
+    }
+    return _cycleView;
+}
+
+#pragma mark - SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    CarouselModel *model = self.cycleModels[index];
+    HWBaseWebViewController *vc = [HWBaseWebViewController new];
+    vc.urlString = model.jumpUrl;
+//    vc.urlString = @"http://www.baidu.com";
+
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+
 
 - (void)viewDidLayoutSubviews {
     
@@ -201,18 +364,18 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
-        
-        
+        cell.dataList = self.shopList;
+            
         return cell;
     }else{
         static NSString *identifire = @"cellID2";
-        HomeOneCell *cell = [tableView dequeueReusableCellWithIdentifier:identifire];
+        HomeTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:identifire];
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"HomeTwoCell" owner:nil options:nil] lastObject];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
-        
+        cell.dataList = self.activityModels;
         
         return cell;
     }

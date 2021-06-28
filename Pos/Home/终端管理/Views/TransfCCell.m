@@ -22,5 +22,11 @@
     }
 }
 
+- (void)setModel:(BrandModel *)model
+{
+    _model = model;
+    [self.img sd_setImageWithURL:[NSURL URLWithString:model.brandImg]];
+    self.titleL.text = model.brandName;
+}
 
 @end

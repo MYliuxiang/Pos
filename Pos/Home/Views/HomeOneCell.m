@@ -36,6 +36,12 @@
     
 }
 
+- (void)setDataList:(NSArray *)dataList
+{
+    _dataList = dataList;
+    [self.collectionView reloadData];
+}
+
 #pragma mark - UICollectionViewDelegate
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -44,13 +50,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 6;
+    return self.dataList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     HomeOneCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeOneCCellID" forIndexPath:indexPath];
+    cell.model = self.dataList[indexPath.row];
     return cell;
     
 }
@@ -70,6 +77,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ProductVC *vc = [ProductVC new];
+    vc.model = self.dataList[indexPath.row];
     [self.viewController.navigationController pushViewController:vc animated:YES];
     
     

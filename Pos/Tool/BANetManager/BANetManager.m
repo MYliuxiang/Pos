@@ -134,13 +134,13 @@ static NSMutableArray *tasks;
      json：[AFJSONRequestSerializer serializer](常用)
      http：[AFHTTPRequestSerializer serializer]
      */
-    //    AFJSONRequestSerializer *request = [AFJSONRequestSerializer serializer];
-    //    BANetManagerShare.sessionManager.requestSerializer = request;
+        AFJSONRequestSerializer *request = [AFJSONRequestSerializer serializer];
+        BANetManagerShare.sessionManager.requestSerializer = request;
     /*! 设置apikey ------类似于自己应用中的tokken---此处仅仅作为测试使用*/
     //        [manager.requestSerializer setValue:apikey forHTTPHeaderField:@"apikey"];
     
     /*! 复杂的参数类型 需要使用json传值-设置请求内容的类型*/
-    //        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [BANetManagerShare.sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     /*! 设置响应数据的基本类型 */
     BANetManagerShare.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/css", @"text/xml", @"text/plain", @"application/javascript", @"application/x-www-form-urlencoded", @"image/*", nil];
@@ -253,12 +253,10 @@ static NSMutableArray *tasks;
     NSString *isCache = isNeedCache ? @"开启":@"关闭";
     CGFloat allCacheSize = [BANetManagerCache ba_getAllHttpCacheSize];
     
-    
     if (BANetManagerShare.isOpenLog)
     {
         NSLog(@"\n******************** 请求参数 ***************************");
-//        NSLog(@"\n请求头: %@\n超时时间设置：%.1f 秒【默认：30秒】\nAFHTTPResponseSerializer：%@【默认：AFJSONResponseSerializer】\nAFHTTPRequestSerializer：%@【默认：AFJSONRequestSerializer】\n请求方式: %@\n请求URL: %@\n请求param: %@\n是否启用缓存：%@【默认：开启】\n目前总缓存大小：%.6fM\n", BANetManagerShare.sessionManager.requestSerializer.HTTPRequestHeaders, timeoutInterval, scc2, scc3, requestType, URLString, parameters, isCache, allCacheSize);
-        NSLog(@"\n请求头: %@\n请求URL: %@\n请求param: %@", BANetManagerShare.sessionManager.requestSerializer.HTTPRequestHeaders, URLString, parameters);
+        NSLog(@"\n请求头: %@\n超时时间设置：%.1f 秒【默认：30秒】\nAFHTTPResponseSerializer：%@【默认：AFJSONResponseSerializer】\nAFHTTPRequestSerializer：%@【默认：AFJSONRequestSerializer】\n请求方式: %@\n请求URL: %@\n请求param: %@\n是否启用缓存：%@【默认：开启】\n目前总缓存大小：%.6fM\n", BANetManagerShare.sessionManager.requestSerializer.HTTPRequestHeaders, timeoutInterval, scc2, scc3, requestType, URLString, parameters, isCache, allCacheSize);
         NSLog(@"\n********************************************************");
     }
     
@@ -309,6 +307,16 @@ static NSMutableArray *tasks;
 
             if (successBlock)
             {
+                NSDictionary *reslut = responseObject;
+                NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
+                NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
+                if ([code isEqualToString:@"401"]) {
+                    [HandleTool switchLgoinVC];
+                    [LoginManger sharedManager].currentLoginModel = nil;
+                }
+                if (![code isEqualToString:@"200"]) {
+                   [MBProgressHUD showError:msg toView:lxWindow];
+                }
                 successBlock(responseObject);
             }
             // 对数据进行异步缓存
@@ -351,14 +359,16 @@ static NSMutableArray *tasks;
             {
                 NSDictionary *reslut = responseObject;
                 NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
+                NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
+
                 
                 if ([code isEqualToString:@"401"]) {
                 
                     [HandleTool switchLgoinVC];
-//                    [LoginManger sharedManager].currentLoginModel = nil;
+                    [LoginManger sharedManager].currentLoginModel = nil;
                 }
-                if (![code isEqualToString:@"0"]) {
-                   [MBProgressHUD showError:reslut[@"message"] toView:lxWindow];
+                if (![code isEqualToString:@"200"]) {
+                   [MBProgressHUD showError:msg toView:lxWindow];
                 }
 
                 successBlock(responseObject);
@@ -385,6 +395,16 @@ static NSMutableArray *tasks;
 
             if (successBlock)
             {
+                NSDictionary *reslut = responseObject;
+                NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
+                NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
+                if ([code isEqualToString:@"401"]) {
+                    [HandleTool switchLgoinVC];
+                    [LoginManger sharedManager].currentLoginModel = nil;
+                }
+                if (![code isEqualToString:@"200"]) {
+                   [MBProgressHUD showError:msg toView:lxWindow];
+                }
                 successBlock(responseObject);
             }
             
@@ -410,6 +430,16 @@ static NSMutableArray *tasks;
 
             if (successBlock)
             {
+                NSDictionary *reslut = responseObject;
+                NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
+                NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
+                if ([code isEqualToString:@"401"]) {
+                    [HandleTool switchLgoinVC];
+                    [LoginManger sharedManager].currentLoginModel = nil;
+                }
+                if (![code isEqualToString:@"200"]) {
+                   [MBProgressHUD showError:msg toView:lxWindow];
+                }
                 successBlock(responseObject);
             }
             

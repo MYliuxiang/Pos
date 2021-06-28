@@ -96,6 +96,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "MJExtension.h"
 #import "WSTableviewTree.h"
 #import "BRPickerView.h"
+#import "SDCycleScrollView.h"
 
 
 
@@ -126,7 +127,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "NSDate+Utilities.h"
 #import "LoginManger.h"
 #import "JXCategoryTitleBackgroundView.h"
-
+#import "HWBaseWebViewController.h"
 
 //
 #import "LLHeader.h"
@@ -157,6 +158,10 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 //model
 #import "AdressModel.h"
+#import "CarouselModel.h"
+#import "ActivityModel.h"
+#import "BrandModel.h"
+#import "ShopItemModel.h"
 
 
 
@@ -164,9 +169,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 
 //mainurl
-
-#define MainUrl @"http://120.24.108.245:8102"
-#define MainFileUrl @"http://120.24.108.245:8100"
+#define MainUrl @"http://app.pos.test.stmj.net.cn"
 
 //分页大小
 

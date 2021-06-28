@@ -14,4 +14,12 @@
     // Initialization code
 }
 
+- (void)setModel:(ShopItemModel *)model
+{
+    _model = model;
+    [self.img sd_setImageWithURL:[NSURL URLWithString:model.indexImg]];
+    self.nameL.text = model.name;
+    self.priceL.text = [NSString stringWithFormat:@"￥%.f",model.price];
+}
+
 @end

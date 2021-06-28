@@ -52,7 +52,47 @@
 
 - (IBAction)loginAC:(id)sender {
     
-    [HandleTool switchMainVC];
+//    [HandleTool switchMainVC];
+    
+    if (_phoneF.text.length!=11) {
+        [MBProgressHUD showError:@"请输入正确的手机号" toView:self.view];
+        return;
+    }
+    
+    if (_passF.text.length == 0) {
+        [MBProgressHUD showError:@"请输入验证码！" toView:self.view];
+        return;
+    }
+    
+    //发送验证码接口
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_user_login];
+    entity.parameters = @{@"password":self.passF.text,@"phone":self.phoneF.text};
+    
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    
+    [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            //倒计时
+            LoginModel *model = [LoginModel mj_objectWithKeyValues:result[@"data"]];
+            //设置网络请求头
+            NSString *user_token = [NSString stringWithFormat:@"%@",model.token];
+            NSDictionary *headerdic = @{@"token":user_token};
+            [BANetManager sharedBANetManager].httpHeaderFieldDictionary = headerdic;
+
+            //消息数据库打开，可以进入到主页面
+            [LoginManger sharedManager].currentLoginModel = model;
+            [HandleTool switchMainVC];
+            [MBProgressHUD showMessag:@"登录成功" toView:lxWindow];
+            
+           }
+        } failureBlock:^(NSError *error) {
+            
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+        
 }
 
 
