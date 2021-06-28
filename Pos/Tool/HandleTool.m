@@ -715,7 +715,8 @@
 
 + (NSString *)getImageUrlStr:(NSString *)imageId{
     
-    return [NSString stringWithFormat:@"%@/imageInfo/download?imageId=%@",MainFileUrl,imageId];
+//    return [NSString stringWithFormat:@"%@/imageInfo/download?imageId=%@",MainFileUrl,imageId];
+    return @"";
 }
 
 + (NSString *)getDistance:(int)distance{

@@ -289,6 +289,9 @@
 		71CF0F452680901400C4E558 /* WBQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F3F2680901300C4E558 /* WBQRCodeVC.m */; };
 		71CF0F462680901400C4E558 /* SGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F402680901300C4E558 /* SGWebView.m */; };
 		71CF0F662680913900C4E558 /* MBProgressHUD+SGQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */; };
+		71DE1B4D2689C33000A46F5E /* UIImage+None.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B4C2689C33000A46F5E /* UIImage+None.m */; };
+		71DE1B532689D25A00A46F5E /* CarouselModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B522689D25A00A46F5E /* CarouselModel.m */; };
+		71DE1B592689D58A00A46F5E /* HWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */; };
 		B568E0BF3597F86AFFEBDA5D /* Pods_Pos_PosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -800,6 +803,12 @@
 		71CF0F432680901300C4E558 /* SGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWebView.h; sourceTree = "<group>"; };
 		71CF0F642680913900C4E558 /* MBProgressHUD+SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+SGQRCode.h"; sourceTree = "<group>"; };
 		71CF0F652680913900C4E558 /* MBProgressHUD+SGQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+SGQRCode.m"; sourceTree = "<group>"; };
+		71DE1B4B2689C33000A46F5E /* UIImage+None.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+None.h"; sourceTree = "<group>"; };
+		71DE1B4C2689C33000A46F5E /* UIImage+None.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+None.m"; sourceTree = "<group>"; };
+		71DE1B512689D25A00A46F5E /* CarouselModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselModel.h; sourceTree = "<group>"; };
+		71DE1B522689D25A00A46F5E /* CarouselModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselModel.m; sourceTree = "<group>"; };
+		71DE1B572689D58A00A46F5E /* HWBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWBaseWebViewController.h; sourceTree = "<group>"; };
+		71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWBaseWebViewController.m; sourceTree = "<group>"; };
 		766792BAAAA57537E38FAE0F /* Pods_Pos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		892CBA1CE419669925D5F4E4 /* Pods-Pos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.debug.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBFB3FA90CD74EA0B0BAEAE /* Pods-Pos-PosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos-PosUITests.release.xcconfig"; path = "Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1319,6 +1328,8 @@
 				22C1BC9E267A677100092C1E /* UIView+ViewController.m */,
 				22C1BCB7267A677100092C1E /* UIWindow+JXSafeArea.h */,
 				22C1BCA3267A677100092C1E /* UIWindow+JXSafeArea.m */,
+				71DE1B4B2689C33000A46F5E /* UIImage+None.h */,
+				71DE1B4C2689C33000A46F5E /* UIImage+None.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1474,6 +1485,8 @@
 		711D7C0D2679AB7F00BAFB54 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				71DE1B572689D58A00A46F5E /* HWBaseWebViewController.h */,
+				71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */,
 				22C1BC35267A65FB00092C1E /* SwizzlingDefine.h */,
 				22C1BC34267A65FB00092C1E /* UIViewController+Swizzling.h */,
 				22C1BC33267A65FB00092C1E /* UIViewController+Swizzling.m */,
@@ -1726,6 +1739,8 @@
 			children = (
 				71C24DAC267C8EDA00700C7F /* DataModel.h */,
 				71C24DAD267C8EDA00700C7F /* DataModel.m */,
+				71DE1B512689D25A00A46F5E /* CarouselModel.h */,
+				71DE1B522689D25A00A46F5E /* CarouselModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2116,6 +2131,7 @@
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
 				2235FFC1268647FE0064B505 /* BRDatePickerView+BR.m in Sources */,
+				71DE1B4D2689C33000A46F5E /* UIImage+None.m in Sources */,
 				226D6E83268797F2004D8778 /* AdressVC.m in Sources */,
 				2253CC5A268387220015B808 /* BusinessListCell.m in Sources */,
 				22C1BCEE267A677D00092C1E /* LxCustomAlert.m in Sources */,
@@ -2131,6 +2147,7 @@
 				22C1BC65267A675500092C1E /* SDCycleScrollView.m in Sources */,
 				22C1BC50267A674200092C1E /* LxRefreshFooter.m in Sources */,
 				228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */,
+				71DE1B592689D58A00A46F5E /* HWBaseWebViewController.m in Sources */,
 				2253CC0E26824E760015B808 /* ChooseAgentVC.m in Sources */,
 				22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */,
 				22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */,
@@ -2268,6 +2285,7 @@
 				22921604267D196E00EB762F /* DataSCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
 				2281D8632687924A004AF0A3 /* AddCarVC.m in Sources */,
+				71DE1B532689D25A00A46F5E /* CarouselModel.m in Sources */,
 				22C1BC40267A670200092C1E /* LLUrl.m in Sources */,
 				2235FFC9268647FE0064B505 /* BRAddressPickerView.m in Sources */,
 				711D7CC72679ACE300BAFB54 /* AchievementVC.m in Sources */,
