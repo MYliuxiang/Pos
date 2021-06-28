@@ -20,6 +20,11 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>是否允许此app使用相机用于用户上传个人证件的功能，如身份证，驾驶证等，以及更改用户头像？</string>
 	<key>NSPhotoLibraryUsageDescription</key>

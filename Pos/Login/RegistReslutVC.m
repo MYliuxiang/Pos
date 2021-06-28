@@ -20,6 +20,7 @@
     self.customNavBar.hidden = YES;
     self.resultB.layer.cornerRadius = 22;
     self.resultB.layer.masksToBounds = YES;
+    self.fd_interactivePopDisabled = NO;
 }
 
 - (IBAction)goLoginAC:(id)sender {

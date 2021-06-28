@@ -21,16 +21,26 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    //打印日志
+    BANetManagerShare.isOpenLog = YES;
+    //设置网络请求头
+    NSString *user_token = [NSString stringWithFormat:@"%@",[LoginManger sharedManager].currentLoginModel.token];
+    NSDictionary *headerdic = @{@"token":user_token};
+    [BANetManager sharedBANetManager].httpHeaderFieldDictionary = headerdic;
+   
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    
-    
-    
-    self.window.rootViewController = [[MainTabBarController alloc] init];
-    
-//    self.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:[LoginVC new]];
-
-    
+    UIViewController *rootVC;
+    if ([LoginManger sharedManager].currentLoginModel == nil) {
+        //未登录
+        rootVC = [[BaseNavigationController alloc] initWithRootViewController:[LoginVC new]];
+    }else{
+        
+        rootVC = [[MainTabBarController alloc] init];
+    }
+    self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
 
     [[AppService shareInstance] registerAppService:application didFinishLaunchingWithOptions:launchOptions];
