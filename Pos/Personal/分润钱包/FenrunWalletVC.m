@@ -8,6 +8,9 @@
 #import "FenrunWalletVC.h"
 #import "ManagementVC.h"
 #import "DirectnessVC.h"
+#import "DirectcoutVC.h"
+#import "TeammerchantVC.h"
+#import "TeamcoutVC.h"
 @interface FenrunWalletVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -199,9 +202,27 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.section ==1){
         if (indexPath.row ==0) {
+            //直属商户
         DirectnessVC *vc = [[DirectnessVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
+        }else{
+        //团队直属商户
+        TeammerchantVC *VC = [[TeammerchantVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+            
         }
+    }else if (indexPath.section ==2){
+        if (indexPath.row ==0) {
+            //直属企业商户
+        DirectcoutVC *VC = [[DirectcoutVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+        }else{
+        //团队企业商户
+        TeamcoutVC *VC = [[TeamcoutVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+        }
+    }else{
+        //调价分成
     }
   
 }
