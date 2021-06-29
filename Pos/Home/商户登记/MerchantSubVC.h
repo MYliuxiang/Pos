@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MerchantSubVC : BaseViewController<JXCategoryListContentViewDelegate>
-
+@property(nonatomic,strong) DeviceModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

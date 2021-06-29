@@ -15,6 +15,7 @@
                 <outlet property="sortConstraint" destination="9j3-Ns-ncn" id="fHg-FZ-11W"/>
                 <outlet property="tableView" destination="zp1-2v-o1r" id="00c-9X-JkW"/>
                 <outlet property="tableView1" destination="aRH-bo-Vtq" id="4J8-K9-fwr"/>
+                <outlet property="totalL" destination="XgG-m4-AFi" id="XYg-zl-6t2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,8 +32,8 @@
                         <outlet property="delegate" destination="-1" id="2j3-vy-zd4"/>
                     </connections>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通讯录：34" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-m4-AFi">
-                    <rect key="frame" x="20" y="0.0" width="76" height="44"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通讯录：0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-m4-AFi">
+                    <rect key="frame" x="20" y="0.0" width="67" height="44"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

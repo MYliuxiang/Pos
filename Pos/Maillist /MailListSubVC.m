@@ -13,10 +13,14 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView1;
 @property (weak, nonatomic) IBOutlet UIButton *sortB;
+@property (weak, nonatomic) IBOutlet UILabel *totalL;
 
 @property (strong, nonatomic) UIView *maskView;
 @property (copy, nonatomic) NSArray *sortTitles;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sortConstraint;
+@property (nonatomic, strong) NSMutableArray *dataList;
+@property (nonatomic, assign) NSInteger sortType;
+
 
 @end
 
@@ -26,10 +30,65 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.hidden = YES;
+    self.dataList = [NSMutableArray array];
     [self setUI];
+    self.sortType = 1;
     self.sortTitles = @[@"默认排序",@"用户规模从高到低",@"本月交易从高到低"];
-   
+    self.tableView.mj_header = [LxResfreshHeader headerWithRefreshingBlock:^{
+        self.pageNum = 1;
+        [self loadData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+
 }
+
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%ld",MainUrl,Url_user_contacts,(long)self.sortType];
+    NSString *verified;
+    if (self.type == 0) {
+        //已经实名的
+        verified = @"1";
+    }else{
+        verified = @"0";
+
+    }
+    entity.needCache = NO;
+    entity.parameters = @{@"verified":verified,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize)};
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            
+            NSArray *models = [ContactsModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            if (self.pageNum == 1) {
+                [self.dataList removeAllObjects];
+            }
+            [self.dataList addObjectsFromArray:models];
+            
+            self.totalL.text = [NSString stringWithFormat:@"通讯录：%ld",self.dataList.count];
+            
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView reloadData];
+          
+        }else{
+            
+            [self.tableView.mj_header endRefreshing];
+
+        }
+        
+    } failureBlock:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
+}
+
+
+
 
 - (void)setUI{
     
@@ -97,7 +156,7 @@
     if (tableView == self.tableView1) {
         return self.sortTitles.count;
     }
-    return 10;
+    return self.dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -114,7 +173,6 @@
         cell.textLabel.text = self.sortTitles[indexPath.row];
         cell.textLabel.font = [UIFont systemFontOfSize:12];
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#C4C4C4"];
-        
         return cell;
     }
     static NSString *identifire = @"cellID";
@@ -124,6 +182,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
+    cell.model = self.dataList[indexPath.row];
     
     return cell;
     
@@ -166,6 +225,25 @@
         [self.sortB setTitle:self.sortTitles[indexPath.row] forState:UIControlStateNormal];
         [self.sortB layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleRight imageTitleSpace:5];
         [self sortCancleAC];
+        
+        self.sortType = indexPath.row + 1;
+        [self.tableView.mj_header beginRefreshing];
+                
+    }else{
+        
+        ContactsModel *model = self.dataList[indexPath.row];
+        NSString *phoneStr = [NSString stringWithFormat:@"tel://%@",model.phone];
+        //设备系统为IOS 10.0或者以上的
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneStr] options:@{} completionHandler:nil];
+        } else {
+            // Fallback on earlier versions
+            //设备系统为IOS 10.0以下的
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneStr]];
+        }
+        
+       
+     
     }
 }
 

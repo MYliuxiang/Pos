@@ -12,7 +12,12 @@
 @interface MerchantVC ()<JXCategoryListContainerViewDelegate,JXCategoryViewDelegate>
 @property (nonatomic, strong) JXCategoryListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleBackgroundView *categoryView;
-@property (nonatomic, strong) NSArray *titles;
+
+@property (nonatomic, strong) NSMutableArray *dataList;
+
+@property (nonatomic, strong) NSMutableArray *titles;
+
+
 
 @end
 
@@ -22,7 +27,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"企业";
+    self.dataList = [NSMutableArray array];
+    self.titles = [NSMutableArray array];
+
+    [self loadData];
     
+       
+}
+
+- (void)setUI{
     [self.view addSubview:self.categoryView];
     [self.view addSubview:self.listContainerView];
     [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -37,7 +50,6 @@
     }];
     
 
-    self.titles = @[@"全部",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2"];
     self.categoryView.titles = self.titles;
     self.categoryView.titleFont = [UIFont boldSystemFontOfSize:16];
     self.categoryView.titleSelectedFont = [UIFont boldSystemFontOfSize:16];
@@ -68,7 +80,35 @@
             make.right.equalTo(self.view).offset(-27);
             make.bottom.equalTo(self.view).offset(-kBottomSafeHeight - 50);
     }];
+}
+
+- (void)loadData{
+    //轮播图
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_model_list];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            self.dataList = [DeviceModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            
+            for (DeviceModel *model in self.dataList) {
+                [self.titles addObject:model.name];
+            }
+
+            [self setUI];
+        }
+       
         
+
+        } failureBlock:^(NSError *error) {
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+    
     
 }
 
@@ -141,6 +181,7 @@
 // 返回各个列表菜单下的实例，该实例需要遵守并实现 <JXCategoryListContentViewDelegate> 协议
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     MerchantSubVC *list = [[MerchantSubVC alloc] init];
+    list.model = self.dataList[index];
     return list;
 }
 

@@ -109,7 +109,7 @@
     
     
     if (_phoneF.text.length!=11) {
-        [MBProgressHUD showError:@"请输入正确的手机号" toView:self.view];
+        [MBProgressHUD showError:@"请输入正确的手机号！" toView:self.view];
         return;
     }
     

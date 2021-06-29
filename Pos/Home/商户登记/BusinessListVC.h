@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BusinessListVC : BaseViewController
+@property(nonatomic,copy) NSString *type;
+@property(nonatomic,strong) DeviceModel *model;
 
 @end
 

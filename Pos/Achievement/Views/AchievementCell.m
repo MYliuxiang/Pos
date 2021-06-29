@@ -59,4 +59,14 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(AchievementModel *)model
+{
+    _model = model;
+    self.number1L.text = model.serviceTradingMoney;
+    self.number2L.text = model.serviceAddSum;
+    self.number3L.text = model.personalTradingMoney;
+    self.number4L.text = model.personalAddSum;
+    self.timeL.text = model.time;
+}
+
 @end

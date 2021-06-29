@@ -166,6 +166,7 @@
 
 - (id<JXPagerViewListViewDelegate>)pagerView:(JXPagerView *)pagerView initListAtIndex:(NSInteger)index {
     MailListSubVC *list = [[MailListSubVC alloc] init];
+    list.type = index;
     return list;
     
     

@@ -14,6 +14,7 @@
 @property (copy, nonatomic) NSArray *titles;
 @property (copy, nonatomic) NSArray *imageStrs;
 @property (copy, nonatomic) NSArray *subTitles;
+@property (nonatomic,strong) NSMutableArray *values;
 
 
 @end
@@ -24,11 +25,57 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.hidden = YES;
+    self.values = [NSMutableArray array];
     self.titles = @[@"全部商户",@"优质商户",@"活跃商户",@"休眠商户"];
     self.imageStrs = @[@"组 23",@"组 24",@"组 25",@"组 26"];
     self.subTitles = @[@"我发展的所有商户",@"我发展的优质商户",@"我发展的活跃商户",@"我发展的休眠商户"];
+    self.tableView.mj_header = [LxResfreshHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+    
 
 }
+
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_reg];
+    
+    entity.needCache = NO;
+    entity.parameters = @{@"brandId":self.model.did};
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            
+            [self.values removeAllObjects];
+            [self.values addObject:[NSString stringWithFormat:@"%@",result[@"data"][@"all"]]];
+            [self.values addObject:[NSString stringWithFormat:@"%@",result[@"data"][@"quality"]]];
+            [self.values addObject:[NSString stringWithFormat:@"%@",result[@"data"][@"active"]]];
+            [self.values addObject:[NSString stringWithFormat:@"%@",result[@"data"][@"unActive"]]];
+
+            
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView reloadData];
+          
+        }else{
+            
+            [self.tableView.mj_header endRefreshing];
+
+        }
+        
+    } failureBlock:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
+}
+
 
 #pragma  mark --------UITableView Delegete----------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -38,8 +85,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    return self.titles.count;
+   
+    return self.values.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,6 +102,7 @@
     cell.titleL.text = self.titles[indexPath.row];
     cell.subTitleL.text = self.subTitles[indexPath.row];
     cell.img.image = [UIImage imageNamed:self.imageStrs[indexPath.row]];
+    cell.countL.text = self.values[indexPath.row];
     return cell;
     
 }
@@ -98,6 +146,17 @@
 {
     
     BusinessListVC *vc = [BusinessListVC new];
+    NSString *type;
+    if (indexPath.row == 0) {
+        type = @"all";
+    }else if (indexPath.row == 1){
+        type = @"quality";
+    }else if (indexPath.row == 2){
+        type = @"active";
+    }else{
+        type = @"unActive";
+    }
+    vc.model = self.model;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

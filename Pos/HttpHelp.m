@@ -45,6 +45,17 @@ NSString *const Url_shop_createOrder = @"/app/shop/order/createOrder/";
 
 NSString *const Url_study_list = @"/app/study/list/";
 
+NSString *const Url_user_contacts = @"/app/user/contacts/";
+
+NSString *const Url_proxy_tradingResultsMonthMoney = @"/app/proxy/tradingResultsMonthMoney/";
+
+NSString *const Url_user_faceToFace = @"/app/user/faceToFace/";
+
+NSString *const Url_model_list = @"/app/model/list/";
+
+NSString *const Url_merc_reg = @"/app/merc/reg/index/";
+
+NSString *const Url_merc_reg_list = @"/app/merc/reg/index/list/";
 
 
 

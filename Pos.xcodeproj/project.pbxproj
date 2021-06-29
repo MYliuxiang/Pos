@@ -84,6 +84,10 @@
 		226D6ECB268A237B004D8778 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6ECA268A237B004D8778 /* ActivityModel.m */; };
 		226D6ED2268A2795004D8778 /* BrandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6ED1268A2795004D8778 /* BrandModel.m */; };
 		226D6EDB268A2A47004D8778 /* ShopItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6EDA268A2A47004D8778 /* ShopItemModel.m */; };
+		226D6EFF268B69E9004D8778 /* ContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6EFE268B69E9004D8778 /* ContactsModel.m */; };
+		226D6F05268B718A004D8778 /* AchievementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F04268B718A004D8778 /* AchievementModel.m */; };
+		226D6F0C268B7D8F004D8778 /* DeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F0B268B7D8F004D8778 /* DeviceModel.m */; };
+		226D6F15268B8852004D8778 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F14268B8852004D8778 /* MerchantModel.m */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -447,6 +451,14 @@
 		226D6ED1268A2795004D8778 /* BrandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandModel.m; sourceTree = "<group>"; };
 		226D6ED9268A2A47004D8778 /* ShopItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopItemModel.h; sourceTree = "<group>"; };
 		226D6EDA268A2A47004D8778 /* ShopItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopItemModel.m; sourceTree = "<group>"; };
+		226D6EFD268B69E9004D8778 /* ContactsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsModel.h; sourceTree = "<group>"; };
+		226D6EFE268B69E9004D8778 /* ContactsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsModel.m; sourceTree = "<group>"; };
+		226D6F03268B718A004D8778 /* AchievementModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchievementModel.h; sourceTree = "<group>"; };
+		226D6F04268B718A004D8778 /* AchievementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchievementModel.m; sourceTree = "<group>"; };
+		226D6F0A268B7D8F004D8778 /* DeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceModel.h; sourceTree = "<group>"; };
+		226D6F0B268B7D8F004D8778 /* DeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceModel.m; sourceTree = "<group>"; };
+		226D6F13268B8852004D8778 /* MerchantModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
+		226D6F14268B8852004D8778 /* MerchantModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -1013,6 +1025,26 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		226D6EFC268B69D9004D8778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				226D6EFD268B69E9004D8778 /* ContactsModel.h */,
+				226D6EFE268B69E9004D8778 /* ContactsModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		226D6F09268B7D67004D8778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				226D6F0A268B7D8F004D8778 /* DeviceModel.h */,
+				226D6F0B268B7D8F004D8778 /* DeviceModel.m */,
+				226D6F13268B8852004D8778 /* MerchantModel.h */,
+				226D6F14268B8852004D8778 /* MerchantModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2281D84C26873B00004AF0A3 /* 分润钱包 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1102,6 +1134,7 @@
 		22921628267E49CA00EB762F /* 商户登记 */ = {
 			isa = PBXGroup;
 			children = (
+				226D6F09268B7D67004D8778 /* Models */,
 				2253CC43268382500015B808 /* Views */,
 				2253CC3326837FEF0015B808 /* MerchantVC.h */,
 				2253CC3426837FEF0015B808 /* MerchantVC.m */,
@@ -1651,6 +1684,7 @@
 		711D7C142679ABD300BAFB54 /* Maillist  */ = {
 			isa = PBXGroup;
 			children = (
+				226D6EFC268B69D9004D8778 /* Models */,
 				226D6E7026878894004D8778 /* Views */,
 				711D7CBC2679ACCA00BAFB54 /* MailListVC.h */,
 				711D7CBD2679ACCA00BAFB54 /* MailListVC.m */,
@@ -1745,6 +1779,8 @@
 				713AA4A026847AAA009F02A5 /* AchDetailModel.m */,
 				713AA4A826847E83009F02A5 /* AchDetailSubModel.h */,
 				713AA4A926847E83009F02A5 /* AchDetailSubModel.m */,
+				226D6F03268B718A004D8778 /* AchievementModel.h */,
+				226D6F04268B718A004D8778 /* AchievementModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2193,6 +2229,7 @@
 				713AA4992684713E009F02A5 /* AchDetailSubVC.m in Sources */,
 				22C1BCCC267A677200092C1E /* UIView+LYExtension.m in Sources */,
 				22C1BCCA267A677200092C1E /* LYEmptyBaseView.m in Sources */,
+				226D6EFF268B69E9004D8778 /* ContactsModel.m in Sources */,
 				2235FFC1268647FE0064B505 /* BRDatePickerView+BR.m in Sources */,
 				71DE1B4D2689C33000A46F5E /* UIImage+None.m in Sources */,
 				226D6E83268797F2004D8778 /* AdressVC.m in Sources */,
@@ -2240,6 +2277,7 @@
 				22C1BCDE267A677200092C1E /* BANetManager.m in Sources */,
 				716979BF26857FAD00B278C7 /* MerchantTotalVC.m in Sources */,
 				22C1BCD7267A677200092C1E /* UIScrollView+Gesture.m in Sources */,
+				226D6F15268B8852004D8778 /* MerchantModel.m in Sources */,
 				228711BD267FA39100AEE15A /* TerminalCenterVC.m in Sources */,
 				2281D83926839A39004AF0A3 /* MessageCell.m in Sources */,
 				716979F52685C8EE00B278C7 /* TransferRecordCell.m in Sources */,
@@ -2253,6 +2291,7 @@
 				713AA491268470BB009F02A5 /* AchievementDetailVC.m in Sources */,
 				22C1BCDF267A677200092C1E /* UIImage+CompressImage.m in Sources */,
 				22C1BCCB267A677200092C1E /* UIView+Empty.m in Sources */,
+				226D6F0C268B7D8F004D8778 /* DeviceModel.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
 				221898DC2680E85700653C2C /* ProductVC.m in Sources */,
 				710271F42681C7B200D5B62A /* BusinessCell.m in Sources */,
@@ -2269,6 +2308,7 @@
 				22C1BC75267A675A00092C1E /* WRCustomNavigationBar.m in Sources */,
 				713B8C4126832FF700420F75 /* TerminalBatchDoneVC.m in Sources */,
 				2292160F267D198000EB762F /* DataSSubCell.m in Sources */,
+				226D6F05268B718A004D8778 /* AchievementModel.m in Sources */,
 				710272632681E48000D5B62A /* ToFaceVC.m in Sources */,
 				2235FFC3268647FE0064B505 /* BRDatePickerView.m in Sources */,
 				2253CC3626837FEF0015B808 /* MerchantVC.m in Sources */,

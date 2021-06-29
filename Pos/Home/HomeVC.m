@@ -89,16 +89,16 @@
 
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
-        
-        self.cycleModels = [CarouselModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
-        
-        NSMutableArray *marray = [NSMutableArray array];
-        for (CarouselModel *model in self.cycleModels) {
-            [marray addObject:model.imgUrl];
+        if ([result[@"code"] intValue] == 200) {
+            self.cycleModels = [CarouselModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+            
+            NSMutableArray *marray = [NSMutableArray array];
+            for (CarouselModel *model in self.cycleModels) {
+                [marray addObject:model.imgUrl];
+            }
+            self.cycleView.imageURLStringsGroup = marray;
         }
-        self.cycleView.imageURLStringsGroup = marray;
-        
-        
+          
         dispatch_group_leave(dispatchGroup);
 
         } failureBlock:^(NSError *error) {
@@ -116,8 +116,11 @@
     [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
     [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
            NSDictionary *result = response;
-        self.activityModels = [ActivityModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
-        [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+        if ([result[@"code"] intValue] == 200) {
+            self.activityModels = [ActivityModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+            [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+        }
+ 
                 
         dispatch_group_leave(dispatchGroup);
 
@@ -136,8 +139,11 @@
     [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
     [BANetManager ba_request_GETWithEntity:entity2 successBlock:^(id response) {
         NSDictionary *result = response;
-        self.shopList = [ShopItemModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
-        [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+        if ([result[@"code"] intValue] == 200) {
+            self.shopList = [ShopItemModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+            [self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] withRowAnimation:UITableViewRowAnimationNone];
+        }
+      
                 
         dispatch_group_leave(dispatchGroup);
 
@@ -156,12 +162,14 @@
     [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
     [BANetManager ba_request_GETWithEntity:entity3 successBlock:^(id response) {
         NSDictionary *result = response;
-       
-        self.hederTotalL.text = [NSString stringWithFormat:@"%.2f", [result[@"data"][@"indexMoney"] floatValue]];
-        self.number1L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"today"] intValue]];
-        self.number2L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"active"] intValue]];
-        
-        self.number3L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"month"] intValue]];
+        if ([result[@"code"] intValue] == 200) {
+            self.hederTotalL.text = [NSString stringWithFormat:@"%.2f", [result[@"data"][@"indexMoney"] floatValue]];
+            self.number1L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"today"] intValue]];
+            self.number2L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"active"] intValue]];
+            
+            self.number3L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"month"] intValue]];
+        }
+    
         dispatch_group_leave(dispatchGroup);
 
 

@@ -66,8 +66,23 @@ extern NSString *const Url_shop_createOrder;
 //查询学习课堂列表
 extern NSString *const Url_study_list;
 
+//获取通讯录
+extern NSString *const Url_user_contacts;
 
+//业绩
+extern NSString *const Url_proxy_tradingResultsMonthMoney;
 
+//面对面开通
+extern NSString *const Url_user_faceToFace;
+
+//查询设备型号列表
+extern NSString *const Url_model_list;
+
+//获取商户登记数据
+extern NSString *const Url_merc_reg;
+
+//获取商户登记数据列表
+extern NSString *const Url_merc_reg_list;
 
 
 

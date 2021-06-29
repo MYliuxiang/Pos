@@ -15,10 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *number1L;
 @property (weak, nonatomic) IBOutlet UILabel *number3L;
 @property (weak, nonatomic) IBOutlet UILabel *number4L;
+@property (weak, nonatomic) IBOutlet UILabel *timeL;
+
 @property (weak, nonatomic) IBOutlet UIView *view1;
 @property (weak, nonatomic) IBOutlet UIView *view3;
 @property (weak, nonatomic) IBOutlet UIView *view4;
 @property (weak, nonatomic) IBOutlet UIView *view2;
+
+@property (nonatomic,strong)AchievementModel *model;
 
 @end
 

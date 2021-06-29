@@ -10,7 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BusinessListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameL;
+@property (weak, nonatomic) IBOutlet UILabel *phoneL;
+@property (weak, nonatomic) IBOutlet UILabel *numberL;
 
+
+@property(nonatomic,strong)MerchantModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

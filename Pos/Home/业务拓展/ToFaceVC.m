@@ -12,6 +12,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *yanF;
 @property (weak, nonatomic) IBOutlet UITextField *passF;
 @property (weak, nonatomic) IBOutlet UIButton *registB;
+@property (weak, nonatomic) IBOutlet UIButton *yanB;
+@property (weak, nonatomic) IBOutlet UITextField *invationF;
+
+
 @end
 
 @implementation ToFaceVC
@@ -42,7 +46,101 @@
 
 }
 
+- (IBAction)getSmsCodeAC:(id)sender {
+    
+    if (_phoneF.text.length!=11) {
+        [MBProgressHUD showError:@"请输入正确的手机号！" toView:self.view];
+        return;
+    }
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_register_sendSmsCode,self.phoneF.text];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+            NSDictionary *result = response;
+            if ([result[@"code"] intValue] == 200) {
+                //倒计时
+                [self countDown];
+            }
+        } failureBlock:^(NSError *error) {
+            
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+}
+
+//倒计时
+-(void)countDown
+{
+    __block NSInteger time = 59; //倒计时时间
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        if(time <= 0){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置按钮的样式
+                [self.yanB setTitle:@"重新发送" forState:UIControlStateNormal];
+                self.yanB.userInteractionEnabled = YES;
+            });
+        }else{
+            int seconds = time % 60;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置按钮显示读秒效果
+                [self.yanB setTitle:[NSString stringWithFormat:@"重新发送（%.2d）", seconds] forState:UIControlStateNormal];
+                self.yanB.userInteractionEnabled = NO;
+            });
+            time--;
+        }
+    });
+    dispatch_resume(_timer);
+}
+
+
+
 - (IBAction)doneAC:(id)sender {
+    
+    if (_phoneF.text.length!=11) {
+        [MBProgressHUD showError:@"请输入正确的手机号！" toView:self.view];
+        return;
+    }
+    
+    if (_yanF.text.length == 0) {
+        [MBProgressHUD showError:@"请输入验证码！" toView:self.view];
+        return;
+    }
+    
+    if (_passF.text.length == 0) {
+        [MBProgressHUD showError:@"请输入密码！" toView:self.view];
+        return;
+    }
+    
+  
+    
+    if (_invationF.text.length == 0) {
+        [MBProgressHUD showError:@"请输入邀请码！" toView:self.view];
+        return;
+    }
+    
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_user_faceToFace];
+    entity.parameters = @{@"invitationCode":_invationF.text,@"password":self.passF.text,@"phone":self.phoneF.text,@"smsCode":self.yanF.text};
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            [MBProgressHUD showSuccess:@"注册成功！" toView:lxWindow];
+            [self.navigationController popViewControllerAnimated:YES];
+           }
+        } failureBlock:^(NSError *error) {
+            
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+
 }
 
 

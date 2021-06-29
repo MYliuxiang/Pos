@@ -20,4 +20,13 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(ContactsModel *)model
+{
+    _model = model;
+    self.nameL.text = model.name;
+    self.timeL.text = [NSString stringWithFormat:@"注册时间：%@",model.registerTime];
+    self.phoneL.text = model.phone;
+    self.userNumL.text = [NSString stringWithFormat:@"用户数：%ld",model.userNum];
+}
+
 @end

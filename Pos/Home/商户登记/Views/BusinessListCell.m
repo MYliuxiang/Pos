@@ -20,4 +20,11 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(MerchantModel *)model{
+    _model = model;
+    self.nameL.text = model.mercName;
+    self.phoneL.text = model.mercPhone;
+    self.numberL.text = model.deviceNo;
+}
+
 @end
