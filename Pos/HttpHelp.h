@@ -12,6 +12,24 @@
 //通知
 extern NSString *const HomeLoadNotice;
 
+
+//前端h5链接
+
+//注册页
+extern NSString *const H5_register;
+//登录页
+extern NSString *const H5_Login;
+//学习课堂详情
+extern NSString *const H5_StudyDetai;
+//活动详情
+extern NSString *const H5_ActiveDetal;
+//商品详情图文
+extern NSString *const H5_GoodsHtml;
+
+
+
+
+
 //发送验证码
 extern NSString *const Url_register_sendSmsCode;
 
@@ -35,6 +53,21 @@ extern NSString *const Url_shopItem_list;
 
 //获取商户首页数据
 extern NSString *const Url_merc_index;
+
+//获取收货地址列表
+extern NSString *const Url_address;
+
+//获取默认收货地址
+extern NSString *const Url_address_default;
+
+//创建订单
+extern NSString *const Url_shop_createOrder;
+
+//查询学习课堂列表
+extern NSString *const Url_study_list;
+
+
+
 
 
 

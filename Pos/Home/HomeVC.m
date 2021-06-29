@@ -159,11 +159,7 @@
        
         self.hederTotalL.text = [NSString stringWithFormat:@"%.2f", [result[@"data"][@"indexMoney"] floatValue]];
         self.number1L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"today"] intValue]];
-//     Money"] intValue]];
-        
-        
-        self.number2L.text = [NSString stringWithFormat:@"%@",result[@"data"][@"activeTradeMoney"]];
-
+        self.number2L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"active"] intValue]];
         
         self.number3L.text = [NSString stringWithFormat:@"%d",[result[@"data"][@"month"] intValue]];
         dispatch_group_leave(dispatchGroup);
@@ -207,6 +203,10 @@
     HWBaseWebViewController *vc = [HWBaseWebViewController new];
     vc.urlString = model.jumpUrl;
 //    vc.urlString = @"http://www.baidu.com";
+    
+//    HWBaseWebViewController *vc = [HWBaseWebViewController new];
+//    vc.urlString = [NSString stringWithFormat:@"%@%@?id=%@",H5MainUrl,H5_StudyDetai,model.sid];
+//    [self.navigationController pushViewController:vc animated:YES];
 
     [self.navigationController pushViewController:vc animated:YES];
 

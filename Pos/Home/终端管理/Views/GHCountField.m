@@ -18,10 +18,8 @@
 }
 
 @end
-@interface GHCountField()
-@property (nonatomic , strong) GHButton *leftButton;
-@property (nonatomic , strong) GHButton *rightButton;
-@property (nonatomic , strong) UITextField *textField;
+@interface GHCountField()<UITextFieldDelegate>
+
 
 
 @end
@@ -31,26 +29,24 @@
     if (self == [super initWithFrame:frame]) {
    
       
-        GHButton *leftButton = [GHButton buttonWithType:UIButtonTypeCustom];
-        [leftButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        [leftButton setImage:[UIImage imageNamed:@"矩形 242"] forState:UIControlStateNormal];
-        [leftButton setImage:[UIImage imageNamed:@"矩形 157"] forState:UIControlStateDisabled];
-        leftButton.tag = GHCountFieldButtonType_sub;
-        self.leftButton = leftButton;
-        [self addSubview:leftButton];
+        self.leftButton = [GHButton buttonWithType:UIButtonTypeCustom];
+        [self.leftButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.leftButton setImage:[UIImage imageNamed:@"矩形 242"] forState:UIControlStateNormal];
+        [self.leftButton setImage:[UIImage imageNamed:@"矩形 157"] forState:UIControlStateDisabled];
+        self.leftButton.tag = GHCountFieldButtonType_sub;
+        [self addSubview:self.leftButton];
         [self.leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self);
             make.width.height.mas_equalTo(self.mas_height);
             make.left.equalTo(self);
         }];
        
-        GHButton *rightButton = [GHButton buttonWithType:UIButtonTypeCustom];
-        [rightButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        [rightButton setImage:[UIImage imageNamed:@"联合 3"] forState:UIControlStateNormal];
-        [rightButton setImage:[UIImage imageNamed:@"联合 2"] forState:UIControlStateDisabled];
-        rightButton.tag = GHCountFieldButtonType_add;
-        self.rightButton = rightButton;
-        [self addSubview:rightButton];
+        self.rightButton = [GHButton buttonWithType:UIButtonTypeCustom];
+        [self.rightButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.rightButton setImage:[UIImage imageNamed:@"联合 3"] forState:UIControlStateNormal];
+        [self.rightButton setImage:[UIImage imageNamed:@"联合 2"] forState:UIControlStateDisabled];
+        self.rightButton.tag = GHCountFieldButtonType_add;
+        [self addSubview:self.rightButton];
         
         [self.rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.mas_equalTo(self.mas_height);
@@ -66,13 +62,13 @@
         self.textField.textAlignment = NSTextAlignmentCenter;
         self.textField.keyboardType = UIKeyboardTypeNumberPad;
         self.textField.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
+        self.textField.delegate = self;
         [self addSubview:self.textField];
         [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.rightButton.mas_left);
-            make.left.equalTo(self.leftButton.mas_right);
+            make.right.equalTo(self.rightButton.mas_left).offset(-5);
+            make.left.equalTo(self.leftButton.mas_right).offset(5);
             make.top.equalTo(self);
             make.bottom.equalTo(self.mas_bottom);
-
         }];
         
         
@@ -87,10 +83,6 @@
     return self;
 }
 
-//- (void)textFieldDidChangeValue:(id)sender
-//{
-//    NSLog(@"222");
-//}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -105,9 +97,39 @@
         self.rightButton.enabled = NO;
         self.leftButton.enabled = YES;
         self.textField.text = [NSString stringWithFormat:@"%ld",(long)self.maxCount];
-    }else if (count == self.minCount) {
+    }else if (count <= self.minCount) {
         self.leftButton.enabled = NO;
         self.rightButton.enabled = YES;
+//        self.textField.text = [NSString stringWithFormat:@"%ld",(long)self.minCount];
+
+
+    } else if (count < self.maxCount && count > self.minCount) {
+        self.leftButton.enabled = YES;
+        self.rightButton.enabled = YES;
+    }
+    
+    if (self.countFielddDelegate && [self.countFielddDelegate respondsToSelector:@selector(countField:count:)]) {
+        [self.countFielddDelegate countField:self count:self.textField.text.integerValue];
+    }
+    
+    if (self.countBlock) {
+        self.countBlock(self.textField.text.integerValue);
+    }
+}
+
+#pragma mark UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSInteger count = self.textField.text.integerValue;
+
+    if (count >= self.maxCount) {
+        self.rightButton.enabled = NO;
+        self.leftButton.enabled = YES;
+        self.textField.text = [NSString stringWithFormat:@"%ld",(long)self.maxCount];
+    }else if (count <= self.minCount) {
+        self.leftButton.enabled = NO;
+        self.rightButton.enabled = YES;
+        self.textField.text = [NSString stringWithFormat:@"%ld",(long)self.minCount];
 
     } else if (count < self.maxCount && count > self.minCount) {
         self.leftButton.enabled = YES;
@@ -129,6 +151,22 @@
 - (void)setCount:(NSInteger)count {
     _count = count;
     self.textField.text = [NSString stringWithFormat:@"%ld",(long)count];
+    if (count >= self.maxCount) {
+        self.rightButton.enabled = NO;
+        self.leftButton.enabled = YES;
+        self.textField.text = [NSString stringWithFormat:@"%ld",(long)self.maxCount];
+    }else if (count <= self.minCount) {
+        self.leftButton.enabled = NO;
+        self.rightButton.enabled = YES;
+        self.textField.text = [NSString stringWithFormat:@"%ld",(long)self.minCount];
+
+    } else if (count < self.maxCount && count > self.minCount) {
+        self.leftButton.enabled = YES;
+        self.rightButton.enabled = YES;
+    }
+    
+    
+    
 }
 - (void)clickButton: (UIButton *)button {
     button.selected = !button.selected;

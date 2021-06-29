@@ -134,7 +134,7 @@
 
 - (void)seletedAdress{
     // 地区
-    BRAddressPickerView *addressPickerView = [[BRAddressPickerView alloc]init];
+    LXAddressPickeView *addressPickerView = [[LXAddressPickeView alloc]init];
     addressPickerView.pickerMode = BRAddressPickerModeArea;
     addressPickerView.title = @"请选择商户地址";
     addressPickerView.selectIndexs = self.addressSelectIndexs;

@@ -37,6 +37,10 @@ typedef void(^CountBlock)(NSInteger count);
 /** 当前值*/
 @property (nonatomic , assign) NSInteger count;
 
+@property (nonatomic , strong) GHButton *leftButton;
+@property (nonatomic , strong) GHButton *rightButton;
+@property (nonatomic , strong) UITextField *textField;
+
 @end
 
 

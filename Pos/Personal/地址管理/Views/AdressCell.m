@@ -25,8 +25,8 @@
     _model = model;
     self.nameL.text = model.name;
     self.phoneL.text = model.phone;
-    self.adressL.text = [NSString stringWithFormat:@"%@%@",model.adress,model.adressDetail];
-    if (model.isDefalut) {
+    self.adressL.text = [NSString stringWithFormat:@"%@%@%@%@",model.procName,model.cityName,model.districtName,model.addrDetail];
+    if (model.defaultValue) {
         [self.defaultB setImage:[UIImage imageNamed:@"组 20"] forState:UIControlStateNormal];
     }else{
         [self.defaultB setImage:[UIImage imageNamed:@"矩形 216"] forState:UIControlStateNormal];

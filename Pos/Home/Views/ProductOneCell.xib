@@ -19,7 +19,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G4F-5M-5Xj">
                         <rect key="frame" x="15" y="15" width="93" height="85"/>
-                        <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="85" id="Une-Na-TDS"/>
                             <constraint firstAttribute="width" constant="93" id="gUe-Wp-rGd"/>
@@ -50,6 +50,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="img" destination="G4F-5M-5Xj" id="PbM-5l-ymO"/>
+                <outlet property="nameL" destination="1bc-kv-slX" id="CSd-b7-HpR"/>
+            </connections>
             <point key="canvasLocation" x="105.79710144927537" y="87.053571428571431"/>
         </tableViewCell>
     </objects>

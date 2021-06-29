@@ -58,7 +58,7 @@
     
     HomeTwoCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTwoCCellID" forIndexPath:indexPath];
     ActivityModel *model = self.dataList[indexPath.row];
-    [cell.img sd_setImageWithURL:model.indexUrl];
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:model.indexUrl]];
     return cell;
     
 }
@@ -79,7 +79,7 @@
 {
     ActivityModel *model = self.dataList[indexPath.row];
     HWBaseWebViewController *vc = [HWBaseWebViewController new];
-    vc.urlString = model.jumpUrl;
+    vc.urlString = [NSString stringWithFormat:@"%@%@?id=%@",H5MainUrl,H5_ActiveDetal,model.aid];
     [self.viewController.navigationController pushViewController:vc animated:YES];
 
     

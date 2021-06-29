@@ -13,7 +13,6 @@
 @interface ProductDoneVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *doneB;
-@property (nonatomic,strong) AdressModel *adModel;
 
 @end
 
@@ -55,7 +54,10 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
+        [cell.img sd_setImageWithURL:[NSURL URLWithString:self.smodel.indexImg]];
+        cell.nameL.text = self.smodel.name;
         return cell;
+        
     }else{
         static NSString *identifire = @"cellID";
         ProductTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:identifire];
@@ -64,7 +66,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
         }
-        if (self.adModel == nil) {
+        if (self.amodel == nil) {
             cell.noAdressL.hidden = NO;
             cell.nameL.hidden = YES;
             cell.phoneL.hidden = YES;
@@ -74,9 +76,9 @@
             cell.nameL.hidden = NO;
             cell.phoneL.hidden = NO;
             cell.adressL.hidden = NO;
-            cell.nameL.text = self.adModel.name;
-            cell.phoneL.text = self.adModel.phone;
-            cell.adressL.text = [NSString stringWithFormat:@"%@%@",self.adModel.adress,self.adModel.adressDetail];
+            cell.nameL.text = self.amodel.name;
+            cell.phoneL.text = self.amodel.phone;
+            cell.adressL.text = [NSString stringWithFormat:@"%@%@%@%@",self.amodel.procName,self.amodel.cityName,self.amodel.districtName,self.amodel.addrDetail];
         }
         return cell;
     }
@@ -114,7 +116,7 @@
     if (indexPath.section == 1) {
         AdressVC *vc = [AdressVC new];
         vc.selectBlock = ^(AdressModel * _Nonnull model) {
-            self.adModel = model;
+            self.amodel = model;
             [self.tableView reloadData];
         };
         [self.navigationController pushViewController:vc animated:YES];
@@ -125,7 +127,30 @@
 
 - (IBAction)doneAC:(id)sender {
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (self.amodel == nil) {
+        [MBProgressHUD showError:@"请选择收货地址！" toView:self.view];
+        return;
+    }
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shop_createOrder];
+    entity.needCache = NO;
+    entity.parameters = @{@"addressId":self.amodel.aid,@"itemId":self.smodel.sid,@"num":@"1"};
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            
+            [MBProgressHUD showSuccess:@"创建订单成功！" toView:self.view];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
 }
 
 

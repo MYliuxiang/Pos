@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong) AdressModel *model;
 
-@property (nonatomic,copy) void (^addBlock)(AdressModel *model) ;
+@property (nonatomic,copy) void (^addBlock)(void) ;
 
 
 @end

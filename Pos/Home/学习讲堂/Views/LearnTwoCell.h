@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LearnTwoCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleL;
+@property (weak, nonatomic) IBOutlet UIImageView *img;
+@property(nonatomic,strong) StudyListModel *model;
+@property (weak, nonatomic) IBOutlet UILabel *timeL;
+
 @end
 
 NS_ASSUME_NONNULL_END

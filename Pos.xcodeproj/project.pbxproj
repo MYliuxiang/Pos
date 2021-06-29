@@ -283,6 +283,8 @@
 		71864988268034BF008EED37 /* TransfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71864986268034BF008EED37 /* TransfCell.xib */; };
 		7186499226804185008EED37 /* TransfCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186499026804185008EED37 /* TransfCCell.m */; };
 		7186499326804185008EED37 /* TransfCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7186499126804185008EED37 /* TransfCCell.xib */; };
+		718D6D87268ABE1F0027CE3E /* LXAddressPickeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718D6D86268ABE1F0027CE3E /* LXAddressPickeView.m */; };
+		718D6D94268B1E7C0027CE3E /* StudyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 718D6D93268B1E7C0027CE3E /* StudyListModel.m */; };
 		71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24D9E267C858F00700C7F /* DataShowVC.m */; };
 		71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C24D9F267C858F00700C7F /* DataShowVC.xib */; };
 		71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24DAD267C8EDA00700C7F /* DataModel.m */; };
@@ -297,6 +299,7 @@
 		71DE1B4D2689C33000A46F5E /* UIImage+None.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B4C2689C33000A46F5E /* UIImage+None.m */; };
 		71DE1B532689D25A00A46F5E /* CarouselModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B522689D25A00A46F5E /* CarouselModel.m */; };
 		71DE1B592689D58A00A46F5E /* HWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */; };
+		71E74ED6268ABAD4001A26DF /* pca-code.json in Resources */ = {isa = PBXBuildFile; fileRef = 71E74ED5268ABAD4001A26DF /* pca-code.json */; };
 		B568E0BF3597F86AFFEBDA5D /* Pods_Pos_PosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -799,6 +802,10 @@
 		7186498F26804185008EED37 /* TransfCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfCCell.h; sourceTree = "<group>"; };
 		7186499026804185008EED37 /* TransfCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfCCell.m; sourceTree = "<group>"; };
 		7186499126804185008EED37 /* TransfCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfCCell.xib; sourceTree = "<group>"; };
+		718D6D85268ABE1F0027CE3E /* LXAddressPickeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAddressPickeView.h; sourceTree = "<group>"; };
+		718D6D86268ABE1F0027CE3E /* LXAddressPickeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddressPickeView.m; sourceTree = "<group>"; };
+		718D6D92268B1E7C0027CE3E /* StudyListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyListModel.h; sourceTree = "<group>"; };
+		718D6D93268B1E7C0027CE3E /* StudyListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyListModel.m; sourceTree = "<group>"; };
 		71C24D9D267C858F00700C7F /* DataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataShowVC.h; sourceTree = "<group>"; };
 		71C24D9E267C858F00700C7F /* DataShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataShowVC.m; sourceTree = "<group>"; };
 		71C24D9F267C858F00700C7F /* DataShowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataShowVC.xib; sourceTree = "<group>"; };
@@ -824,6 +831,7 @@
 		71DE1B522689D25A00A46F5E /* CarouselModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselModel.m; sourceTree = "<group>"; };
 		71DE1B572689D58A00A46F5E /* HWBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWBaseWebViewController.h; sourceTree = "<group>"; };
 		71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWBaseWebViewController.m; sourceTree = "<group>"; };
+		71E74ED5268ABAD4001A26DF /* pca-code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pca-code.json"; sourceTree = "<group>"; };
 		766792BAAAA57537E38FAE0F /* Pods_Pos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		892CBA1CE419669925D5F4E4 /* Pods-Pos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.debug.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBFB3FA90CD74EA0B0BAEAE /* Pods-Pos-PosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos-PosUITests.release.xcconfig"; path = "Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1203,6 +1211,7 @@
 		2292162B267E49E200EB762F /* 学习讲堂 */ = {
 			isa = PBXGroup;
 			children = (
+				718D6D91268B1E670027CE3E /* Models */,
 				2253CBDC268243C90015B808 /* Views */,
 				2253CBCC268243AC0015B808 /* LeranVC.h */,
 				2253CBCD268243AC0015B808 /* LeranVC.m */,
@@ -1487,6 +1496,7 @@
 				711D7BB52679A0F400BAFB54 /* Main.storyboard */,
 				711D7BB82679A0F500BAFB54 /* Assets.xcassets */,
 				711D7CA82679AC7A00BAFB54 /* Pos.pch */,
+				71E74ED5268ABAD4001A26DF /* pca-code.json */,
 				2235FF87268641DF0064B505 /* 2020年1月县以上行政区划代码.json */,
 				22C1BC3B267A670100092C1E /* HttpHelp.h */,
 				22C1BC3F267A670100092C1E /* HttpHelp.m */,
@@ -1576,6 +1586,8 @@
 				22ACB8732681745800A4E79D /* GzhPhotoManager.m */,
 				224239552686168200E5188F /* UITextField+TintColor.h */,
 				224239562686168200E5188F /* UITextField+TintColor.m */,
+				718D6D85268ABE1F0027CE3E /* LXAddressPickeView.h */,
+				718D6D86268ABE1F0027CE3E /* LXAddressPickeView.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1769,6 +1781,15 @@
 				716979F42685C8EE00B278C7 /* TransferRecordCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		718D6D91268B1E670027CE3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				718D6D92268B1E7C0027CE3E /* StudyListModel.h */,
+				718D6D93268B1E7C0027CE3E /* StudyListModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		71C24DAB267C8EB700700C7F /* Model */ = {
@@ -2018,6 +2039,7 @@
 				22921605267D196E00EB762F /* DataSCell.xib in Resources */,
 				22F7F86B267BB9280009FDF0 /* HomeOneCCell.xib in Resources */,
 				221898F02680EAE000653C2C /* ProductCell.xib in Resources */,
+				71E74ED6268ABAD4001A26DF /* pca-code.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2240,6 +2262,7 @@
 				2235FFC6268647FE0064B505 /* BRBaseView.m in Sources */,
 				22ACB8742681745800A4E79D /* GzhPhotoManager.m in Sources */,
 				22C1BC66267A675500092C1E /* UIView+SDExtension.m in Sources */,
+				718D6D94268B1E7C0027CE3E /* StudyListModel.m in Sources */,
 				22C1BCCE267A677200092C1E /* MBProgressHUD+Add.m in Sources */,
 				224239572686168200E5188F /* UITextField+TintColor.m in Sources */,
 				2253CBCF268243AC0015B808 /* LeranVC.m in Sources */,
@@ -2291,6 +2314,7 @@
 				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,
+				718D6D87268ABE1F0027CE3E /* LXAddressPickeView.m in Sources */,
 				226D6ECB268A237B004D8778 /* ActivityModel.m in Sources */,
 				2281D85C268789D0004AF0A3 /* MybankcardVC.m in Sources */,
 				7102724E2681E05E00D5B62A /* JXCategoryTitleBackgroundView.m in Sources */,
@@ -2523,7 +2547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pos.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pos.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2544,7 +2568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pos.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pos.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

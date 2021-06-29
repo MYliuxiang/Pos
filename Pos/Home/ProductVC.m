@@ -143,8 +143,32 @@
 
 - (IBAction)bugAC:(id)sender {
     
-    ProductDoneVC *vc = [ProductDoneVC new];
-    [self.navigationController pushViewController:vc animated:YES];
+  
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_address_default];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            
+            AdressModel *amodel = [AdressModel mj_objectWithKeyValues:result[@"data"]];
+            ProductDoneVC *vc = [ProductDoneVC new];
+            vc.smodel = self.model;
+            vc.amodel = amodel;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
+    
+    
 }
 
 

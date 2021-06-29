@@ -115,6 +115,7 @@
 // 返回各个列表菜单下的实例，该实例需要遵守并实现 <JXCategoryListContentViewDelegate> 协议
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     LeranSubVC *list = [[LeranSubVC alloc] init];
+    list.type = index;
     return list;
 }
 

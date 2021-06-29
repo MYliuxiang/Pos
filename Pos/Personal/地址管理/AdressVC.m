@@ -24,39 +24,48 @@
         self.customNavBar.title = @"管理收货地址";
     }else{
         self.customNavBar.title = @"选择收货地址";
-
+        
     }
     self.dataList = [NSMutableArray array];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
     
     LXViewBorder(self.addB, 22);
+    [self loadData];
     
-    for (int i = 0; i < 3; i++) {
-        AdressModel *model = [[AdressModel alloc] init];
-        if (i == 2) {
-            model.name = @"翔哥";
-            model.isDefalut = YES;
-        }else if (i == 1){
-            model.name = @"小丽丽";
-            model.isDefalut = NO;
-        }else{
-            model.name = @"小花花";
-            model.isDefalut = NO;
+    self.tableView.mj_header = [LxResfreshHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+}
+
+- (void)loadData{
+    BADataEntity *entity1 = [BADataEntity new];
+    entity1.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_address];
+    entity1.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            self.dataList = [AdressModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            [self.tableView reloadData];
         }
-        model.phone = @"13823252392";
-        model.adress = @"广东省深圳市南山区";
-        model.adressDetail = @"南山大道山红叶小区";
-        [self.dataList addObject:model];
-    }
+        [self.tableView.mj_header endRefreshing];
+    } failureBlock:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
 }
 
 - (IBAction)addAC:(id)sender {
     
     AddAdressVC *vc = [AddAdressVC new];
-    vc.addBlock = ^(AdressModel * _Nonnull model) {
-        [self.dataList addObject:model];
-        [self.tableView reloadData];
+    vc.addBlock = ^() {
+//        [self.dataList addObject:model];
+        [self loadData];
     };
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -94,7 +103,7 @@
     
     cell.defaultB.tag = 300 + indexPath.section;
     [cell.defaultB addTarget:self action:@selector(defaultAC:) forControlEvents:UIControlEventTouchUpInside];
-        
+    
     return cell;
     
 }
@@ -105,9 +114,8 @@
     AdressModel *smodel = self.dataList[index];
     AddAdressVC *vc = [AddAdressVC new];
     vc.model = smodel;
-    vc.addBlock = ^(AdressModel * _Nonnull model) {
-        [self.dataList replaceObjectAtIndex:index withObject:model];
-        [self.tableView reloadData];
+    vc.addBlock = ^() {
+        [self loadData];
     };
     [self.navigationController pushViewController:vc animated:YES];
     
@@ -117,15 +125,34 @@
     
     NSInteger index = btn.tag - 200;
     AdressModel *model = self.dataList[index];
-    [self.dataList removeObject:model];
-    if (model.isDefalut) {
-        if (self.dataList.count > 0) {
-            AdressModel *defaultM = self.dataList[0];
-            defaultM.isDefalut = YES;
-        }
-    }
     
-    [self.tableView reloadData];
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_address,model.aid];
+    entity.needCache = NO;
+   
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_DELETEWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            [self.dataList removeObject:model];
+            if (model.defaultValue) {
+                [self loadData];
+            }else{
+                [self.tableView deleteSection:index withRowAnimation:UITableViewRowAnimationLeft];
+            }
+        }
+        
+    } failureBlock:^(NSError *error) {
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
+    
+    
+   
     
 }
 
@@ -134,14 +161,40 @@
 - (void)defaultAC:(UIButton *)btn{
     NSInteger index = btn.tag - 300;
     AdressModel *model = self.dataList[index];
-    if (!model.isDefalut) {
-        for (AdressModel *dmodel in self.dataList) {
-            dmodel.isDefalut = NO;
-        }
-        model.isDefalut = YES;
-
-        [self.tableView reloadData];
+  
+    if (model.defaultValue) {
+        return;
     }
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_address,model.aid];
+    entity.needCache = NO;
+   
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+                
+            for (AdressModel *dmodel in self.dataList) {
+                dmodel.defaultValue = NO;
+            }
+            model.defaultValue = YES;
+            [self.tableView reloadData];
+          
+        }
+        
+    } failureBlock:^(NSError *error) {
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
+    
+    
+    
+    
+       
     
 }
 

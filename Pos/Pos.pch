@@ -128,6 +128,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "LoginManger.h"
 #import "JXCategoryTitleBackgroundView.h"
 #import "HWBaseWebViewController.h"
+#import "LXAddressPickeView.h"
 
 //
 #import "LLHeader.h"
@@ -162,6 +163,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "ActivityModel.h"
 #import "BrandModel.h"
 #import "ShopItemModel.h"
+#import "StudyListModel.h"
 
 
 
@@ -170,6 +172,10 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 //mainurl
 #define MainUrl @"http://app.pos.test.stmj.net.cn"
+
+//H5
+#define H5MainUrl @"http://h5.pos.test.stmj.net.cn"
+
 
 //分页大小
 
