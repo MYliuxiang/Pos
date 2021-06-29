@@ -6,7 +6,7 @@
 //
 
 #import "FaxianWalletVC.h"
-
+#import "RecruitmentVC.h"
 @interface FaxianWalletVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -186,6 +186,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if (indexPath.section ==0) {
+        if (indexPath.row ==0) {
+            //直属商户返现
+            
+        }else{
+        //招募奖
+        RecruitmentVC *VC = [[RecruitmentVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+        }
+    }else{
+        //直属商户返现
+    }
 }
 
 //可提现

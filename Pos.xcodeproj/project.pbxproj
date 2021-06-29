@@ -114,6 +114,12 @@
 		22881F472687A5F1002F725B /* ManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F462687A5F1002F725B /* ManagementVC.m */; };
 		22881F4A268A34FB002F725B /* DirectnessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F49268A34FB002F725B /* DirectnessVC.m */; };
 		22881F4E268A38B5002F725B /* DirectnessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F4D268A38B5002F725B /* DirectnessCell.m */; };
+		22881F51268B6E3D002F725B /* DirectcoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F50268B6E3D002F725B /* DirectcoutVC.m */; };
+		22881F54268B6FFA002F725B /* TeammerchantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F53268B6FFA002F725B /* TeammerchantVC.m */; };
+		22881F57268B70F3002F725B /* TeammerchatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F56268B70F3002F725B /* TeammerchatCell.m */; };
+		22881F5A268B7337002F725B /* TeamcoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F59268B7337002F725B /* TeamcoutVC.m */; };
+		22881F5D268B775A002F725B /* RecruitmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F5C268B775A002F725B /* RecruitmentVC.m */; };
+		22881F60268B7DF0002F725B /* RecruitmeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22881F5F268B7DF0002F725B /* RecruitmeCell.m */; };
 		229215FA267D17DA00EB762F /* WSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */; };
 		229215FB267D17DA00EB762F /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F2267D17DA00EB762F /* WSTableViewCell.m */; };
 		229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 229215F3267D17DA00EB762F /* WSTableviewDataModel.m */; };
@@ -502,6 +508,18 @@
 		22881F49268A34FB002F725B /* DirectnessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectnessVC.m; sourceTree = "<group>"; };
 		22881F4C268A38B5002F725B /* DirectnessCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectnessCell.h; sourceTree = "<group>"; };
 		22881F4D268A38B5002F725B /* DirectnessCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectnessCell.m; sourceTree = "<group>"; };
+		22881F4F268B6E3D002F725B /* DirectcoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectcoutVC.h; sourceTree = "<group>"; };
+		22881F50268B6E3D002F725B /* DirectcoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectcoutVC.m; sourceTree = "<group>"; };
+		22881F52268B6FFA002F725B /* TeammerchantVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeammerchantVC.h; sourceTree = "<group>"; };
+		22881F53268B6FFA002F725B /* TeammerchantVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeammerchantVC.m; sourceTree = "<group>"; };
+		22881F55268B70F3002F725B /* TeammerchatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeammerchatCell.h; sourceTree = "<group>"; };
+		22881F56268B70F3002F725B /* TeammerchatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeammerchatCell.m; sourceTree = "<group>"; };
+		22881F58268B7337002F725B /* TeamcoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamcoutVC.h; sourceTree = "<group>"; };
+		22881F59268B7337002F725B /* TeamcoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamcoutVC.m; sourceTree = "<group>"; };
+		22881F5B268B775A002F725B /* RecruitmentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecruitmentVC.h; sourceTree = "<group>"; };
+		22881F5C268B775A002F725B /* RecruitmentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecruitmentVC.m; sourceTree = "<group>"; };
+		22881F5E268B7DF0002F725B /* RecruitmeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecruitmeCell.h; sourceTree = "<group>"; };
+		22881F5F268B7DF0002F725B /* RecruitmeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecruitmeCell.m; sourceTree = "<group>"; };
 		229215F1267D17DA00EB762F /* WSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCellIndicator.m; sourceTree = "<group>"; };
 		229215F2267D17DA00EB762F /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
 		229215F3267D17DA00EB762F /* WSTableviewDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableviewDataModel.m; sourceTree = "<group>"; };
@@ -1022,6 +1040,12 @@
 				22881F462687A5F1002F725B /* ManagementVC.m */,
 				22881F48268A34FB002F725B /* DirectnessVC.h */,
 				22881F49268A34FB002F725B /* DirectnessVC.m */,
+				22881F52268B6FFA002F725B /* TeammerchantVC.h */,
+				22881F53268B6FFA002F725B /* TeammerchantVC.m */,
+				22881F4F268B6E3D002F725B /* DirectcoutVC.h */,
+				22881F50268B6E3D002F725B /* DirectcoutVC.m */,
+				22881F58268B7337002F725B /* TeamcoutVC.h */,
+				22881F59268B7337002F725B /* TeamcoutVC.m */,
 				2281D85026874623004AF0A3 /* DetailsfenrunVC.h */,
 				2281D85126874623004AF0A3 /* DetailsfenrunVC.m */,
 				22881F4B268A3893002F725B /* Cell */,
@@ -1070,6 +1094,10 @@
 			children = (
 				22881F422687A12A002F725B /* FaxianWalletVC.h */,
 				22881F432687A12A002F725B /* FaxianWalletVC.m */,
+				22881F5B268B775A002F725B /* RecruitmentVC.h */,
+				22881F5C268B775A002F725B /* RecruitmentVC.m */,
+				22881F5E268B7DF0002F725B /* RecruitmeCell.h */,
+				22881F5F268B7DF0002F725B /* RecruitmeCell.m */,
 			);
 			path = "返现钱包";
 			sourceTree = "<group>";
@@ -1079,6 +1107,8 @@
 			children = (
 				22881F4C268A38B5002F725B /* DirectnessCell.h */,
 				22881F4D268A38B5002F725B /* DirectnessCell.m */,
+				22881F55268B70F3002F725B /* TeammerchatCell.h */,
+				22881F56268B70F3002F725B /* TeammerchatCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2174,6 +2204,7 @@
 				711D7C1F2679ABF900BAFB54 /* MainTabBarController.m in Sources */,
 				221898EF2680EAE000653C2C /* ProductCell.m in Sources */,
 				22C1BC51267A674200092C1E /* LxResfreshHeader.m in Sources */,
+				22881F57268B70F3002F725B /* TeammerchatCell.m in Sources */,
 				2281D85226874623004AF0A3 /* DetailsfenrunVC.m in Sources */,
 				22E33E84268071C40019915A /* UIViewController+YKViewControllerBarHeight.m in Sources */,
 				22C1BCC6267A677200092C1E /* TXDynamicDelegate.m in Sources */,
@@ -2210,6 +2241,7 @@
 				22C1BCF5267A678500092C1E /* HandleTool.m in Sources */,
 				22C1BC65267A675500092C1E /* SDCycleScrollView.m in Sources */,
 				22C1BC50267A674200092C1E /* LxRefreshFooter.m in Sources */,
+				22881F60268B7DF0002F725B /* RecruitmeCell.m in Sources */,
 				228711A7267F998700AEE15A /* RegistReslutVC.m in Sources */,
 				71DE1B592689D58A00A46F5E /* HWBaseWebViewController.m in Sources */,
 				2253CC0E26824E760015B808 /* ChooseAgentVC.m in Sources */,
@@ -2278,6 +2310,7 @@
 				710272392681D4A500D5B62A /* PosterSubVC.m in Sources */,
 				22C1BC74267A675A00092C1E /* WRNavigationBar.m in Sources */,
 				2235FFC0268647FE0064B505 /* BRStringPickerView.m in Sources */,
+				22881F5A268B7337002F725B /* TeamcoutVC.m in Sources */,
 				22C1BCD0267A677200092C1E /* NSDate+Utilities.m in Sources */,
 				22C1BCEC267A677D00092C1E /* NibView.m in Sources */,
 				22C1BCD6267A677200092C1E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -2342,6 +2375,8 @@
 				2281D85826874B3A004AF0A3 /* MyoerderCellTableViewCell.m in Sources */,
 				22C1BCC8267A677200092C1E /* TXLimitedTextField.m in Sources */,
 				226D6E74268788A8004D8778 /* MailListCell.m in Sources */,
+				22881F5D268B775A002F725B /* RecruitmentVC.m in Sources */,
+				22881F54268B6FFA002F725B /* TeammerchantVC.m in Sources */,
 				22C1BCD8267A677200092C1E /* NSObject+XWAdd.m in Sources */,
 				2281D8422684CCB1004AF0A3 /* ChangePasswordVC.m in Sources */,
 				2281D84B2686D7A3004AF0A3 /* EnterpriseVC.m in Sources */,
@@ -2351,6 +2386,7 @@
 				2235FFC2268647FE0064B505 /* NSDate+BRPickerView.m in Sources */,
 				22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */,
 				2287119F267F960400AEE15A /* RegistVC.m in Sources */,
+				22881F51268B6E3D002F725B /* DirectcoutVC.m in Sources */,
 				71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */,
 				22921604267D196E00EB762F /* DataSCell.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
