@@ -208,7 +208,7 @@
 //    vc.urlString = [NSString stringWithFormat:@"%@%@?id=%@",H5MainUrl,H5_StudyDetai,model.sid];
 //    [self.navigationController pushViewController:vc animated:YES];
 
-    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
 
 }
 

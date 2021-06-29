@@ -34,11 +34,31 @@
    self.tableView.estimatedSectionFooterHeight = 0;
    self.tableView.estimatedSectionHeaderHeight = 0;
    self.tableView.backgroundColor = [UIColor clearColor];
-   UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.01)];
+   UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
+        
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(46, (100 - 44) / 2, kScreenWidth - 92, 44);
+    btn.backgroundColor = [UIColor colorWithHexString:@"#FF8901"];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [btn setTitle:@"退出登录" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(loginOutAC) forControlEvents:UIControlEventTouchUpInside];
+    [footview addSubview:btn];
+    LXViewBorder(btn, 22);
+    
    self.tableView.tableFooterView = footview;
-//    self.tableView.tableHeaderView = headview;
+   
+    
+    
    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
    [self.view addSubview:self.tableView];
+}
+
+- (void)loginOutAC{
+    
+    [LoginManger sharedManager].currentLoginModel = nil;
+    [HandleTool switchLgoinVC];
+    
 }
 
 #pragma mark - UITableViewDataSource

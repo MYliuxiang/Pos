@@ -23,7 +23,12 @@
         make.height.mas_equalTo(20);
         make.width.mas_equalTo(120);
     }];
-//    self.field.leftButton.backgroundColor = [UIColor redColor];
+    [self.field.leftButton setImage:[UIImage imageNamed:@"减_可操作icon"] forState:UIControlStateNormal];
+    [self.field.leftButton setImage:[UIImage imageNamed:@"减_icon"] forState:UIControlStateDisabled];
+    [self.field.rightButton setImage:[UIImage imageNamed:@"加_可操作_icon"] forState:UIControlStateNormal];
+    [self.field.rightButton setImage:[UIImage imageNamed:@"加_icon"] forState:UIControlStateDisabled];
+
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

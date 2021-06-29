@@ -13,6 +13,7 @@
 @interface ProductDoneVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *doneB;
+@property (nonatomic,strong) GHCountField *field;
 
 @end
 
@@ -56,6 +57,7 @@
         }
         [cell.img sd_setImageWithURL:[NSURL URLWithString:self.smodel.indexImg]];
         cell.nameL.text = self.smodel.name;
+        self.field = cell.field;
         return cell;
         
     }else{
@@ -135,7 +137,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shop_createOrder];
     entity.needCache = NO;
-    entity.parameters = @{@"addressId":self.amodel.aid,@"itemId":self.smodel.sid,@"num":@"1"};
+    entity.parameters = @{@"addressId":self.amodel.aid,@"itemId":self.smodel.sid,@"num":self.field.textField.text};
     [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
     [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
