@@ -42,6 +42,8 @@
 @property (nonatomic,copy) NSArray *titles;
 @property (nonatomic,copy) NSArray *counts;
 
+@property (nonatomic,strong) BrandMangerModel *model;
+
 @end
 
 @implementation TerminalManagerVC
@@ -65,7 +67,35 @@
     [self handerCenterUIWithIndex:0];
     
     [self setUI];
+    [self loadData];
+    
+    
   
+}
+
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_device_manage];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            
+            self.model = [BrandMangerModel mj_objectWithKeyValues:result[@"data"]];
+            
+            
+        }
+        
+        
+    } failureBlock:^(NSError *error) {
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
 }
 
 - (void)setUI{
@@ -213,6 +243,8 @@
 //    }
     return [gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && [otherGestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]];
 }
+
+
 
 
 

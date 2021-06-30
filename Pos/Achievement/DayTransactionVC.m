@@ -9,7 +9,9 @@
 
 @interface DayTransactionVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic,copy) NSArray *titles;
+@property (nonatomic,copy) NSMutableArray *dataList;
+@property(nonatomic,copy) NSString *totalCount;
+@property(nonatomic,copy) NSString *sumMoney;
 
 @end
 
@@ -19,8 +21,46 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"当日总交易额";
-    self.titles = @[@"当日XX1品牌总交易额",@"当日XX2品牌总交易额",@"当日XX3品牌总交易额"];
+    self.dataList = [NSMutableArray array];
+    [self loadData];
+  
+    
 
+}
+
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    
+    NSString *url;
+    if (self.type == 0) {
+        url = Url_proxyResults_serviceSum;
+    }else{
+        url = Url_proxyResults_serviceSumMonth;
+    }
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
+    entity.needCache = NO;
+    entity.parameters = @{@"id":self.agentModel.aid,@"time":self.model.time};
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            
+            self.dataList = [TransationModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"list"]];
+            self.totalCount = [NSString stringWithFormat:@"%@",result[@"data"][@"list"]];
+            self.sumMoney = [NSString stringWithFormat:@"%@",result[@"data"][@"sumMoney"]];
+
+            [self.tableView reloadData];
+          
+        }
+        
+    } failureBlock:^(NSError *error) {
+      
+
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
 }
 
 #pragma  mark --------UITableView Delegete----------
@@ -32,7 +72,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.titles.count;
+    return self.dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,13 +89,13 @@
         [cell.contentView addSubview:lineView];
         
     }
-    cell.lab1.text = self.titles[indexPath.row];
+    
+    TransationModel *model = self.dataList[indexPath.row];
+    cell.lab1.text = model.name;
     cell.lab1.textColor = [UIColor colorWithHexString:@"#232323"];
     cell.lab1.font = [UIFont boldSystemFontOfSize:14];
-
-    cell.lab2.text = @"33";
+    cell.lab2.text = model.count;
     cell.lab2.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
-
     
     return cell;
     
@@ -64,13 +104,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    
+    if (self.dataList.count == 0) {
+        return 0.1;
+    }
     return 44;
     
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    if (self.dataList.count == 0) {
+        return [UIView new];
+    }
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor clearColor];
 
@@ -87,7 +132,7 @@
     
     UILabel *label1 = [[UILabel alloc] init];
     label1.font = [UIFont systemFontOfSize:14];
-    label1.text = @"275";
+    label1.text = self.totalCount;
     label1.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
     label1.backgroundColor = [UIColor clearColor];
     [view addSubview:label1];
@@ -134,15 +179,5 @@
 }
 
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -42,7 +42,11 @@
     self.collectionView.mj_footer = [LxRefreshFooter footerWithRefreshingBlock:^{
         [self loadData];
     }];
-    [self.collectionView.mj_header beginRefreshing];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.collectionView.mj_header beginRefreshing];
+
+    });
     
 }
 

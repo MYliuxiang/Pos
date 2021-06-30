@@ -272,7 +272,7 @@ static NSMutableArray *tasks;
     
     if (isNeedCache && responseCacheData != nil)
     {
-        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+        [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
 
         if (successBlock)
         {
@@ -303,7 +303,7 @@ static NSMutableArray *tasks;
         sessionTask = [BANetManagerShare.sessionManager GET:URLString parameters:parameters headers:nil  progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
 
             if (successBlock)
             {
@@ -315,7 +315,7 @@ static NSMutableArray *tasks;
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }
                 if (![code isEqualToString:@"200"]) {
-                   [MBProgressHUD showError:msg toView:lxWindow];
+                   [MBProgressHUD showError:msg toView:lxMbProgressView];
                 }
                 successBlock(responseObject);
             }
@@ -324,8 +324,8 @@ static NSMutableArray *tasks;
             [[weakSelf tasks] removeObject:sessionTask];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
-            [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
+            [MBProgressHUD showError:@"网络错误" toView:lxMbProgressView];
 
             if (failureBlock)
             {
@@ -350,7 +350,7 @@ static NSMutableArray *tasks;
                 }
             });
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
             if (BANetManagerShare.isOpenLog)
             {
                 NSLog(@"post结果***%@", responseObject);
@@ -368,7 +368,7 @@ static NSMutableArray *tasks;
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }
                 if (![code isEqualToString:@"200"]) {
-                   [MBProgressHUD showError:msg toView:lxWindow];
+                   [MBProgressHUD showError:msg toView:lxMbProgressView];
                 }
 
                 successBlock(responseObject);
@@ -379,8 +379,8 @@ static NSMutableArray *tasks;
             [[weakSelf tasks] removeObject:sessionTask];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-           [MBProgressHUD hideHUDForView:lxWindow animated:YES];
-           [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+           [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
+           [MBProgressHUD showError:@"网络错误" toView:lxMbProgressView];
 
             if (failureBlock){
                 failureBlock(error);
@@ -391,7 +391,7 @@ static NSMutableArray *tasks;
     else if (type == BAHttpRequestTypePut)
     {
         sessionTask = [BANetManagerShare.sessionManager PUT:URLString parameters:parameters headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
 
             if (successBlock)
             {
@@ -403,7 +403,7 @@ static NSMutableArray *tasks;
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }
                 if (![code isEqualToString:@"200"]) {
-                   [MBProgressHUD showError:msg toView:lxWindow];
+                   [MBProgressHUD showError:msg toView:lxMbProgressView];
                 }
                 successBlock(responseObject);
             }
@@ -412,8 +412,8 @@ static NSMutableArray *tasks;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"错误信息：%@",error);
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
-            [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
+            [MBProgressHUD showError:@"网络错误" toView:lxMbProgressView];
 
             if (failureBlock)
             {
@@ -426,7 +426,7 @@ static NSMutableArray *tasks;
     else if (type == BAHttpRequestTypeDelete)
     {
         sessionTask = [BANetManagerShare.sessionManager DELETE:URLString parameters:parameters headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
 
             if (successBlock)
             {
@@ -438,7 +438,7 @@ static NSMutableArray *tasks;
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }
                 if (![code isEqualToString:@"200"]) {
-                   [MBProgressHUD showError:msg toView:lxWindow];
+                   [MBProgressHUD showError:msg toView:lxMbProgressView];
                 }
                 successBlock(responseObject);
             }
@@ -447,8 +447,8 @@ static NSMutableArray *tasks;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"错误信息：%@",error);
-            [MBProgressHUD hideHUDForView:lxWindow animated:YES];
-            [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+            [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
+            [MBProgressHUD showError:@"网络错误" toView:lxMbProgressView];
 
             if (failureBlock)
             {
@@ -633,7 +633,7 @@ static NSMutableArray *tasks;
             }
         });
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+        [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
 
         if (BANetManagerShare.isOpenLog)
         {
@@ -652,7 +652,7 @@ static NSMutableArray *tasks;
 //                [LoginManger sharedManager].currentLoginModel = nil;
             }
             if (![code isEqualToString:@"0"]) {
-                [MBProgressHUD showError:reslut[@"message"] toView:lxWindow];
+                [MBProgressHUD showError:reslut[@"message"] toView:lxMbProgressView];
             }
             successBlock(responseObject);
             
@@ -660,8 +660,8 @@ static NSMutableArray *tasks;
         
         [[weakSelf tasks] removeObject:sessionTask];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
-        [MBProgressHUD showError:@"网络错误" toView:lxWindow];
+        [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
+        [MBProgressHUD showError:@"网络错误" toView:lxMbProgressView];
 
         NSLog(@"错误信息：%@",error);
         if (failureBlock) {

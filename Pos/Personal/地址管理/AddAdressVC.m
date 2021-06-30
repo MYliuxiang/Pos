@@ -68,7 +68,7 @@
                               [1],@"districtCode":self.districtCode,@"districtName":self.addressSelectValues
                               [2],@"name":self.nameF.text,@"phone":self.phoneF.text,@"procName":self.addressSelectValues
                               [0],@"id":self.model.aid};
-        [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+        [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
         [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
             NSDictionary *result = response;
             if ([result[@"code"] intValue] == 200) {
@@ -94,7 +94,7 @@
                               [1],@"districtCode":self.districtCode,@"districtName":self.addressSelectValues
                               [2],@"name":self.nameF.text,@"phone":self.phoneF.text,@"procName":self.addressSelectValues
                               [0]};
-        [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+        [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
         [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
             NSDictionary *result = response;
             if ([result[@"code"] intValue] == 200) {

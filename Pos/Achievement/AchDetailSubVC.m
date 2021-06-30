@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *rightTable;
 
 @property (copy,nonatomic) NSArray *rightTitles;
+@property (nonatomic,strong) AgentModel *agentModel;
+
 
 @end
 
@@ -44,11 +46,14 @@
     self.dataList = [NSMutableArray array];
     self.isSelected = NO;
     
-    [self.leftTable selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-    if (self.agents.count > 0) {
-        [self loadDataWithAgent:self.agents[0]];
-
-    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.leftTable selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+        if (self.agents.count > 0) {
+            self.agentModel = self.agents[0];
+            [self loadDataWithAgent:self.agents[0]];
+        }
+    });
+    
 
 //    // 初始化表格视图
 //    [self initTableView];
@@ -63,13 +68,11 @@
         url = Url_proxyResults_serviceList;
     }else{
         url = Url_proxyResults_serviceListMonth;
-
     }
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
     entity.needCache = NO;
     entity.parameters = @{@"id":agentModel.aid};
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
-    
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -82,6 +85,7 @@
     } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
         
     }];
+
 }
 
 static NSString *const resueIdleft = @"leftCell";
@@ -171,7 +175,6 @@ static NSString *const resueIdright = @"rightCell";
         
         AgentDataModel *model = self.dataList[section];
 
-
         UILabel *label = [[UILabel alloc] init];
         label.font = [UIFont systemFontOfSize:14];
         label.text = model.time;
@@ -207,6 +210,7 @@ static NSString *const resueIdright = @"rightCell";
         
         [self.dataList removeAllObjects];
         [self.rightTable reloadData];
+        self.agentModel = self.agents[indexPath.row];
         [self loadDataWithAgent:self.agents[indexPath.row]];
         
         
@@ -217,10 +221,14 @@ static NSString *const resueIdright = @"rightCell";
     }
     
     if (tableView == self.rightTable) {
+        AgentDataModel *model = self.dataList[indexPath.section];
         switch (indexPath.row) {
             case 0:
             {
                 ServiceVC *vc = [ServiceVC new];
+                vc.model = model;
+                vc.type = self.type;
+                vc.agentModel = self.agentModel;
                 [self.navigationController pushViewController:vc animated:YES];
                 
             }
@@ -228,6 +236,9 @@ static NSString *const resueIdright = @"rightCell";
             case 1:
             {
                 MerchantTotalVC *vc = [MerchantTotalVC new];
+                vc.model = model;
+                vc.type = self.type;
+                vc.agentModel = self.agentModel;
                 [self.navigationController pushViewController:vc animated:YES];
                 
             }
@@ -235,12 +246,18 @@ static NSString *const resueIdright = @"rightCell";
             case 2:
             {
                 DayTransactionVC *vc = [DayTransactionVC new];
+                vc.model = model;
+                vc.type = self.type;
+                vc.agentModel = self.agentModel;
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
             case 3:
             {
                 DayTotalProfitVC *vc = [DayTotalProfitVC new];
+                vc.model = model;
+                vc.type = self.type;
+                vc.agentModel = self.agentModel;
                 [self.navigationController pushViewController:vc animated:YES];
                 
             }

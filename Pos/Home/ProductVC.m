@@ -148,7 +148,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_address_default];
     entity.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200){

@@ -34,7 +34,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_model_list];
     entity.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
 
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;

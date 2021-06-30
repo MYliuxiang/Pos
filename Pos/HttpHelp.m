@@ -69,6 +69,23 @@ NSString *const Url_user_userAppInfoDetail = @"/app/user/userAppInfoDetail/";
 
 NSString *const Url_recommendBack_list = @"/app/recommendBack/list/";
 
+NSString *const Url_proxyResults_serviceSum = @"/app/proxyResults/serviceSum/";
+
+NSString *const Url_proxyResults_serviceSumMonth = @"/app/proxyResults/serviceSumMonth/";
+
+
+NSString *const Url_proxyResults_mercList = @"/app/proxyResults/mercList/";
+
+NSString *const Url_proxyResults_mercListMonth = @"/app/proxyResults/mercListMonth/";
+
+NSString *const Url_proxyResults_tradDayList = @"/app/proxyResults/tradDayList/";
+
+NSString *const Url_proxyResults_tradDayListMonth = @"/app/proxyResults/tradDayListMonth/";
+
+NSString *const Url_merc_mercInfo = @"/app/merc/mercInfo/";
+
+NSString *const Url_device_manage = @"/app/device/manage/";
+
 
 
 @implementation HttpHelp

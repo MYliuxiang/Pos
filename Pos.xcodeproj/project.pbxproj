@@ -88,6 +88,9 @@
 		226D6F05268B718A004D8778 /* AchievementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F04268B718A004D8778 /* AchievementModel.m */; };
 		226D6F0C268B7D8F004D8778 /* DeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F0B268B7D8F004D8778 /* DeviceModel.m */; };
 		226D6F15268B8852004D8778 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F14268B8852004D8778 /* MerchantModel.m */; };
+		226D6F21268CC764004D8778 /* TransationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F20268CC764004D8778 /* TransationModel.m */; };
+		226D6F55268CCB43004D8778 /* MerchDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F54268CCB43004D8778 /* MerchDetailModel.m */; };
+		226D6F5B268CD141004D8778 /* BrandMangerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F5A268CD141004D8778 /* BrandMangerModel.m */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -466,6 +469,12 @@
 		226D6F0B268B7D8F004D8778 /* DeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceModel.m; sourceTree = "<group>"; };
 		226D6F13268B8852004D8778 /* MerchantModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
 		226D6F14268B8852004D8778 /* MerchantModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
+		226D6F1F268CC764004D8778 /* TransationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransationModel.h; sourceTree = "<group>"; };
+		226D6F20268CC764004D8778 /* TransationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransationModel.m; sourceTree = "<group>"; };
+		226D6F53268CCB43004D8778 /* MerchDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchDetailModel.h; sourceTree = "<group>"; };
+		226D6F54268CCB43004D8778 /* MerchDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchDetailModel.m; sourceTree = "<group>"; };
+		226D6F59268CD141004D8778 /* BrandMangerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandMangerModel.h; sourceTree = "<group>"; };
+		226D6F5A268CD141004D8778 /* BrandMangerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandMangerModel.m; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -1042,6 +1051,8 @@
 			children = (
 				226D6ED0268A2795004D8778 /* BrandModel.h */,
 				226D6ED1268A2795004D8778 /* BrandModel.m */,
+				226D6F59268CD141004D8778 /* BrandMangerModel.h */,
+				226D6F5A268CD141004D8778 /* BrandMangerModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1062,6 +1073,8 @@
 				226D6F0B268B7D8F004D8778 /* DeviceModel.m */,
 				226D6F13268B8852004D8778 /* MerchantModel.h */,
 				226D6F14268B8852004D8778 /* MerchantModel.m */,
+				226D6F53268CCB43004D8778 /* MerchDetailModel.h */,
+				226D6F54268CCB43004D8778 /* MerchDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1824,6 +1837,8 @@
 				7127EA7D268C5FC20035CB74 /* AgentModel.m */,
 				7127EA82268C648E0035CB74 /* AgentDataModel.h */,
 				7127EA83268C648E0035CB74 /* AgentDataModel.m */,
+				226D6F1F268CC764004D8778 /* TransationModel.h */,
+				226D6F20268CC764004D8778 /* TransationModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2314,6 +2329,7 @@
 				229215FC267D17DA00EB762F /* WSTableviewDataModel.m in Sources */,
 				711D7CBF2679ACCA00BAFB54 /* MailListVC.m in Sources */,
 				22C1BCD4267A677200092C1E /* UITextView+WZB.m in Sources */,
+				226D6F55268CCB43004D8778 /* MerchDetailModel.m in Sources */,
 				22881F4026879F9C002F725B /* AddcariphoneVC.m in Sources */,
 				2253CBEB268243EF0015B808 /* LearnTwoCell.m in Sources */,
 				22E33E8726808EEE0019915A /* InformationVC.m in Sources */,
@@ -2339,6 +2355,7 @@
 				226D6F0C268B7D8F004D8778 /* DeviceModel.m in Sources */,
 				711D7C232679ABF900BAFB54 /* BaseNavigationController.m in Sources */,
 				221898DC2680E85700653C2C /* ProductVC.m in Sources */,
+				226D6F21268CC764004D8778 /* TransationModel.m in Sources */,
 				710271F42681C7B200D5B62A /* BusinessCell.m in Sources */,
 				2281D83F2684C6E2004AF0A3 /* MoresettingsVC.m in Sources */,
 				7102725B2681E2DF00D5B62A /* PosterCCell.m in Sources */,
@@ -2388,6 +2405,7 @@
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
 				226D6E6B26878816004D8778 /* MailListSubVC.m in Sources */,
 				2253CBE0268243E00015B808 /* LeranOneCell.m in Sources */,
+				226D6F5B268CD141004D8778 /* BrandMangerModel.m in Sources */,
 				2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
 				221899072680F4D600653C2C /* ProductTwoCell.m in Sources */,

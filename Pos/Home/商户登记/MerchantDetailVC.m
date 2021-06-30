@@ -15,7 +15,7 @@
 @property (nonatomic,strong) NSArray *dataList;
 @property (weak, nonatomic) IBOutlet UILabel *numberL;
 
-
+@property (strong, nonatomic) MerchDetailModel *detailModel;
 @property (weak, nonatomic) IBOutlet UIButton *headerB;
 
 @end
@@ -32,15 +32,46 @@
     
     
     [self.headerB layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleRight imageTitleSpace:5];
-    self.headerView.height = 197;
-    self.tableView.tableHeaderView = self.headerView;
-    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
+ 
     
     self.nameList = @[@"姓名",@"手机号",@"商户类型",@"机器编码",@"登记时间"];
     self.subList = @[@"王晓热",@"13278990099",@"多宝宝",@"7897668988989",@"2021-09-12  12:23:23"];
     self.dataList = @[@"首次达标：N时间到N时间，达标剩余金额￥7000",@"二次达标：N时间到N时间，达标剩余金额￥7000",@"三次达标：N时间到N时间，达标剩余金额￥7000",
         @"四次达标：N时间到N时间，达标剩余金额￥7000"];
+    [self loadData];
 
+}
+
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_mercInfo,self.mmodel.mercId];
+    entity.needCache = NO;
+    entity.parameters = @{@"deviceNo":self.mmodel.deviceNo};
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            
+            self.detailModel = [MerchDetailModel mj_objectWithKeyValues:result[@"data"]];
+            self.headerView.height = 197;
+            self.tableView.tableHeaderView = self.headerView;
+            self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
+            
+            self.numberL.text = [NSString stringWithFormat:@"%.2f",self.detailModel.tradingMoneySum];
+            
+            [self.tableView reloadData];
+          
+        }
+        
+    } failureBlock:^(NSError *error) {
+      
+
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
 }
 
 
@@ -57,7 +88,10 @@
 #pragma  mark --------UITableView Delegete----------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    if (self.detailModel) {
+        return 2;
+    }
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -67,7 +101,7 @@
         return self.nameList.count;
 
     }
-    return  self.dataList.count;
+    return  self.detailModel.tradingDataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,10 +121,30 @@
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#282828"];
        
-        cell.detailTextLabel.text = self.subList[indexPath.row];
         cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:14];
         cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"#B3B3B3"];
         cell.backgroundColor = [UIColor whiteColor];
+        
+        if (indexPath.row == 0) {
+            cell.detailTextLabel.text = self.detailModel.name;
+
+        }else if (indexPath.row == 1){
+            cell.detailTextLabel.text = self.detailModel.phone;
+
+        }else if (indexPath.row == 2){
+            cell.detailTextLabel.text = self.detailModel.typeName;
+
+        }else if (indexPath.row == 3){
+            cell.detailTextLabel.text = self.detailModel.deviceNo;
+
+        }else{
+            cell.detailTextLabel.text = self.detailModel.registration;
+
+        }
+        
+        
+        
+        
     }else{
         cell.textLabel.text = self.dataList[indexPath.row];
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
@@ -98,13 +152,8 @@
         cell.detailTextLabel.text = @"";
         cell.backgroundColor = Color_bg;
         
-        
     }
-   
-    
-    
-    
-    
+        
     return cell;
     
 }

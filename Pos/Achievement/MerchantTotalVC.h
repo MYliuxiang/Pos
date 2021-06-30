@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MerchantTotalVC : BaseViewController
+@property (nonatomic,assign) NSInteger type;
+@property (nonatomic,strong) AgentDataModel *model;
+@property (nonatomic,strong) AgentModel *agentModel;
 
 @end
 

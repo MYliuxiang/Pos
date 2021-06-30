@@ -102,9 +102,31 @@ extern NSString *const Url_user_userAppInfoDetail;
 //查询推荐背景底图列表
 extern NSString *const Url_recommendBack_list;
 
+//查询代理商直属下级-日服务商总数
+extern NSString *const Url_proxyResults_serviceSum;
+
+//查询代理商直属下级-月服务商总数
+extern NSString *const Url_proxyResults_serviceSumMonth;
+
+//日商户总数详情列表
+extern NSString *const Url_proxyResults_mercList;
+
+//月商户总数详情列表
+extern NSString *const Url_proxyResults_mercListMonth;
+
+//日交易额列表
+extern NSString *const Url_proxyResults_tradDayList;
+
+//月交易额列表
+extern NSString *const Url_proxyResults_tradDayListMonth;
+
+//商户详情
+extern NSString *const Url_merc_mercInfo;
+
+//查询设备终端管理
+extern NSString *const Url_device_manage;
 
 
- 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HttpHelp : NSObject

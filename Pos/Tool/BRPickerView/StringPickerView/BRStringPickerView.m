@@ -160,7 +160,7 @@
             if (self.selectIndexs.count > 0) {
                 if (i < self.selectIndexs.count) {
                     NSInteger index = [self.selectIndexs[i] integerValue];
-                    row = ((index > 0 && index < [self.mDataSourceArr[i] count]) ? index : 0);
+                    row = ((index > 0 && index < [(NSArray *)self.mDataSourceArr[i] count]) ? index : 0);
                 }
             } else {
                 if (self.mSelectValues.count > 0 && i < self.mSelectValues.count) {
@@ -273,7 +273,7 @@
             break;
         case BRStringPickerComponentMulti:
         case BRStringPickerComponentLinkage:
-            return [self.mDataSourceArr[component] count];
+            return [(NSArray *)self.mDataSourceArr[component] count];
             break;
             
         default:

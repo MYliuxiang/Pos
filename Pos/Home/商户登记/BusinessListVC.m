@@ -166,7 +166,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    MerchantModel *model = self.dataList[indexPath.row];
     MerchantDetailVC *vc = [MerchantDetailVC new];
+    vc.mmodel = model;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

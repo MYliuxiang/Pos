@@ -60,7 +60,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_register_sendSmsCode,self.phoneF.text];
     entity.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
             NSDictionary *result = response;
             if ([result[@"code"] intValue] == 200) {
@@ -142,7 +142,7 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_user_register];
     entity.parameters = @{@"invitationCode":_invationF.text,@"password":self.passF.text,@"phone":self.phoneF.text,@"smsCode":self.yanF.text};
     
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     
     [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;

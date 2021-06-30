@@ -69,7 +69,7 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_user_login];
     entity.parameters = @{@"password":self.passF.text,@"phone":self.phoneF.text};
     
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     
     [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
@@ -84,7 +84,7 @@
             //消息数据库打开，可以进入到主页面
             [LoginManger sharedManager].currentLoginModel = model;
             [HandleTool switchMainVC];
-            [MBProgressHUD showMessag:@"登录成功" toView:lxWindow];
+            [MBProgressHUD showMessag:@"登录成功" toView:lxMbProgressView];
             
            }
         } failureBlock:^(NSError *error) {

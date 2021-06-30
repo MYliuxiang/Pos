@@ -49,6 +49,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 #define lxWindow [UIApplication sharedApplication].keyWindow
 
+#define lxMbProgressView [HandleTool getCurrentVC].view
+
 /** View 圆角和加边框 */
 #define KViewBorderRadius(View, Radius, Width, Color)\
 \
@@ -173,6 +175,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "AgentModel.h"
 #import "AgentDataModel.h"
 #import "PosterModel.h"
+#import "TransationModel.h"
+#import "MerchDetailModel.h"
+#import "BrandMangerModel.h"
 
 
 

@@ -31,6 +31,7 @@
 - (void)setUI{
     
     
+  
     self.titles = @[@"按日查询",@"按月查询"];
     self.categoryView.titles = self.titles;
     self.categoryView.titleFont = [UIFont boldSystemFontOfSize:16];
@@ -70,7 +71,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_proxyResults_list];
     entity.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;

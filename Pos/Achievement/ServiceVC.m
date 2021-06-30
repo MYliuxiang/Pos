@@ -10,7 +10,7 @@
 @interface ServiceVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,copy) NSArray *titles;
-
+@property (nonatomic,strong) NSMutableArray *values;
 @end
 
 @implementation ServiceVC
@@ -20,7 +20,46 @@
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"服务商总数";
     self.bottomView.hidden = YES;
-    self.titles = @[@"XX的服务商总数",@"直属服务商",@"服务商团队"];
+    self.titles = @[@"服务商总数",@"直属服务商",@"服务商团队"];
+    self.values = [NSMutableArray array];
+    [self loadData];
+        
+}
+
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    
+    NSString *url;
+    if (self.type == 0) {
+        url = Url_proxyResults_serviceSum;
+    }else{
+        url = Url_proxyResults_serviceSumMonth;
+    }
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
+    entity.needCache = NO;
+    entity.parameters = @{@"id":self.agentModel.aid,@"time":self.model.time};
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            
+           
+            [self.values addObject: [NSString stringWithFormat:@"%@",result[@"data"][@"sum"]]];
+            [self.values addObject: [NSString stringWithFormat:@"%@",result[@"data"][@"directlySum"]]];
+            [self.values addObject: [NSString stringWithFormat:@"%@",result[@"data"][@"teamSum"]]];
+
+            [self.tableView reloadData];
+          
+        }
+        
+    } failureBlock:^(NSError *error) {
+      
+
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
 }
 
 #pragma  mark --------UITableView Delegete----------
@@ -32,7 +71,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.titles.count;
+    return self.values.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -138,7 +138,7 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shop_createOrder];
     entity.needCache = NO;
     entity.parameters = @{@"addressId":self.amodel.aid,@"itemId":self.smodel.sid,@"num":self.field.textField.text};
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200){

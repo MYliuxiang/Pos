@@ -74,7 +74,9 @@
     
     [self.tableView.mj_header beginRefreshing];
 
+    
 
+    
 }
 
 - (void)loadData{
@@ -85,7 +87,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_carousel_list,@"0"];
     entity.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
 
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
@@ -113,7 +115,7 @@
     BADataEntity *entity1 = [BADataEntity new];
     entity1.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_activity_list];
     entity1.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
            NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -136,7 +138,7 @@
     BADataEntity *entity2 = [BADataEntity new];
     entity2.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shopItem_list];
     entity2.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity2 successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -159,7 +161,7 @@
     BADataEntity *entity3 = [BADataEntity new];
     entity3.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_index];
     entity3.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity3 successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -183,7 +185,7 @@
     dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
 
         NSLog(@"请求完成");
-        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
+        [MBProgressHUD hideHUDForView:lxMbProgressView animated:YES];
         [self.tableView.mj_header endRefreshing];
 
     });

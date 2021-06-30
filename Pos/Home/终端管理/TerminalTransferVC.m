@@ -64,7 +64,7 @@
     BADataEntity *entity1 = [BADataEntity new];
     entity1.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_shopBrand_list];
     entity1.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
            NSDictionary *result = response;
         self.brandList = [BrandModel mj_objectArrayWithKeyValuesArray:result[@"data"]];

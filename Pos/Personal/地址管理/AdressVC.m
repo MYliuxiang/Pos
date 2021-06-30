@@ -44,7 +44,7 @@
     BADataEntity *entity1 = [BADataEntity new];
     entity1.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_address];
     entity1.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity1 successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200){
@@ -131,7 +131,7 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_address,model.aid];
     entity.needCache = NO;
    
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_DELETEWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -170,7 +170,7 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_address,model.aid];
     entity.needCache = NO;
    
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {

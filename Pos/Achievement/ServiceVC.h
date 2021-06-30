@@ -10,6 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ServiceVC : BaseViewController
+@property (nonatomic,assign) NSInteger type;
+@property (nonatomic,strong) AgentDataModel *model;
+@property (nonatomic,strong) AgentModel *agentModel;
+
 
 @end
 

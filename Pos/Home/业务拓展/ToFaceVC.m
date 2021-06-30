@@ -55,7 +55,7 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_register_sendSmsCode,self.phoneF.text];
     entity.needCache = NO;
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
             NSDictionary *result = response;
             if ([result[@"code"] intValue] == 200) {
@@ -128,11 +128,11 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_user_faceToFace];
     entity.parameters = @{@"invitationCode":_invationF.text,@"password":self.passF.text,@"phone":self.phoneF.text,@"smsCode":self.yanF.text};
-    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
-            [MBProgressHUD showSuccess:@"注册成功！" toView:lxWindow];
+            [MBProgressHUD showSuccess:@"注册成功！" toView:lxMbProgressView];
             [self.navigationController popViewControllerAnimated:YES];
            }
         } failureBlock:^(NSError *error) {

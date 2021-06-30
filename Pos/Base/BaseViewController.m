@@ -36,6 +36,7 @@
     return _bottomView;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -156,7 +157,7 @@
 {
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
-
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
   
 }
 
