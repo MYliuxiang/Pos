@@ -84,6 +84,24 @@ extern NSString *const Url_merc_reg;
 //获取商户登记数据列表
 extern NSString *const Url_merc_reg_list;
 
+//查询代理商直属下级列表
+extern NSString *const Url_proxyResults_list;
+
+//查询代理商-日列表数据
+extern NSString *const Url_proxyResults_serviceList;
+
+//查询代理商-月列表数据
+extern NSString *const Url_proxyResults_serviceListMonth;
+
+//获取app用户信息
+extern NSString *const Url_user_userAppInfo;
+
+//获取app用户详细信息
+extern NSString *const Url_user_userAppInfoDetail;
+
+//查询推荐背景底图列表
+extern NSString *const Url_recommendBack_list;
+
 
 
  

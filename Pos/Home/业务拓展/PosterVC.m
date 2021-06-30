@@ -11,8 +11,8 @@
 @interface PosterVC ()<JXCategoryListContainerViewDelegate,JXCategoryViewDelegate>
 @property (nonatomic, strong) JXCategoryListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleBackgroundView *categoryView;
-@property (nonatomic, strong) NSArray *titles;
-
+@property (nonatomic, strong) NSMutableArray *dataList;
+@property (nonatomic, strong) NSMutableArray *titles;
 
 @end
 
@@ -22,22 +22,46 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"业务拓展";
+    self.dataList = [NSMutableArray array];
+    self.titles = [NSMutableArray array];
+    [self loadData];
+       
     
-    [self.view addSubview:self.categoryView];
-    [self.view addSubview:self.listContainerView];
-    [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.view);
-            make.top.equalTo(self.view).offset(Height_NavBar);
+}
 
-            make.height.mas_equalTo(70);
-    }];
-    [self.listContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
-        make.top.equalTo(self.categoryView.mas_bottom);
-    }];
+- (void)loadData{
     
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_model_list];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
 
-    self.titles = @[@"品牌1",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2",@"品牌2"];
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            self.dataList = [DeviceModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            [self.titles addObject:@"全部"];
+
+            for (DeviceModel *model in self.dataList) {
+                [self.titles addObject:model.name];
+            }
+
+            [self setUI];
+        }
+       
+        
+
+        } failureBlock:^(NSError *error) {
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+    
+    
+}
+
+
+- (void)setUI{
     self.categoryView.titles = self.titles;
     self.categoryView.titleFont = [UIFont boldSystemFontOfSize:16];
     self.categoryView.titleSelectedFont = [UIFont boldSystemFontOfSize:16];
@@ -54,6 +78,19 @@
     self.categoryView.backgroundCornerRadius = 17.5;
     self.categoryView.cellSpacing = 10;
 //    self.categoryView.
+    
+    [self.view addSubview:self.categoryView];
+    [self.view addSubview:self.listContainerView];
+    [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.view);
+            make.top.equalTo(self.view).offset(Height_NavBar);
+
+            make.height.mas_equalTo(70);
+    }];
+    [self.listContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.categoryView.mas_bottom);
+    }];
 
     
 }
@@ -121,6 +158,15 @@
 // 返回各个列表菜单下的实例，该实例需要遵守并实现 <JXCategoryListContentViewDelegate> 协议
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     PosterSubVC *list = [[PosterSubVC alloc] init];
+    if (index != 0) {
+        list.model = self.dataList[index - 1];
+    }
+    list.seltedBlock = ^(PosterModel * _Nonnull model) {
+        if (self.seltedBlock) {
+            self.seltedBlock(model);
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    };
     return list;
 }
 

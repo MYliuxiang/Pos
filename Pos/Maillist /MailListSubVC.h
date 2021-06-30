@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MailListSubVC : BaseViewController<JXPagerViewListViewDelegate>
 @property(nonatomic,assign) NSInteger type;
+@property (nonatomic,copy) NSString *keyword;
 
 @end
 

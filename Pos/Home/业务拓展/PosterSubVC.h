@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PosterSubVC : BaseViewController<JXCategoryListContentViewDelegate>
+@property(nonatomic,strong) DeviceModel *model;
+@property(nonatomic,copy)void (^seltedBlock)(PosterModel *model);
 
 @end
 

@@ -6,8 +6,6 @@
 //
 
 #import "AchDetailSubVC.h"
-#import "AchDetailModel.h"
-#import "AchDetailSubModel.h"
 #import "ALeftCell.h"
 #import "ARightCell.h"
 #import "ServiceVC.h"
@@ -34,37 +32,56 @@
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.hidden = YES;
     self.bottomView.hidden = YES;
-    self.rightTitles = @[@"服务商总数",@"商户总数",@"当月总交易额",@"当月总收益额"];
+    if (self.type == 0) {
+        self.rightTitles = @[@"服务商总数",@"商户总数",@"当日总交易额",@"当日总收益额"];
+
+    }else{
+        self.rightTitles = @[@"服务商总数",@"商户总数",@"当月总交易额",@"当月总收益额"];
+
+    }
+
     
     self.dataList = [NSMutableArray array];
-    
-    for (int i = 0; i < 10; i++) {
-        AchDetailModel *model = [[AchDetailModel alloc] init];
-        model.name = [NSString stringWithFormat:@"张三%d",i];
-        NSMutableArray *marray = [NSMutableArray array];
-        
-        for (int i = 0; i < 10; i++) {
-            AchDetailSubModel *smodel = [[AchDetailSubModel alloc] init];
-            smodel.time = [NSString stringWithFormat:@"2021-0%d",i];
-            smodel.fwcount = @"300";
-            smodel.shcount = @"300";
-            smodel.totalProfit = @"300";
-            smodel.totalTransaction = @"300";
-            [marray addObject:smodel];
-        }
-        model.subModels = marray;
-        [self.dataList addObject:model];
-        
-    }
-    
-    
     self.isSelected = NO;
     
     [self.leftTable selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    if (self.agents.count > 0) {
+        [self loadDataWithAgent:self.agents[0]];
+
+    }
 
 //    // 初始化表格视图
 //    [self initTableView];
     
+}
+
+- (void)loadDataWithAgent:(AgentModel *)agentModel{
+    
+    BADataEntity *entity = [BADataEntity new];
+    NSString *url;
+    if (self.type == 0) {
+        url = Url_proxyResults_serviceList;
+    }else{
+        url = Url_proxyResults_serviceListMonth;
+
+    }
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
+    entity.needCache = NO;
+    entity.parameters = @{@"id":agentModel.aid};
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            self.dataList = [AgentDataModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            [self.rightTable reloadData];
+        }
+                
+    } failureBlock:^(NSError *error) {
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
 }
 
 static NSString *const resueIdleft = @"leftCell";
@@ -88,19 +105,19 @@ static NSString *const resueIdright = @"rightCell";
     if (tableView == self.leftTable) {
         return 1;
     }
-    AchDetailModel *model = self.dataList[self.leftTable.indexPathForSelectedRow.row];
-    return model.subModels.count;;
+    return self.dataList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == self.leftTable) {
-        return self.dataList.count;
+        return self.agents.count;
     }
     
     return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
     if (tableView == self.leftTable) {
        
         static NSString *identifire = @"ALeftCellID";
@@ -111,9 +128,8 @@ static NSString *const resueIdright = @"rightCell";
 
             
         }
-        AchDetailModel *model = self.dataList[indexPath.row];
+        AgentModel *model = self.agents[indexPath.row];
         cell.titleL.text = model.name;
-        
         return cell;
         
         
@@ -129,10 +145,19 @@ static NSString *const resueIdright = @"rightCell";
             
         }
         
-        AchDetailModel *model = self.dataList[self.leftTable.indexPathForSelectedRow.row];
-        AchDetailSubModel *smodel = model.subModels[indexPath.section];
+        AgentDataModel *model = self.dataList[indexPath.section];
         cell.titleL.text = self.rightTitles[indexPath.row];
-       
+        
+
+        if (indexPath.row == 0) {
+            cell.numberL.text = model.serviceCount;
+        }else if (indexPath.row == 1){
+            cell.numberL.text = model.mercCount;
+        }else if(indexPath.row == 1){
+            cell.numberL.text = model.dayTradMoney;
+        }else{
+            cell.numberL.text = model.dayEarnMoney;
+        }
         return cell;
     }
 }
@@ -144,12 +169,12 @@ static NSString *const resueIdright = @"rightCell";
         UIView *view = [[UIView alloc] init];
         view.backgroundColor = [UIColor whiteColor];
         
-        AchDetailModel *model = self.dataList[self.leftTable.indexPathForSelectedRow.row];
-        AchDetailSubModel *smodel = model.subModels[section];
+        AgentDataModel *model = self.dataList[section];
+
 
         UILabel *label = [[UILabel alloc] init];
         label.font = [UIFont systemFontOfSize:14];
-        label.text = smodel.time;
+        label.text = model.time;
         label.textColor = [UIColor colorWithHexString:@"#2F2F2F"];
         label.backgroundColor = [UIColor clearColor];
         [view addSubview:label];
@@ -179,10 +204,15 @@ static NSString *const resueIdright = @"rightCell";
 #pragma mark ~~~~~~~~~~ TableViewDelegate ~~~~~~~~~~
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.leftTable) {
+        
+        [self.dataList removeAllObjects];
         [self.rightTable reloadData];
-      
-        [self.rightTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
-                               atScrollPosition:UITableViewScrollPositionNone animated:NO];
+        [self loadDataWithAgent:self.agents[indexPath.row]];
+        
+        
+//        [self.rightTable reloadData];
+//        [self.rightTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+//                               atScrollPosition:UITableViewScrollPositionNone animated:NO];
 
     }
     

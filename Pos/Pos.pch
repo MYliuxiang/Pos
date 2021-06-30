@@ -97,6 +97,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "WSTableviewTree.h"
 #import "BRPickerView.h"
 #import "SDCycleScrollView.h"
+#import "SGQRCode.h"
 
 
 
@@ -169,7 +170,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "AchievementModel.h"
 #import "DeviceModel.h"
 #import "MerchantModel.h"
-
+#import "AgentModel.h"
+#import "AgentDataModel.h"
+#import "PosterModel.h"
 
 
 

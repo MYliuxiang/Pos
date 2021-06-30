@@ -12,6 +12,7 @@
 @property (nonatomic, strong) JXCategoryListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleBackgroundView *categoryView;
 @property (nonatomic, strong) NSArray *titles;
+@property (nonatomic,strong) NSMutableArray *agents;
 @end
 
 @implementation AchievementDetailVC
@@ -21,23 +22,15 @@
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"业绩详情";
     self.bottomView.hidden = YES;
+    self.agents = [NSMutableArray array];
+    [self loadData];
+//    [self setUI];
+   
+}
 
-    [self.view addSubview:self.categoryView];
-    [self.view addSubview:self.listContainerView];
-    [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.view);
-            make.top.equalTo(self.view).offset(Height_NavBar);
-
-            make.height.mas_equalTo(70);
-    }];
-    [self.listContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(self.categoryView.mas_bottom);
-        make.bottom.equalTo(self.view).offset(-kBottomSafeHeight);
-
-    }];
+- (void)setUI{
     
-
+    
     self.titles = @[@"按日查询",@"按月查询"];
     self.categoryView.titles = self.titles;
     self.categoryView.titleFont = [UIFont boldSystemFontOfSize:16];
@@ -54,8 +47,51 @@
     self.categoryView.backgroundHeight = 35;
     self.categoryView.backgroundCornerRadius = 17.5;
     self.categoryView.cellSpacing = 10;
+    
+    [self.view addSubview:self.categoryView];
+    [self.view addSubview:self.listContainerView];
+    [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.view);
+            make.top.equalTo(self.view).offset(Height_NavBar);
+
+            make.height.mas_equalTo(70);
+    }];
+    [self.listContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.categoryView.mas_bottom);
+        make.bottom.equalTo(self.view).offset(-kBottomSafeHeight);
+
+    }];
+    
 }
 
+- (void)loadData{
+
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_proxyResults_list];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxWindow animated:YES];
+    
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+            AgentModel *model = [AgentModel new];
+            model.name = @"我的业绩";
+            model.aid = @"";
+            [self.agents addObject:model];
+            NSArray *array = [AgentModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
+            [self.agents addObjectsFromArray:array];
+            [self setUI];
+        }
+                
+    } failureBlock:^(NSError *error) {
+        
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+    
+}
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
@@ -117,6 +153,8 @@
 // 返回各个列表菜单下的实例，该实例需要遵守并实现 <JXCategoryListContentViewDelegate> 协议
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     AchDetailSubVC *list = [[AchDetailSubVC alloc] init];
+    list.agents = self.agents;
+    list.type = index;
     return list;
 }
 

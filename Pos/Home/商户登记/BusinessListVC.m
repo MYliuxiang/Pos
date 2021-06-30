@@ -39,7 +39,10 @@
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_reg_list,self.type];
     entity.needCache = NO;
-    entity.parameters = @{@"brandId":self.model.did,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize)};
+    if (self.model) {
+        entity.parameters = @{@"brandId":self.model.did,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize)};
+
+    }
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {

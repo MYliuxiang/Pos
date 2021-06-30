@@ -44,7 +44,9 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_reg];
     
     entity.needCache = NO;
-    entity.parameters = @{@"brandId":self.model.did};
+    if (self.model != nil) {
+        entity.parameters = @{@"brandId":self.model.did};
+    }
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -55,7 +57,6 @@
             [self.values addObject:[NSString stringWithFormat:@"%@",result[@"data"][@"active"]]];
             [self.values addObject:[NSString stringWithFormat:@"%@",result[@"data"][@"unActive"]]];
 
-            
             [self.tableView.mj_header endRefreshing];
             [self.tableView reloadData];
           
@@ -156,6 +157,7 @@
     }else{
         type = @"unActive";
     }
+    vc.type = type;
     vc.model = self.model;
     [self.navigationController pushViewController:vc animated:YES];
     

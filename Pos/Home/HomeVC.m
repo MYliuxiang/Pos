@@ -183,6 +183,7 @@
     dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
 
         NSLog(@"请求完成");
+        [MBProgressHUD hideHUDForView:lxWindow animated:YES];
         [self.tableView.mj_header endRefreshing];
 
     });

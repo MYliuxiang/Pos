@@ -310,7 +310,7 @@ static NSMutableArray *tasks;
                 NSDictionary *reslut = responseObject;
                 NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
                 NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
-                if ([code isEqualToString:@"401"]) {
+                if ([code isEqualToString:@"401"] || [code isEqualToString:@"7001"]) {
                     [HandleTool switchLgoinVC];
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }
@@ -362,7 +362,7 @@ static NSMutableArray *tasks;
                 NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
 
                 
-                if ([code isEqualToString:@"401"]) {
+                if ([code isEqualToString:@"401"] || [code isEqualToString:@"7001"]) {
                 
                     [HandleTool switchLgoinVC];
                     [LoginManger sharedManager].currentLoginModel = nil;
@@ -398,7 +398,7 @@ static NSMutableArray *tasks;
                 NSDictionary *reslut = responseObject;
                 NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
                 NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
-                if ([code isEqualToString:@"401"]) {
+                if ([code isEqualToString:@"401"] || [code isEqualToString:@"7001"]) {
                     [HandleTool switchLgoinVC];
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }
@@ -433,7 +433,7 @@ static NSMutableArray *tasks;
                 NSDictionary *reslut = responseObject;
                 NSString *code = [NSString stringWithFormat:@"%@",reslut[@"code"]];
                 NSString *msg = [NSString stringWithFormat:@"%@",reslut[@"msg"]];
-                if ([code isEqualToString:@"401"]) {
+                if ([code isEqualToString:@"401"] || [code isEqualToString:@"7001"]) {
                     [HandleTool switchLgoinVC];
                     [LoginManger sharedManager].currentLoginModel = nil;
                 }

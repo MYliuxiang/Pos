@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AchDetailSubVC : BaseViewController<JXCategoryListContentViewDelegate>
+@property (nonatomic,strong) NSMutableArray *agents;
+@property (nonatomic,assign) NSInteger type;
 
 @end
 

@@ -33,13 +33,19 @@
     self.dataList = [NSMutableArray array];
     [self setUI];
     self.sortType = 1;
-    self.sortTitles = @[@"默认排序",@"用户规模从高到低",@"本月交易从高到低"];
+    self.sortTitles = @[@"默认排序",@"用户收益从高到低",@"用户规模从高到低",@"交易额从高到低"];
     self.tableView.mj_header = [LxResfreshHeader headerWithRefreshingBlock:^{
         self.pageNum = 1;
         [self loadData];
     }];
     [self.tableView.mj_header beginRefreshing];
 
+}
+
+- (void)setKeyword:(NSString *)keyword
+{
+    _keyword = keyword;
+    [self loadData];
 }
 
 - (void)loadData{
@@ -54,7 +60,12 @@
 
     }
     entity.needCache = NO;
-    entity.parameters = @{@"verified":verified,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize)};
+    if(self.keyword == nil){
+        entity.parameters = @{@"verified":verified,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize)};
+    }else{
+        entity.parameters = @{@"verified":verified,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize),@"search":[NSString stringWithFormat:@"%@",self.keyword]};
+    }
+   
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -226,7 +237,7 @@
         [self.sortB layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleRight imageTitleSpace:5];
         [self sortCancleAC];
         
-        self.sortType = indexPath.row + 1;
+        self.sortType = indexPath.row;
         [self.tableView.mj_header beginRefreshing];
                 
     }else{

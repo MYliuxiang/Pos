@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PosterVC : BaseViewController
 
+@property(nonatomic,copy)void (^seltedBlock)(PosterModel *model);
 @end
 
 NS_ASSUME_NONNULL_END

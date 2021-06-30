@@ -242,6 +242,9 @@
 		711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CCD2679ACF100BAFB54 /* HomeVC.m */; };
 		711D7CD02679ACF100BAFB54 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711D7CCE2679ACF100BAFB54 /* HomeVC.xib */; };
 		711D7CD92679AD4A00BAFB54 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D7CD82679AD4A00BAFB54 /* AppService.m */; };
+		7127EA7E268C5FC20035CB74 /* AgentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7127EA7D268C5FC20035CB74 /* AgentModel.m */; };
+		7127EA84268C648E0035CB74 /* AgentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7127EA83268C648E0035CB74 /* AgentDataModel.m */; };
+		7127EA91268C73B00035CB74 /* PosterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7127EA90268C73B00035CB74 /* PosterModel.m */; };
 		713AA4552684272A009F02A5 /* TerminalSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4532684272A009F02A5 /* TerminalSearchVC.m */; };
 		713AA4562684272A009F02A5 /* TerminalSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4542684272A009F02A5 /* TerminalSearchVC.xib */; };
 		713AA45D2684285C009F02A5 /* TerSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA45B2684285C009F02A5 /* TerSearchCell.m */; };
@@ -254,8 +257,6 @@
 		713AA492268470BB009F02A5 /* AchievementDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA490268470BB009F02A5 /* AchievementDetailVC.xib */; };
 		713AA4992684713E009F02A5 /* AchDetailSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4972684713E009F02A5 /* AchDetailSubVC.m */; };
 		713AA49A2684713E009F02A5 /* AchDetailSubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4982684713E009F02A5 /* AchDetailSubVC.xib */; };
-		713AA4A126847AAA009F02A5 /* AchDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4A026847AAA009F02A5 /* AchDetailModel.m */; };
-		713AA4AA26847E83009F02A5 /* AchDetailSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4A926847E83009F02A5 /* AchDetailSubModel.m */; };
 		713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4AF268486F4009F02A5 /* ALeftCell.m */; };
 		713AA4B2268486F4009F02A5 /* ALeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713AA4B0268486F4009F02A5 /* ALeftCell.xib */; };
 		713AA4B926848704009F02A5 /* ARightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713AA4B726848704009F02A5 /* ARightCell.m */; };
@@ -754,6 +755,12 @@
 		711D7CCE2679ACF100BAFB54 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		711D7CD72679AD4A00BAFB54 /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		711D7CD82679AD4A00BAFB54 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
+		7127EA7C268C5FC20035CB74 /* AgentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgentModel.h; sourceTree = "<group>"; };
+		7127EA7D268C5FC20035CB74 /* AgentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgentModel.m; sourceTree = "<group>"; };
+		7127EA82268C648E0035CB74 /* AgentDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgentDataModel.h; sourceTree = "<group>"; };
+		7127EA83268C648E0035CB74 /* AgentDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgentDataModel.m; sourceTree = "<group>"; };
+		7127EA8F268C73B00035CB74 /* PosterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterModel.h; sourceTree = "<group>"; };
+		7127EA90268C73B00035CB74 /* PosterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterModel.m; sourceTree = "<group>"; };
 		713AA4522684272A009F02A5 /* TerminalSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalSearchVC.h; sourceTree = "<group>"; };
 		713AA4532684272A009F02A5 /* TerminalSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalSearchVC.m; sourceTree = "<group>"; };
 		713AA4542684272A009F02A5 /* TerminalSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalSearchVC.xib; sourceTree = "<group>"; };
@@ -772,10 +779,6 @@
 		713AA4962684713E009F02A5 /* AchDetailSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchDetailSubVC.h; sourceTree = "<group>"; };
 		713AA4972684713E009F02A5 /* AchDetailSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchDetailSubVC.m; sourceTree = "<group>"; };
 		713AA4982684713E009F02A5 /* AchDetailSubVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchDetailSubVC.xib; sourceTree = "<group>"; };
-		713AA49F26847AAA009F02A5 /* AchDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchDetailModel.h; sourceTree = "<group>"; };
-		713AA4A026847AAA009F02A5 /* AchDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchDetailModel.m; sourceTree = "<group>"; };
-		713AA4A826847E83009F02A5 /* AchDetailSubModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchDetailSubModel.h; sourceTree = "<group>"; };
-		713AA4A926847E83009F02A5 /* AchDetailSubModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchDetailSubModel.m; sourceTree = "<group>"; };
 		713AA4AE268486F4009F02A5 /* ALeftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALeftCell.h; sourceTree = "<group>"; };
 		713AA4AF268486F4009F02A5 /* ALeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALeftCell.m; sourceTree = "<group>"; };
 		713AA4B0268486F4009F02A5 /* ALeftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALeftCell.xib; sourceTree = "<group>"; };
@@ -1251,6 +1254,8 @@
 		2292162A267E49DC00EB762F /* 业务拓展 */ = {
 			isa = PBXGroup;
 			children = (
+				710271F02681C79C00D5B62A /* Views */,
+				7127EA8E268C739E0035CB74 /* Models */,
 				710271E82681C71D00D5B62A /* BusinessVC.h */,
 				710271E92681C71D00D5B62A /* BusinessVC.m */,
 				710271EA2681C71D00D5B62A /* BusinessVC.xib */,
@@ -1266,7 +1271,6 @@
 				710272602681E48000D5B62A /* ToFaceVC.h */,
 				710272612681E48000D5B62A /* ToFaceVC.m */,
 				710272622681E48000D5B62A /* ToFaceVC.xib */,
-				710271F02681C79C00D5B62A /* Views */,
 			);
 			path = "业务拓展";
 			sourceTree = "<group>";
@@ -1786,6 +1790,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		7127EA8E268C739E0035CB74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7127EA8F268C73B00035CB74 /* PosterModel.h */,
+				7127EA90268C73B00035CB74 /* PosterModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		713AA482268466FC009F02A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1805,12 +1818,12 @@
 		713AA49E26847A9A009F02A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				713AA49F26847AAA009F02A5 /* AchDetailModel.h */,
-				713AA4A026847AAA009F02A5 /* AchDetailModel.m */,
-				713AA4A826847E83009F02A5 /* AchDetailSubModel.h */,
-				713AA4A926847E83009F02A5 /* AchDetailSubModel.m */,
 				226D6F03268B718A004D8778 /* AchievementModel.h */,
 				226D6F04268B718A004D8778 /* AchievementModel.m */,
+				7127EA7C268C5FC20035CB74 /* AgentModel.h */,
+				7127EA7D268C5FC20035CB74 /* AgentModel.m */,
+				7127EA82268C648E0035CB74 /* AgentDataModel.h */,
+				7127EA83268C648E0035CB74 /* AgentDataModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2342,8 +2355,10 @@
 				2292160F267D198000EB762F /* DataSSubCell.m in Sources */,
 				226D6F05268B718A004D8778 /* AchievementModel.m in Sources */,
 				710272632681E48000D5B62A /* ToFaceVC.m in Sources */,
+				7127EA84268C648E0035CB74 /* AgentDataModel.m in Sources */,
 				2235FFC3268647FE0064B505 /* BRDatePickerView.m in Sources */,
 				2253CC3626837FEF0015B808 /* MerchantVC.m in Sources */,
+				7127EA91268C73B00035CB74 /* PosterModel.m in Sources */,
 				22C1BC6B267A675500092C1E /* TAAbstractDotView.m in Sources */,
 				2235FFBF268647FE0064B505 /* BRResultModel.m in Sources */,
 				22C1BC6A267A675500092C1E /* TAAnimatedDotView.m in Sources */,
@@ -2372,7 +2387,6 @@
 				22ACB877268177D600A4E79D /* AboutusVCViewController.m in Sources */,
 				22C1BCC9267A677200092C1E /* TXLimitedTextView.m in Sources */,
 				226D6E6B26878816004D8778 /* MailListSubVC.m in Sources */,
-				713AA4AA26847E83009F02A5 /* AchDetailSubModel.m in Sources */,
 				2253CBE0268243E00015B808 /* LeranOneCell.m in Sources */,
 				2253CBD7268243C50015B808 /* LeranSubVC.m in Sources */,
 				22C1BCED267A677D00092C1E /* LxEmptyView.m in Sources */,
@@ -2394,12 +2408,12 @@
 				22C1BC69267A675500092C1E /* TAPageControl.m in Sources */,
 				22921624267E43E700EB762F /* LoginManger.m in Sources */,
 				22C1BCD9267A677200092C1E /* UISwitch+Custom.m in Sources */,
-				713AA4A126847AAA009F02A5 /* AchDetailModel.m in Sources */,
 				22C1BCEF267A677D00092C1E /* LxDelayed.m in Sources */,
 				716979DA2685C5DB00B278C7 /* TransferRecordVC.m in Sources */,
 				716979FE2685D9E200B278C7 /* TransferRecordDetailVC.m in Sources */,
 				2235FFC7268647FE0064B505 /* NSBundle+BRPickerView.m in Sources */,
 				226D6EA426879AB4004D8778 /* AdressCell.m in Sources */,
+				7127EA7E268C5FC20035CB74 /* AgentModel.m in Sources */,
 				7102724C2681E05E00D5B62A /* JXCategoryTitleBackgroundCellModel.m in Sources */,
 				2235FFC8268647FE0064B505 /* BRAddressModel.m in Sources */,
 				713AA4862684671A009F02A5 /* AchievementCell.m in Sources */,

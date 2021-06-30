@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (nonatomic,copy) NSString *keyword;
 
+@property (nonatomic,strong) MailListSubVC *vc1;
+@property (nonatomic,strong) MailListSubVC *vc2;
 
 
 @end
@@ -26,8 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"通讯录";
-    self.customNavBar.title = @"调拨记录";
+    self.customNavBar.title = @"通讯录";
     _pagerView = [self preferredPagingView];
     self.pagerView.mainTableView.gestureDelegate = self;
     self.pagerView.mainTableView.backgroundColor = [UIColor clearColor];
@@ -43,6 +44,8 @@
     [self setUI];
     [self handerHeadrBWithIndex:0];
 }
+
+
 
 - (void)setUI{
     self.btn1.layer.cornerRadius = 17.5;
@@ -80,8 +83,6 @@
   
 }
 
-
-
 - (void)textFieldChange:(UITextField *)textField{
     
     
@@ -98,6 +99,10 @@
 
 - (void)searchAC{
 
+    self.vc1.keyword = self.keyword;
+    self.vc2.keyword = self.keyword;
+    
+    
 }
 
 
@@ -165,9 +170,18 @@
 }
 
 - (id<JXPagerViewListViewDelegate>)pagerView:(JXPagerView *)pagerView initListAtIndex:(NSInteger)index {
-    MailListSubVC *list = [[MailListSubVC alloc] init];
-    list.type = index;
-    return list;
+    if (index == 0) {
+        MailListSubVC *list = [[MailListSubVC alloc] init];
+        list.type = index;
+        self.vc1 = list;
+        return list;
+    }else{
+        MailListSubVC *list = [[MailListSubVC alloc] init];
+        list.type = index;
+        self.vc2 = list;
+        return list;
+    }
+  
     
     
 }

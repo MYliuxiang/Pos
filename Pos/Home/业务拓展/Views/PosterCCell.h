@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PosterCCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *img;
 
 @end
 
