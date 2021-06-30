@@ -93,7 +93,7 @@ MJCodingImplementation
 
 //- (void)removeData{
 //    
-//    [[NSFileManager defaultManager] removeItemAtPath:[self filepath] error:nil];
+//  [[NSFileManager defaultManager] removeItemAtPath:[self filepath] error:nil];
 //    [self readData];
 //  
 //    
