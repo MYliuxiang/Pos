@@ -126,6 +126,21 @@ extern NSString *const Url_merc_mercInfo;
 //查询设备终端管理
 extern NSString *const Url_device_manage;
 
+//日收益额列表
+extern NSString *const Url_proxyResults_earnDayList;
+
+//月收益额列表
+extern NSString *const Url_proxyResults_earnMonthList;
+
+//首页交易额-点击
+extern NSString *const Url_trade_info;
+
+//首页交易额-点击-月份详情
+extern NSString *const Url_trade_infoDetail;
+
+//商户数据展示(详情)
+extern NSString *const Url_merc_data;
+
 
 NS_ASSUME_NONNULL_BEGIN
 

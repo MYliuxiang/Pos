@@ -178,6 +178,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "TransationModel.h"
 #import "MerchDetailModel.h"
 #import "BrandMangerModel.h"
+#import "ProfitModel.h"
+#import "DataModel.h"
 
 
 

@@ -646,7 +646,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
 //找到第一层数据cell所对应的index
 - (NSIndexPath *)correspondingIndexPathForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    __block NSIndexPath *correspondingIndexPath = nil;
+    __block NSIndexPath *correspondingIndexPath;
     __block NSInteger expandedSubrows = 0;
     
     NSArray *rows = self.expandableCells[@(indexPath.section)];

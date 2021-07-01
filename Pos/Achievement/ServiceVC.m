@@ -38,6 +38,7 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
     entity.needCache = NO;
     entity.parameters = @{@"id":self.agentModel.aid,@"time":self.model.time};
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {

@@ -17,6 +17,9 @@
 
 @property (nonatomic, assign)BOOL expandable;
 
+@property (nonatomic, assign)BOOL isLoad;
+
+
 - (void)object_add_toSecondLevelArrM:(id)obj;
 - (id)object_get_fromSecondLevelArrMWithIndex:(NSInteger)index;
 

@@ -24,13 +24,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CenterModel : NSObject
 @property(nonatomic,strong) NSArray *children;//
-@property(nonatomic,copy) NSString *count;//    数量    integer(int32)
+@property(nonatomic,copy)   NSString *count;//    数量    integer(int32)
 @property(nonatomic,strong) ChildrenModel *myself;//    当前代理
 
 @end
 
 @interface ChildrenModel : NSObject
-@property(nonatomic,strong) NSString *devices;//    设备数组    array    设备信息
+@property(nonatomic,strong) NSArray *devices;//    设备数组    array    设备信息
 @property(nonatomic,copy) NSString *proxyName;//   代理商名字
 @property(nonatomic,copy) NSString *proxyId;//   代理商名字
 

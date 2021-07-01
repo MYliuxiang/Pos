@@ -11,6 +11,7 @@
 
 @property (nonatomic, copy) void(^scrollCallback)(UIScrollView *scrollView);
 @property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UILabel *headerL;
 
 @end
 
@@ -19,22 +20,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+   
+    self.customNavBar.hidden =YES;
     self.headerView.height = 40;
     self.tableView.tableHeaderView = self.headerView;
-    self.customNavBar.hidden =YES;
+    self.headerL.text = [NSString stringWithFormat:@"%@总数：%@",self.headerTitle,self.model.count];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kBottomSafeHeight, 0);
 }
+
 
 
 #pragma  mark --------UITableView Delegete----------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    if(self.model)return self.model.children.count + 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (section == 0) {
+        return self.model.myself.devices.count;
+    }
     
-    return 4;
+    ChildrenModel *model = self.model.children[section - 1];
+
+    return model.devices.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -48,6 +59,18 @@
         
     }
     
+    BDeviceModel *model;
+    if (indexPath.section == 0) {
+        model = self.model.myself.devices[indexPath.row];
+    }else{
+        
+        ChildrenModel *cmodel = self.model.children[indexPath.section - 1];
+        model = cmodel.devices[indexPath.row];
+
+    }
+    cell.lab1.text = [NSString stringWithFormat:@"品牌设备编号%@",model.deviceNo];
+    cell.lab2.text = model.modelName;
+    
     
     return cell;
     
@@ -56,19 +79,28 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    
-    return 54;
+    if (self.model) {
+        return 54;
+
+    }
+    return 0;
+
     
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    if (self.model == nil) {
+        return [UIView new];
+
+    }
+    
+   
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor whiteColor];
 
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont boldSystemFontOfSize:14];
-    label.text = @"本人设备总数：12台";
     label.textColor = [UIColor colorWithHexString:@"#282828"];
     label.backgroundColor = [UIColor clearColor];
     [view addSubview:label];
@@ -76,6 +108,15 @@
         make.left.right.equalTo(view).offset(20);
         make.top.equalTo(view).offset(20);
     }];
+    
+    if (section == 0) {
+        label.text =[NSString stringWithFormat:@"本人设备总数：%ld台",self.model.myself.devices.count];
+    }else{
+        
+        ChildrenModel *model = self.model.children[section - 1];
+        label.text =[NSString stringWithFormat:@"直属代理%@设备总数：%ld台",model.proxyName,model.devices.count];
+
+    }
     
     
     return view;

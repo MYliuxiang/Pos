@@ -10,18 +10,20 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DataModel : NSObject
-/** 名字 */
-@property (nonatomic, strong) NSString *title;
-/** 子层 */
-@property (nonatomic, strong) NSArray<DataModel *> *subs;
 
-/** 是否展开 */
-@property (nonatomic, assign) BOOL isUnfold;
+@property(nonatomic,copy) NSString *number;
+@property(nonatomic,copy) NSString *total;
+@property(nonatomic,copy) NSArray *children;
 
-/** 是否能展开 */
-@property (nonatomic, assign) BOOL isCanUnfold;
+@end
 
+@interface DataChildrenModel : NSObject
 
+@property(nonatomic,copy) NSString *did;
+@property(nonatomic,copy) NSString *manageDivide;
+@property(nonatomic,copy) NSString *name;
+@property(nonatomic,copy) NSString *number;
+@property(nonatomic,copy) NSString *phone;
 @end
 
 NS_ASSUME_NONNULL_END
