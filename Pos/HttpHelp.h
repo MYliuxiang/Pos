@@ -141,6 +141,9 @@ extern NSString *const Url_trade_infoDetail;
 //商户数据展示(详情)
 extern NSString *const Url_merc_data;
 
+//查询我的终端
+extern NSString *const Url_devicec_query;
+
 
 NS_ASSUME_NONNULL_BEGIN
 

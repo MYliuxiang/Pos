@@ -27,6 +27,7 @@
     _model = model;
     [self.img sd_setImageWithURL:[NSURL URLWithString:model.brandImg]];
     self.titleL.text = model.brandName;
+        
 }
 
 @end

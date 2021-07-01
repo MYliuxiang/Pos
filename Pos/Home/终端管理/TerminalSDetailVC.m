@@ -6,11 +6,14 @@
 //
 
 #import "TerminalSDetailVC.h"
+#import "SearchTerminalVC.h"
 
 @interface TerminalSDetailVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (copy, nonatomic) NSArray *titles;
 @property (copy, nonatomic) NSArray *values;
+@property (copy, nonatomic) NSMutableArray *settings;
+
 
 
 
@@ -23,17 +26,59 @@
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"查询详情";
     self.rightImageName = @"搜索";
-
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
+    self.values = [NSMutableArray array];
+    self.settings = [NSMutableArray array];
     
-    self.titles = @[@"终端编号",@"返现到期",@"划拨人",@"绑定状态",@"首次达标",@"二次达标"];
-    self.values = @[@"8980989",@"2021-02-23",@"李二",@"已绑定",@"150.00",@"150.00"];
+  
+  
+    
+    [self loadData];
 
 
 }
 
+- (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_devicec_query,self.model.deviceNo];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            self.titles = @[@"终端编号",@"返现到期",@"划拨人",@"绑定状态"];
+            NSString *bindStr;
+            if ([result[@"data"][@"bindStatus"] intValue] == 0) {
+                bindStr = @"未绑定";
+            }else{
+                bindStr = @"已经绑定";
+            }
+            
+            /*
+             bindStatus = 1;
+             bindTime = "<null>";
+             deviceNo = 000099953;
+             expired = "<null>";
+             modelId = 1;
+             owner = "\U674e\U6d0b";
+             */
+            self.values = @[[NSString stringWithFormat:@"%@",result[@"data"][@"deviceNo"]],[NSString stringWithFormat:@"%@",result[@"data"][@"expired"]],[NSString stringWithFormat:@"%@",result[@"data"][@"owner"]],bindStr];
+            self.settings = [SettingModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"settings"]];
+            [self.tableView reloadData];
+          
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+}
+
 - (void)doRightNavBarRightBtnAction{
     //搜索
+    SearchTerminalVC *vc = [SearchTerminalVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma  mark --------UITableView Delegete----------
@@ -45,7 +90,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.titles.count;
+    return self.titles.count + self.settings.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,8 +115,15 @@
     cell.lab1.textColor = [UIColor colorWithHexString:@"#282828"];
     cell.lab2.textColor = [UIColor colorWithHexString:@"#C4C4C4"];
 
-    cell.lab1.text = self.titles[indexPath.row];
-    cell.lab2.text = self.values[indexPath.row];
+    if (indexPath.row < self.titles.count) {
+        cell.lab1.text = self.titles[indexPath.row];
+        cell.lab2.text = self.values[indexPath.row];
+    }else{
+        SettingModel *model = self.settings[indexPath.row - self.titles.count];
+        cell.lab1.text = model.standard;
+        cell.lab2.text = model.money;
+    }
+  
     
     
     return cell;
@@ -96,13 +148,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
+    if (self.titles.count == 0) {
+        return 0.1;
+    }
     return 76;
     
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    
+    if (self.titles.count == 0) {
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor clearColor];
+        return view;
+    }
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor clearColor];
     
@@ -137,11 +196,15 @@
 
 - (void)transfAC{
     //累积交易
+    
+    MerchantModel *model = [MerchantModel new];
+    model.deviceNo = self.model.deviceNo;
     MerchantDetailVC *vc = [MerchantDetailVC new];
-    vc.customNavBar.title = @"累积交易";
+    vc.mmodel = model;
     [self.navigationController pushViewController:vc animated:YES];
 }
+@end
 
-
+@implementation SettingModel
 
 @end
