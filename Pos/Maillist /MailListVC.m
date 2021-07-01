@@ -102,7 +102,12 @@
     self.vc1.keyword = self.keyword;
     self.vc2.keyword = self.keyword;
     
-    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    [self searchAC];
+    return YES;
 }
 
 

@@ -87,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5ACFBB73-2482-4944-9BF8-9FD0BF732581"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pos/Tool/BANetManager/BANetManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
-            landmarkName = "+ba_requestWithType:isNeedCache:urlString:parameters:successBlock:failureBlock:progressBlock:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -116,14 +100,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E - 2334008949205e5f"
+                  uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E - f18054e3cc6b1ce4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "+[BANetManager ba_requestWithType:isNeedCache:urlString:parameters:successBlock:failureBlock:progressBlock:]"
                   moduleName = "Pos"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liuxiang/Desktop/Pos/Pos/Tool/BANetManager/BANetManager.m"
+                  urlString = "file:///Users/liuxiang/Desktop/%5C/Pos/Tool/BANetManager/BANetManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "381"
@@ -131,14 +115,14 @@
                   offsetFromSymbolStart = "4631">
                </Location>
                <Location
-                  uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E - 4f3552da971b6dc4"
+                  uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E - 9d8106b012502f7f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__108+[BANetManager ba_requestWithType:isNeedCache:urlString:parameters:successBlock:failureBlock:progressBlock:]_block_invoke.183"
                   moduleName = "Pos"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liuxiang/Desktop/Pos/Pos/Tool/BANetManager/BANetManager.m"
+                  urlString = "file:///Users/liuxiang/Desktop/%5C/Pos/Tool/BANetManager/BANetManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "381"
@@ -146,14 +130,14 @@
                   offsetFromSymbolStart = "1208">
                </Location>
                <Location
-                  uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E - 4a4d91a3362f3de"
+                  uuid = "FE8F8A59-DE24-4B28-8A8E-F65929B95A1E - d6108d70b629b165"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__108+[BANetManager ba_requestWithType:isNeedCache:urlString:parameters:successBlock:failureBlock:progressBlock:]_block_invoke_2.186"
                   moduleName = "Pos"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liuxiang/Desktop/Pos/Pos/Tool/BANetManager/BANetManager.m"
+                  urlString = "file:///Users/liuxiang/Desktop/%5C/Pos/Tool/BANetManager/BANetManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "381"
@@ -192,54 +176,6 @@
             startingLineNumber = "327"
             endingLineNumber = "327"
             landmarkName = "+ba_requestWithType:isNeedCache:urlString:parameters:successBlock:failureBlock:progressBlock:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6EBBA7D3-071B-4C50-9938-F03B0A83270A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pos/Home/&#x7ec8;&#x7aef;&#x7ba1;&#x7406;/TerminalManagerVC.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-loadData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3110666F-6491-4EC8-8425-BE821F6C2B37"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pos/Home/&#x7ec8;&#x7aef;&#x7ba1;&#x7406;/TerminalManagerVC.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-loadData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C3305AF4-01FA-4D0A-A870-4A7644621CD1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pos/Home/&#x7ec8;&#x7aef;&#x7ba1;&#x7406;/TerminalManagerVC.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

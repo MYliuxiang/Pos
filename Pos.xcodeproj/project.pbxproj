@@ -91,6 +91,9 @@
 		226D6F21268CC764004D8778 /* TransationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F20268CC764004D8778 /* TransationModel.m */; };
 		226D6F55268CCB43004D8778 /* MerchDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F54268CCB43004D8778 /* MerchDetailModel.m */; };
 		226D6F5B268CD141004D8778 /* BrandMangerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D6F5A268CD141004D8778 /* BrandMangerModel.m */; };
+		2271B70C268E2AB00002C3E1 /* TerminalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2271B70B268E2AB00002C3E1 /* TerminalModel.m */; };
+		2271B713268E33D30002C3E1 /* SearchTerminalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2271B711268E33D30002C3E1 /* SearchTerminalVC.m */; };
+		2271B714268E33D30002C3E1 /* SearchTerminalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2271B712268E33D30002C3E1 /* SearchTerminalVC.xib */; };
 		2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83526839915004AF0A3 /* MessagecenterVC.m */; };
 		2281D83926839A39004AF0A3 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83826839A39004AF0A3 /* MessageCell.m */; };
 		2281D83C26839ED6004AF0A3 /* MessageNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */; };
@@ -479,6 +482,11 @@
 		226D6F54268CCB43004D8778 /* MerchDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchDetailModel.m; sourceTree = "<group>"; };
 		226D6F59268CD141004D8778 /* BrandMangerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandMangerModel.h; sourceTree = "<group>"; };
 		226D6F5A268CD141004D8778 /* BrandMangerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandMangerModel.m; sourceTree = "<group>"; };
+		2271B70A268E2AB00002C3E1 /* TerminalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalModel.h; sourceTree = "<group>"; };
+		2271B70B268E2AB00002C3E1 /* TerminalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalModel.m; sourceTree = "<group>"; };
+		2271B710268E33D30002C3E1 /* SearchTerminalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTerminalVC.h; sourceTree = "<group>"; };
+		2271B711268E33D30002C3E1 /* SearchTerminalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTerminalVC.m; sourceTree = "<group>"; };
+		2271B712268E33D30002C3E1 /* SearchTerminalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTerminalVC.xib; sourceTree = "<group>"; };
 		2281D83426839915004AF0A3 /* MessagecenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagecenterVC.h; sourceTree = "<group>"; };
 		2281D83526839915004AF0A3 /* MessagecenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagecenterVC.m; sourceTree = "<group>"; };
 		2281D83726839A39004AF0A3 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -1064,6 +1072,8 @@
 				226D6ED1268A2795004D8778 /* BrandModel.m */,
 				226D6F59268CD141004D8778 /* BrandMangerModel.h */,
 				226D6F5A268CD141004D8778 /* BrandMangerModel.m */,
+				2271B70A268E2AB00002C3E1 /* TerminalModel.h */,
+				2271B70B268E2AB00002C3E1 /* TerminalModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1241,6 +1251,9 @@
 				713AA46226842CDF009F02A5 /* TerminalSDetailVC.h */,
 				713AA46326842CDF009F02A5 /* TerminalSDetailVC.m */,
 				713AA46426842CDF009F02A5 /* TerminalSDetailVC.xib */,
+				2271B710268E33D30002C3E1 /* SearchTerminalVC.h */,
+				2271B711268E33D30002C3E1 /* SearchTerminalVC.m */,
+				2271B712268E33D30002C3E1 /* SearchTerminalVC.xib */,
 				71864975268031A5008EED37 /* TerminalTransferVC.h */,
 				71864976268031A5008EED37 /* TerminalTransferVC.m */,
 				71864977268031A5008EED37 /* TerminalTransferVC.xib */,
@@ -2106,6 +2119,7 @@
 				710272322681D45100D5B62A /* PosterVC.xib in Resources */,
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
 				2253CBE1268243E00015B808 /* LeranOneCell.xib in Resources */,
+				2271B714268E33D30002C3E1 /* SearchTerminalVC.xib in Resources */,
 				711D7CC02679ACCA00BAFB54 /* MailListVC.xib in Resources */,
 				713AA49A2684713E009F02A5 /* AchDetailSubVC.xib in Resources */,
 				710271EC2681C71D00D5B62A /* BusinessVC.xib in Resources */,
@@ -2517,9 +2531,11 @@
 				22C1BC67267A675500092C1E /* SDCollectionViewCell.m in Sources */,
 				2242393F26838D2100E5188F /* TradeDSubCell.m in Sources */,
 				7186499226804185008EED37 /* TransfCCell.m in Sources */,
+				2271B713268E33D30002C3E1 /* SearchTerminalVC.m in Sources */,
 				2281D83626839915004AF0A3 /* MessagecenterVC.m in Sources */,
 				22C1BC68267A675500092C1E /* TADotView.m in Sources */,
 				22C1BCC5267A677200092C1E /* TXMatchManager.m in Sources */,
+				2271B70C268E2AB00002C3E1 /* TerminalModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

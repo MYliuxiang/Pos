@@ -95,6 +95,8 @@ NSString *const Url_trade_infoDetail = @"/app/trade/index/info/detail/";
 
 NSString *const Url_merc_data = @"/app/merc/index/data/";
 
+NSString *const Url_devicec_query = @"/app/device/manage/query/";
+
 
 
 @implementation HttpHelp

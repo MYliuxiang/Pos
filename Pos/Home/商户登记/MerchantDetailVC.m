@@ -44,7 +44,13 @@
 - (void)loadData{
     BADataEntity *entity = [BADataEntity new];
     
-    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_mercInfo,self.mmodel.mercId];
+    if (self.mmodel.mercId) {
+        entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_mercInfo,self.mmodel.mercId];
+
+    }else{
+        entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_mercInfo];
+
+    }
     entity.needCache = NO;
     entity.parameters = @{@"deviceNo":self.mmodel.deviceNo};
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
