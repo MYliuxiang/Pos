@@ -20,6 +20,7 @@
     //设置全局状态栏字体颜色为黑色
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
+    
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
     //打印日志
