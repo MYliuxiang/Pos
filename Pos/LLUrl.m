@@ -10,6 +10,7 @@
 
 @implementation LLUrl
 NSString *const Url_getVerifyCode = @"/userInfo/getVerifyCode";
+NSString *const Url_userAppInfo = @"/app/user/userAppInfo";
 
 
 

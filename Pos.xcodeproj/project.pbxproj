@@ -196,6 +196,7 @@
 		22C1BCFE267A679000092C1E /* TZImgePickHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1BCFC267A679000092C1E /* TZImgePickHelper.m */; };
 		22E33E84268071C40019915A /* UIViewController+YKViewControllerBarHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E33E82268071C40019915A /* UIViewController+YKViewControllerBarHeight.m */; };
 		22E33E8726808EEE0019915A /* InformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E33E8626808EEE0019915A /* InformationVC.m */; };
+		22ED0764268E291D0042AB02 /* PersonaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED0762268E291D0042AB02 /* PersonaModel.m */; };
 		22F7F85A267BAE620009FDF0 /* HomeOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F858267BAE620009FDF0 /* HomeOneCell.m */; };
 		22F7F85B267BAE620009FDF0 /* HomeOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7F859267BAE620009FDF0 /* HomeOneCell.xib */; };
 		22F7F862267BB7FD0009FDF0 /* HomeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7F860267BB7FD0009FDF0 /* HomeTwoCell.m */; };
@@ -686,6 +687,8 @@
 		22E33E83268071C40019915A /* UIViewController+YKViewControllerBarHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YKViewControllerBarHeight.h"; sourceTree = "<group>"; };
 		22E33E8526808EEE0019915A /* InformationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationVC.h; sourceTree = "<group>"; };
 		22E33E8626808EEE0019915A /* InformationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationVC.m; sourceTree = "<group>"; };
+		22ED0762268E291D0042AB02 /* PersonaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonaModel.m; sourceTree = "<group>"; };
+		22ED0763268E291D0042AB02 /* PersonaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonaModel.h; sourceTree = "<group>"; };
 		22F7F857267BAE620009FDF0 /* HomeOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeOneCell.h; sourceTree = "<group>"; };
 		22F7F858267BAE620009FDF0 /* HomeOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeOneCell.m; sourceTree = "<group>"; };
 		22F7F859267BAE620009FDF0 /* HomeOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOneCell.xib; sourceTree = "<group>"; };
@@ -1760,6 +1763,8 @@
 				711D7CB42679ACB400BAFB54 /* PersonalVC.h */,
 				711D7CB52679ACB400BAFB54 /* PersonalVC.m */,
 				711D7CB62679ACB400BAFB54 /* PersonalVC.xib */,
+				22ED0763268E291D0042AB02 /* PersonaModel.h */,
+				22ED0762268E291D0042AB02 /* PersonaModel.m */,
 				226D6E7F268797D9004D8778 /* 地址管理 */,
 				2281D85926878989004AF0A3 /* 卡包 */,
 				22881F412687A0EF002F725B /* 返现钱包 */,
@@ -2477,6 +2482,7 @@
 				22881F51268B6E3D002F725B /* DirectcoutVC.m in Sources */,
 				71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */,
 				22921604267D196E00EB762F /* DataSCell.m in Sources */,
+				22ED0764268E291D0042AB02 /* PersonaModel.m in Sources */,
 				711D7C222679ABF900BAFB54 /* BaseViewController.m in Sources */,
 				2281D8632687924A004AF0A3 /* AddCarVC.m in Sources */,
 				71DE1B532689D25A00A46F5E /* CarouselModel.m in Sources */,

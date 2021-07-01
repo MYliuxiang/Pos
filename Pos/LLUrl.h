@@ -11,7 +11,8 @@
 //注册
 extern NSString *const Url_register;
 
-
+//获取APP用户信息
+extern NSString *const Url_userAppInfo;
 
 
 

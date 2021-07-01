@@ -18,7 +18,9 @@
 #import "MybankcardVC.h"
 #import "AdressVC.h"
 #import "FaxianWalletVC.h"
+#import "PersonaModel.h"
 @interface PersonalVC ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong)PersonaModel *model;
 
 @end
 
@@ -29,6 +31,39 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"个人中心";
     [self setUI];
+    [self getdata];
+}
+//初始化视图
+-(void)getdata{
+    //轮播图
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_userAppInfo];
+    entity.needCache = NO;
+
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+           self.model = [PersonaModel mj_objectWithKeyValues:result[@"data"]];
+            //加载头像
+            [self.headimageview sd_setImageWithURL:[NSURL URLWithString:self.model.avatar]];
+            NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:16]};
+            CGSize size=[self.model.name sizeWithAttributes:attrs];
+            [self.namelabel setFrame:CGRectMake(self.headimageview.right+11, self.headimageview.top+17, size.width, 21)];
+            self.namelabel.text = self.model.name;
+            self.yaoqview.frame = CGRectMake(self.namelabel.right+2,self.namelabel.top-2,138,24);
+            self.iphonelabel.text = self.model.phone;
+            self.yaoqingmalabel.text = [NSString stringWithFormat:@"我的邀请码：%@",self.model.invitationCode];
+            [self.tableView reloadData];
+        }
+          
+      
+
+        } failureBlock:^(NSError *error) {
+          
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
 }
 
 //初始化视图
@@ -65,18 +100,18 @@
     self.iphonelabel.text = @"13299998888";
     [tapview addSubview:self.iphonelabel];
     
-    UIView *yaoqview = [[UIView alloc] init];
-    yaoqview.frame = CGRectMake(self.namelabel.right+2,self.namelabel.top-2,148,24);
-    yaoqview.alpha = 1.0;
-    yaoqview.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
-    yaoqview.layer.cornerRadius = 12;
-    [tapview addSubview:yaoqview];
+    self.yaoqview = [[UIView alloc] init];
+    self.yaoqview.frame = CGRectMake(self.namelabel.right+2,self.namelabel.top-2,138,24);
+    self.yaoqview.alpha = 1.0;
+    self.yaoqview.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
+    self.yaoqview.layer.cornerRadius = 12;
+    [tapview addSubview:self.yaoqview];
     //我的邀请码
     self.yaoqingmalabel = [[UILabel alloc]initWithFrame:CGRectMake(11, 4, 148-22, 16)];
     self.yaoqingmalabel.font = [UIFont systemFontOfSize:12];
     self.yaoqingmalabel.textColor = [UIColor colorWithHexString:@"FF8901"];
     self.yaoqingmalabel.text = @"我的邀请码：889N0U";
-    [yaoqview addSubview:self.yaoqingmalabel];
+    [self.yaoqview  addSubview:self.yaoqingmalabel];
     
     //进入图标
     UIImageView *goinimageview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth-30, 67+[self ykStatusbarHeight], 9.14, 16.26)];

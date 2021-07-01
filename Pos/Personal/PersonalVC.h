@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) UILabel *namelabel;
 @property (nonatomic,strong) UILabel *iphonelabel;
 @property (nonatomic,strong) UILabel *yaoqingmalabel;
+@property (nonatomic,strong) UIView *yaoqview;
 
 @end
 
