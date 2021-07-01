@@ -249,7 +249,6 @@
     
     NSInteger tag = sender.tag;
     [self handerHeadrBWithIndex:(int)tag - 100];
-    
     [self.pagerView.listContainerView.scrollView setContentOffset:CGPointMake(kScreenWidth * (tag - 100), 0) animated:NO];
     [self.pagerView.listContainerView didClickSelectedItemAtIndex:tag - 100];
 //    self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = (self.seletedIndex == 0);

@@ -73,7 +73,6 @@ NSString *const Url_proxyResults_serviceSum = @"/app/proxyResults/serviceSum/";
 
 NSString *const Url_proxyResults_serviceSumMonth = @"/app/proxyResults/serviceSumMonth/";
 
-
 NSString *const Url_proxyResults_mercList = @"/app/proxyResults/mercList/";
 
 NSString *const Url_proxyResults_mercListMonth = @"/app/proxyResults/mercListMonth/";
@@ -85,6 +84,16 @@ NSString *const Url_proxyResults_tradDayListMonth = @"/app/proxyResults/tradDayL
 NSString *const Url_merc_mercInfo = @"/app/merc/mercInfo/";
 
 NSString *const Url_device_manage = @"/app/device/manage/";
+
+NSString *const Url_proxyResults_earnDayList = @"/app/proxyResults/earnDayList/";
+
+NSString *const Url_proxyResults_earnMonthList = @"/app/proxyResults/earnMonthList/";
+
+NSString *const Url_trade_info = @"/app/trade/index/info/";
+
+NSString *const Url_trade_infoDetail = @"/app/trade/index/info/detail/";
+
+NSString *const Url_merc_data = @"/app/merc/index/data/";
 
 
 

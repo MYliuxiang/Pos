@@ -12,7 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (nonatomic,strong) NSArray *nameList;
 @property (nonatomic,strong) NSArray *subList;
-@property (nonatomic,strong) NSArray *dataList;
 @property (weak, nonatomic) IBOutlet UILabel *numberL;
 
 @property (strong, nonatomic) MerchDetailModel *detailModel;
@@ -36,8 +35,8 @@
     
     self.nameList = @[@"姓名",@"手机号",@"商户类型",@"机器编码",@"登记时间"];
     self.subList = @[@"王晓热",@"13278990099",@"多宝宝",@"7897668988989",@"2021-09-12  12:23:23"];
-    self.dataList = @[@"首次达标：N时间到N时间，达标剩余金额￥7000",@"二次达标：N时间到N时间，达标剩余金额￥7000",@"三次达标：N时间到N时间，达标剩余金额￥7000",
-        @"四次达标：N时间到N时间，达标剩余金额￥7000"];
+//    self.dataList = @[@"首次达标：N时间到N时间，达标剩余金额￥7000",@"二次达标：N时间到N时间，达标剩余金额￥7000",@"三次达标：N时间到N时间，达标剩余金额￥7000",
+//        @"四次达标：N时间到N时间，达标剩余金额￥7000"];
     [self loadData];
 
 }
@@ -141,16 +140,27 @@
             cell.detailTextLabel.text = self.detailModel.registration;
 
         }
-        
-        
-        
+
         
     }else{
-        cell.textLabel.text = self.dataList[indexPath.row];
+//        cell.textLabel.text = self.dataList[indexPath.row];
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#282828"];
         cell.detailTextLabel.text = @"";
         cell.backgroundColor = Color_bg;
+        
+        TradingModel *model = self.detailModel.tradingDataList[indexPath.row];
+        if(indexPath.row == 0){
+            cell.textLabel.text = [NSString stringWithFormat:@"首次达标：%@到%@，达标剩余金额￥%@",model.startTime,model.endTime,model.money];
+        }else if (indexPath.row == 1){
+            cell.textLabel.text = [NSString stringWithFormat:@"二次达标：%@到%@，达标剩余金额￥%@",model.startTime,model.endTime,model.money];
+
+        }else if (indexPath.row == 2){
+            cell.textLabel.text = [NSString stringWithFormat:@"三次达标：%@到%@，达标剩余金额￥%@",model.startTime,model.endTime,model.money];
+
+        }else{
+            cell.textLabel.text = [NSString stringWithFormat:@"四次达标：%@到%@，达标剩余金额￥%@",model.startTime,model.endTime,model.money];
+        }
         
     }
         

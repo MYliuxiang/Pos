@@ -8,12 +8,16 @@
 #import "DataModel.h"
 
 @implementation DataModel
-/**
- 判断是否能够展开, 当subs中有数据时才能展开
- */
-- (BOOL)isCanUnfold
++ (NSDictionary *)mj_objectClassInArray{
+    return @{@"children":@"DataChildrenModel"};
+}
+
+@end
+
+@implementation DataChildrenModel
++ (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return self.subs.count > 0;
+    return @{@"did":@"id"};
 }
 
 @end

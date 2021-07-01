@@ -33,13 +33,15 @@
     
     NSString *url;
     if (self.type == 0) {
-        url = Url_proxyResults_serviceSum;
+        url = Url_proxyResults_tradDayList;
     }else{
-        url = Url_proxyResults_serviceSumMonth;
+        url = Url_proxyResults_tradDayListMonth;
     }
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
     entity.needCache = NO;
     entity.parameters = @{@"id":self.agentModel.aid,@"time":self.model.time};
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
@@ -47,7 +49,6 @@
             self.dataList = [TransationModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"list"]];
             self.totalCount = [NSString stringWithFormat:@"%@",result[@"data"][@"list"]];
             self.sumMoney = [NSString stringWithFormat:@"%@",result[@"data"][@"sumMoney"]];
-
             [self.tableView reloadData];
           
         }
@@ -94,7 +95,7 @@
     cell.lab1.text = model.name;
     cell.lab1.textColor = [UIColor colorWithHexString:@"#232323"];
     cell.lab1.font = [UIFont boldSystemFontOfSize:14];
-    cell.lab2.text = model.count;
+    cell.lab2.text = model.countMoney;
     cell.lab2.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
     
     return cell;
@@ -132,7 +133,7 @@
     
     UILabel *label1 = [[UILabel alloc] init];
     label1.font = [UIFont systemFontOfSize:14];
-    label1.text = self.totalCount;
+    label1.text = self.sumMoney;
     label1.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
     label1.backgroundColor = [UIColor clearColor];
     [view addSubview:label1];

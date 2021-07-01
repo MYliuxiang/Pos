@@ -9,7 +9,8 @@
 
 @interface DayTotalProfitVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic,copy) NSArray *titles;
+@property (nonatomic,strong) NSMutableArray *dataList;
+@property(nonatomic,copy) NSString *sumMoney;
 
 @end
 
@@ -18,67 +19,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.customNavBar.title = @"当日总收益额";
-    self.titles = @[@"当日XX1品牌直属总收益额",@"当日XX2品牌直属总收益额",@"当日XX3品牌直属总收益额",@"当日XX2品牌服务商贡献收益",@"当日XX3品牌服务商贡献收益"];
-    
-    self.tableView.mj_header = [LxResfreshHeader headerWithRefreshingBlock:^{
-        self.pageNum = 1;
-        [self loadData];
-    }];
-    
-    self.tableView.mj_footer = [LxRefreshFooter footerWithRefreshingBlock:^{
-        [self loadData];
-        
-    }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView.mj_header beginRefreshing];
-
-    });
+    self.customNavBar.title = @"当日总收益额";    
+    self.dataList = [NSMutableArray array];
+    [self loadData];
 
 }
 
 - (void)loadData{
+    BADataEntity *entity = [BADataEntity new];
     
     NSString *url;
     if (self.type == 0) {
-        url = Url_proxyResults_serviceList;
+        url = Url_proxyResults_earnDayList;
     }else{
-        url = Url_proxyResults_serviceListMonth;
+        url = Url_proxyResults_earnMonthList;
     }
-    BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
     entity.needCache = NO;
-     NSString *typeStr = [NSString stringWithFormat:@"%d",self.type];
-    entity.parameters = @{@"studyKind":typeStr,@"pageNum":@(self.pageNum),@"pageSize":@(PageSize)};
+    entity.parameters = @{@"id":self.agentModel.aid,@"time":self.model.time};
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
             
-            NSArray *models = [StudyListModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"rows"]];
-//            if (self.pageNum == 1) {
-//                [self.dataList removeAllObjects];
-//            }
-//            [self.dataList addObjectsFromArray:models];
-//            self.pageNum++;
-//            
-//            if ([result[@"data"][@"total"] intValue] == self.dataList.count) {
-//                [self.tableView.mj_footer endRefreshingWithNoMoreData];
-//            }else{
-//                [self.tableView.mj_footer endRefreshing];
-//            }
-            [self.tableView.mj_header endRefreshing];
+            ProfitModel *model = [ProfitModel mj_objectWithKeyValues:result[@"data"]];
+            [self.dataList addObjectsFromArray:model.children];
+            [self.dataList addObjectsFromArray:model.models];
+            self.sumMoney = [NSString stringWithFormat:@"%@",result[@"data"][@"total"]];
             [self.tableView reloadData];
           
-        }else{
-            
-            [self.tableView.mj_footer endRefreshing];
-            [self.tableView.mj_header endRefreshing];
-
         }
         
     } failureBlock:^(NSError *error) {
-        [self.tableView.mj_footer endRefreshing];
-        [self.tableView.mj_header endRefreshing];
+      
 
         
     } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
@@ -87,6 +61,7 @@
     
     
 }
+
 
 #pragma  mark --------UITableView Delegete----------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -97,7 +72,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.titles.count;
+    return self.dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,10 +90,11 @@
         [cell.contentView addSubview:lineView];
         
     }
-    cell.lab1.text = self.titles[indexPath.row];
-    cell.lab2.text = @"33";
+    Profit *model = self.dataList[indexPath.row];
+    cell.lab1.text = model.name;
     cell.lab1.textColor = [UIColor colorWithHexString:@"#232323"];
     cell.lab1.font = [UIFont boldSystemFontOfSize:14];
+    cell.lab2.text = model.value;
     cell.lab2.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
 
     
@@ -131,12 +107,19 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     
+    if (self.dataList.count == 0) {
+        return 0.1;
+    }
     return 44;
+    
     
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    if (self.dataList.count == 0) {
+        return [UIView new];
+    }
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor clearColor];
 
@@ -153,7 +136,7 @@
     
     UILabel *label1 = [[UILabel alloc] init];
     label1.font = [UIFont systemFontOfSize:14];
-    label1.text = @"275";
+    label1.text = self.sumMoney;
     label1.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
     label1.backgroundColor = [UIColor clearColor];
     [view addSubview:label1];

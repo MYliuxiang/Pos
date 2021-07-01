@@ -16,6 +16,7 @@
 #import "UrgentAttentionVC.h"
 #import "MerchantVC.h"
 #import "TradeDetailVC.h"
+#import "TrdeDataVC.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -271,7 +272,10 @@
 
 - (void)tapheaderTitle {
     
-    MerchantDetailVC *vc = [MerchantDetailVC new];
+//    MerchantDetailVC *vc = [MerchantDetailVC new];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    TrdeDataVC *vc = [TrdeDataVC new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)headerBottomAC:(UIButton *)sender {

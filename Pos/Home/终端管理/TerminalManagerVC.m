@@ -41,6 +41,9 @@
 @property (nonatomic,copy) NSArray *views;
 @property (nonatomic,copy) NSArray *titles;
 @property (nonatomic,copy) NSArray *counts;
+@property (nonatomic,copy) NSArray *titleStrs;
+
+@property (nonatomic,strong) NSMutableArray *models;
 
 @property (nonatomic,strong) BrandMangerModel *model;
 
@@ -52,10 +55,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"终端管理";
+    self.models = [NSMutableArray array];
     
     _pagerView = [self preferredPagingView];
     self.pagerView.mainTableView.gestureDelegate = self;
     self.pagerView.mainTableView.backgroundColor = [UIColor clearColor];
+    self.pagerView.isListHorizontalScrollEnabled = NO;
     [self.view addSubview:self.pagerView];
     [self.pagerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(Height_NavBar);
@@ -64,8 +69,7 @@
     self.views = @[self.view1,self.view2,self.view3,self.view4,self.view5,self.view6];
     self.titles = @[self.title1,self.title2,self.title3,self.title4,self.title5,self.title6];
     self.counts = @[self.count1,self.count2,self.count3,self.count4,self.count5,self.count6];
-    [self handerCenterUIWithIndex:0];
-    
+    self.titleStrs = @[@"未绑定",@"已绑定",@"已解绑",@"未返现",@"已返现",@"已过期"];
     [self setUI];
     [self loadData];
     
@@ -84,8 +88,23 @@
         if ([result[@"code"] intValue] == 200) {
             
             self.model = [BrandMangerModel mj_objectWithKeyValues:result[@"data"]];
+                    
+            [self.models addObject:self.model.unbound];
+            [self.models addObject:self.model.binded];
+            [self.models addObject:self.model.untied];
+            [self.models addObject:self.model.noCashBack];
+            [self.models addObject:self.model.cashBack];
+            [self.models addObject:self.model.expired];
+
             
             
+            [self handerCenterUIWithIndex:0];
+            
+            
+            
+
+            [self setUIData];
+            [self.pagerView reloadData];
         }
         
         
@@ -96,6 +115,17 @@
     }];
     
     
+}
+
+- (void)setUIData{
+    
+    self.count1.text = self.model.unbound.count;
+    self.count2.text = self.model.binded.count;
+    self.count3.text = self.model.untied.count;
+    self.count4.text = self.model.noCashBack.count;
+    self.count5.text = self.model.cashBack.count;
+    self.count6.text = self.model.expired.count;
+
 }
 
 - (void)setUI{
@@ -114,6 +144,11 @@
 
 - (void)handerCenterUIWithIndex:(int)index{
     
+    [self.pagerView.listContainerView.scrollView setContentOffset:CGPointMake(kScreenWidth * index, 0) animated:NO];
+    [self.pagerView.listContainerView didClickSelectedItemAtIndex:index];
+    
+    
+    
     for (int i = 0; i < self.views.count; i++) {
         UIView *view = self.views[i];
         UILabel *titleL = self.titles[i];
@@ -130,6 +165,50 @@
             titleL.textColor = countL.textColor = [UIColor colorWithHexString:@"#999999"];
         }
     }
+    
+//    switch (index) {
+//        case 0:
+//        {
+//            self.vc.model = self.model.unbound;
+//
+//        }
+//            break;
+//        case 1:
+//        {
+//            self.vc.model = self.model.binded;
+//
+//        }
+//            break;
+//        case 2:
+//        {
+//            self.vc.model = self.model.untied;
+//
+//        }
+//            break;
+//        case 3:
+//        {
+//            self.vc.model = self.model.noCashBack;
+//
+//        }
+//            break;
+//        case 4:
+//        {
+//            self.vc.model = self.model.cashBack;
+//
+//        }
+//            break;
+//        case 5:
+//        {
+//            self.vc.model = self.model.expired;
+//
+//        }
+//            break;
+//
+//        default:
+//            break;
+//    }
+    
+    
     
 }
 
@@ -210,21 +289,24 @@
 }
 
 - (NSUInteger)heightForPinSectionHeaderInPagerView:(JXPagerView *)pagerView {
-    return 261;
+    if(self.model) return 261;
+    return 0;
 }
 
 - (UIView *)viewForPinSectionHeaderInPagerView:(JXPagerView *)pagerView {
-    return self.centerV;
+    if(self.model) return self.centerV;
+    return [UIView new];
 }
 
 - (NSInteger)numberOfListsInPagerView:(JXPagerView *)pagerView {
     //和categoryView的item数量一致
-    return 1;
+    return self.models.count;
 }
 
 - (id<JXPagerViewListViewDelegate>)pagerView:(JXPagerView *)pagerView initListAtIndex:(NSInteger)index {
     TerminalCenterVC *list = [[TerminalCenterVC alloc] init];
-   
+    list.model = self.models[index];
+    list.headerTitle = self.titleStrs[index];
     return list;
 }
 

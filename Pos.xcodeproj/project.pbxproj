@@ -302,6 +302,9 @@
 		71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24D9E267C858F00700C7F /* DataShowVC.m */; };
 		71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C24D9F267C858F00700C7F /* DataShowVC.xib */; };
 		71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24DAD267C8EDA00700C7F /* DataModel.m */; };
+		71CCEBE6268DA4EB00C84352 /* ProfitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCEBE5268DA4EB00C84352 /* ProfitModel.m */; };
+		71CCEBED268DA7DD00C84352 /* TrdeDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCEBEB268DA7DD00C84352 /* TrdeDataVC.m */; };
+		71CCEBEE268DA7DD00C84352 /* TrdeDataVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CCEBEC268DA7DD00C84352 /* TrdeDataVC.xib */; };
 		71CF0F1E268077BD00C4E558 /* TerminalTransfOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F1C268077BD00C4E558 /* TerminalTransfOneVC.m */; };
 		71CF0F1F268077BD00C4E558 /* TerminalTransfOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CF0F1D268077BD00C4E558 /* TerminalTransfOneVC.xib */; };
 		71CF0F26268077D300C4E558 /* TerminalTransfTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF0F24268077D300C4E558 /* TerminalTransfTwoVC.m */; };
@@ -853,6 +856,11 @@
 		71C24D9F267C858F00700C7F /* DataShowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataShowVC.xib; sourceTree = "<group>"; };
 		71C24DAC267C8EDA00700C7F /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		71C24DAD267C8EDA00700C7F /* DataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		71CCEBE4268DA4EB00C84352 /* ProfitModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfitModel.h; sourceTree = "<group>"; };
+		71CCEBE5268DA4EB00C84352 /* ProfitModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfitModel.m; sourceTree = "<group>"; };
+		71CCEBEA268DA7DD00C84352 /* TrdeDataVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrdeDataVC.h; sourceTree = "<group>"; };
+		71CCEBEB268DA7DD00C84352 /* TrdeDataVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrdeDataVC.m; sourceTree = "<group>"; };
+		71CCEBEC268DA7DD00C84352 /* TrdeDataVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrdeDataVC.xib; sourceTree = "<group>"; };
 		71CF0F1B268077BD00C4E558 /* TerminalTransfOneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalTransfOneVC.h; sourceTree = "<group>"; };
 		71CF0F1C268077BD00C4E558 /* TerminalTransfOneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalTransfOneVC.m; sourceTree = "<group>"; };
 		71CF0F1D268077BD00C4E558 /* TerminalTransfOneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalTransfOneVC.xib; sourceTree = "<group>"; };
@@ -1221,15 +1229,15 @@
 				228711B2267F9DA900AEE15A /* TerminalManagerVC.h */,
 				228711B3267F9DA900AEE15A /* TerminalManagerVC.m */,
 				228711B4267F9DA900AEE15A /* TerminalManagerVC.xib */,
+				228711BA267FA39100AEE15A /* TerminalCenterVC.h */,
+				228711BB267FA39100AEE15A /* TerminalCenterVC.m */,
+				228711BC267FA39100AEE15A /* TerminalCenterVC.xib */,
 				713AA4522684272A009F02A5 /* TerminalSearchVC.h */,
 				713AA4532684272A009F02A5 /* TerminalSearchVC.m */,
 				713AA4542684272A009F02A5 /* TerminalSearchVC.xib */,
 				713AA46226842CDF009F02A5 /* TerminalSDetailVC.h */,
 				713AA46326842CDF009F02A5 /* TerminalSDetailVC.m */,
 				713AA46426842CDF009F02A5 /* TerminalSDetailVC.xib */,
-				228711BA267FA39100AEE15A /* TerminalCenterVC.h */,
-				228711BB267FA39100AEE15A /* TerminalCenterVC.m */,
-				228711BC267FA39100AEE15A /* TerminalCenterVC.xib */,
 				71864975268031A5008EED37 /* TerminalTransferVC.h */,
 				71864976268031A5008EED37 /* TerminalTransferVC.m */,
 				71864977268031A5008EED37 /* TerminalTransferVC.xib */,
@@ -1680,6 +1688,9 @@
 				711D7CCC2679ACF100BAFB54 /* HomeVC.h */,
 				711D7CCD2679ACF100BAFB54 /* HomeVC.m */,
 				711D7CCE2679ACF100BAFB54 /* HomeVC.xib */,
+				71CCEBEA268DA7DD00C84352 /* TrdeDataVC.h */,
+				71CCEBEB268DA7DD00C84352 /* TrdeDataVC.m */,
+				71CCEBEC268DA7DD00C84352 /* TrdeDataVC.xib */,
 				71C24D9D267C858F00700C7F /* DataShowVC.h */,
 				71C24D9E267C858F00700C7F /* DataShowVC.m */,
 				71C24D9F267C858F00700C7F /* DataShowVC.xib */,
@@ -1839,6 +1850,8 @@
 				7127EA83268C648E0035CB74 /* AgentDataModel.m */,
 				226D6F1F268CC764004D8778 /* TransationModel.h */,
 				226D6F20268CC764004D8778 /* TransationModel.m */,
+				71CCEBE4268DA4EB00C84352 /* ProfitModel.h */,
+				71CCEBE5268DA4EB00C84352 /* ProfitModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2059,6 +2072,7 @@
 				2242397B268619EE00E5188F /* UnincorporateVC.xib in Resources */,
 				2242393026838B9800E5188F /* TradeDetailVC.xib in Resources */,
 				22F7F863267BB7FD0009FDF0 /* HomeTwoCell.xib in Resources */,
+				71CCEBEE268DA7DD00C84352 /* TrdeDataVC.xib in Resources */,
 				716979DB2685C5DB00B278C7 /* TransferRecordVC.xib in Resources */,
 				710272322681D45100D5B62A /* PosterVC.xib in Resources */,
 				71CF0F27268077D300C4E558 /* TerminalTransfTwoVC.xib in Resources */,
@@ -2345,6 +2359,7 @@
 				716979ED2685C73C00B278C7 /* TransferRecordSubVC.m in Sources */,
 				22C1BCE0267A677200092C1E /* BADataEntity.m in Sources */,
 				22ACB87A268181B900A4E79D /* ComplaintVC.m in Sources */,
+				71CCEBED268DA7DD00C84352 /* TrdeDataVC.m in Sources */,
 				2235FFC5268647FE0064B505 /* BRPickerStyle.m in Sources */,
 				711D7BAE2679A0F400BAFB54 /* AppDelegate.m in Sources */,
 				713B8C1A2682D51200420F75 /* UrgentAttentionVC.m in Sources */,
@@ -2416,6 +2431,7 @@
 				2281D85526874A06004AF0A3 /* MyorderVC.m in Sources */,
 				713AA4B1268486F4009F02A5 /* ALeftCell.m in Sources */,
 				22881F442687A12A002F725B /* FaxianWalletVC.m in Sources */,
+				71CCEBE6268DA4EB00C84352 /* ProfitModel.m in Sources */,
 				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,

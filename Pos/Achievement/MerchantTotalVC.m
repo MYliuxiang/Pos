@@ -12,7 +12,9 @@
 @interface MerchantTotalVC ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property(nonatomic,copy) NSString *totalCount;
+@property(nonatomic,copy) NSString *sumMoney;
+@property (nonatomic,copy) NSMutableArray *dataList;
 
 @end
 
@@ -23,7 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"商户总数";
-    
+    self.dataList = [NSMutableArray array];
+
     [self loadData];
 
 
@@ -41,15 +44,15 @@
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,url];
     entity.needCache = NO;
     entity.parameters = @{@"id":self.agentModel.aid,@"time":self.model.time};
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
             
-//
-//            [self.values addObject: [NSString stringWithFormat:@"%@",result[@"data"][@"sum"]]];
-//            [self.values addObject: [NSString stringWithFormat:@"%@",result[@"data"][@"directlySum"]]];
-//            [self.values addObject: [NSString stringWithFormat:@"%@",result[@"data"][@"teamSum"]]];
-
+            self.dataList = [TransationModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"list"]];
+            self.totalCount = [NSString stringWithFormat:@"%@",result[@"data"][@"count"]];
+            self.sumMoney = [NSString stringWithFormat:@"%@",result[@"data"][@"sumMoney"]];
             [self.tableView reloadData];
           
         }
@@ -73,7 +76,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 3;
+    return self.dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,13 +93,13 @@
         [cell.contentView addSubview:lineView];
         
     }
-//    cell.lab1.text = self.titles[indexPath.row];
+   
+    TransationModel *model = self.dataList[indexPath.row];
+    cell.lab1.text = model.name;
     cell.lab1.textColor = [UIColor colorWithHexString:@"#232323"];
     cell.lab1.font = [UIFont boldSystemFontOfSize:14];
-
-    cell.lab2.text = @"33";
+    cell.lab2.text = model.count;
     cell.lab2.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
-
     
     return cell;
     
@@ -106,18 +109,23 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     
+    if (self.dataList.count == 0) {
+        return 0.1;
+    }
     return 44;
-    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    if (self.dataList.count == 0) {
+        return [UIView new];
+    }
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor clearColor];
 
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont boldSystemFontOfSize:14];
-    label.text = @"当日总交易额";
+    label.text = @"商户总数";
     label.textColor = [UIColor colorWithHexString:@"#FF8901"];
     label.backgroundColor = [UIColor clearColor];
     [view addSubview:label];
@@ -128,7 +136,7 @@
     
     UILabel *label1 = [[UILabel alloc] init];
     label1.font = [UIFont systemFontOfSize:14];
-    label1.text = @"275";
+    label1.text = self.totalCount;
     label1.textColor = [UIColor colorWithHexString:@"#BDBDBD"];
     label1.backgroundColor = [UIColor clearColor];
     [view addSubview:label1];
