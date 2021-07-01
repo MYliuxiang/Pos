@@ -42,6 +42,7 @@
     [querenbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     KViewBorderRadius(querenbutton, 22, 0.5, [UIColor clearColor]);
     [querenbutton setTitle:@"确定" forState:UIControlStateNormal];
+    [querenbutton addTarget:self action:@selector(querenbuttonacion) forControlEvents:UIControlEventTouchUpInside];
     [footview addSubview:querenbutton];
     
     footview.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
@@ -117,8 +118,28 @@
         return;
     }
     
-//    [self getclodeisture];
-    [self huoqu];
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_changesmsnew,self.iphonetextifld.text];
+    entity.needCache = NO;
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200) {
+        [MBProgressHUD showSuccess:@"验证码发送成功" toView:self.view];
+            [self huoqu];
+        }else{
+            [MBProgressHUD showError:result[@"msg"] toView:self.view];
+
+        }
+          
+        } failureBlock:^(NSError *error) {
+          
+
+        } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+            
+        }];
+    
+    
+    
    
   
 }
@@ -174,4 +195,47 @@
     
 }
 
+//确认修改手机号
+-(void)querenbuttonacion{
+    if (self.caridtifld.text.length ==0) {
+        [MBProgressHUD showError:@"请输入身份证" toView:self.view];
+        return;
+    }
+    if (self.yinhangtifld.text.length ==0) {
+        [MBProgressHUD showError:@"请输入结算银行卡" toView:self.view];
+        return;
+    }
+    if (self.iphonetextifld.text.length ==0) {
+        [MBProgressHUD showError:@"请输入新手机号" toView:self.view];
+        return;
+    }
+    if (self.yzmtextifld.text.length ==0) {
+        [MBProgressHUD showError:@"请输入验证码" toView:self.view];
+        return;
+    }
+    
+            BADataEntity *entity = [BADataEntity new];
+            entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_changeiphone2];
+            entity.needCache = NO;
+    entity.parameters =@{@"bankNo":self.yinhangtifld.text,@"idCard":self.caridtifld.text,@"newPhone":self.iphonetextifld.text,@"smsCode":self.yzmtextifld.text};
+            [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
+                NSDictionary *result = response;
+                if ([result[@"code"] intValue] == 200) {
+                [MBProgressHUD showSuccess:@"手机号修改成功请重新登录" toView:self.view];
+                    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC));
+
+                    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+//                        [LoginManger sharedManager].currentLoginModel = nil;
+//                        [HandleTool switchLgoinVC];
+                    });
+               
+                }
+                  
+                } failureBlock:^(NSError *error) {
+                  
+
+                } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+                    
+                }];
+}
 @end

@@ -1488,6 +1488,33 @@
 			path = BANetManager;
 			sourceTree = "<group>";
 		};
+		22ED0765268E397E0042AB02 /* 更改手机号 */ = {
+			isa = PBXGroup;
+			children = (
+				2281D8432684D5C6004AF0A3 /* ChangiphoneVC.h */,
+				2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */,
+			);
+			path = "更改手机号";
+			sourceTree = "<group>";
+		};
+		22ED0766268E398D0042AB02 /* 更改密码 */ = {
+			isa = PBXGroup;
+			children = (
+				2281D8402684CCB1004AF0A3 /* ChangePasswordVC.h */,
+				2281D8412684CCB1004AF0A3 /* ChangePasswordVC.m */,
+			);
+			path = "更改密码";
+			sourceTree = "<group>";
+		};
+		22ED0767268E39A40042AB02 /* 个人认证 */ = {
+			isa = PBXGroup;
+			children = (
+				2281D8462684E5FA004AF0A3 /* PersonalcertificationVC.h */,
+				2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */,
+			);
+			path = "个人认证";
+			sourceTree = "<group>";
+		};
 		22F7F853267BA88B0009FDF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1785,12 +1812,9 @@
 				2281D83B26839ED6004AF0A3 /* MessageNewsVC.m */,
 				2281D83D2684C6E2004AF0A3 /* MoresettingsVC.h */,
 				2281D83E2684C6E2004AF0A3 /* MoresettingsVC.m */,
-				2281D8402684CCB1004AF0A3 /* ChangePasswordVC.h */,
-				2281D8412684CCB1004AF0A3 /* ChangePasswordVC.m */,
-				2281D8432684D5C6004AF0A3 /* ChangiphoneVC.h */,
-				2281D8442684D5C6004AF0A3 /* ChangiphoneVC.m */,
-				2281D8462684E5FA004AF0A3 /* PersonalcertificationVC.h */,
-				2281D8472684E5FA004AF0A3 /* PersonalcertificationVC.m */,
+				22ED0765268E397E0042AB02 /* 更改手机号 */,
+				22ED0767268E39A40042AB02 /* 个人认证 */,
+				22ED0766268E398D0042AB02 /* 更改密码 */,
 				2281D8492686D7A3004AF0A3 /* EnterpriseVC.h */,
 				2281D84A2686D7A3004AF0A3 /* EnterpriseVC.m */,
 				2281D85326874A05004AF0A3 /* MyorderVC.h */,

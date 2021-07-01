@@ -35,7 +35,7 @@
 }
 //初始化视图
 -(void)getdata{
-    //轮播图
+    //请求个人信息
     BADataEntity *entity = [BADataEntity new];
     entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_userAppInfo];
     entity.needCache = NO;
@@ -156,7 +156,7 @@
    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - Height_TabBar) style:UITableViewStylePlain];
    self.tableView.delegate = self;
    self.tableView.dataSource = self;
-   self.tableView.bounces = YES;
+   self.tableView.bounces = NO;
    self.tableView.estimatedSectionFooterHeight = 0;
    self.tableView.estimatedSectionHeaderHeight = 10;
    self.tableView.backgroundColor = [UIColor clearColor];
@@ -214,7 +214,28 @@
         cell.imageView.image = [UIImage imageNamed:sectionarry[indexPath.row]];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.textLabel.text = sectionarry[indexPath.row];
+        
+        //认证消息
+        UILabel *afterlabel = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth-154, 19, 100, 19)];
+        afterlabel.textColor = [UIColor colorWithHexString:@"#C4C4C4"];
+        afterlabel.font = [UIFont systemFontOfSize:14];
+        afterlabel.textAlignment = NSTextAlignmentRight;
+        
+        if ([self.model.verified intValue] ==0) {
+            afterlabel.text = @"未认证";
+        }else{
+            afterlabel.text = @"认证成功";
+        }
+        
+        [cell.contentView addSubview:afterlabel];
+        
+        
         if (indexPath.row ==1) {
+            if ([self.model.enterpriseCertification intValue] ==0) {
+                afterlabel.text = @"未认证";
+            }else{
+                afterlabel.text = @"认证成功";
+            }
             xtview.hidden = YES;
         }
     }else{

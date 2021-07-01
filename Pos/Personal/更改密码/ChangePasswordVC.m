@@ -40,6 +40,7 @@
     querenbutton.titleLabel.font = [UIFont systemFontOfSize:14];
     [querenbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     KViewBorderRadius(querenbutton, 22, 0.5, [UIColor clearColor]);
+    [querenbutton addTarget:self action:@selector(querenbuttonaciton) forControlEvents:UIControlEventTouchUpInside];
     [querenbutton setTitle:@"确认" forState:UIControlStateNormal];
     [footview addSubview:querenbutton];
     
@@ -105,5 +106,46 @@
       
     
 }
+//确认按钮提交
+-(void)querenbuttonaciton{
+       
+    if (self.oldtextifld.text.length ==0) {
+        [MBProgressHUD showError:@"请输入旧密码" toView:self.view];
+        return;
+    }
+    
+    if (self.newtextifld.text.length == 0) {
+        [MBProgressHUD showError:@"请输入新密码" toView:self.view];
+        return;
+    }else{
+        if (![self.newtextifld.text isEqualToString:self.conttextifld.text]) {
+            [MBProgressHUD showError:@"两次密码不一致!" toView:self.view];
+            return;
+        }
+    }
+    
+        BADataEntity *entity = [BADataEntity new];
+        entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_resetPwd];
+        entity.needCache = NO;
+    entity.parameters =@{@"newPwd":self.newtextifld.text,@"oldPwd":self.oldtextifld.text};
+        [BANetManager ba_request_PUTWithEntity:entity successBlock:^(id response) {
+            NSDictionary *result = response;
+            if ([result[@"code"] intValue] == 200) {
+            [MBProgressHUD showSuccess:@"密码修改成功请重新登录" toView:self.view];
+                dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC));
 
+                dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+                    [LoginManger sharedManager].currentLoginModel = nil;
+                    [HandleTool switchLgoinVC];
+                });
+           
+            }
+              
+            } failureBlock:^(NSError *error) {
+              
+
+            } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+                
+            }];
+}
 @end

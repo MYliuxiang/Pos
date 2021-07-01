@@ -73,19 +73,20 @@
         cell=[[UITableViewCell alloc] init];
         [cell setRestorationIdentifier:@"TransactionTableViewCell"];
     }
-   
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //线条
     UIView *xtview = [[UIView alloc]initWithFrame:CGRectMake(22, 69-1, kScreenWidth, 1)];
     xtview.backgroundColor = [UIColor colorWithHexString:@"E9E9E9"];
     [cell addSubview:xtview];
     
+   
   
     //显示值
     UITextField *afterlabel = [[UITextField alloc]initWithFrame:CGRectMake(kScreenWidth-200, 30, 180, 16)];
     afterlabel.textAlignment = NSTextAlignmentRight;
     afterlabel.font = [UIFont systemFontOfSize:14];
     afterlabel.textColor = [UIColor colorWithHexString:@"C4C4C4"];
-    [cell addSubview:afterlabel];
+    [cell.contentView addSubview:afterlabel];
     
     if (indexPath.section ==0) {
         NSArray *sectionarry = @[@"姓名",@"身份证"];
