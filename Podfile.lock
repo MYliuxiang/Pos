@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.10.9)
   - AxcAE_TabBar (1.0.5)
   - IQKeyboardManager (6.5.5)
   - JXCategoryView (1.5.5)
@@ -56,6 +57,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AliyunOSSiOS
   - AxcAE_TabBar
   - IQKeyboardManager
   - JXCategoryView
@@ -76,6 +78,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - AliyunOSSiOS
     - AxcAE_TabBar
     - IQKeyboardManager
     - JXCategoryView
@@ -95,6 +98,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AliyunOSSiOS: 13173e9eaf05d3816315319876025de3028ea31d
   AxcAE_TabBar: 1d5bcf6c4921889dc38839b6ba2c584a9b55251a
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
@@ -112,6 +116,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 90357ffb7fa40107644a0fdb43f3f2831cfb24d6
+PODFILE CHECKSUM: 40824cc53f29d3e0f44260207eecffc9df851e74
 
 COCOAPODS: 1.10.1

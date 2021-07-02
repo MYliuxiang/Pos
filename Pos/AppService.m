@@ -44,6 +44,23 @@
       manager.shouldResignOnTouchOutside = YES;
       manager.shouldToolbarUsesTextFieldTintColor = YES;
       manager.enableAutoToolbar = NO;
+    
+    // wrnavgation
+     [WRNavigationBar wr_widely];
+     [WRNavigationBar wr_setBlacklist:@[@"TZImgePickHelper",@"TZImagePickerController",
+     @"TZPhotoPickerController",
+     @"TZGifPhotoPreviewController",
+     @"TZAlbumPickerController",
+     @"TZPhotoPreviewController",
+     @"TZVideoPlayerController"]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor orangeColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16],
+//                                                           NSForegroundColorAttributeName:[UIColor orangeColor]}];
 }
 
 @end

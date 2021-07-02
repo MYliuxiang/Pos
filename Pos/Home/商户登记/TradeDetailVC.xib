@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TradeDetailVC">
             <connections>
+                <outlet property="headerL" destination="i4D-Pr-1YW" id="QUt-oy-7EB"/>
                 <outlet property="headerView" destination="p2G-Le-p8O" id="n1G-y5-Hqk"/>
                 <outlet property="tableView" destination="k3g-08-MfM" id="AVt-Ev-Z9P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -24,30 +25,6 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-08-MfM" customClass="WSTableView">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <view key="tableHeaderView" contentMode="scaleToFill" id="p2G-Le-p8O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-Pr-1YW">
-                                <rect key="frame" x="20" y="10" width="374" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qI6-GN-8zB"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="i4D-Pr-1YW" firstAttribute="leading" secondItem="qI6-GN-8zB" secondAttribute="leading" constant="20" id="RWR-Kp-co2"/>
-                            <constraint firstAttribute="trailing" secondItem="i4D-Pr-1YW" secondAttribute="trailing" constant="20" id="U6I-vW-if5"/>
-                            <constraint firstItem="qI6-GN-8zB" firstAttribute="bottom" secondItem="i4D-Pr-1YW" secondAttribute="bottom" constant="10" id="jPD-cB-akE"/>
-                            <constraint firstItem="i4D-Pr-1YW" firstAttribute="top" secondItem="p2G-Le-p8O" secondAttribute="top" constant="10" id="uHg-hh-YBY"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="HpZ-0b-3Yb"/>
-                        <outlet property="delegate" destination="-1" id="Iq5-ly-04D"/>
-                    </connections>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
@@ -59,6 +36,28 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="k3g-08-MfM" secondAttribute="trailing" id="yTH-iG-eEV"/>
             </constraints>
             <point key="canvasLocation" x="100" y="50"/>
+        </view>
+        <view contentMode="scaleToFill" id="p2G-Le-p8O">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注：交易数据保留45天，如有任何疑问请联系客服，我们查询核对后回复" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-Pr-1YW">
+                    <rect key="frame" x="20" y="10" width="374" height="144"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="qI6-GN-8zB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="i4D-Pr-1YW" firstAttribute="leading" secondItem="qI6-GN-8zB" secondAttribute="leading" constant="20" id="RWR-Kp-co2"/>
+                <constraint firstAttribute="trailing" secondItem="i4D-Pr-1YW" secondAttribute="trailing" constant="20" id="U6I-vW-if5"/>
+                <constraint firstItem="qI6-GN-8zB" firstAttribute="bottom" secondItem="i4D-Pr-1YW" secondAttribute="bottom" constant="10" id="cs3-Sv-QL7"/>
+                <constraint firstItem="i4D-Pr-1YW" firstAttribute="top" secondItem="p2G-Le-p8O" secondAttribute="top" constant="10" id="uHg-hh-YBY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-481.15942028985512" y="-480.80357142857139"/>
         </view>
     </objects>
     <resources>

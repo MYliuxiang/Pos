@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *name;//    金额    number
 @property(nonatomic,copy)NSString *value;//   收益    string
 @property(nonatomic,copy)NSString *month;//   收益    string
+@property(nonatomic,copy)NSString *number;//   收益    string
+
 
 @end
 

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet WSTableView *tableView;
 @property (nonatomic, strong)NSMutableArray *dataSourceArrM;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UILabel *headerL;
 
 @end
 
@@ -22,23 +23,46 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"交易明细";
-    
+    self.tableView.WSTableViewDelegate = self;
     self.dataSourceArrM = [NSMutableArray array];
-    
+    self.headerL.preferredMaxLayoutWidth = kScreenWidth - 20;
+    self.tableView.tableHeaderView = self.headerView;
     [self registerCell];
-    [self addData];
+    [self loadData];
 
  }
 
+- (void)loadData{
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@?deviceNo=%@&mercNo=%@",MainUrl,Url_trade_list,self.deviceNo,self.mercNo];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            NSArray *array = result[@"data"];
+            for (NSString *month in array) {
+                WSTableviewDataModel *dataModel = [[WSTableviewDataModel alloc] init];
+                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@",month];
+                dataModel.shouldExpandSubRows = NO;
+                [self.dataSourceArrM addObject:dataModel];
+            }
+            [self.tableView reloadData];
+            
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+}
+
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-//    {
-//        CGFloat height = [self.tableView.tableFooterView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-//        CGRect footerFrame = self.tableView.tableFooterView.frame;
-//        footerFrame.size.height = height;
-//        self.tableView.tableFooterView.frame = footerFrame;
-//        self.tableView.tableFooterView = self.tableView.tableFooterView;
-//    }
+
     {
         CGFloat height = [self.tableView.tableHeaderView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
         CGRect headerFrame = self.tableView.tableHeaderView.frame;
@@ -60,37 +84,7 @@
    
  }
 
- - (void)addData {
-     
-     self.tableView.WSTableViewDelegate = self;
-     self.tableView.separatorColor = [UIColor whiteColor];
-     
-     _dataSourceArrM = [NSMutableArray array];
-     WSTableviewDataModel *dataModel = [[WSTableviewDataModel alloc] init];
-     dataModel.firstLevelStr = @"2021-02";
-     dataModel.shouldExpandSubRows = NO;
-     [dataModel object_add_toSecondLevelArrM:@"医院1"];
-     [dataModel object_add_toSecondLevelArrM:@"医院2"];
-     [_dataSourceArrM addObject:dataModel];
-     
-     WSTableviewDataModel *dataModel2 = [[WSTableviewDataModel alloc] init];
-     dataModel2.firstLevelStr = @"2021-03";
-     //dataModel2.shouldExpandSubRows = YES;
-     [dataModel2 object_add_toSecondLevelArrM:@"腿"];
-     [dataModel2 object_add_toSecondLevelArrM:@"脚"];
-     [_dataSourceArrM addObject:dataModel2];
-     
-     for (int i = 0; i < 20; i++) {
-         WSTableviewDataModel *dataModel3 = [[WSTableviewDataModel alloc] init];
-         dataModel3.firstLevelStr = @"2021-04";
-         [dataModel3 object_add_toSecondLevelArrM:@"腿2"];
-         dataModel3.expandable = YES;
-         [_dataSourceArrM addObject:dataModel3];
-     }
-   
-     
-    
- }
+
 
  #pragma mark - UITableViewDataSource & UITableViewDelegate
  - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -101,13 +95,15 @@
  {
      UIView *view = [[UIView alloc] init];
      view.backgroundColor = [UIColor clearColor];
-
-
      return view;
  }
 
  - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+     if (self.dataSourceArrM.count == 0) {
+         return 0;
+     }
      return 1;
+
  }
 
  - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -116,7 +112,7 @@
 
  - (NSInteger)tableView:(WSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath {
      WSTableviewDataModel *dataModel = _dataSourceArrM[indexPath.row];
-     return [dataModel.secondLevelArrM count] + 1;
+     return [dataModel.secondLevelArrM count];
  }
 
  - (BOOL)tableView:(WSTableView *)tableView shouldExpandSubRowsOfCellAtIndexPath:(NSIndexPath *)indexPath {
@@ -129,9 +125,7 @@
      TradeDCell *cell =
      [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TradeDCell class])];
      cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
      
- //    cell.statusLabel.text = dataModel.firstLevelStr;
      cell.expandable = dataModel.expandable;
      cell.expanded = YES;
      cell.timeL.text = dataModel.firstLevelStr;
@@ -141,11 +135,22 @@
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath {
      WSTableviewDataModel *dataModel = _dataSourceArrM[indexPath.row];
      
-         TradeDSubCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TradeDSubCell class])];
+     TradeDSubCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TradeDSubCell class])];
      cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//         cell.productNamelabel.text = [dataModel object_get_fromSecondLevelArrMWithIndex:indexPath.subRow];
- //        cell.bottomHeightConstraint.constant = indexPath.subRow == dataModel.secondLevelArrM.count - 1 ? 0.0f : 5.0f;
-         return cell;
+     TradeDetailModel *model = [dataModel object_get_fromSecondLevelArrMWithIndex:indexPath.subRow];
+     cell.timeL.text = model.tradeTime;
+     cell.moneyL.text = model.amount;
+//     卡类型 借贷标识 1 借记 2 贷记 3 境外卡 扫码交易为空
+     if (model.cardFlag == 1) {
+         cell.cardL.text = @"借记卡";
+     }else if (model.cardFlag == 2){
+         cell.cardL.text = @"贷记卡";
+     }else{
+         cell.cardL.text = @"境外卡";
+
+     }
+     
+     return cell;
    
  }
 
@@ -154,17 +159,50 @@
  }
 
  - (CGFloat)tableView:(WSTableView *)tableView heightForSubRowAtIndexPath:(NSIndexPath *)indexPath {
-     WSTableviewDataModel *dataModel = _dataSourceArrM[indexPath.section];
      
      return 56;
  }
 
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
      
-     WSTableviewDataModel *dataModel = _dataSourceArrM[indexPath.section];
-     dataModel.shouldExpandSubRows = !dataModel.shouldExpandSubRows;
+     WSTableviewDataModel *dataModel = _dataSourceArrM[indexPath.row];
+     if (dataModel.isLoad) {
+         dataModel.shouldExpandSubRows = !dataModel.shouldExpandSubRows;
+     }else{
+         [self loadDetailDataWithIndex:indexPath.row];
+     }
 
  }
+
+- (void)loadDetailDataWithIndex:(NSInteger)index{
+    
+    WSTableviewDataModel *dataModel = _dataSourceArrM[index];
+
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@?deviceNo=%@&mercNo=%@&tradeDate=%@",MainUrl,Url_trade_monthInfoList,self.deviceNo,self.mercNo,dataModel.firstLevelStr];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            
+            NSArray *datas = [TradeDetailModel mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            WSTableviewDataModel *dataModel = self.dataSourceArrM[index];
+            for (Profit *model in datas) {
+                [dataModel object_add_toSecondLevelArrM:model];
+            }
+            dataModel.isLoad = YES;
+            dataModel.shouldExpandSubRows = !dataModel.shouldExpandSubRows;
+            [self.tableView refreshData];
+           
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+}
 
  - (void)tableView:(WSTableView *)tableView didSelectSubRowAtIndexPath:(NSIndexPath *)indexPath {
  }

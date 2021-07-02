@@ -46,8 +46,7 @@
     
 }
 
-- (IBAction)doneAC:(id)sender {
-}
+
 
 - (IBAction)startTimeAC:(UITapGestureRecognizer *)sender {
     
@@ -169,6 +168,26 @@
  */
 - (UIView *)listView {
     return self.view;
+}
+
+- (IBAction)doneAC:(id)sender {
+    
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@to_public",MainUrl,Url_merc];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            
+         
+           
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
 }
 
 @end

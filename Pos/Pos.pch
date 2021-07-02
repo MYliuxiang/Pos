@@ -100,6 +100,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "BRPickerView.h"
 #import "SDCycleScrollView.h"
 #import "SGQRCode.h"
+#import <AliyunOSSiOS/AliyunOSSiOS.h>
+
 
 
 
@@ -181,6 +183,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "ProfitModel.h"
 #import "DataModel.h"
 #import "TerminalModel.h"
+#import "TradeDetailModel.h"
+
 
 
 

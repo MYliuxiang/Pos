@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D505645C3F99EB1E8B6529D64D2C3E1C"
-               BuildableName = "BRPickerView.framework"
-               BlueprintName = "BRPickerView"
+               BlueprintIdentifier = "C1FD11F5F7EBFF63F845CDF963F73E1A"
+               BuildableName = "AliyunOSSiOS.framework"
+               BlueprintName = "AliyunOSSiOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

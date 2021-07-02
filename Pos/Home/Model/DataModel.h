@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *did;
 @property(nonatomic,copy) NSString *manageDivide;
 @property(nonatomic,copy) NSString *name;
-@property(nonatomic,copy) NSString *number;
+@property(nonatomic,assign) NSInteger number;
 @property(nonatomic,copy) NSString *phone;
 @end
 

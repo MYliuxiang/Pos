@@ -22,8 +22,7 @@ target 'Pos' do
    pod 'UITextView+Placeholder'
    pod 'SDAutoLayout', '~> 2.1.3'
    pod 'SGQRCode', '~> 3.0.1'
-
-
+   pod 'AliyunOSSiOS'
   # Pods for Pos
 
   target 'PosTests' do

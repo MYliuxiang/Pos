@@ -303,6 +303,7 @@
 		7186499326804185008EED37 /* TransfCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7186499126804185008EED37 /* TransfCCell.xib */; };
 		718D6D87268ABE1F0027CE3E /* LXAddressPickeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718D6D86268ABE1F0027CE3E /* LXAddressPickeView.m */; };
 		718D6D94268B1E7C0027CE3E /* StudyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 718D6D93268B1E7C0027CE3E /* StudyListModel.m */; };
+		71AB318C268EF82600DFDA77 /* TradeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AB318B268EF82600DFDA77 /* TradeDetailModel.m */; };
 		71C24DA0267C858F00700C7F /* DataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24D9E267C858F00700C7F /* DataShowVC.m */; };
 		71C24DA1267C858F00700C7F /* DataShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C24D9F267C858F00700C7F /* DataShowVC.xib */; };
 		71C24DAE267C8EDA00700C7F /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24DAD267C8EDA00700C7F /* DataModel.m */; };
@@ -321,6 +322,10 @@
 		71DE1B532689D25A00A46F5E /* CarouselModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B522689D25A00A46F5E /* CarouselModel.m */; };
 		71DE1B592689D58A00A46F5E /* HWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */; };
 		71E74ED6268ABAD4001A26DF /* pca-code.json in Resources */ = {isa = PBXBuildFile; fileRef = 71E74ED5268ABAD4001A26DF /* pca-code.json */; };
+		71EE82A2268F13B500F4C131 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EE82A1268F13B500F4C131 /* libresolv.tbd */; };
+		71EE82A7268F13C200F4C131 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EE82A6268F13C200F4C131 /* CoreTelephony.framework */; };
+		71EE82A9268F13CB00F4C131 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EE82A8268F13CB00F4C131 /* SystemConfiguration.framework */; };
+		71EE82AF268F14FC00F4C131 /* OSSClientHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EE82AE268F14FC00F4C131 /* OSSClientHelp.m */; };
 		B568E0BF3597F86AFFEBDA5D /* Pods_Pos_PosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -862,6 +867,8 @@
 		718D6D86268ABE1F0027CE3E /* LXAddressPickeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddressPickeView.m; sourceTree = "<group>"; };
 		718D6D92268B1E7C0027CE3E /* StudyListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyListModel.h; sourceTree = "<group>"; };
 		718D6D93268B1E7C0027CE3E /* StudyListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyListModel.m; sourceTree = "<group>"; };
+		71AB318A268EF82600DFDA77 /* TradeDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TradeDetailModel.h; sourceTree = "<group>"; };
+		71AB318B268EF82600DFDA77 /* TradeDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeDetailModel.m; sourceTree = "<group>"; };
 		71C24D9D267C858F00700C7F /* DataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataShowVC.h; sourceTree = "<group>"; };
 		71C24D9E267C858F00700C7F /* DataShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataShowVC.m; sourceTree = "<group>"; };
 		71C24D9F267C858F00700C7F /* DataShowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataShowVC.xib; sourceTree = "<group>"; };
@@ -893,6 +900,11 @@
 		71DE1B572689D58A00A46F5E /* HWBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWBaseWebViewController.h; sourceTree = "<group>"; };
 		71DE1B582689D58A00A46F5E /* HWBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWBaseWebViewController.m; sourceTree = "<group>"; };
 		71E74ED5268ABAD4001A26DF /* pca-code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pca-code.json"; sourceTree = "<group>"; };
+		71EE82A1268F13B500F4C131 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		71EE82A6268F13C200F4C131 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		71EE82A8268F13CB00F4C131 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		71EE82AD268F14FC00F4C131 /* OSSClientHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSClientHelp.h; sourceTree = "<group>"; };
+		71EE82AE268F14FC00F4C131 /* OSSClientHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSClientHelp.m; sourceTree = "<group>"; };
 		766792BAAAA57537E38FAE0F /* Pods_Pos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		892CBA1CE419669925D5F4E4 /* Pods-Pos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos.debug.xcconfig"; path = "Target Support Files/Pods-Pos/Pods-Pos.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBFB3FA90CD74EA0B0BAEAE /* Pods-Pos-PosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pos-PosUITests.release.xcconfig"; path = "Target Support Files/Pods-Pos-PosUITests/Pods-Pos-PosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -904,6 +916,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EE82A9268F13CB00F4C131 /* SystemConfiguration.framework in Frameworks */,
+				71EE82A7268F13C200F4C131 /* CoreTelephony.framework in Frameworks */,
+				71EE82A2268F13B500F4C131 /* libresolv.tbd in Frameworks */,
 				56EDAF8983D68EFD8FA4615B /* Pods_Pos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1096,6 +1111,8 @@
 				226D6F14268B8852004D8778 /* MerchantModel.m */,
 				226D6F53268CCB43004D8778 /* MerchDetailModel.h */,
 				226D6F54268CCB43004D8778 /* MerchDetailModel.m */,
+				71AB318A268EF82600DFDA77 /* TradeDetailModel.h */,
+				71AB318B268EF82600DFDA77 /* TradeDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1719,6 +1736,8 @@
 				224239562686168200E5188F /* UITextField+TintColor.m */,
 				718D6D85268ABE1F0027CE3E /* LXAddressPickeView.h */,
 				718D6D86268ABE1F0027CE3E /* LXAddressPickeView.m */,
+				71EE82AD268F14FC00F4C131 /* OSSClientHelp.h */,
+				71EE82AE268F14FC00F4C131 /* OSSClientHelp.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1972,6 +1991,9 @@
 		84CF427F585B54273205569D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71EE82A8268F13CB00F4C131 /* SystemConfiguration.framework */,
+				71EE82A6268F13C200F4C131 /* CoreTelephony.framework */,
+				71EE82A1268F13B500F4C131 /* libresolv.tbd */,
 				766792BAAAA57537E38FAE0F /* Pods_Pos.framework */,
 				45F20FB8130B84E36E353390 /* Pods_Pos_PosUITests.framework */,
 				F5CAFA14D96261860D459735 /* Pods_PosTests.framework */,
@@ -2377,6 +2399,7 @@
 				71CF0F462680901400C4E558 /* SGWebView.m in Sources */,
 				711D7CCF2679ACF100BAFB54 /* HomeVC.m in Sources */,
 				22C1BCCF267A677200092C1E /* UIView+ViewController.m in Sources */,
+				71EE82AF268F14FC00F4C131 /* OSSClientHelp.m in Sources */,
 				22C1BC7C267A676100092C1E /* Reachability.m in Sources */,
 				710272312681D45100D5B62A /* PosterVC.m in Sources */,
 				713AA4552684272A009F02A5 /* TerminalSearchVC.m in Sources */,
@@ -2478,6 +2501,7 @@
 				224239722686198600E5188F /* ToPublicVC.m in Sources */,
 				22C1BCDC267A677200092C1E /* UIView+Corners.m in Sources */,
 				2281D8482684E5FA004AF0A3 /* PersonalcertificationVC.m in Sources */,
+				71AB318C268EF82600DFDA77 /* TradeDetailModel.m in Sources */,
 				718D6D87268ABE1F0027CE3E /* LXAddressPickeView.m in Sources */,
 				226D6ECB268A237B004D8778 /* ActivityModel.m in Sources */,
 				2281D85C268789D0004AF0A3 /* MybankcardVC.m in Sources */,
@@ -2709,15 +2733,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 49RMD2WMA5;
+				DEVELOPMENT_TEAM = V5HRKRDUCX;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Pos/Pos.pch";
 				INFOPLIST_FILE = Pos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pos.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zf.pos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2730,15 +2754,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 49RMD2WMA5;
+				DEVELOPMENT_TEAM = V5HRKRDUCX;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Pos/Pos.pch";
 				INFOPLIST_FILE = Pos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pos.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zf.pos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

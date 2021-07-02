@@ -25,18 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.customNavBar.title = @"商户详情";
-    
-    
-//    self.headerB
-    
-    
     [self.headerB layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleRight imageTitleSpace:5];
- 
-    
     self.nameList = @[@"姓名",@"手机号",@"商户类型",@"机器编码",@"登记时间"];
     self.subList = @[@"王晓热",@"13278990099",@"多宝宝",@"7897668988989",@"2021-09-12  12:23:23"];
-//    self.dataList = @[@"首次达标：N时间到N时间，达标剩余金额￥7000",@"二次达标：N时间到N时间，达标剩余金额￥7000",@"三次达标：N时间到N时间，达标剩余金额￥7000",
-//        @"四次达标：N时间到N时间，达标剩余金额￥7000"];
     [self loadData];
 
 }
@@ -46,32 +37,24 @@
     
     if (self.mmodel.mercId) {
         entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_mercInfo,self.mmodel.mercId];
-
     }else{
         entity.urlString = [NSString stringWithFormat:@"%@%@",MainUrl,Url_merc_mercInfo];
-
     }
     entity.needCache = NO;
     entity.parameters = @{@"deviceNo":self.mmodel.deviceNo};
     [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
         NSDictionary *result = response;
         if ([result[@"code"] intValue] == 200) {
-            
             self.detailModel = [MerchDetailModel mj_objectWithKeyValues:result[@"data"]];
             self.headerView.height = 197;
             self.tableView.tableHeaderView = self.headerView;
             self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
-            
             self.numberL.text = [NSString stringWithFormat:@"%.2f",self.detailModel.tradingMoneySum];
-            
             [self.tableView reloadData];
-          
         }
         
     } failureBlock:^(NSError *error) {
-      
-
-        
+              
     } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
         
     }];
@@ -83,11 +66,16 @@
 
 - (IBAction)detailAC:(id)sender {
     TradeDetailVC *vc = [TradeDetailVC new];
+    vc.mercNo = self.detailModel.mercNo;
+    vc.deviceNo = self.mmodel.deviceNo;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)headeClickAC:(id)sender {
-    NSLog(@"点击了头部");
+    TradeDetailVC *vc = [TradeDetailVC new];
+    vc.mercNo = self.detailModel.mercNo;
+    vc.deviceNo = self.mmodel.deviceNo;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma  mark --------UITableView Delegete----------

@@ -73,25 +73,37 @@
 
             for (DataChildrenModel *model in self.today.children) {
                 WSTableviewDataModel *dataModel = [[WSTableviewDataModel alloc] init];
-                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@今日新增商户数(%@户)",model.name,model.number];
+                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@今日新增商户数(%ld户)",model.name,model.number];
                 dataModel.shouldExpandSubRows = NO;
-                dataModel.expandable = YES;
+                if (model.number == 0) {
+                    dataModel.expandable = NO;
+                }else{
+                    dataModel.expandable = YES;
+                }
                 [self.todayDataSourceArrM addObject:dataModel];
             }
             
             for (DataChildrenModel *model in self.month.children) {
                 WSTableviewDataModel *dataModel = [[WSTableviewDataModel alloc] init];
-                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@本月新增商户数(%@户)",model.name,model.number];
+                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@本月新增商户数(%ld户)",model.name,model.number];
                 dataModel.shouldExpandSubRows = NO;
+                if (model.number == 0) {
+                    dataModel.expandable = NO;
+                }else{
+                    dataModel.expandable = YES;
+                }
                 [self.monthDataSourceArrM addObject:dataModel];
             }
             
             for (DataChildrenModel *model in self.active.children) {
                 WSTableviewDataModel *dataModel = [[WSTableviewDataModel alloc] init];
-                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@总激活商户数(%@户)",model.name,model.number];
+                dataModel.firstLevelStr = [NSString stringWithFormat:@"%@总激活商户数(%ld户)",model.name,model.number];
                 dataModel.shouldExpandSubRows = NO;
-                
-                
+                if (model.number == 0) {
+                    dataModel.expandable = NO;
+                }else{
+                    dataModel.expandable = YES;
+                }
                 [self.activeDataSourceArrM addObject:dataModel];
             }
             
@@ -131,10 +143,10 @@
         label.text = [NSString stringWithFormat:@"今日新增商户数：%@户",self.today.total];
 
     }else if(section == 1){
-        label.text = [NSString stringWithFormat:@"本月新增商户数：%@户",self.today.total];
+        label.text = [NSString stringWithFormat:@"本月新增商户数：%@户",self.month.total];
 
     }else{
-        label.text = [NSString stringWithFormat:@"团队总激活商户数：%@户",self.today.total];
+        label.text = [NSString stringWithFormat:@"团队总激活商户数：%@户",self.active.total];
 
     }
 
@@ -170,7 +182,7 @@
         dataModel = self.activeDataSourceArrM[indexPath.row];
 
     }
-    return [dataModel.secondLevelArrM count] + 1;
+    return [dataModel.secondLevelArrM count];
 }
 
 - (BOOL)tableView:(WSTableView *)tableView shouldExpandSubRowsOfCellAtIndexPath:(NSIndexPath *)indexPath {
@@ -209,13 +221,23 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath {
-    WSTableviewDataModel *dataModel = self.activeDataSourceArrM[indexPath.row];
-    
-        DataSSubCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DataSSubCell class])];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        cell.productNamelabel.text = [dataModel object_get_fromSecondLevelArrMWithIndex:indexPath.subRow];
-//        cell.bottomHeightConstraint.constant = indexPath.subRow == dataModel.secondLevelArrM.count - 1 ? 0.0f : 5.0f;
-        return cell;
+    WSTableviewDataModel *dataModel;
+    if (indexPath.section == 0) {
+        dataModel = self.todayDataSourceArrM[indexPath.row];
+    }else if (indexPath.section == 1){
+        dataModel = self.monthDataSourceArrM[indexPath.row];
+        
+    }else{
+        dataModel = self.activeDataSourceArrM[indexPath.row];
+    }
+    DataSSubCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DataSSubCell class])];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    Profit *model = [dataModel object_get_fromSecondLevelArrMWithIndex:indexPath.subRow];
+    cell.nameL.text = model.name;
+    cell.numberL.text = model.number;
+    //        cell.productNamelabel.text = [dataModel object_get_fromSecondLevelArrMWithIndex:indexPath.subRow];
+    //        cell.bottomHeightConstraint.constant = indexPath.subRow == dataModel.secondLevelArrM.count - 1 ? 0.0f : 5.0f;
+    return cell;
   
 }
 
@@ -231,10 +253,72 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    WSTableviewDataModel *dataModel = self.activeDataSourceArrM[indexPath.section];
-    dataModel.shouldExpandSubRows = !dataModel.shouldExpandSubRows;
+    WSTableviewDataModel *dataModel;
+    if (indexPath.section == 0) {
+        dataModel = self.todayDataSourceArrM[indexPath.row];
+    }else if (indexPath.section == 1){
+        dataModel = self.monthDataSourceArrM[indexPath.row];
+
+    }else{
+        dataModel = self.activeDataSourceArrM[indexPath.row];
+    }
+    if (!dataModel.isLoad && dataModel.expandable) {
+        [self loadDetailDataWithIndex:indexPath];
+    }else{
+        dataModel.shouldExpandSubRows = !dataModel.shouldExpandSubRows;
+    }
 
 }
+
+- (void)loadDetailDataWithIndex:(NSIndexPath*)indexPath{
+    
+    BADataEntity *entity = [BADataEntity new];
+    DataChildrenModel *oModel;
+    WSTableviewDataModel *dataModel;
+
+    if (indexPath.section == 0) {
+        entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_data,@"today"];
+        dataModel = self.todayDataSourceArrM[indexPath.row];
+        oModel = self.today.children[indexPath.row];
+    }else if (indexPath.section == 1){
+        entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_data,@"month"];
+        dataModel = self.monthDataSourceArrM[indexPath.row];
+        oModel = self.month.children[indexPath.row];
+
+    }else{
+        entity.urlString = [NSString stringWithFormat:@"%@%@%@",MainUrl,Url_merc_data,@"active"];
+        dataModel = self.activeDataSourceArrM[indexPath.row];
+        oModel = self.active.children[indexPath.row];
+
+    }
+   
+    entity.needCache = NO;
+    entity.parameters = @{@"subId":oModel.did};
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    [BANetManager ba_request_GETWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            
+            NSArray *datas = [Profit mj_objectArrayWithKeyValuesArray:result[@"data"]];
+            
+                        
+            for (Profit *model in datas) {
+                [dataModel object_add_toSecondLevelArrM:model];
+            }
+            dataModel.isLoad = YES;
+            dataModel.shouldExpandSubRows = !dataModel.shouldExpandSubRows;
+            [self.wsTableView refreshData];
+
+           
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
+    
+}
+
 
 - (void)tableView:(WSTableView *)tableView didSelectSubRowAtIndexPath:(NSIndexPath *)indexPath {
 }

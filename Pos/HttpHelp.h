@@ -144,6 +144,19 @@ extern NSString *const Url_merc_data;
 //查询我的终端
 extern NSString *const Url_devicec_query;
 
+//查询交易明细月份
+extern NSString *const Url_trade_list;
+
+//查询交易月明细
+extern NSString *const Url_trade_monthInfoList;
+
+//商户进件
+extern NSString *const Url_merc;
+
+//获取sts
+extern NSString *const Url_oss_sts;
+
+
 
 NS_ASSUME_NONNULL_BEGIN
 

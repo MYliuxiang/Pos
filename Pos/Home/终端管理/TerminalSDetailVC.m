@@ -12,8 +12,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (copy, nonatomic) NSArray *titles;
 @property (copy, nonatomic) NSArray *values;
-@property (copy, nonatomic) NSMutableArray *settings;
+@property (strong, nonatomic) NSMutableArray *settings;
 
+@property (copy, nonatomic) NSString *mercId;
 
 
 
@@ -53,16 +54,9 @@
             }else{
                 bindStr = @"已经绑定";
             }
-            
-            /*
-             bindStatus = 1;
-             bindTime = "<null>";
-             deviceNo = 000099953;
-             expired = "<null>";
-             modelId = 1;
-             owner = "\U674e\U6d0b";
-             */
+
             self.values = @[[NSString stringWithFormat:@"%@",result[@"data"][@"deviceNo"]],[NSString stringWithFormat:@"%@",result[@"data"][@"expired"]],[NSString stringWithFormat:@"%@",result[@"data"][@"owner"]],bindStr];
+            self.mercId = [NSString stringWithFormat:@"%@",result[@"data"][@"mercId"]];
             self.settings = [SettingModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"settings"]];
             [self.tableView reloadData];
           
@@ -196,9 +190,9 @@
 
 - (void)transfAC{
     //累积交易
-    
     MerchantModel *model = [MerchantModel new];
     model.deviceNo = self.model.deviceNo;
+    model.mercId = self.mercId;
     MerchantDetailVC *vc = [MerchantDetailVC new];
     vc.mmodel = model;
     [self.navigationController pushViewController:vc animated:YES];

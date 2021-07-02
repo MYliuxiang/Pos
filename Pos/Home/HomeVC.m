@@ -336,10 +336,6 @@
     
 }
 
-
-
-
-
 - (void)headerClick{
     DataShowVC *vc = [DataShowVC new];
     [self.navigationController pushViewController:vc animated:YES];

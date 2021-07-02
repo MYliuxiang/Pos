@@ -71,43 +71,9 @@
     
     UINib *orderProductNib = [UINib nibWithNibName:NSStringFromClass([TradeDSubCell class]) bundle:nil];
     [self.tableView registerNib:orderProductNib forCellReuseIdentifier:NSStringFromClass([TradeDSubCell class])];
-    
   
 }
 
-- (void)addData {
-    
-    self.tableView.WSTableViewDelegate = self;
-    self.tableView.separatorColor = [UIColor whiteColor];
-    
-    _dataSourceArrM = [NSMutableArray array];
-    WSTableviewDataModel *dataModel = [[WSTableviewDataModel alloc] init];
-    dataModel.firstLevelStr = @"医院选择";
-    dataModel.shouldExpandSubRows = NO;
-    [dataModel object_add_toSecondLevelArrM:@"医院1"];
-    [dataModel object_add_toSecondLevelArrM:@"医院2"];
-    [dataModel object_add_toSecondLevelArrM:@"医院3"];
-    [dataModel object_add_toSecondLevelArrM:@"医院4"];
-    [_dataSourceArrM addObject:dataModel];
-    
-    WSTableviewDataModel *dataModel2 = [[WSTableviewDataModel alloc] init];
-    dataModel2.firstLevelStr = @"部位选择";
-    //dataModel2.shouldExpandSubRows = YES;
-    [dataModel2 object_add_toSecondLevelArrM:@"腿"];
-    [dataModel2 object_add_toSecondLevelArrM:@"脚"];
-    [dataModel2 object_add_toSecondLevelArrM:@"头"];
-    [_dataSourceArrM addObject:dataModel2];
-    
-    
-    WSTableviewDataModel *dataModel3 = [[WSTableviewDataModel alloc] init];
-    dataModel3.firstLevelStr = @"部位选择2";
-    [dataModel3 object_add_toSecondLevelArrM:@"腿2"];
-    [dataModel3 object_add_toSecondLevelArrM:@"脚2"];
-    dataModel3.expandable = YES;
-    [_dataSourceArrM addObject:dataModel3];
-    
-   
-}
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

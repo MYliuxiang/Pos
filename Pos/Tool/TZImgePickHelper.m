@@ -39,6 +39,11 @@
         self.allowPickingGif = NO;
         self.allowPickingOriginalPhoto = NO;
         self.modalPresentationStyle = UIModalPresentationFullScreen;
+        self.navigationBar.tintColor = [UIColor redColor];
+        self.naviBgColor = [UIColor whiteColor];
+        self.naviTitleFont = [UIFont boldSystemFontOfSize:16];
+        self.naviTitleColor = [UIColor colorWithHexString:@"#282828"];
+        self.barItemTextColor = [UIColor colorWithHexString:@"#282828"];
         [self addObserver:self forKeyPath:@"navigationBar.hidden" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;

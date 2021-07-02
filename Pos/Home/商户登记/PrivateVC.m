@@ -47,8 +47,7 @@
     
 }
 
-- (IBAction)doneAC:(id)sender {
-}
+
 
 
 - (IBAction)startTimeAC:(UITapGestureRecognizer *)sender {
@@ -145,7 +144,6 @@
     customStyle.cancelBtnTitle = @"取消";
     customStyle.doneBtnTitle = @"确认";
     addressPickerView.pickerStyle = customStyle;
-    
     [addressPickerView show];
     
     
@@ -170,6 +168,93 @@
  */
 - (UIView *)listView {
     return self.view;
+}
+
+- (IBAction)photoAC:(UIButton *)sender {
+    
+    TZImgePickHelper *helper = [[TZImgePickHelper alloc] initMaxCount:1];
+    helper.didFinishPickingPhotosHandle = ^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+//        [self uploadIcon:photos[0]];
+        UIImage *image = photos[0];
+        NSData *imageData = UIImageJPEGRepresentation(image, 1);
+        OSSPutObjectRequest *put = [OSSPutObjectRequest new];
+
+        // 填写Bucket名称，例如examplebucket。
+        put.bucketName = @"examplebucket";
+        // 填写文件完整路径，例如exampledir/exampleobject.txt。Object完整路径中不能包含Bucket名称。
+        put.objectKey = @"exampledir/exampleobject.txt";
+//        put.uploadingFileURL = [NSURL fileURLWithPath:@"<filePath>"];
+         put.uploadingData = imageData; // 直接上传NSData。
+
+        // （可选）设置上传进度。
+        put.uploadProgress = ^(int64_t bytesSent, int64_t totalByteSent, int64_t totalBytesExpectedToSend) {
+            // 指定当前上传长度、当前已经上传总长度、待上传的总长度。
+            NSLog(@"%lld, %lld, %lld", bytesSent, totalByteSent, totalBytesExpectedToSend);
+        };
+        // 配置可选字段。
+        // put.contentType = @"application/octet-stream";
+        // put.contentMd5 = @"";
+        // put.contentEncoding = @"";
+        // put.contentDisposition = @"";
+        // 可以在上传文件时设置文件元数据或者HTTP头部。
+        // put.objectMeta = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value1", @"x-oss-meta-name1", nil];
+        
+        NSString *endPoint = @"http://oss-cn-hangzhou.aliyuncs.com";
+        // 由阿里云颁发的AccessKeyId/AccessKeySecret构造一个CredentialProvider。
+        // 移动端建议使用STS方式初始化OSSClient。
+        id<OSSCredentialProvider> credential = [[OSSFederationCredentialProvider alloc] initWithFederationTokenGetter:^OSSFederationToken * _Nullable{
+            OSSFederationToken *token = [OSSFederationToken new];
+            // 从STS服务获取的临时访问密钥（AccessKey ID和AccessKey Secret）。
+            token.tAccessKey = @"AccessKeyId";
+            token.tSecretKey = @"AccessKeySecret";
+            // 从STS服务获取的安全令牌（SecurityToken）。
+            token.tToken = @"SecurityToken";
+            // 临时访问凭证的过期时间。
+            token.expirationTimeInGMTFormat = @"Expiration";
+            return token;
+        }];
+
+        OSSClientConfiguration * conf = [OSSClientConfiguration new];
+        conf.maxRetryCount = 3; // 网络请求遇到异常失败后的重试次数
+        conf.timeoutIntervalForRequest = 30; // 网络请求的超时时间
+        conf.timeoutIntervalForResource = 24 * 60 * 60; // 允许资源传输的最长时间
+        OSSClient *client = [[OSSClient alloc] initWithEndpoint:endPoint credentialProvider:credential clientConfiguration:conf];
+                
+        OSSTask *putTask = [client putObject:put];
+        [putTask continueWithBlock:^id(OSSTask *task) {
+            if (!task.error) {
+                NSLog(@"upload object success!");
+            } else {
+                NSLog(@"upload object failed, error: %@" , task.error);
+            }
+            return nil;
+        }];
+        
+        
+    };
+    [self presentViewController:helper animated:YES completion:nil];
+    
+}
+
+
+
+- (IBAction)doneAC:(id)sender {
+    BADataEntity *entity = [BADataEntity new];
+    entity.urlString = [NSString stringWithFormat:@"%@%@to_private",MainUrl,Url_merc];
+    entity.needCache = NO;
+    [MBProgressHUD showHUDAddedTo:lxMbProgressView animated:YES];
+    [BANetManager ba_request_POSTWithEntity:entity successBlock:^(id response) {
+        NSDictionary *result = response;
+        if ([result[@"code"] intValue] == 200){
+            
+         
+           
+        }
+    } failureBlock:^(NSError *error) {
+
+    } progressBlock:^(int64_t bytesProgress, int64_t totalBytesProgress) {
+        
+    }];
 }
 
 @end
